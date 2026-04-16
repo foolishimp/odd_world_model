@@ -1,0 +1,11 @@
+{
+  "requirements_source": "bounded_apra_liquidity_summary_over_official_apra_sources",
+  "focus_surfaces": [
+    "counterparty bucket",
+    "agreement treatment basis",
+    "liquidity classification",
+    "reporting position"
+  ],
+  "source_authority_ref": "input://apra_liquidity/source_authority.md",
+  "authority_claims_ref": "input://apra_liquidity/authority_claims.json"
+}

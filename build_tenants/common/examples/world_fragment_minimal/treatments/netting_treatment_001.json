@@ -1,0 +1,22 @@
+{
+  "schema_kind": "odd_domain.treatment_surface",
+  "schema_version": "v1",
+  "treatment_id": "netting_treatment_001",
+  "source_object_refs": [
+    "trade_contract_state_001"
+  ],
+  "target_domain": "treasury.netting",
+  "preserved_structure": [
+    "counterparty_identity",
+    "legal_agreement_reference"
+  ],
+  "changed_meaning": [
+    "trade-level economics become treasury netting membership and aggregated exposure context"
+  ],
+  "loss_notes": [
+    "Individual booking attributes may not survive in the netting summary."
+  ],
+  "surplus_notes": [
+    "Treasury introduces agreement-level aggregation semantics."
+  ]
+}

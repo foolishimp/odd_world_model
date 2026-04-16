@@ -1,0 +1,58 @@
+{
+  "schema_kind": "odd_domain.world_model_object",
+  "schema_version": "v1",
+  "object_id": "odd_domain.world_model_object.trade_representation.party_profile.partyB",
+  "object_kind": "TradePartyProfile",
+  "bounded_context": "trade_representation.fpml_confirmation.commodity_swap",
+  "semantic_role": "Second party surface recovered from the bounded FpML trade package.",
+  "identity": {
+    "authority_basis": "FpML party representation",
+    "aliases": [
+      "party_xml_id:partyB",
+      "party_id:549300AJRHKBLY9GM262",
+      "Energy Co."
+    ]
+  },
+  "boundary": {
+    "internal_claim": "Local party identity and naming are internal to this party profile object.",
+    "external_claim": "Regulatory counterparty bucketing is external to the local party profile.",
+    "adjacent_objects": [
+      "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
+    ],
+    "adjacent_domains": [
+      "apra_liquidity.reporting"
+    ]
+  },
+  "state": {
+    "lifecycle_state": "known",
+    "state_summary": "Second party profile is present in the bounded FpML trade package.",
+    "observation_time": "2026-04-15T00:00:00Z",
+    "ambiguity_status": "medium"
+  },
+  "evidence": {
+    "refs": [
+      "input://trade_representation/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+      "input://trade_representation/authority/fpml-5-12-examples.html",
+      "input://trade_representation/source_authority.md",
+      "review://parsed_trade_observation.json"
+    ],
+    "summary": "Second party profile recovered from party elements and party references."
+  },
+  "cross_domain": {
+    "treatment_refs": [
+      "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1"
+    ],
+    "covariance_edge_refs": [],
+    "adjoint_mapping_refs": [],
+    "loss_notes": [
+      "Local party identity may be reduced to a counterparty bucket downstream."
+    ]
+  },
+  "composition": {
+    "fragment_id": "odd_domain.fragment.trade_representation.fpml_commodity_swap.v1",
+    "parent_object_refs": [
+      "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
+    ],
+    "child_object_refs": []
+  }
+}

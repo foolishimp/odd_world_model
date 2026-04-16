@@ -1,0 +1,19 @@
+{
+  "schema_kind": "odd_domain.adjoint_mapping",
+  "schema_version": "v1",
+  "mapping_id": "trade_to_netting_adjoint_001",
+  "forward_treatment_ref": "netting_treatment_001",
+  "source_domain": "tradesystem_xx.trade_capture",
+  "target_domain": "treasury.netting",
+  "interpret_back_summary": "Treasury netting view can be interpreted back as a treated aggregate over booked trades with declared loss of trade-level granularity.",
+  "preserved_structure": [
+    "counterparty_identity",
+    "legal_agreement_reference"
+  ],
+  "loss_notes": [
+    "Trade-level booking fields are not guaranteed to survive round-trip."
+  ],
+  "surplus_notes": [
+    "Target adds netting-set aggregation semantics."
+  ]
+}

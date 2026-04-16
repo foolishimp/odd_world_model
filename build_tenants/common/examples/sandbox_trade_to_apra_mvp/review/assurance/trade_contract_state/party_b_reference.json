@@ -1,0 +1,18 @@
+{
+  "schema_kind": "odd_domain.assurance_record",
+  "schema_version": "v1",
+  "assurance_id": "odd_domain.assurance.trade_representation.trade_contract_state.trade_fpml_001.party_b_reference.v1",
+  "object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+  "claim_key": "party_b_reference",
+  "claim_kind": "derived",
+  "accepted_value": "odd_domain.world_model_object.trade_representation.party_profile.partyB",
+  "trace_record_refs": [
+    "review://traces/trade_contract_state/party_b_reference.json"
+  ],
+  "authority_basis": [
+    "document:fpml_party_reference",
+    "derivation:party_profile_alignment"
+  ],
+  "accepted_at": "2026-04-15T00:00:00Z",
+  "summary": "Second party reference aligned from commodity-swap leg party references and party elements."
+}

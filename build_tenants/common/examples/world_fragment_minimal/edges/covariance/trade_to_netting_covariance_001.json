@@ -1,0 +1,11 @@
+{
+  "schema_kind": "odd_domain.covariance_edge",
+  "schema_version": "v1",
+  "edge_id": "trade_to_netting_covariance_001",
+  "source_object_ref": "trade_contract_state_001",
+  "target_object_ref": "netting_set_001",
+  "relationship_kind": "treatment_effect",
+  "ambiguity_notes": [
+    "Multiple trades may contribute to the same netting set."
+  ]
+}

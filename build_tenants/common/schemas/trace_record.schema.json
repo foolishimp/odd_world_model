@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_domain.trace_record.schema.json",
+  "title": "TraceRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_kind",
+    "schema_version",
+    "trace_id",
+    "source_ref",
+    "source_kind",
+    "claim_key",
+    "locator",
+    "observed_at",
+    "observed_value"
+  ],
+  "properties": {
+    "schema_kind": {
+      "const": "odd_domain.trace_record"
+    },
+    "schema_version": {
+      "const": "v1"
+    },
+    "trace_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "object_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_kind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "locator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observation_kind": {
+      "type": "string"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "effective_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "observed_value": {},
+    "summary": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema_kind": "odd_domain.world_model_object",
+  "schema_version": "v1",
+  "object_id": "odd_domain.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001",
+  "object_kind": "FpmlCommoditySwapSourceSurface",
+  "bounded_context": "fpml_confirmation_source.commodity_swap",
+  "semantic_role": "Official commoditySwap source surface preserved with bounded leg structure.",
+  "identity": {
+    "authority_basis": "Official FpML commoditySwap source representation",
+    "aliases": [
+      "product_type:CommoditySwap",
+      "asset_class:Commodity",
+      "leg_count:2"
+    ]
+  },
+  "boundary": {
+    "internal_claim": "Official product type, asset class, dates, and direct leg structure are internal to this source product surface.",
+    "external_claim": "Downstream normalized trade semantics remain external to the source product surface.",
+    "adjacent_objects": [
+      "odd_domain.world_model_object.fpml_confirmation.trade_record.trade_fpml_001",
+      "odd_domain.world_model_object.fpml_confirmation.commodity_swap_leg.fixed_leg_01",
+      "odd_domain.world_model_object.fpml_confirmation.commodity_swap_leg.floating_leg_02"
+    ],
+    "adjacent_domains": [
+      "trade_representation.fpml_confirmation"
+    ]
+  },
+  "state": {
+    "lifecycle_state": "captured",
+    "state_summary": "Official commoditySwap source surface captured with bounded fixed/floating legs.",
+    "effective_time": "2006-07-01T00:00:00Z",
+    "observation_time": "2026-04-15T00:00:00Z",
+    "ambiguity_status": "low"
+  },
+  "constraints": {
+    "invariants": [
+      "source_product_must_preserve_official_leg_structure"
+    ],
+    "policies": [
+      "fpml_source_product_capture_policy"
+    ],
+    "valid_transitions": [
+      "supersede_with_new_source_cut"
+    ]
+  },
+  "evidence": {
+    "refs": [
+      "input://trade_representation/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+      "input://trade_representation/authority/fpml-5-12-examples.html",
+      "input://trade_representation/source_authority.md",
+      "review://parsed_trade_observation.json"
+    ],
+    "summary": "CommoditySwap source surface preserved directly from the official FpML example."
+  },
+  "cross_domain": {
+    "treatment_refs": [],
+    "covariance_edge_refs": [],
+    "adjoint_mapping_refs": [],
+    "loss_notes": []
+  },
+  "composition": {
+    "fragment_id": "odd_domain.fragment.fpml_confirmation_source.commodity_swap.v1",
+    "parent_object_refs": [
+      "odd_domain.world_model_object.fpml_confirmation.trade_record.trade_fpml_001"
+    ],
+    "child_object_refs": [
+      "odd_domain.world_model_object.fpml_confirmation.commodity_swap_leg.fixed_leg_01",
+      "odd_domain.world_model_object.fpml_confirmation.commodity_swap_leg.floating_leg_02"
+    ]
+  }
+}

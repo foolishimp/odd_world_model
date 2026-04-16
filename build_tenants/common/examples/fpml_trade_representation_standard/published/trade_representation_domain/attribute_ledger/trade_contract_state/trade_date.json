@@ -1,0 +1,19 @@
+{
+  "schema_kind": "odd_domain.attribute_ledger_entry",
+  "schema_version": "v1",
+  "entry_id": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.trade_date.v1",
+  "object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+  "claim_key": "trade_date",
+  "claim_kind": "observed",
+  "value": "2006-06-01",
+  "trace_record_refs": [
+    "review://traces/trade_contract_state/trade_date.json"
+  ],
+  "assurance_record_refs": [
+    "review://assurance/trade_contract_state/trade_date.json"
+  ],
+  "published_at": "2026-04-15T00:00:00Z",
+  "effective_time": "2006-06-01T00:00:00Z",
+  "observed_at": "2026-04-15T00:00:00Z",
+  "summary": "Trade date traced from the official FpML confirmation-view trade header."
+}

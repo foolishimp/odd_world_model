@@ -1,0 +1,13 @@
+{
+  "schema_name": "trade_capture_schema",
+  "fields": [
+    "trade_id",
+    "product_name",
+    "commodity_family",
+    "commodity_name",
+    "counterparty_id",
+    "agreement_id",
+    "booking_timestamp",
+    "lifecycle_state"
+  ]
+}

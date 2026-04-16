@@ -1,0 +1,22 @@
+{
+  "schema_kind": "odd_domain.attribute_ledger_entry",
+  "schema_version": "v1",
+  "entry_id": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.party_b_reference.v1",
+  "object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+  "claim_key": "party_b_reference",
+  "claim_kind": "derived",
+  "value": "odd_domain.world_model_object.trade_representation.party_profile.partyB",
+  "trace_record_refs": [
+    "review://traces/trade_contract_state/party_b_reference.json"
+  ],
+  "assurance_record_refs": [
+    "review://assurance/trade_contract_state/party_b_reference.json"
+  ],
+  "published_at": "2026-04-15T00:00:00Z",
+  "qualifiers": {
+    "party_id": "549300AJRHKBLY9GM262",
+    "party_name": "Energy Co."
+  },
+  "observed_at": "2026-04-15T00:00:00Z",
+  "summary": "Second party reference aligned from commodity-swap leg party references and party elements."
+}

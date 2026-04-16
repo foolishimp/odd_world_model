@@ -1,0 +1,17 @@
+{
+  "schema_kind": "odd_domain.assurance_record",
+  "schema_version": "v1",
+  "assurance_id": "odd_domain.assurance.apra_liquidity.reporting_position.apra_liquidity_position_001.reporting_lifecycle_state.v1",
+  "object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "claim_key": "reporting_lifecycle_state",
+  "claim_kind": "projected",
+  "accepted_value": "draft_classified",
+  "trace_record_refs": [
+    "review://apra_liquidity/traces/reporting_position/reporting_lifecycle_state/domain_input.json"
+  ],
+  "authority_basis": [
+    "project:apra_liquidity_domain_build_state"
+  ],
+  "accepted_at": "2026-04-15T00:10:00Z",
+  "summary": "Lifecycle state projected from the current retained APRA-liquidity domain-build state."
+}

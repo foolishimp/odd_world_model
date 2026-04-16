@@ -1,0 +1,28 @@
+{
+  "schema_kind": "odd_domain.world_fragment",
+  "schema_version": "v1",
+  "fragment_id": "fragment.tradesystem_xx.trade_slice",
+  "bounded_context": "tradesystem_xx.trade_capture",
+  "published_at": "2026-04-15T00:00:00Z",
+  "published_by": "team.tradesystem_xx",
+  "summary": "Minimal example fragment for the common JSON carrier.",
+  "objects": [
+    "objects/trade_contract_state_001.json",
+    "objects/netting_set_001.json"
+  ],
+  "reference_artifacts": [],
+  "treatments": [
+    "treatments/netting_treatment_001.json"
+  ],
+  "edges": [
+    "edges/covariance/trade_to_netting_covariance_001.json",
+    "edges/adjoints/trade_to_netting_adjoint_001.json"
+  ],
+  "projections": [
+    "projections/trade_mapping_document_001.json"
+  ],
+  "evidence_manifests": [
+    "evidence/manifests/trade_capture_manifest_001.json"
+  ],
+  "links": []
+}

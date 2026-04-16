@@ -1,0 +1,15 @@
+{
+  "schema_kind": "odd_domain.trace_record",
+  "schema_version": "v1",
+  "trace_id": "odd_domain.trace.trade_representation.trade_contract_state.trade_fpml_001.trade_date.v1",
+  "source_ref": "input://trade_representation/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+  "source_kind": "document",
+  "claim_key": "trade_date",
+  "locator": "trade/tradeHeader/tradeDate",
+  "observation_kind": "observed",
+  "observed_at": "2026-04-15T00:00:00Z",
+  "observed_value": "2006-06-01",
+  "object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+  "effective_time": "2006-06-01T00:00:00Z",
+  "summary": "Trade date traced from the official FpML confirmation-view trade header."
+}

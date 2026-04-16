@@ -1,0 +1,71 @@
+{
+  "schema_kind": "odd_domain.world_model_object",
+  "schema_version": "v1",
+  "object_id": "odd_domain.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
+  "object_kind": "ApraAgreementTreatmentBasis",
+  "bounded_context": "sandbox.apra_liquidity.reporting",
+  "semantic_role": "Regulatory agreement treatment basis composed against the imported master-agreement reference.",
+  "identity": {
+    "authority_basis": "official APRA contractual-treatment guidance composed with imported master-agreement evidence",
+    "aliases": [
+      "master_agreement_reviewed"
+    ]
+  },
+  "boundary": {
+    "internal_claim": "Agreement treatment basis is internal to the APRA-liquidity interpretation.",
+    "external_claim": "Detailed legal documentation and FpML master-agreement reference remain external.",
+    "adjacent_objects": [
+      "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "odd_domain.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001"
+    ],
+    "adjacent_domains": [
+      "odd_domain.domain.trade_representation.fpml_confirmation.v1"
+    ]
+  },
+  "state": {
+    "lifecycle_state": "reviewed",
+    "state_summary": "Agreement basis is classified enough for sandbox inspection.",
+    "effective_time": "2026-04-15T00:00:00Z",
+    "observation_time": "2026-04-15T00:10:00Z",
+    "ambiguity_status": "high"
+  },
+  "evidence": {
+    "refs": [
+      "input://apra_liquidity/domain_input.json",
+      "input://apra_liquidity/requirements_snapshot.json",
+      "input://apra_liquidity/source_notes.md",
+      "input://apra_liquidity/source_authority.md",
+      "input://apra_liquidity/authority_claims.json",
+      "input://apra_liquidity/authority/apra_liquidity_landing_page.html",
+      "input://apra_liquidity/authority/aps_210_liquidity_2025.html",
+      "input://apra_liquidity/authority/apg_210_liquidity_2025.pdf",
+      "input://apra_liquidity/authority/ars_210_0_liquidity_2023.html",
+      "input://apra_liquidity/authority/apra_liquidity_faq.html",
+      "input://trade_representation/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+      "review://parsed_trade_observation.json"
+    ],
+    "summary": "Agreement treatment basis derived from APRA authority claims and upstream agreement evidence."
+  },
+  "cross_domain": {
+    "treatment_refs": [
+      "odd_domain.treatment.apra_liquidity.reporting_position.classification.v1",
+      "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1"
+    ],
+    "covariance_edge_refs": [
+      "odd_domain.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+    ],
+    "adjoint_mapping_refs": [
+      "odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+    ],
+    "loss_notes": [
+      "Regulatory agreement treatment basis does not preserve the full legal semantics of the source agreement."
+    ]
+  },
+  "composition": {
+    "fragment_id": "odd_domain.fragment.apra_liquidity.reporting.sandbox.v1",
+    "parent_object_refs": [
+      "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+    ],
+    "child_object_refs": []
+  }
+}

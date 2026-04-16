@@ -1,0 +1,17 @@
+.DS_Store
+
+# Installed products and bootstrapped toolsets are not project source truth.
+.genesis/
+.odd_sdlc/
+
+# Python cache and local test noise.
+.pytest_cache/
+**/__pycache__/
+*.pyc
+build_tenants/python/test_env/reports/
+
+# Runtime/event exhaust is regenerated from the source line.
+.ai-workspace/events/
+.ai-workspace/fp_manifests/
+.ai-workspace/fp_results/
+.ai-workspace/runtime/

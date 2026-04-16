@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_domain.attribute_ledger_entry.schema.json",
+  "title": "AttributeLedgerEntry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_kind",
+    "schema_version",
+    "entry_id",
+    "object_ref",
+    "claim_key",
+    "claim_kind",
+    "value",
+    "trace_record_refs",
+    "assurance_record_refs",
+    "published_at"
+  ],
+  "properties": {
+    "schema_kind": {
+      "const": "odd_domain.attribute_ledger_entry"
+    },
+    "schema_version": {
+      "const": "v1"
+    },
+    "entry_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "object_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_kind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "value": {},
+    "qualifiers": {
+      "type": "object"
+    },
+    "trace_record_refs": {
+      "$ref": "world_model_object.schema.json#/$defs/string_array"
+    },
+    "assurance_record_refs": {
+      "$ref": "world_model_object.schema.json#/$defs/string_array"
+    },
+    "effective_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "published_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "supersedes_entry_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string"
+    }
+  }
+}

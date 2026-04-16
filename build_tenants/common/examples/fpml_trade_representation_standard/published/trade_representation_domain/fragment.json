@@ -1,0 +1,47 @@
+{
+  "schema_kind": "odd_domain.world_fragment",
+  "schema_version": "v1",
+  "fragment_id": "odd_domain.fragment.trade_representation.fpml_commodity_swap.v1",
+  "bounded_context": "trade_representation.fpml_confirmation.commodity_swap",
+  "published_at": "2026-04-15T00:00:00Z",
+  "published_by": "odd_domain.project.fpml_trade_representation_standard",
+  "summary": "Published trade fragment materialized from an official FpML commodity-swap confirmation example.",
+  "objects": [
+    "objects/trade_contract_state.json",
+    "objects/commodity_swap_product.json",
+    "objects/party_a_profile.json",
+    "objects/party_b_profile.json",
+    "objects/master_agreement_reference.json"
+  ],
+  "attribute_ledger_entries": [
+    "attribute_ledger/trade_contract_state/trade_identifier.json",
+    "attribute_ledger/trade_contract_state/trade_date.json",
+    "attribute_ledger/trade_contract_state/product_reference.json",
+    "attribute_ledger/trade_contract_state/party_a_reference.json",
+    "attribute_ledger/trade_contract_state/party_b_reference.json",
+    "attribute_ledger/trade_contract_state/master_agreement_reference.json"
+  ],
+  "reference_artifacts": [],
+  "treatments": [
+    "treatments/trade_to_apra_liquidity_candidate.json"
+  ],
+  "edges": [
+    "edges/covariance/trade_to_product.json",
+    "edges/adjoints/trade_to_product.json"
+  ],
+  "projections": [
+    "projections/trade_table.json",
+    "projections/trade_api_contract.json",
+    "projections/trade_schema_contract.json"
+  ],
+  "evidence_manifests": [
+    "evidence/manifests/fpml_trade_manifest.json"
+  ],
+  "links": [
+    "../../review/parsed_trade_observation.json",
+    "../fpml_confirmation_source_domain/fragment.json",
+    "../../inputs/trade_representation/source_authority.md",
+    "../../inputs/trade_representation/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+    "../../inputs/trade_representation/authority/fpml-5-12-examples.html"
+  ]
+}

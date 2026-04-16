@@ -1,0 +1,59 @@
+{
+  "source_id": "apra_liquidity.authority_claims",
+  "published_by": "odd_domain.review.apra_liquidity",
+  "summary": "Bounded extracted authority claims from official APRA liquidity sources for the first real APRA-liquidity domain slice in odd_domain.",
+  "claims": [
+    {
+      "claim_id": "counterparty_bucket_financial_institution",
+      "claim_key": "counterparty_bucket",
+      "value_code": "financial_institution",
+      "source_refs": [
+        "input://apra_liquidity/authority/ars_210_0_liquidity_2023.html",
+        "input://apra_liquidity/authority/apra_liquidity_faq.html"
+      ],
+      "locators": [
+        "definitions.financial_institution",
+        "faq.q25.reporting_classification_examples"
+      ],
+      "summary": "ARS 210.0 defines the financial institution counterparty category by reference to APS 210 paragraph 10(b), and APRA FAQ 25 illustrates how reporting classifications are applied across ARF 210 forms.",
+      "excerpts": [
+        "Financial institution has the meaning given in paragraph 10(b) of Prudential Standard APS 210 Liquidity. ADIs must exclude ADI/bank in this counterparty category if separately indicated in the reporting item.",
+        "Deposits from other entities of national, state, territory and local governments are expected to be reported as a financial institution under item 9.5 ... unless ..."
+      ]
+    },
+    {
+      "claim_id": "liquidity_bucket_contractual_outflow",
+      "claim_key": "liquidity_bucket",
+      "value_code": "contractual_outflow_assessment",
+      "source_refs": [
+        "input://apra_liquidity/authority/ars_210_0_liquidity_2023.html",
+        "input://apra_liquidity/authority/apra_liquidity_faq.html"
+      ],
+      "locators": [
+        "outflows.item_13_6_and_item_15",
+        "faq.q24.collateral_outflows_due_to_market_valuation_changes"
+      ],
+      "summary": "ARS 210.0 includes collateral outflows due to market valuation changes on derivative transactions and other contractual obligations to extend funds, and APRA FAQ 24 explains the derivative collateral outflow treatment under APS 210 paragraph 53.",
+      "excerpts": [
+        "Collateral outflows due to market valuation changes on derivative transactions and other transactions.",
+        "Paragraph 53 of Attachment A to APS 210 requires collateral outflows due to market valuation changes on derivative and other transactions to be calculated as 100 per cent of the largest absolute net 30-day collateral flow realised in the past 24 months."
+      ]
+    },
+    {
+      "claim_id": "agreement_treatment_basis_contractual_review",
+      "claim_key": "agreement_treatment_basis",
+      "value_code": "master_agreement_reviewed",
+      "source_refs": [
+        "input://apra_liquidity/authority/ars_210_0_liquidity_2023.html"
+      ],
+      "locators": [
+        "definitions.guarantees_and_committed_facilities"
+      ],
+      "summary": "ARS 210.0 definitions treat guarantees, contractual performance, and committed facilities as liquidity-relevant contractual semantics; combined with imported trade agreement evidence this supports a reviewed master-agreement treatment basis.",
+      "excerpts": [
+        "Guarantees refers to agreements to be liable for another party’s debt or contractual performance if that other party does not pay or perform.",
+        "Committed facilities refers to contractually irrevocable or only conditionally revocable agreements or other lending commitments."
+      ]
+    }
+  ]
+}

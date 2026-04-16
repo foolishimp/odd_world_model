@@ -1,0 +1,11 @@
+{
+  "schema_kind": "odd_domain.covariance_edge",
+  "schema_version": "v1",
+  "edge_id": "odd_domain.covariance.trade_representation.trade_contract_to_product.v1",
+  "source_object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+  "target_object_ref": "odd_domain.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+  "relationship_kind": "decomposition",
+  "ambiguity_notes": [
+    "Product representation could later be split into richer economic-leg objects."
+  ]
+}

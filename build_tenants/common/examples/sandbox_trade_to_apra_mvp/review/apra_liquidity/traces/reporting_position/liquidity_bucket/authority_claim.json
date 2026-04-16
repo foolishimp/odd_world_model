@@ -1,0 +1,14 @@
+{
+  "schema_kind": "odd_domain.trace_record",
+  "schema_version": "v1",
+  "trace_id": "odd_domain.trace.apra_liquidity.reporting_position.apra_liquidity_position_001.liquidity_bucket.authority_claim.v1",
+  "source_ref": "input://apra_liquidity/authority_claims.json",
+  "source_kind": "document_review",
+  "claim_key": "liquidity_bucket",
+  "locator": "claims.liquidity_bucket_contractual_outflow",
+  "observation_kind": "composed",
+  "observed_at": "2026-04-15T00:10:00Z",
+  "observed_value": "contractual_outflow_assessment",
+  "object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "summary": "ARS 210.0 includes collateral outflows due to market valuation changes on derivative transactions and other contractual obligations to extend funds, and APRA FAQ 24 explains the derivative collateral outflow treatment under APS 210 paragraph 53."
+}

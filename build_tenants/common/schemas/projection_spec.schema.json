@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_domain.projection_spec.schema.json",
+  "title": "ProjectionSpec",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_kind",
+    "schema_version",
+    "projection_id",
+    "projection_kind",
+    "source_refs"
+  ],
+  "properties": {
+    "schema_kind": {
+      "const": "odd_domain.projection_spec"
+    },
+    "schema_version": {
+      "const": "v1"
+    },
+    "projection_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "projection_kind": {
+      "type": "string",
+      "enum": [
+        "table",
+        "schema_contract",
+        "api_contract",
+        "event_contract",
+        "mapping_document",
+        "dbt_model",
+        "lineage_view",
+        "state_timeline",
+        "glossary_page"
+      ]
+    },
+    "source_refs": {
+      "$ref": "world_model_object.schema.json#/$defs/string_array"
+    },
+    "output_summary": {
+      "type": "string"
+    }
+  }
+}

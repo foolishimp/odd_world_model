@@ -1,0 +1,18 @@
+{
+  "schema_kind": "odd_domain.assurance_record",
+  "schema_version": "v1",
+  "assurance_id": "odd_domain.assurance.trade_representation.trade_contract_state.trade_fpml_001.trade_identifier.v1",
+  "object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+  "claim_key": "trade_identifier",
+  "claim_kind": "observed",
+  "accepted_value": "1234",
+  "trace_record_refs": [
+    "review://traces/trade_contract_state/trade_identifier.json"
+  ],
+  "authority_basis": [
+    "document:fpml_confirmation_trade_identifier",
+    "parser:fpml_confirmation_adapter"
+  ],
+  "accepted_at": "2026-04-15T00:00:00Z",
+  "summary": "Trade identifier traced from the official FpML confirmation-view trade header."
+}

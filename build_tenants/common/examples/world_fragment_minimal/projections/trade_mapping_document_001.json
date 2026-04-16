@@ -1,0 +1,13 @@
+{
+  "schema_kind": "odd_domain.projection_spec",
+  "schema_version": "v1",
+  "projection_id": "trade_mapping_document_001",
+  "projection_kind": "mapping_document",
+  "source_refs": [
+    "trade_contract_state_001",
+    "netting_set_001",
+    "trade_to_netting_covariance_001",
+    "trade_to_netting_adjoint_001"
+  ],
+  "output_summary": "Mapping document projection for trade-to-netting proof lane."
+}

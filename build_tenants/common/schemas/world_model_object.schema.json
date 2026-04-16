@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_domain.world_model_object.schema.json",
+  "title": "WorldModelObject",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_kind",
+    "schema_version",
+    "object_id",
+    "object_kind",
+    "bounded_context",
+    "identity",
+    "boundary",
+    "state",
+    "evidence",
+    "cross_domain",
+    "composition"
+  ],
+  "properties": {
+    "schema_kind": {
+      "const": "odd_domain.world_model_object"
+    },
+    "schema_version": {
+      "const": "v1"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "object_kind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bounded_context": {
+      "type": "string",
+      "minLength": 1
+    },
+    "semantic_role": {
+      "type": "string"
+    },
+    "identity": {
+      "$ref": "#/$defs/identity"
+    },
+    "boundary": {
+      "$ref": "#/$defs/boundary"
+    },
+    "state": {
+      "$ref": "#/$defs/state"
+    },
+    "constraints": {
+      "$ref": "#/$defs/constraints"
+    },
+    "evidence": {
+      "$ref": "#/$defs/evidence"
+    },
+    "cross_domain": {
+      "$ref": "#/$defs/cross_domain"
+    },
+    "materialization": {
+      "$ref": "#/$defs/materialization"
+    },
+    "composition": {
+      "$ref": "#/$defs/composition"
+    }
+  },
+  "$defs": {
+    "string_array": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authority_basis"
+      ],
+      "properties": {
+        "authority_basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "aliases": {
+          "$ref": "#/$defs/string_array"
+        }
+      }
+    },
+    "boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "internal_claim",
+        "external_claim"
+      ],
+      "properties": {
+        "internal_claim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "external_claim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "adjacent_objects": {
+          "$ref": "#/$defs/string_array"
+        },
+        "adjacent_domains": {
+          "$ref": "#/$defs/string_array"
+        }
+      }
+    },
+    "state": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lifecycle_state": {
+          "type": "string"
+        },
+        "state_summary": {
+          "type": "string"
+        },
+        "effective_time": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "observation_time": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "ambiguity_status": {
+          "type": "string"
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "invariants": {
+          "$ref": "#/$defs/string_array"
+        },
+        "policies": {
+          "$ref": "#/$defs/string_array"
+        },
+        "valid_transitions": {
+          "$ref": "#/$defs/string_array"
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "refs"
+      ],
+      "properties": {
+        "refs": {
+          "$ref": "#/$defs/string_array"
+        },
+        "summary": {
+          "type": "string"
+        }
+      }
+    },
+    "cross_domain": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "treatment_refs": {
+          "$ref": "#/$defs/string_array"
+        },
+        "covariance_edge_refs": {
+          "$ref": "#/$defs/string_array"
+        },
+        "adjoint_mapping_refs": {
+          "$ref": "#/$defs/string_array"
+        },
+        "loss_notes": {
+          "$ref": "#/$defs/string_array"
+        }
+      }
+    },
+    "materialization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "attribute_ledger_entry_refs"
+      ],
+      "properties": {
+        "projection_summary": {
+          "type": "string"
+        },
+        "attribute_ledger_entry_refs": {
+          "$ref": "#/$defs/string_array"
+        },
+        "assurance_record_refs": {
+          "$ref": "#/$defs/string_array"
+        },
+        "trace_record_refs": {
+          "$ref": "#/$defs/string_array"
+        }
+      }
+    },
+    "composition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fragment_id"
+      ],
+      "properties": {
+        "fragment_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parent_object_refs": {
+          "$ref": "#/$defs/string_array"
+        },
+        "child_object_refs": {
+          "$ref": "#/$defs/string_array"
+        }
+      }
+    }
+  }
+}

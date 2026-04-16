@@ -1,0 +1,24 @@
+{
+  "schema_kind": "odd_domain.attribute_ledger_entry",
+  "schema_version": "v1",
+  "entry_id": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.product_reference.v1",
+  "object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+  "claim_key": "product_reference",
+  "claim_kind": "derived",
+  "value": "odd_domain.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+  "trace_record_refs": [
+    "review://traces/trade_contract_state/product_reference.json"
+  ],
+  "assurance_record_refs": [
+    "review://assurance/trade_contract_state/product_reference.json"
+  ],
+  "published_at": "2026-04-15T00:00:00Z",
+  "qualifiers": {
+    "source_product_id": "",
+    "source_product_type": "CommoditySwap",
+    "leg_count": "2"
+  },
+  "effective_time": "2006-07-01T00:00:00Z",
+  "observed_at": "2026-04-15T00:00:00Z",
+  "summary": "Product reference aligned from the parsed official commoditySwap structure."
+}

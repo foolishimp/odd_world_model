@@ -1,0 +1,14 @@
+{
+  "schema_kind": "odd_domain.trace_record",
+  "schema_version": "v1",
+  "trace_id": "odd_domain.trace.trade_representation.trade_contract_state.trade_fpml_001.party_a_reference.v1",
+  "source_ref": "review://parsed_trade_observation.json",
+  "source_kind": "derived_observation",
+  "claim_key": "party_a_reference",
+  "locator": "trade/commoditySwap/*Leg/*PartyReference[href=partyA]",
+  "observation_kind": "derived",
+  "observed_at": "2026-04-15T00:00:00Z",
+  "observed_value": "odd_domain.world_model_object.trade_representation.party_profile.partyA",
+  "object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+  "summary": "First party reference aligned from commodity-swap leg party references and party elements."
+}

@@ -1,0 +1,14 @@
+{
+  "proof_id": "odd_domain.proof.trade_to_apra.v1",
+  "source_fragment_ref": "odd_domain.fragment.trade_representation.fpml_commodity_swap.v1",
+  "target_fragment_ref": "odd_domain.fragment.apra_liquidity.reporting.sandbox.v1",
+  "treatment_ref": "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1",
+  "covariance_edge_ref": "odd_domain.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
+  "adjoint_mapping_ref": "odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
+  "outputs": {
+    "mapping_document": "proof/conventional/trade_to_apra_mapping_document.md",
+    "dbt_model": "proof/conventional/trade_to_apra_liquidity.sql",
+    "covariant_transform": "proof/covariant/trade_to_apra_covariant_transform.json",
+    "comparison_report": "proof/comparison/trade_to_apra_comparison.md"
+  }
+}

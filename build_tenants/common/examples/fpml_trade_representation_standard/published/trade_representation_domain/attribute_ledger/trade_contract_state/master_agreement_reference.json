@@ -1,0 +1,22 @@
+{
+  "schema_kind": "odd_domain.attribute_ledger_entry",
+  "schema_version": "v1",
+  "entry_id": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.master_agreement_reference.v1",
+  "object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+  "claim_key": "master_agreement_reference",
+  "claim_kind": "derived",
+  "value": "odd_domain.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001",
+  "trace_record_refs": [
+    "review://traces/trade_contract_state/master_agreement_reference.json"
+  ],
+  "assurance_record_refs": [
+    "review://assurance/trade_contract_state/master_agreement_reference.json"
+  ],
+  "published_at": "2026-04-15T00:00:00Z",
+  "qualifiers": {
+    "agreement_type": "ISDA",
+    "agreement_version": null
+  },
+  "observed_at": "2026-04-15T00:00:00Z",
+  "summary": "Master agreement reference aligned from official FpML documentation."
+}
