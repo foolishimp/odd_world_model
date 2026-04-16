@@ -20,7 +20,7 @@ from typing import Any
 SOURCE_PACKAGE = Path(__file__).resolve().parents[1]
 SOURCE_WORKSPACE_ROOT = Path(__file__).resolve().parents[5]
 SOURCE_COMMON_ROOT = SOURCE_WORKSPACE_ROOT / "build_tenants" / "common"
-SOURCE_STANDARDS_ROOT = SOURCE_WORKSPACE_ROOT / ".genesis" / "docs" / "standards"
+SOURCE_RUNTIME_ROOT = SOURCE_WORKSPACE_ROOT / ".genesis"
 PACKAGE_RELATIVE = Path(".odd_domain") / "python" / "code" / "odd_domain"
 INSTALL_MANIFEST_RELATIVE = Path(".odd_domain") / "release" / "install_manifest.json"
 _BOOTLOADER_START = "<!-- ODD_DOMAIN_BOOTLOADER_START -->"
@@ -53,8 +53,8 @@ def _copy_common_assets(target_root: Path) -> Path:
     return _copytree(SOURCE_COMMON_ROOT, target_root / "build_tenants" / "common")
 
 
-def _copy_installed_standards(target_root: Path) -> Path:
-    return _copytree(SOURCE_STANDARDS_ROOT, target_root / ".genesis" / "docs" / "standards")
+def _copy_runtime_surface(target_root: Path) -> Path:
+    return _copytree(SOURCE_RUNTIME_ROOT, target_root / ".genesis")
 
 
 def _bootstrap_workspace(target_root: Path) -> None:
@@ -104,6 +104,7 @@ def _write_install_manifest(target_root: Path, *, project_slug: str) -> Path:
         "source_package": str(SOURCE_PACKAGE),
         "package_path": PACKAGE_RELATIVE.as_posix(),
         "common_assets_path": "build_tenants/common",
+        "runtime_path": ".genesis",
         "standards_path": ".genesis/docs/standards",
         "installation_type": "filesystem_release_install",
     }
@@ -126,6 +127,7 @@ def _workspace_instruction_bootloader(target_root: Path, *, project_slug: str) -
             f"- project slug: `{project_slug}`",
             f"- install manifest: `{manifest}`",
             "- installed package root: `workspace://.odd_domain/python/code/odd_domain`",
+            "- installed runtime root: `workspace://.genesis/`",
             "- installed standards: `workspace://.genesis/docs/standards/`",
             "- common carrier assets: `workspace://build_tenants/common/`",
             "- project-owned domain outputs: `workspace://domain_artifacts/`",
@@ -141,14 +143,16 @@ def _workspace_instruction_bootloader(target_root: Path, *, project_slug: str) -
             "## Operating Rule",
             "- treat the project specification as project authority",
             "- treat the installed `odd_domain` package as the builder substrate",
+            "- treat the installed `.genesis` runtime as the GTL/ABG execution substrate",
             "- publish project-owned domain artifacts under `domain_artifacts/`",
             "- use `build_tenants/common/` as the installed carrier/examples/schema surface",
             "- do not confuse this installed workspace with the source workspace that produced the release",
             "",
             "## First Verification Commands",
-            "- `PYTHONPATH=.odd_domain/python/code python -m odd_domain.world_model.validate build_tenants/common/examples/world_fragment_minimal`",
-            "- `PYTHONPATH=.odd_domain/python/code python -m odd_domain.build_line.fpml_trade_domain`",
-            "- `PYTHONPATH=.odd_domain/python/code python -m odd_domain.build_line.trade_to_apra`",
+            "- `PYTHONPATH=.genesis:.odd_domain/python/code python -m odd_domain.world_model.validate build_tenants/common/examples/world_fragment_minimal`",
+            "- `PYTHONPATH=.genesis:.odd_domain/python/code python -m odd_domain.build_line.fpml_trade_domain`",
+            "- `PYTHONPATH=.genesis:.odd_domain/python/code python -m odd_domain.build_line.trade_to_apra`",
+            "- `PYTHONPATH=.genesis:.odd_domain/python/code python -m odd_domain self-test --workspace .`",
             "",
             "## Interpretation Rule",
             "- the install manifest explains what was stamped into this workspace",
@@ -195,7 +199,7 @@ def install(target_root: Path | str, *, project_slug: str | None = None) -> dict
 
     package_path = _copy_package(root)
     common_assets_path = _copy_common_assets(root)
-    standards_path = _copy_installed_standards(root)
+    runtime_path = _copy_runtime_surface(root)
     manifest_path = _write_install_manifest(root, project_slug=slug)
     agents_md = _install_instruction_bootloader(root, "AGENTS.md", project_slug=slug)
     claude_md = _install_instruction_bootloader(root, "CLAUDE.md", project_slug=slug)
@@ -206,7 +210,8 @@ def install(target_root: Path | str, *, project_slug: str | None = None) -> dict
         "project_slug": slug,
         "package_path": str(package_path.relative_to(root)),
         "common_assets_path": str(common_assets_path.relative_to(root)),
-        "standards_path": str(standards_path.relative_to(root)),
+        "runtime_path": str(runtime_path.relative_to(root)),
+        "standards_path": ".genesis/docs/standards",
         "install_manifest": str(manifest_path.relative_to(root)),
         "agents_md": agents_md,
         "claude_md": claude_md,

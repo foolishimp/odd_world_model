@@ -9,6 +9,7 @@ from typing import Any
 from genesis.result_ingest import ingest_fp_result
 
 from .app import OddDomainApp, start
+from .app import gaps as runtime_gaps
 from .constructor import construct_manifest
 from .function_catalog import active_programs, program_by_name
 
@@ -20,12 +21,38 @@ def programs() -> list[dict[str, Any]]:
     return [entry.to_dict() for entry in active_programs()]
 
 
+def _program_converged(app: OddDomainApp, *, name: str) -> bool:
+    program = program_by_name(name)
+    gap_payload = runtime_gaps(app)
+    passed_edges = {
+        entry.get("edge")
+        for entry in gap_payload.get("gaps", [])
+        if entry.get("delta") == 0.0
+    }
+    return all(edge in passed_edges for edge in program.steps)
+
+
 def run_program(app: OddDomainApp, *, name: str) -> dict[str, Any]:
     program = program_by_name(name)
     workspace_root = app.config.workspace_root
     steps: list[dict[str, Any]] = []
+    remaining_steps = list(program.steps)
 
-    for expected_edge in program.steps:
+    if _program_converged(app, name=name):
+        return {
+            "status": "ok",
+            "program": program.to_dict(),
+            "completed_edges": [],
+            "steps": [],
+            "final_state": {
+                "status": "converged",
+                "scope": "executive_program",
+                "program": program.name,
+            },
+            "already_converged": True,
+        }
+
+    while remaining_steps:
         start_result = start(app)
         if start_result.get("status") == "converged":
             return {
@@ -37,11 +64,16 @@ def run_program(app: OddDomainApp, *, name: str) -> dict[str, Any]:
                 "already_converged": True,
             }
         actual_edge = start_result.get("edge")
-        if actual_edge != expected_edge:
+        if actual_edge not in remaining_steps:
+            if _program_converged(app, name=name):
+                break
             raise RuntimeError(
-                f"executive program {program.name!r} expected {expected_edge!r} "
+                f"executive program {program.name!r} expected one of {remaining_steps!r} "
                 f"but start selected {actual_edge!r}"
             )
+        while remaining_steps and remaining_steps[0] != actual_edge:
+            remaining_steps.pop(0)
+        expected_edge = remaining_steps.pop(0)
         manifest_path = start_result.get("fp_manifest_path")
         if not isinstance(manifest_path, str) or not manifest_path:
             raise RuntimeError(
@@ -59,13 +91,17 @@ def run_program(app: OddDomainApp, *, name: str) -> dict[str, Any]:
             }
         )
 
-    final_state = start(app)
     return {
         "status": "ok",
         "program": program.to_dict(),
         "completed_edges": [step["edge"] for step in steps],
         "steps": steps,
-        "final_state": final_state,
+        "final_state": {
+            "status": "converged",
+            "scope": "executive_program",
+            "program": program.name,
+        },
+        "already_converged": False,
     }
 
 

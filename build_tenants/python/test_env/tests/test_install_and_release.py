@@ -10,16 +10,14 @@ from pathlib import Path
 
 from odd_domain.release.install import install
 
-
-WORKSPACE_ROOT = Path(__file__).resolve().parents[4]
-
-
 def test_release_install_stamps_workspace_layout(tmp_path: Path) -> None:
     target = tmp_path / "sandbox"
     result = install(target, project_slug="sandbox_domain")
 
     assert result["status"] == "installed"
     assert (target / ".odd_domain" / "python" / "code" / "odd_domain").exists()
+    assert (target / ".genesis" / "genesis").exists()
+    assert (target / ".genesis" / "gtl").exists()
     assert (target / "build_tenants" / "common").exists()
     assert (target / ".genesis" / "docs" / "standards").exists()
     assert (target / ".ai-workspace").exists()
@@ -36,13 +34,13 @@ def test_installed_package_exposes_program_catalog_in_sandbox(tmp_path: Path) ->
     target = tmp_path / "sandbox_runtime"
     install(target, project_slug="sandbox_runtime")
 
-    env = os.environ.copy()
-    env["PYTHONPATH"] = f"{WORKSPACE_ROOT / '.genesis'}:{target / '.odd_domain' / 'python' / 'code'}"
-
     completed = subprocess.run(
         [sys.executable, "-m", "odd_domain", "programs", "--workspace", "."],
         cwd=target,
-        env=env,
+        env={
+            **dict(os.environ),
+            "PYTHONPATH": f"{target / '.genesis'}:{target / '.odd_domain' / 'python' / 'code'}",
+        },
         capture_output=True,
         text=True,
         check=True,

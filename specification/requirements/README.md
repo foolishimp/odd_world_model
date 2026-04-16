@@ -26,3 +26,5 @@ Use `.genesis/docs/standards/` as the governing method reference when writing or
 - `50-odd-method-gtl-carrier.md`
 - `60-multi-domain-mapping-capability.md`
 - `70-multi-domain-mapping-constraints.md`
+- `80-world-model-mesh-capability.md`
+- `90-world-model-mesh-constraints.md`

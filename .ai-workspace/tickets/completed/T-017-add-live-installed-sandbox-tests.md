@@ -3,7 +3,7 @@
 - id: T-017
 - title: Add live installed sandbox tests
 - type: feature
-- status: active
+- status: completed
 - goal: proving-wave-03
 - change_intent: turn the installed odd_domain product proof into live tests that exercise installation and the retained trade-plus-regulation world-model scenario the same way odd_sdlc proves its installed runtime
 - change_class: realization_refactor
@@ -92,3 +92,19 @@ and then converge/query the composed world-model line.
 - this is the move from source-workspace proof to installed-product proof
 - the basis should be the existing `odd_sdlc` live installed-test pattern, but
   specialized to the `odd_domain` retained two-domain world-model scenario
+
+## Closure
+
+- installer now stamps the runnable `.genesis` GTL/ABG runtime into the target
+  sandbox instead of only copying standards
+- installed runtime tests now execute through
+  `PYTHONPATH=.genesis:.odd_domain/python/code python -m odd_domain ...`
+- live installed proof now covers:
+  - installed `programs`
+  - installed `self-test`
+  - rerun of installed `self-test` once the executive program is already complete
+  - retained output presence for:
+    - `fpml_confirmation_source_domain`
+    - `trade_representation_domain`
+    - `apra_liquidity_domain`
+    - query projection summary
