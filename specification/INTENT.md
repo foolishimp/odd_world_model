@@ -1,13 +1,13 @@
 # Intent
 
-**ID**: INT-ODD-DOMAIN-001
+**ID**: INT-ODD-WORLD-MODEL-001
 **Status**: Draft
 **Date**: 2026-04-15
 **Profile**: initial vision
 
 ## Purpose
 
-`odd_domain` exists to externalize the world model that domain experts already
+`odd_world_model` exists to externalize the world model that domain experts already
 carry in their heads.
 
 This source project observes existing source systems of record and reconstructs the
@@ -18,16 +18,16 @@ system of record.
 
 This source project exists because downstream outcomes are often produced by opaque
 dumps, ETLs, and transformations that preserve values but lose the semantic
-history required to explain what happened. `odd_domain` reconstructs that
+history required to explain what happened. `odd_world_model` reconstructs that
 history as an inspectable world model rather than accepting detached data as the
 best available representation of reality.
 
-`odd_domain` is the concrete product domain for this line of work. It is
+`odd_world_model` is the concrete product domain for this line of work. It is
 implemented as a specific GTL/ABG domain rather than remaining only as an
 abstract product thesis or generic commentary about domains.
 
-This intent surface defines what the current `odd_domain` source project is
-trying to make true for the next released `odd_domain` product. It is not the
+This intent surface defines what the current `odd_world_model` source project is
+trying to make true for the next released `odd_world_model` product. It is not the
 release artifact itself.
 
 This line is governed by `SPEC_METHOD.md` as refined by
@@ -63,14 +63,14 @@ This line is governed by `SPEC_METHOD.md` as refined by
 
 - The authoritative project truth lives in `specification/`; code is a
   downstream realization of that authority.
-- `odd_domain` is the product domain itself. The project is not only describing
+- `odd_world_model` is the product domain itself. The project is not only describing
   domain comprehension in the abstract; it is realizing that capability as a
   specific GTL/ABG domain.
 - The build line should declare semantic derivation through GTL / graph
   functions and use deterministic `F_D` primitives for record and
   provenance/event materialization rather than allowing one-off loader sprawl.
-- This source project defines the next `odd_domain` product. Installed
-  workspaces consume released `odd_domain` products to build project-owned
+- This source project defines the next `odd_world_model` product. Installed
+  workspaces consume released `odd_world_model` products to build project-owned
   domain artifacts.
 - Published domain artifacts are the durable semantic publication units. They
   can be referenced, versioned, composed into higher-order world models, and
@@ -78,7 +78,7 @@ This line is governed by `SPEC_METHOD.md` as refined by
 - Query and traversal are currently part of the delivery line, but the serving
   mechanism for that work may later be offloaded into a dedicated query plane
   without changing the constitutional identity of the product.
-- Source systems remain sovereign for operational truth. `odd_domain` observes,
+- Source systems remain sovereign for operational truth. `odd_world_model` observes,
   inspects, and comprehends them; it does not stand in their way.
 - Catalogs and metadata systems are evidence surfaces, not primary semantic
   authority. The strongest comprehension comes from understanding the functions,
@@ -91,7 +91,7 @@ This line is governed by `SPEC_METHOD.md` as refined by
 - Cross-domain transformation is not plain field mapping. Every transformation
   is a semantic treatment and must preserve or explicitly declare changes in
   meaning, authority, freshness, and loss.
-- `odd_domain` does not replace `data_mapper`; it builds the world model,
+- `odd_world_model` does not replace `data_mapper`; it builds the world model,
   Markov objects, treatment surfaces, and covariance relationships that make
   lawful mapping possible.
 - The core abstractions remain generic across domains. Specific industries or

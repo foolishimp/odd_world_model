@@ -1,10 +1,10 @@
 {
-  "schema_kind": "odd_domain.world_fragment",
+  "schema_kind": "odd_world_model.world_fragment",
   "schema_version": "v1",
-  "fragment_id": "odd_domain.fragment.trade_representation.fpml_commodity_swap.v1",
+  "fragment_id": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
   "bounded_context": "trade_representation.fpml_confirmation.commodity_swap",
   "published_at": "2026-04-15T00:00:00Z",
-  "published_by": "odd_domain.project.fpml_trade_representation_standard",
+  "published_by": "odd_world_model.project.fpml_trade_representation_standard",
   "summary": "Published trade fragment materialized from an official FpML commodity-swap confirmation example.",
   "objects": [
     "objects/trade_contract_state.json",

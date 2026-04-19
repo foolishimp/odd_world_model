@@ -1,5 +1,5 @@
 {
-  "schema_kind": "odd_domain.evidence_manifest",
+  "schema_kind": "odd_world_model.evidence_manifest",
   "schema_version": "v1",
   "manifest_id": "trade_capture_manifest_001",
   "summary": "Minimal example evidence manifest for the trade capture fragment.",

@@ -1,13 +1,13 @@
 # Sandbox Trade To APRA MVP
 
-This sandbox is the first executable `odd_domain` MVP lane.
+This sandbox is the first executable `odd_world_model` MVP lane.
 
 It exists to prove the lifecycle end to end:
 
 1. bounded source inputs are provided
-2. `odd_domain` imports a real FpML-derived trade artifact and combines it with
+2. `odd_world_model` imports a real FpML-derived trade artifact and combines it with
    bounded APRA-liquidity inputs
-3. `odd_domain` builds and publishes the resulting two-domain corpus in the
+3. `odd_world_model` builds and publishes the resulting two-domain corpus in the
    common JSON carrier
 4. the team inspects the resulting representations to find missing semantics
 
@@ -43,32 +43,32 @@ inspection, not treated as a finished ontology.
 Run the sandbox builder:
 
 ```bash
-PYTHONPATH=build_tenants/python/code python -m odd_domain.build_line.trade_to_apra
+PYTHONPATH=build_tenants/python/code python -m odd_world_model.build_line.trade_to_apra
 ```
 
 Validate the generated fragments:
 
 ```bash
-PYTHONPATH=build_tenants/python/code python -m odd_domain.world_model.validate build_tenants/common/examples/sandbox_trade_to_apra_mvp/published
+PYTHONPATH=build_tenants/python/code python -m odd_world_model.world_model.validate build_tenants/common/examples/sandbox_trade_to_apra_mvp/published
 ```
 
 Generate the first proof lane:
 
 ```bash
-PYTHONPATH=build_tenants/python/code python -m odd_domain.proof.trade_to_apra
+PYTHONPATH=build_tenants/python/code python -m odd_world_model.proof.trade_to_apra
 ```
 
 Generate the current query/traversal lane:
 
 ```bash
-PYTHONPATH=build_tenants/python/code python -m odd_domain.query.trade_to_apra
+PYTHONPATH=build_tenants/python/code python -m odd_world_model.query.trade_to_apra
 ```
 
 ## Current Intent
 
 This sandbox is not trying to prove enterprise coverage.
 
-It is trying to prove that `odd_domain` can:
+It is trying to prove that `odd_world_model` can:
 
 - observe bounded input evidence and import an upstream published trade artifact
 - publish initial semantic kernel objects in a composed sandbox corpus

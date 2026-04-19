@@ -10,12 +10,12 @@
 
 ## Context
 
-Building `odd_domain` exposed a gap in the current `odd_sdlc` UX: product-shape
+Building `odd_world_model` exposed a gap in the current `odd_sdlc` UX: product-shape
 discovery found a concrete build need before the workspace had a local ticket
 carrier for turning that discovery into bounded execution work.
 
 The immediate build need was the first common representation tenant for the
-`odd_domain` semantic kernel.
+`odd_world_model` semantic kernel.
 
 That tenant needed to define the file-native carrier for:
 
@@ -29,7 +29,7 @@ That tenant needed to define the file-native carrier for:
 
 ## Acceptance
 
-- a first common representation tenant is defined for `odd_domain`
+- a first common representation tenant is defined for `odd_world_model`
 - the tenant uses JSON as the initial canonical object carrier
 - the tenant covers world fragments, world-model objects, Markov objects,
   treatment surfaces, covariance edges, adjoint mappings, and projection
@@ -55,7 +55,7 @@ Completed by:
 
 ## Links
 
-- comment: `.ai-workspace/comments/codex/20260414T020656Z_STRATEGY_odd-domain-product-direction.md`
+- comment: `.ai-workspace/comments/codex/20260414T020656Z_STRATEGY_odd-world-model-product-direction.md`
 - comment: `.ai-workspace/comments/codex/20260414T155356Z_STRATEGY_world-model-evidence-kernel-and-projections.md`
 - comment: `.ai-workspace/comments/codex/20260414T161949Z_TRIAGE_T-001-world-model-representation-tenant.md`
 - standard: `/Users/jim/src/apps/specification_methodology/specification/standards/WORLD_MODEL_GUIDE.md`

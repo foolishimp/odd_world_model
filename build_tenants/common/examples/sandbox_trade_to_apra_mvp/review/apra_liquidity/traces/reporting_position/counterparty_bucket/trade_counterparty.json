@@ -1,7 +1,7 @@
 {
-  "schema_kind": "odd_domain.trace_record",
+  "schema_kind": "odd_world_model.trace_record",
   "schema_version": "v1",
-  "trace_id": "odd_domain.trace.apra_liquidity.reporting_position.apra_liquidity_position_001.counterparty_bucket.trade_counterparty.v1",
+  "trace_id": "odd_world_model.trace.apra_liquidity.reporting_position.apra_liquidity_position_001.counterparty_bucket.trade_counterparty.v1",
   "source_ref": "review://parsed_trade_observation.json",
   "source_kind": "data",
   "claim_key": "counterparty_bucket",
@@ -12,6 +12,6 @@
     "party_id": "549300KFSLY4U7N3LL12",
     "party_name": "Bank"
   },
-  "object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
   "summary": "Imported trade counterparty evidence for the bounded APRA classification."
 }

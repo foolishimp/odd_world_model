@@ -1,7 +1,7 @@
 {
-  "schema_kind": "odd_domain.trace_record",
+  "schema_kind": "odd_world_model.trace_record",
   "schema_version": "v1",
-  "trace_id": "odd_domain.trace.apra_liquidity.reporting_position.apra_liquidity_position_001.reporting_lifecycle_state.domain_input.v1",
+  "trace_id": "odd_world_model.trace.apra_liquidity.reporting_position.apra_liquidity_position_001.reporting_lifecycle_state.domain_input.v1",
   "source_ref": "input://apra_liquidity/domain_input.json",
   "source_kind": "data",
   "claim_key": "reporting_lifecycle_state",
@@ -9,6 +9,6 @@
   "observation_kind": "projected",
   "observed_at": "2026-04-15T00:10:00Z",
   "observed_value": "draft_classified",
-  "object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
   "summary": "Current bounded reporting-position lifecycle carried in the retained domain input."
 }

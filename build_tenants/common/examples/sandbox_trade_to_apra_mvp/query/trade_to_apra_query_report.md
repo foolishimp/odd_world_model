@@ -3,8 +3,8 @@
 ## Current Query Lane
 
 - lane: filesystem-first
-- source fragment: `odd_domain.fragment.trade_representation.fpml_commodity_swap.v1`
-- target fragment: `odd_domain.fragment.apra_liquidity.reporting.sandbox.v1`
+- source fragment: `odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1`
+- target fragment: `odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1`
 
 ## Explainability Query
 
@@ -15,7 +15,7 @@ Answer:
 The reporting position carries a ledger-backed counterparty-bucket claim. That claim is accepted through an assurance record and traced both to the official APRA authority-claim surface and to the imported trade counterparty evidence.
 
 Path:
-- object cut: `odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001`
+- object cut: `odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001`
 - ledger entry: `ledger://reporting_position/counterparty_bucket.json`
 - assurance: `review://apra_liquidity/assurance/reporting_position/counterparty_bucket.json`
 
@@ -32,7 +32,7 @@ Resolved files:
 - `review/parsed_trade_observation.json`
 
 Value:
-- `odd_domain.world_model_object.apra_liquidity.counterparty_bucket.financial_institution`
+- `odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution`
 
 Authority basis:
 - official:ars_210_0.financial_institution_counterparty_category
@@ -49,11 +49,11 @@ Answer:
 The path is governed by the published trade object cut, the cross-domain treatment, the covariance candidate, and the adjoint mapping that declares what is preserved, lost, and added in the APRA interpretation.
 
 Published path:
-- source object: `odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001`
-- treatment: `odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1`
-- covariance: `odd_domain.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
-- adjoint: `odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
-- target object: `odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001`
+- source object: `odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001`
+- treatment: `odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1`
+- covariance: `odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
+- adjoint: `odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
+- target object: `odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001`
 
 Preserved structure:
 - `trade_identifier`

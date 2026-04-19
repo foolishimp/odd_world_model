@@ -1,7 +1,7 @@
 {
-  "schema_kind": "odd_domain.world_model_object",
+  "schema_kind": "odd_world_model.world_model_object",
   "schema_version": "v1",
-  "object_id": "odd_domain.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
+  "object_id": "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
   "object_kind": "ApraAgreementTreatmentBasis",
   "bounded_context": "sandbox.apra_liquidity.reporting",
   "semantic_role": "Regulatory agreement treatment basis composed against the imported master-agreement reference.",
@@ -15,11 +15,11 @@
     "internal_claim": "Agreement treatment basis is internal to the APRA-liquidity interpretation.",
     "external_claim": "Detailed legal documentation and FpML master-agreement reference remain external.",
     "adjacent_objects": [
-      "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
-      "odd_domain.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001"
+      "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001"
     ],
     "adjacent_domains": [
-      "odd_domain.domain.trade_representation.fpml_confirmation.v1"
+      "odd_world_model.domain.trade_representation.fpml_confirmation.v1"
     ]
   },
   "state": {
@@ -48,23 +48,23 @@
   },
   "cross_domain": {
     "treatment_refs": [
-      "odd_domain.treatment.apra_liquidity.reporting_position.classification.v1",
-      "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1"
+      "odd_world_model.treatment.apra_liquidity.reporting_position.classification.v1",
+      "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1"
     ],
     "covariance_edge_refs": [
-      "odd_domain.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+      "odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
     ],
     "adjoint_mapping_refs": [
-      "odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+      "odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
     ],
     "loss_notes": [
       "Regulatory agreement treatment basis does not preserve the full legal semantics of the source agreement."
     ]
   },
   "composition": {
-    "fragment_id": "odd_domain.fragment.apra_liquidity.reporting.sandbox.v1",
+    "fragment_id": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
     "parent_object_refs": [
-      "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+      "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
     ],
     "child_object_refs": []
   }

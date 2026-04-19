@@ -1,19 +1,19 @@
-# Validates: REQ-ODD-DOMAIN-ODD-CARRIER-001
-# Validates: REQ-ODD-DOMAIN-ODD-CARRIER-002
-# Validates: REQ-ODD-DOMAIN-ODD-CARRIER-003
-# Validates: REQ-ODD-DOMAIN-ODD-CARRIER-004
-# Validates: REQ-ODD-DOMAIN-ODD-CARRIER-005
-# Validates: REQ-ODD-DOMAIN-ODD-CARRIER-006
-# Validates: REQ-ODD-DOMAIN-BUILD-CONSTRAINT-001
-# Validates: REQ-ODD-DOMAIN-BUILD-VERIFY-004
+# Validates: REQ-ODD-WORLD-MODEL-ODD-CARRIER-001
+# Validates: REQ-ODD-WORLD-MODEL-ODD-CARRIER-002
+# Validates: REQ-ODD-WORLD-MODEL-ODD-CARRIER-003
+# Validates: REQ-ODD-WORLD-MODEL-ODD-CARRIER-004
+# Validates: REQ-ODD-WORLD-MODEL-ODD-CARRIER-005
+# Validates: REQ-ODD-WORLD-MODEL-ODD-CARRIER-006
+# Validates: REQ-ODD-WORLD-MODEL-BUILD-CONSTRAINT-001
+# Validates: REQ-ODD-WORLD-MODEL-BUILD-VERIFY-004
 from __future__ import annotations
 
 from pathlib import Path
 
-from odd_domain.function_catalog import active_programs, program_by_name
-from odd_domain.query.domain import query_domain
-from odd_domain.query_contract import query_domain_contract
-from odd_domain.workspace_assets import bootstrap_assets, bootstrap_bindings
+from odd_world_model.function_catalog import active_programs, program_by_name
+from odd_world_model.query.domain import query_domain
+from odd_world_model.query_contract import query_domain_contract
+from odd_world_model.workspace_assets import bootstrap_assets, bootstrap_bindings
 
 
 WORKSPACE_ROOT = Path(__file__).resolve().parents[4]

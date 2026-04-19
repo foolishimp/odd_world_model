@@ -5,7 +5,7 @@
 - type: feature
 - status: completed
 - goal: proving-wave-01
-- change_intent: refactor the existing sandbox/proof prototype into a first bounded odd_domain attribute-ledger slice that conforms to the ratified requirement and design line while preserving end-to-end provenance in the current proving lane
+- change_intent: refactor the existing sandbox/proof prototype into a first bounded odd_world_model attribute-ledger slice that conforms to the ratified requirement and design line while preserving end-to-end provenance in the current proving lane
 - change_class: realization_refactor
 - re_entry_point: realized_surface
 - triaged_at: 2026-04-15

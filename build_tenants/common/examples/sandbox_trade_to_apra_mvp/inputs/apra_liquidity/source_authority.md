@@ -1,7 +1,7 @@
 # APRA Liquidity Source Authority
 
 This source-authority surface records the bounded official APRA liquidity
-documents pulled into the retained `odd_domain` trade-to-APRA proving slice.
+documents pulled into the retained `odd_world_model` trade-to-APRA proving slice.
 
 The current retained APRA input remains an interpreted local regulatory slice,
 not a direct row-for-row extraction from APRA forms. Its role is now explicit:

@@ -21,7 +21,7 @@ This lane now publishes two bounded domains over that one source truth:
    The upstream source-truth domain preserving the official FpML trade header,
    commodity swap surface, and fixed/floating leg structure.
 2. `trade_representation_domain`
-   The downstream interpreted world-model domain built by `odd_domain` from the
+   The downstream interpreted world-model domain built by `odd_world_model` from the
    official source domain.
 
 The internal review surface `parsed_trade_observation.json` is only a constructor

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "odd_domain.world_model_object.schema.json",
+  "$id": "odd_world_model.world_model_object.schema.json",
   "title": "WorldModelObject",
   "type": "object",
   "additionalProperties": false,
@@ -19,7 +19,7 @@
   ],
   "properties": {
     "schema_kind": {
-      "const": "odd_domain.world_model_object"
+      "const": "odd_world_model.world_model_object"
     },
     "schema_version": {
       "const": "v1"

@@ -1,16 +1,16 @@
 {
-  "schema_kind": "odd_domain.mapping_analysis",
+  "schema_kind": "odd_world_model.mapping_analysis",
   "schema_version": "v1",
-  "analysis_id": "odd_domain.mapping_analysis.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
-  "source_fragment_ref": "odd_domain.fragment.trade_representation.fpml_commodity_swap.v1",
-  "target_fragment_ref": "odd_domain.fragment.apra_liquidity.reporting.sandbox.v1",
+  "analysis_id": "odd_world_model.mapping_analysis.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
+  "source_fragment_ref": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
+  "target_fragment_ref": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
   "source_domain_ref": "trade_representation.fpml_confirmation.commodity_swap",
   "target_domain_ref": "sandbox.apra_liquidity.reporting",
   "object_pairings": [
     {
-      "pairing_id": "odd_domain.mapping_pair.trade_to_apra.primary_object_pair.v1",
-      "source_object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
-      "target_object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "pairing_id": "odd_world_model.mapping_pair.trade_to_apra.primary_object_pair.v1",
+      "source_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
       "category": "treatment_projection",
       "confidence_band": "strong",
       "rationale": [
@@ -19,74 +19,74 @@
         "target object evidence declares imported trade artifact dependence"
       ],
       "supporting_refs": [
-        "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1",
-        "odd_domain.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
-        "odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+        "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1",
+        "odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
+        "odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
       ]
     }
   ],
   "source_attribute_inventory": [
     {
-      "entry_id": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.master_agreement_reference.v1",
+      "entry_id": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.master_agreement_reference.v1",
       "claim_key": "master_agreement_reference",
       "summary": "Master agreement reference aligned from official FpML documentation."
     },
     {
-      "entry_id": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.party_a_reference.v1",
+      "entry_id": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.party_a_reference.v1",
       "claim_key": "party_a_reference",
       "summary": "First party reference aligned from commodity-swap leg party references and party elements."
     },
     {
-      "entry_id": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.party_b_reference.v1",
+      "entry_id": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.party_b_reference.v1",
       "claim_key": "party_b_reference",
       "summary": "Second party reference aligned from commodity-swap leg party references and party elements."
     },
     {
-      "entry_id": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.product_reference.v1",
+      "entry_id": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.product_reference.v1",
       "claim_key": "product_reference",
       "summary": "Product reference aligned from the parsed official commoditySwap structure."
     },
     {
-      "entry_id": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.trade_date.v1",
+      "entry_id": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.trade_date.v1",
       "claim_key": "trade_date",
       "summary": "Trade date traced from the official FpML confirmation-view trade header."
     },
     {
-      "entry_id": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.trade_identifier.v1",
+      "entry_id": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.trade_identifier.v1",
       "claim_key": "trade_identifier",
       "summary": "Trade identifier traced from the official FpML confirmation-view trade header."
     }
   ],
   "target_attribute_inventory": [
     {
-      "entry_id": "odd_domain.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.agreement_treatment_basis.v1",
+      "entry_id": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.agreement_treatment_basis.v1",
       "claim_key": "agreement_treatment_basis",
       "summary": "Agreement treatment basis composed from official APRA contractual-treatment guidance and imported master-agreement evidence."
     },
     {
-      "entry_id": "odd_domain.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.counterparty_bucket.v1",
+      "entry_id": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.counterparty_bucket.v1",
       "claim_key": "counterparty_bucket",
       "summary": "Counterparty bucket classified from official APRA reporting definitions and imported trade counterparty evidence."
     },
     {
-      "entry_id": "odd_domain.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.liquidity_bucket.v1",
+      "entry_id": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.liquidity_bucket.v1",
       "claim_key": "liquidity_bucket",
       "summary": "Liquidity bucket composed from official APRA liquidity outflow guidance and imported derivative trade evidence."
     },
     {
-      "entry_id": "odd_domain.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.reporting_lifecycle_state.v1",
+      "entry_id": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.reporting_lifecycle_state.v1",
       "claim_key": "reporting_lifecycle_state",
       "summary": "Lifecycle state projected from the current retained APRA-liquidity domain-build state."
     }
   ],
   "selected_attribute_mappings": [
     {
-      "mapping_id": "odd_domain.mapping.trade_to_apra.party_a_to_counterparty_bucket.v1",
-      "source_object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
-      "source_attribute_ref": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.party_a_reference.v1",
+      "mapping_id": "odd_world_model.mapping.trade_to_apra.party_a_to_counterparty_bucket.v1",
+      "source_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "source_attribute_ref": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.party_a_reference.v1",
       "source_claim_key": "party_a_reference",
-      "target_object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
-      "target_attribute_ref": "odd_domain.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.counterparty_bucket.v1",
+      "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "target_attribute_ref": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.counterparty_bucket.v1",
       "target_claim_key": "counterparty_bucket",
       "category": "treatment_projection",
       "directionality": "source_to_target",
@@ -97,10 +97,10 @@
         "target claim is a regulatory classification over the imported party reference"
       ],
       "evidence_basis": [
-        "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1",
-        "odd_domain.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
-        "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.party_a_reference.v1",
-        "odd_domain.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.counterparty_bucket.v1"
+        "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1",
+        "odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
+        "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.party_a_reference.v1",
+        "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.counterparty_bucket.v1"
       ],
       "ambiguity_notes": [
         "The retained slice does not yet model counterparty-side role selection generically across both trade parties."
@@ -108,12 +108,12 @@
       "declared_loss": []
     },
     {
-      "mapping_id": "odd_domain.mapping.trade_to_apra.master_agreement_to_agreement_treatment_basis.v1",
-      "source_object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
-      "source_attribute_ref": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.master_agreement_reference.v1",
+      "mapping_id": "odd_world_model.mapping.trade_to_apra.master_agreement_to_agreement_treatment_basis.v1",
+      "source_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "source_attribute_ref": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.master_agreement_reference.v1",
       "source_claim_key": "master_agreement_reference",
-      "target_object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
-      "target_attribute_ref": "odd_domain.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.agreement_treatment_basis.v1",
+      "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "target_attribute_ref": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.agreement_treatment_basis.v1",
       "target_claim_key": "agreement_treatment_basis",
       "category": "treatment_projection",
       "directionality": "source_to_target",
@@ -124,21 +124,21 @@
         "adjoint support declares interpret-back over the agreement surface"
       ],
       "evidence_basis": [
-        "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1",
-        "odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
-        "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.master_agreement_reference.v1",
-        "odd_domain.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.agreement_treatment_basis.v1"
+        "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1",
+        "odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
+        "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.master_agreement_reference.v1",
+        "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.agreement_treatment_basis.v1"
       ],
       "ambiguity_notes": [],
       "declared_loss": []
     },
     {
-      "mapping_id": "odd_domain.mapping.trade_to_apra.product_to_liquidity_bucket.v1",
-      "source_object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
-      "source_attribute_ref": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.product_reference.v1",
+      "mapping_id": "odd_world_model.mapping.trade_to_apra.product_to_liquidity_bucket.v1",
+      "source_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "source_attribute_ref": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.product_reference.v1",
       "source_claim_key": "product_reference",
-      "target_object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
-      "target_attribute_ref": "odd_domain.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.liquidity_bucket.v1",
+      "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "target_attribute_ref": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.liquidity_bucket.v1",
       "target_claim_key": "liquidity_bucket",
       "category": "derived_mapping",
       "directionality": "source_to_target",
@@ -149,10 +149,10 @@
         "source product economics are narrowed into a regulatory liquidity bucket"
       ],
       "evidence_basis": [
-        "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1",
-        "odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
-        "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.product_reference.v1",
-        "odd_domain.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.liquidity_bucket.v1"
+        "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1",
+        "odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
+        "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.product_reference.v1",
+        "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.liquidity_bucket.v1"
       ],
       "ambiguity_notes": [
         "Detailed commodity economics do not survive intact across the regulatory treatment boundary."
@@ -164,19 +164,19 @@
   ],
   "unassigned_source_attributes": [
     {
-      "entry_id": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.party_b_reference.v1",
+      "entry_id": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.party_b_reference.v1",
       "claim_key": "party_b_reference",
       "summary": "Second party reference aligned from commodity-swap leg party references and party elements.",
       "reason": "No explicit retained target attribute currently materializes this source semantic in the bounded APRA slice."
     },
     {
-      "entry_id": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.trade_date.v1",
+      "entry_id": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.trade_date.v1",
       "claim_key": "trade_date",
       "summary": "Trade date traced from the official FpML confirmation-view trade header.",
       "reason": "No explicit retained target attribute currently materializes this source semantic in the bounded APRA slice."
     },
     {
-      "entry_id": "odd_domain.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.trade_identifier.v1",
+      "entry_id": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.trade_identifier.v1",
       "claim_key": "trade_identifier",
       "summary": "Trade identifier traced from the official FpML confirmation-view trade header.",
       "reason": "No explicit retained target attribute currently materializes this source semantic in the bounded APRA slice."
@@ -184,15 +184,15 @@
   ],
   "unassigned_target_attributes": [
     {
-      "entry_id": "odd_domain.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.reporting_lifecycle_state.v1",
+      "entry_id": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.reporting_lifecycle_state.v1",
       "claim_key": "reporting_lifecycle_state",
       "summary": "Lifecycle state projected from the current retained APRA-liquidity domain-build state.",
       "reason": "No retained source attribute currently maps to this target reporting semantic in the bounded trade slice."
     }
   ],
   "supporting_refs": {
-    "treatment_ref": "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1",
-    "covariance_ref": "odd_domain.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
-    "adjoint_ref": "odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+    "treatment_ref": "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1",
+    "covariance_ref": "odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
+    "adjoint_ref": "odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
   }
 }

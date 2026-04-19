@@ -17,7 +17,7 @@
 
 ## Context
 
-`odd_domain` already has a working prototype and proving corpus.
+`odd_world_model` already has a working prototype and proving corpus.
 
 That prototype pre-dates the current attribute-ledger build line and should
 therefore be treated as a readback surface, not as the authority to preserve.

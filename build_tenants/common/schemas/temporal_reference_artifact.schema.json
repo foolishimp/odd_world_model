@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "odd_domain.temporal_reference_artifact.schema.json",
+  "$id": "odd_world_model.temporal_reference_artifact.schema.json",
   "title": "TemporalReferenceArtifact",
   "type": "object",
   "additionalProperties": false,
@@ -19,7 +19,7 @@
   ],
   "properties": {
     "schema_kind": {
-      "const": "odd_domain.temporal_reference_artifact"
+      "const": "odd_world_model.temporal_reference_artifact"
     },
     "schema_version": {
       "const": "v1"

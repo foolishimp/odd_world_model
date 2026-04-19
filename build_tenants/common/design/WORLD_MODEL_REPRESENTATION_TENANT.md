@@ -2,11 +2,11 @@
 
 **Status**: Draft
 **Scope**: Shared realization design for the canonical file-native
-representation carrier used by `odd_domain`
+representation carrier used by `odd_world_model`
 
 ## Purpose
 
-Define the first common tenant law for the `odd_domain` semantic kernel.
+Define the first common tenant law for the `odd_world_model` semantic kernel.
 
 This tenant is the shared representation carrier for published world fragments,
 world-model objects, Markov objects, treatment surfaces, covariance edges,

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "odd_domain.attribute_ledger_entry.schema.json",
+  "$id": "odd_world_model.attribute_ledger_entry.schema.json",
   "title": "AttributeLedgerEntry",
   "type": "object",
   "additionalProperties": false,
@@ -18,7 +18,7 @@
   ],
   "properties": {
     "schema_kind": {
-      "const": "odd_domain.attribute_ledger_entry"
+      "const": "odd_world_model.attribute_ledger_entry"
     },
     "schema_version": {
       "const": "v1"

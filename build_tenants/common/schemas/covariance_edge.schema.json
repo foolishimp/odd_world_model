@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "odd_domain.covariance_edge.schema.json",
+  "$id": "odd_world_model.covariance_edge.schema.json",
   "title": "CovarianceEdge",
   "type": "object",
   "additionalProperties": false,
@@ -14,7 +14,7 @@
   ],
   "properties": {
     "schema_kind": {
-      "const": "odd_domain.covariance_edge"
+      "const": "odd_world_model.covariance_edge"
     },
     "schema_version": {
       "const": "v1"

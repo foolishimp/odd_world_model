@@ -2,7 +2,7 @@
   "source_id": "sandbox.apra_liquidity",
   "published_by": "team.sandbox.regulatory",
   "bounded_context": "sandbox.apra_liquidity.reporting",
-  "summary": "Sandbox APRA liquidity input for the first odd_domain MVP lane.",
+  "summary": "Sandbox APRA liquidity input for the first odd_world_model MVP lane.",
   "reporting_position": {
     "position_id": "apra_liquidity_position_001",
     "reporting_regime": "APRA liquidity",

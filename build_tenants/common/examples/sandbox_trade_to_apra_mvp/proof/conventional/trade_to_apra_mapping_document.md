@@ -2,18 +2,18 @@
 
 ## Scope
 
-- Source fragment: `odd_domain.fragment.trade_representation.fpml_commodity_swap.v1`
-- Target fragment: `odd_domain.fragment.apra_liquidity.reporting.sandbox.v1`
-- Treatment: `odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1`
-- Covariance edge: `odd_domain.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
-- Adjoint mapping: `odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
+- Source fragment: `odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1`
+- Target fragment: `odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1`
+- Treatment: `odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1`
+- Covariance edge: `odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
+- Adjoint mapping: `odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
 
 ## Object Mapping
 
-- `odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001` -> `odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001`
-- `odd_domain.world_model_object.trade_representation.commodity_swap_product.product_fpml_001` -> `odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001`
-- `odd_domain.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001` -> `odd_domain.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed`
-- `odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001` -> `odd_domain.world_model_object.apra_liquidity.counterparty_bucket.financial_institution` via counterparty and reporting treatment
+- `odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001` -> `odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001`
+- `odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001` -> `odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001`
+- `odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001` -> `odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed`
+- `odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001` -> `odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution` via counterparty and reporting treatment
 
 ## Preserved Structure
 

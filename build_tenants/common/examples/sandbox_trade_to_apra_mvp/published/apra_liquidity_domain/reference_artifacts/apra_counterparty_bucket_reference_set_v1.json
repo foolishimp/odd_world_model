@@ -1,7 +1,7 @@
 {
-  "schema_kind": "odd_domain.temporal_reference_artifact",
+  "schema_kind": "odd_world_model.temporal_reference_artifact",
   "schema_version": "v1",
-  "artifact_id": "odd_domain.reference_artifact.apra_liquidity.counterparty_bucket_set.v1",
+  "artifact_id": "odd_world_model.reference_artifact.apra_liquidity.counterparty_bucket_set.v1",
   "artifact_kind": "classification_set",
   "bounded_context": "sandbox.apra_liquidity.reference_data",
   "semantic_role": "Sandbox APRA-liquidity counterparty bucket reference set used by the reporting position.",
@@ -49,19 +49,19 @@
   },
   "usage": {
     "object_refs": [
-      "odd_domain.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
-      "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+      "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+      "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
     ],
     "attribute_refs": [
-      "odd_domain.attribute.apra_liquidity.reporting_position.counterparty_bucket"
+      "odd_world_model.attribute.apra_liquidity.reporting_position.counterparty_bucket"
     ],
     "treatment_refs": [
-      "odd_domain.treatment.apra_liquidity.reporting_position.classification.v1",
-      "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1"
+      "odd_world_model.treatment.apra_liquidity.reporting_position.classification.v1",
+      "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1"
     ]
   },
   "composition": {
-    "fragment_id": "odd_domain.fragment.apra_liquidity.reporting.sandbox.v1",
+    "fragment_id": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
     "parent_object_refs": [],
     "child_object_refs": []
   }

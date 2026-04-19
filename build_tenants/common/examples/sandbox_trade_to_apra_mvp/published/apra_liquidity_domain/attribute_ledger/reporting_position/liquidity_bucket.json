@@ -1,8 +1,8 @@
 {
-  "schema_kind": "odd_domain.attribute_ledger_entry",
+  "schema_kind": "odd_world_model.attribute_ledger_entry",
   "schema_version": "v1",
-  "entry_id": "odd_domain.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.liquidity_bucket.v1",
-  "object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "entry_id": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.liquidity_bucket.v1",
+  "object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
   "claim_key": "liquidity_bucket",
   "claim_kind": "composed",
   "value": "contractual_outflow_assessment",

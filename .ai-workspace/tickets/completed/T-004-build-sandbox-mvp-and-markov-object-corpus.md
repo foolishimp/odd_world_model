@@ -11,7 +11,7 @@
 
 ## Context
 
-`odd_domain` needed a sandbox MVP that exercised the lifecycle end to end.
+`odd_world_model` needed a sandbox MVP that exercised the lifecycle end to end.
 
 The resulting sandbox now:
 
@@ -23,7 +23,7 @@ The resulting sandbox now:
 
 ## Acceptance
 
-- a sandbox install path exists for the first `odd_domain` MVP lane
+- a sandbox install path exists for the first `odd_world_model` MVP lane
 - the sandbox can ingest bounded source inputs such as data, schema, docs, or
   similar evidence
 - the first sandbox corpus includes the published trade-representation domain
@@ -47,13 +47,13 @@ Completed by:
 - creating the sandbox lane under
   `build_tenants/common/examples/sandbox_trade_to_apra_mvp/`
 - materializing the composed two-domain corpus with
-  `build_tenants/python/code/odd_domain/sandbox/trade_to_apra.py`
+  `build_tenants/python/code/odd_world_model/sandbox/trade_to_apra.py`
 - importing the bounded FpML trade artifact instead of relying only on
   hand-authored synthetic trade input
 - repricing the APRA side and stitching candidates to FQN-based semantic
   identifiers
 - validating the published sandbox corpus with
-  `python -m odd_domain.world_model.validate`
+  `python -m odd_world_model.world_model.validate`
 
 ## Links
 
@@ -63,5 +63,5 @@ Completed by:
 - product: `specification/PRODUCT.md`
 - goals: `specification/GOALS.md`
 - sandbox: `build_tenants/common/examples/sandbox_trade_to_apra_mvp/README.md`
-- builder: `build_tenants/python/code/odd_domain/sandbox/trade_to_apra.py`
+- builder: `build_tenants/python/code/odd_world_model/sandbox/trade_to_apra.py`
 - source_trade: `.ai-workspace/tickets/completed/T-005-ingest-real-trade-representation-standard.md`

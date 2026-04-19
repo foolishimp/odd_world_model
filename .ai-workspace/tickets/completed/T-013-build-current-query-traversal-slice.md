@@ -5,7 +5,7 @@
 - type: feature
 - status: completed
 - goal: proving-wave-01
-- change_intent: realize the current odd_domain query and traversal pillar over published domain artifacts and composed world models in the low-volume lane without changing the constitutional split between world-model construction and any future dedicated query plane
+- change_intent: realize the current odd_world_model query and traversal pillar over published domain artifacts and composed world models in the low-volume lane without changing the constitutional split between world-model construction and any future dedicated query plane
 - change_class: design_reframe
 - re_entry_point: design
 - triaged_at: 2026-04-15
@@ -17,7 +17,7 @@
 
 ## Context
 
-`odd_domain` still treats query/traversal as a current delivery pillar even
+`odd_world_model` still treats query/traversal as a current delivery pillar even
 though it is not constitutional core.
 
 The active queue previously preserved that pillar only in parent-ticket prose.
@@ -31,7 +31,7 @@ query-plane need is proven.
 This ticket is complete through:
 
 - `build_tenants/common/design/CURRENT_QUERY_TRAVERSAL_SLICE.md`
-- `build_tenants/python/code/odd_domain/query/trade_to_apra.py`
+- `build_tenants/python/code/odd_world_model/query/trade_to_apra.py`
 - `build_tenants/common/examples/sandbox_trade_to_apra_mvp/query/`
 
 ## Major Ambiguities

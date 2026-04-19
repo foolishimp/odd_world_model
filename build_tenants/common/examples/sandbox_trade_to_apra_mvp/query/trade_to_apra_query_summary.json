@@ -1,15 +1,15 @@
 {
-  "query_id": "odd_domain.query.trade_to_apra.v1",
+  "query_id": "odd_world_model.query.trade_to_apra.v1",
   "lane": "filesystem_first",
-  "source_fragment_ref": "odd_domain.fragment.trade_representation.fpml_commodity_swap.v1",
-  "target_fragment_ref": "odd_domain.fragment.apra_liquidity.reporting.sandbox.v1",
+  "source_fragment_ref": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
+  "target_fragment_ref": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
   "explainability": {
     "question": "Why is the APRA reporting position classified into the financial institution counterparty bucket?",
-    "object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+    "object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
     "claim_key": "counterparty_bucket",
     "answer": "The reporting position carries a ledger-backed counterparty-bucket claim. That claim is accepted through an assurance record and traced both to the official APRA authority-claim surface and to the imported trade counterparty evidence.",
     "path": {
-      "object_cut_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "object_cut_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
       "ledger_entry_ref": "ledger://reporting_position/counterparty_bucket.json",
       "ledger_entry_path": "published/apra_liquidity_domain/attribute_ledger/reporting_position/counterparty_bucket.json",
       "assurance_record_ref": "review://apra_liquidity/assurance/reporting_position/counterparty_bucket.json",
@@ -31,7 +31,7 @@
         }
       ]
     },
-    "value": "odd_domain.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+    "value": "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
     "authority_basis": [
       "official:ars_210_0.financial_institution_counterparty_category",
       "official:apra_liquidity_faq.q25.reporting_classification_examples",
@@ -43,11 +43,11 @@
     "question": "What published path explains the mapping from the FpML trade object to the APRA reporting position?",
     "answer": "The path is governed by the published trade object cut, the cross-domain treatment, the covariance candidate, and the adjoint mapping that declares what is preserved, lost, and added in the APRA interpretation.",
     "path": {
-      "source_object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
-      "target_object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
-      "treatment_ref": "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1",
-      "covariance_edge_ref": "odd_domain.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
-      "adjoint_mapping_ref": "odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+      "source_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "treatment_ref": "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1",
+      "covariance_edge_ref": "odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
+      "adjoint_mapping_ref": "odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
     },
     "preserved_structure": [
       "trade_identifier",

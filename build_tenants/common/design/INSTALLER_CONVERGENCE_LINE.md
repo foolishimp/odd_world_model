@@ -2,11 +2,11 @@
 
 **Status**: Draft
 **Scope**: Shared installer-family responsibilities for `abiogenesis`,
-`odd_sdlc`, and `odd_domain`
+`odd_sdlc`, and `odd_world_model`
 
 ## Purpose
 
-Define the common installer line so `odd_domain` does not drift away from the
+Define the common installer line so `odd_world_model` does not drift away from the
 existing `odd_sdlc` installer shape while the broader installer family is still
 under active development.
 
@@ -47,7 +47,7 @@ The shared `odd_*` installer line should converge on:
 - installed standards propagation by running install
 - instruction bootloader management
 
-This is the installer-family layer that `odd_sdlc` and `odd_domain` should
+This is the installer-family layer that `odd_sdlc` and `odd_world_model` should
 share.
 
 ### 3. Product-Local Overrides
@@ -63,7 +63,7 @@ Product-local overrides must not redefine the common installer responsibilities.
 
 ## Current Bound
 
-For the current proving wave, `odd_domain` intentionally tracks the existing
+For the current proving wave, `odd_world_model` intentionally tracks the existing
 `odd_sdlc` installer structure rather than extracting a shared installer
 package prematurely.
 

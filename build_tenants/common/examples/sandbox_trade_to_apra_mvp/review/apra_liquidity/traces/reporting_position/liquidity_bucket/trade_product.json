@@ -1,7 +1,7 @@
 {
-  "schema_kind": "odd_domain.trace_record",
+  "schema_kind": "odd_world_model.trace_record",
   "schema_version": "v1",
-  "trace_id": "odd_domain.trace.apra_liquidity.reporting_position.apra_liquidity_position_001.liquidity_bucket.trade_product.v1",
+  "trace_id": "odd_world_model.trace.apra_liquidity.reporting_position.apra_liquidity_position_001.liquidity_bucket.trade_product.v1",
   "source_ref": "review://parsed_trade_observation.json",
   "source_kind": "data",
   "claim_key": "liquidity_bucket",
@@ -49,6 +49,6 @@
     ],
     "leg_count": 2
   },
-  "object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
   "summary": "Imported derivative-product evidence used to bound the liquidity outflow assessment."
 }

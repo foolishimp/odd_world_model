@@ -1,11 +1,11 @@
 {
-  "schema_kind": "odd_domain.attribute_ledger_entry",
+  "schema_kind": "odd_world_model.attribute_ledger_entry",
   "schema_version": "v1",
-  "entry_id": "odd_domain.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.counterparty_bucket.v1",
-  "object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "entry_id": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.counterparty_bucket.v1",
+  "object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
   "claim_key": "counterparty_bucket",
   "claim_kind": "classified",
-  "value": "odd_domain.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+  "value": "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
   "trace_record_refs": [
     "review://apra_liquidity/traces/reporting_position/counterparty_bucket/authority_claim.json",
     "review://apra_liquidity/traces/reporting_position/counterparty_bucket/trade_counterparty.json"

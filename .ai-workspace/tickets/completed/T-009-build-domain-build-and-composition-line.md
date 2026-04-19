@@ -5,7 +5,7 @@
 - type: feature
 - status: completed
 - goal: proving-wave-01
-- change_intent: realize the current odd_domain product-definition line downstream of the ratified intent and product surfaces so installed odd_domain products can be used by builder projects to build published domain artifacts, compose them into higher-order world models, and preserve full source traceability
+- change_intent: realize the current odd_world_model product-definition line downstream of the ratified intent and product surfaces so installed odd_world_model products can be used by builder projects to build published domain artifacts, compose them into higher-order world models, and preserve full source traceability
 - change_class: requirement_reprice
 - re_entry_point: requirements
 - triaged_at: 2026-04-15
@@ -17,7 +17,7 @@
 
 ## Context
 
-`odd_domain` now has a materially repriced constitutional shape.
+`odd_world_model` now has a materially repriced constitutional shape.
 
 The current product-definition surface says the line has two constitutional
 intents:
@@ -86,12 +86,12 @@ world-model fact or attribute:
 
 ## Acceptance
 
-- `odd_domain` has an explicit downstream requirement family or families for:
+- `odd_world_model` has an explicit downstream requirement family or families for:
   - domain build
   - world-model composition
   - attribute-level sourceability / provenance
   - GTL / graph-function loading posture
-- `odd_domain` has a design surface that defines the build line from:
+- `odd_world_model` has a design surface that defines the build line from:
   - source evidence
   - tracing and assurance
   - attribute-ledger materialization

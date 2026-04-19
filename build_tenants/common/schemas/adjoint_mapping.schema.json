@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "odd_domain.adjoint_mapping.schema.json",
+  "$id": "odd_world_model.adjoint_mapping.schema.json",
   "title": "AdjointMapping",
   "type": "object",
   "additionalProperties": false,
@@ -15,7 +15,7 @@
   ],
   "properties": {
     "schema_kind": {
-      "const": "odd_domain.adjoint_mapping"
+      "const": "odd_world_model.adjoint_mapping"
     },
     "schema_version": {
       "const": "v1"

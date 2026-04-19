@@ -1,9 +1,9 @@
 {
-  "schema_kind": "odd_domain.covariance_edge",
+  "schema_kind": "odd_world_model.covariance_edge",
   "schema_version": "v1",
-  "edge_id": "odd_domain.covariance.apra_liquidity.reporting_position.to_counterparty_bucket.v1",
-  "source_object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
-  "target_object_ref": "odd_domain.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+  "edge_id": "odd_world_model.covariance.apra_liquidity.reporting_position.to_counterparty_bucket.v1",
+  "source_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "target_object_ref": "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
   "relationship_kind": "decomposition",
   "ambiguity_notes": [
     "Counterparty bucketing may later depend on richer regulatory classification rules."

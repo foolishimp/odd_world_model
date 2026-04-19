@@ -1,12 +1,12 @@
 # Attribute Ledger Build Line
 
 **Status**: Draft
-**Scope**: Shared realization design for the `odd_domain` build line from
+**Scope**: Shared realization design for the `odd_world_model` build line from
 source evidence to composed world models
 
 ## Purpose
 
-Define the realization shape of the current `odd_domain` line:
+Define the realization shape of the current `odd_world_model` line:
 
 - build published domain artifacts
 - compose those artifacts into higher-order world models

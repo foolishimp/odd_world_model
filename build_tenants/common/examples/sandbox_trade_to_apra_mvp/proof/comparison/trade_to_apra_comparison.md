@@ -8,9 +8,9 @@
 
 ## Shared Governing Semantics
 
-- Treatment: `odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1`
-- Covariance edge: `odd_domain.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
-- Adjoint mapping: `odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
+- Treatment: `odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1`
+- Covariance edge: `odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
+- Adjoint mapping: `odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
 
 ## Semantic Continuity
 

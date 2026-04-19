@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "odd_domain.evidence_manifest.schema.json",
+  "$id": "odd_world_model.evidence_manifest.schema.json",
   "title": "EvidenceManifest",
   "type": "object",
   "additionalProperties": false,
@@ -12,7 +12,7 @@
   ],
   "properties": {
     "schema_kind": {
-      "const": "odd_domain.evidence_manifest"
+      "const": "odd_world_model.evidence_manifest"
     },
     "schema_version": {
       "const": "v1"

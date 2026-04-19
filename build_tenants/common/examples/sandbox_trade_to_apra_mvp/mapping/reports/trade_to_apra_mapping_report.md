@@ -2,21 +2,21 @@
 
 ## Scope
 
-- source fragment: `odd_domain.fragment.trade_representation.fpml_commodity_swap.v1`
-- target fragment: `odd_domain.fragment.apra_liquidity.reporting.sandbox.v1`
-- durable mapping record: `odd_domain.mapping_record.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
+- source fragment: `odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1`
+- target fragment: `odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1`
+- durable mapping record: `odd_world_model.mapping_record.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
 
 ## Object Pairing Basis
 
-- source object: `odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001`
-- target object: `odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001`
+- source object: `odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001`
+- target object: `odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001`
 - category: `treatment_projection`
 - confidence: `strong`
 
 Supporting refs:
-- `odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1`
-- `odd_domain.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
-- `odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
+- `odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1`
+- `odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
+- `odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
 
 Rationale:
 - published treatment explicitly reinterprets the trade object as a regulatory reporting position
@@ -81,6 +81,6 @@ Rationale:
 
 ## Governing Semantic Refs
 
-- `odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1`
-- `odd_domain.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
-- `odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
+- `odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1`
+- `odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1`
+- `odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1`

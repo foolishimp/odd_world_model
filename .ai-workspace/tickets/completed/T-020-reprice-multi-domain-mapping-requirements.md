@@ -5,7 +5,7 @@
 - type: feature
 - status: completed
 - goal: proving-wave-04
-- change_intent: carry the ratified mapping direction into explicit odd_domain requirement families for governed cross-domain mapping, durable mapping records, mapping reports, category semantics, confidence disclosure, and unassigned-surface treatment
+- change_intent: carry the ratified mapping direction into explicit odd_world_model requirement families for governed cross-domain mapping, durable mapping records, mapping reports, category semantics, confidence disclosure, and unassigned-surface treatment
 - change_class: requirement_reprice
 - re_entry_point: requirements
 - triaged_at: 2026-04-16
@@ -17,7 +17,7 @@
 
 ## Context
 
-`odd_domain` already supports:
+`odd_world_model` already supports:
 
 - published domain artifacts
 - composed world models
@@ -47,7 +47,7 @@ The mapping line now needs requirement coverage for:
 
 ## Acceptance
 
-- `odd_domain/specification/requirements/` contains explicit requirement
+- `odd_world_model/specification/requirements/` contains explicit requirement
   families covering governed multi-domain mapping
 - the requirement set makes the mapping record the durable truth boundary of
   the retained slice

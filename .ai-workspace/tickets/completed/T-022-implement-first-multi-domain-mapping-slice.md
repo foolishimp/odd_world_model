@@ -5,7 +5,7 @@
 - type: feature
 - status: completed
 - goal: proving-wave-04
-- change_intent: implement the first governed mapping carrier slice over real published domains so odd_domain emits one durable mapping record and one projected mapping report with categories, confidence, and unassigned-surface disclosure
+- change_intent: implement the first governed mapping carrier slice over real published domains so odd_world_model emits one durable mapping record and one projected mapping report with categories, confidence, and unassigned-surface disclosure
 - change_class: realization_refactor
 - re_entry_point: realized_surface
 - triaged_at: 2026-04-16
@@ -17,7 +17,7 @@
 
 ## Context
 
-`odd_domain` now has requirement and design authority for governed
+`odd_world_model` now has requirement and design authority for governed
 multi-domain mapping.
 
 What is missing is the first retained carrier slice:
@@ -73,7 +73,7 @@ Completed by:
   - `specification/requirements/70-multi-domain-mapping-constraints.md`
   - `build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md`
 - adding the retained mapping implementation:
-  - `build_tenants/python/code/odd_domain/mapping/trade_to_apra.py`
+  - `build_tenants/python/code/odd_world_model/mapping/trade_to_apra.py`
 - extending the ODD carrier with:
   - mapping asset inventory and contracts
   - mapping graph functions and executive carrier publication

@@ -5,7 +5,7 @@
 - type: feature
 - status: completed
 - goal: proving-wave-01
-- change_intent: define the odd_domain build design from traced source evidence through assurance and attribute-ledger materialization into immutable Markov object cuts, published domain artifacts, composed world models, and the current query/traversal path
+- change_intent: define the odd_world_model build design from traced source evidence through assurance and attribute-ledger materialization into immutable Markov object cuts, published domain artifacts, composed world models, and the current query/traversal path
 - change_class: design_reframe
 - re_entry_point: design
 - triaged_at: 2026-04-15

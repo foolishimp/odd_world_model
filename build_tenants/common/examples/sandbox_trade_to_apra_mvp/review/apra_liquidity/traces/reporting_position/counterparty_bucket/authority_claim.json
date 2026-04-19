@@ -1,7 +1,7 @@
 {
-  "schema_kind": "odd_domain.trace_record",
+  "schema_kind": "odd_world_model.trace_record",
   "schema_version": "v1",
-  "trace_id": "odd_domain.trace.apra_liquidity.reporting_position.apra_liquidity_position_001.counterparty_bucket.authority_claim.v1",
+  "trace_id": "odd_world_model.trace.apra_liquidity.reporting_position.apra_liquidity_position_001.counterparty_bucket.authority_claim.v1",
   "source_ref": "input://apra_liquidity/authority_claims.json",
   "source_kind": "document_review",
   "claim_key": "counterparty_bucket",
@@ -9,6 +9,6 @@
   "observation_kind": "classified",
   "observed_at": "2026-04-15T00:10:00Z",
   "observed_value": "financial_institution",
-  "object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
   "summary": "ARS 210.0 defines the financial institution counterparty category by reference to APS 210 paragraph 10(b), and APRA FAQ 25 illustrates how reporting classifications are applied across ARF 210 forms."
 }

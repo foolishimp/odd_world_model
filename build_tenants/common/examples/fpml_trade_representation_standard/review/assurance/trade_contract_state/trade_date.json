@@ -1,8 +1,8 @@
 {
-  "schema_kind": "odd_domain.assurance_record",
+  "schema_kind": "odd_world_model.assurance_record",
   "schema_version": "v1",
-  "assurance_id": "odd_domain.assurance.trade_representation.trade_contract_state.trade_fpml_001.trade_date.v1",
-  "object_ref": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+  "assurance_id": "odd_world_model.assurance.trade_representation.trade_contract_state.trade_fpml_001.trade_date.v1",
+  "object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
   "claim_key": "trade_date",
   "claim_kind": "observed",
   "accepted_value": "2006-06-01",

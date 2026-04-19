@@ -1,11 +1,11 @@
 {
-  "schema_kind": "odd_domain.attribute_ledger_entry",
+  "schema_kind": "odd_world_model.attribute_ledger_entry",
   "schema_version": "v1",
-  "entry_id": "odd_domain.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.agreement_treatment_basis.v1",
-  "object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "entry_id": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.agreement_treatment_basis.v1",
+  "object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
   "claim_key": "agreement_treatment_basis",
   "claim_kind": "composed",
-  "value": "odd_domain.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
+  "value": "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
   "trace_record_refs": [
     "review://apra_liquidity/traces/reporting_position/agreement_treatment_basis/authority_claim.json",
     "review://apra_liquidity/traces/reporting_position/agreement_treatment_basis/trade_agreement.json"

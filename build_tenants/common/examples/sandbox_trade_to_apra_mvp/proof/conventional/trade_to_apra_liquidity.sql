@@ -1,6 +1,6 @@
--- Generated from the governed odd_domain semantic kernel.
--- Source object: odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001
--- Target object: odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001
+-- Generated from the governed odd_world_model semantic kernel.
+-- Source object: odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001
+-- Target object: odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001
 -- Preserved structure: trade_identifier, party_identity, master_agreement_reference, trade_lifecycle_state
 
 with source_trade as (

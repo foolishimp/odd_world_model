@@ -37,7 +37,7 @@ Both outputs needed to derive from the same semantic kernel.
 Completed by introducing:
 
 - proof-lane builder:
-  `build_tenants/python/code/odd_domain/proof/trade_to_apra.py`
+  `build_tenants/python/code/odd_world_model/proof/trade_to_apra.py`
 - conventional mapping document:
   `build_tenants/common/examples/sandbox_trade_to_apra_mvp/proof/conventional/trade_to_apra_mapping_document.md`
 - conventional dbt-style SQL projection:

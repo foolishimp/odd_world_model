@@ -2,11 +2,11 @@
 
 **Status**: Implemented
 **Scope**: Shared design for the first live ODD-method carrier slice in
-`odd_domain`
+`odd_world_model`
 
 ## Purpose
 
-Define how `odd_domain` adopts the proven `odd_sdlc` GTL pattern without
+Define how `odd_world_model` adopts the proven `odd_sdlc` GTL pattern without
 reopening product direction and without extracting a shared library
 prematurely.
 
@@ -20,19 +20,19 @@ This design is governed by:
 
 ## Design Position
 
-The current `odd_domain` line already has the right semantic chain:
+The current `odd_world_model` line already has the right semantic chain:
 
 `source -> tracing -> assurance -> attribute ledger -> object cut -> published domain artifact -> composed world model`
 
 The missing part is not semantic direction. The missing part is the operative
 carrier.
 
-For the first live carrier slice, `odd_domain` adopts the `odd_sdlc` GTL
+For the first live carrier slice, `odd_world_model` adopts the `odd_sdlc` GTL
 pattern in the most pragmatic way:
 
 1. copy the relevant GTL Python surfaces from `odd_sdlc`
-2. land them inside `odd_domain`
-3. customize them to `odd_domain` semantics
+2. land them inside `odd_world_model`
+3. customize them to `odd_world_model` semantics
 4. defer shared-library extraction until at least two real implementations
    exist
 
@@ -51,7 +51,7 @@ The retained pattern is **not**:
 - SDLC-specific semantic chains
 - SDLC-specific catalogs or proof nouns
 
-## First Live odd_domain Asset Set
+## First Live odd_world_model Asset Set
 
 The first retained callable asset set is:
 
@@ -128,13 +128,13 @@ No second implementation stack should be introduced in the same wave.
 
 The first live retained realization is now present under the Python tenant:
 
-- `build_tenants/python/code/odd_domain/app.py`
-- `build_tenants/python/code/odd_domain/gtl_module.py`
-- `build_tenants/python/code/odd_domain/function_catalog.py`
-- `build_tenants/python/code/odd_domain/fd_contracts.py`
-- `build_tenants/python/code/odd_domain/fd_checks.py`
-- `build_tenants/python/code/odd_domain/constructor.py`
-- `build_tenants/python/code/odd_domain/self_test.py`
+- `build_tenants/python/code/odd_world_model/app.py`
+- `build_tenants/python/code/odd_world_model/gtl_module.py`
+- `build_tenants/python/code/odd_world_model/function_catalog.py`
+- `build_tenants/python/code/odd_world_model/fd_contracts.py`
+- `build_tenants/python/code/odd_world_model/fd_checks.py`
+- `build_tenants/python/code/odd_world_model/constructor.py`
+- `build_tenants/python/code/odd_world_model/self_test.py`
 
 The operative runtime shape is now:
 

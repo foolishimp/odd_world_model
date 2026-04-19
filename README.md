@@ -1,4 +1,4 @@
-# odd_domain
+# odd_world_model
 
 This is a GTL/ABG project scaffold.
 
@@ -13,5 +13,5 @@ Start with these surfaces:
 - `specification/PRODUCT.md`
 - `specification/GOALS.md`
 - `specification/requirements/`
-- `build_tenants/odd_domain/python/`
+- `build_tenants/odd_world_model/python/`
 - `.genesis/docs/LLM_GTL_APP_BUILDER_GUIDE.md`

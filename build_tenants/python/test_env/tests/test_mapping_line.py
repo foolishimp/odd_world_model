@@ -1,24 +1,24 @@
-# Validates: REQ-ODD-DOMAIN-MAPPING-CAP-001
-# Validates: REQ-ODD-DOMAIN-MAPPING-CAP-002
-# Validates: REQ-ODD-DOMAIN-MAPPING-CAP-003
-# Validates: REQ-ODD-DOMAIN-MAPPING-CAP-004
-# Validates: REQ-ODD-DOMAIN-MAPPING-CAP-005
-# Validates: REQ-ODD-DOMAIN-MAPPING-CAP-006
-# Validates: REQ-ODD-DOMAIN-MAPPING-CAP-007
-# Validates: REQ-ODD-DOMAIN-MAPPING-CONSTRAINT-001
-# Validates: REQ-ODD-DOMAIN-MAPPING-CONSTRAINT-002
-# Validates: REQ-ODD-DOMAIN-MAPPING-CONSTRAINT-003
-# Validates: REQ-ODD-DOMAIN-MAPPING-CONSTRAINT-004
-# Validates: REQ-ODD-DOMAIN-MAPPING-CONSTRAINT-005
-# Validates: REQ-ODD-DOMAIN-MAPPING-CONSTRAINT-006
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CAP-001
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CAP-002
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CAP-003
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CAP-004
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CAP-005
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CAP-006
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CAP-007
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-001
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-002
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-003
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-004
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-005
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-006
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
-from odd_domain.constructor import construct_manifest
-from odd_domain.mapping.trade_to_apra import analysis_path, build, record_path, report_path
-from odd_domain.world_model.load import load_json
+from odd_world_model.constructor import construct_manifest
+from odd_world_model.mapping.trade_to_apra import analysis_path, build, record_path, report_path
+from odd_world_model.world_model.load import load_json
 
 
 def test_mapping_line_materializes_governed_analysis_record_and_report() -> None:
@@ -28,9 +28,9 @@ def test_mapping_line_materializes_governed_analysis_record_and_report() -> None
     record = load_json(record_path())
     report = report_path().read_text(encoding="utf-8")
 
-    assert analysis["schema_kind"] == "odd_domain.mapping_analysis"
-    assert record["schema_kind"] == "odd_domain.mapping_record"
-    assert record["mapping_record_id"].startswith("odd_domain.")
+    assert analysis["schema_kind"] == "odd_world_model.mapping_analysis"
+    assert record["schema_kind"] == "odd_world_model.mapping_record"
+    assert record["mapping_record_id"].startswith("odd_world_model.")
     assert analysis["source_fragment_ref"] == record["source_fragment_ref"]
     assert analysis["target_fragment_ref"] == record["target_fragment_ref"]
 
@@ -71,7 +71,7 @@ def test_constructor_can_materialize_mapping_report_surface(tmp_path: Path) -> N
                 "target_asset": "mapping_report_surface",
                 "result_path": str(result_path),
                 "failing_evaluators": [
-                    {"name": "odd_domain_fd_mapping_report_surface"},
+                    {"name": "odd_world_model_fd_mapping_report_surface"},
                 ],
             },
             indent=2,

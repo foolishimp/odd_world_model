@@ -1,8 +1,8 @@
 {
-  "schema_kind": "odd_domain.assurance_record",
+  "schema_kind": "odd_world_model.assurance_record",
   "schema_version": "v1",
-  "assurance_id": "odd_domain.assurance.apra_liquidity.reporting_position.apra_liquidity_position_001.reporting_lifecycle_state.v1",
-  "object_ref": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "assurance_id": "odd_world_model.assurance.apra_liquidity.reporting_position.apra_liquidity_position_001.reporting_lifecycle_state.v1",
+  "object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
   "claim_key": "reporting_lifecycle_state",
   "claim_kind": "projected",
   "accepted_value": "draft_classified",

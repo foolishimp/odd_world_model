@@ -1,7 +1,7 @@
 {
-  "schema_kind": "odd_domain.markov_object",
+  "schema_kind": "odd_world_model.markov_object",
   "schema_version": "v1",
-  "object_id": "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "object_id": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
   "object_kind": "ApraLiquidityReportingPosition",
   "bounded_context": "sandbox.apra_liquidity.reporting",
   "semantic_role": "Regulatory reporting position composed against the imported FpML trade artifact.",
@@ -16,13 +16,13 @@
     "internal_claim": "Counterparty bucket, agreement treatment basis, liquidity bucket, and reporting position lifecycle are internal to this regulatory object.",
     "external_claim": "Detailed FpML trade economics and local trade confirmation semantics remain outside the reporting position.",
     "adjacent_objects": [
-      "odd_domain.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
-      "odd_domain.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
-      "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
-      "odd_domain.world_model_object.trade_representation.commodity_swap_product.product_fpml_001"
+      "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+      "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
+      "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001"
     ],
     "adjacent_domains": [
-      "odd_domain.domain.trade_representation.fpml_confirmation.v1"
+      "odd_world_model.domain.trade_representation.fpml_confirmation.v1"
     ]
   },
   "blanket": {
@@ -45,12 +45,12 @@
       "assign_liquidity_bucket"
     ],
     "adjacent_objects": [
-      "odd_domain.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
-      "odd_domain.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
-      "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
+      "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+      "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
+      "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
     ],
     "adjacent_domains": [
-      "odd_domain.domain.trade_representation.fpml_confirmation.v1"
+      "odd_world_model.domain.trade_representation.fpml_confirmation.v1"
     ],
     "internal_claim": "This object bounds the APRA-liquidity reporting interpretation over the imported trade artifact.",
     "external_claim": "The upstream trade artifact remains an external evidence and treatment source."
@@ -120,27 +120,27 @@
   },
   "cross_domain": {
     "treatment_refs": [
-      "odd_domain.treatment.apra_liquidity.reporting_position.classification.v1",
-      "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1"
+      "odd_world_model.treatment.apra_liquidity.reporting_position.classification.v1",
+      "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1"
     ],
     "covariance_edge_refs": [
-      "odd_domain.covariance.apra_liquidity.reporting_position.to_counterparty_bucket.v1",
-      "odd_domain.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+      "odd_world_model.covariance.apra_liquidity.reporting_position.to_counterparty_bucket.v1",
+      "odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
     ],
     "adjoint_mapping_refs": [
-      "odd_domain.adjoint.apra_liquidity.reporting_position.to_counterparty_bucket.v1",
-      "odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+      "odd_world_model.adjoint.apra_liquidity.reporting_position.to_counterparty_bucket.v1",
+      "odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
     ],
     "loss_notes": [
       "Regulatory reporting position does not preserve full upstream commodity trade semantics."
     ]
   },
   "composition": {
-    "fragment_id": "odd_domain.fragment.apra_liquidity.reporting.sandbox.v1",
+    "fragment_id": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
     "parent_object_refs": [],
     "child_object_refs": [
-      "odd_domain.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
-      "odd_domain.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed"
+      "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+      "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed"
     ]
   }
 }

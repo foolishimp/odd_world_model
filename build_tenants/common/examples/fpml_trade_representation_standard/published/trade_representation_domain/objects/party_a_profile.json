@@ -1,7 +1,7 @@
 {
-  "schema_kind": "odd_domain.world_model_object",
+  "schema_kind": "odd_world_model.world_model_object",
   "schema_version": "v1",
-  "object_id": "odd_domain.world_model_object.trade_representation.party_profile.partyA",
+  "object_id": "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
   "object_kind": "TradePartyProfile",
   "bounded_context": "trade_representation.fpml_confirmation.commodity_swap",
   "semantic_role": "First party surface recovered from the bounded FpML trade package.",
@@ -17,7 +17,7 @@
     "internal_claim": "Local party identity and naming are internal to this party profile object.",
     "external_claim": "Regulatory counterparty bucketing is external to the local party profile.",
     "adjacent_objects": [
-      "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
+      "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
     ],
     "adjacent_domains": [
       "apra_liquidity.reporting"
@@ -40,7 +40,7 @@
   },
   "cross_domain": {
     "treatment_refs": [
-      "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1"
+      "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1"
     ],
     "covariance_edge_refs": [],
     "adjoint_mapping_refs": [],
@@ -49,9 +49,9 @@
     ]
   },
   "composition": {
-    "fragment_id": "odd_domain.fragment.trade_representation.fpml_commodity_swap.v1",
+    "fragment_id": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
     "parent_object_refs": [
-      "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
+      "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
     ],
     "child_object_refs": []
   }

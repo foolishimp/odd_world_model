@@ -1,13 +1,13 @@
 # Product
 
-**ID**: PROD-ODD-DOMAIN-001
+**ID**: PROD-ODD-WORLD-MODEL-001
 **Status**: Draft
 **Date**: 2026-04-15
 
 This document is the current product-definition surface of the mutable
-`odd_domain` source project.
+`odd_world_model` source project.
 
-It defines what the next released `odd_domain` product is becoming. It is not
+It defines what the next released `odd_world_model` product is becoming. It is not
 the tapped release artifact or an installed product instance.
 
 This product-definition line is governed by `SPEC_METHOD.md` as refined by
@@ -15,7 +15,7 @@ This product-definition line is governed by `SPEC_METHOD.md` as refined by
 
 ## Product Position
 
-`odd_domain` is a world-model construction and comprehension product for
+`odd_world_model` is a world-model construction and comprehension product for
 existing source systems.
 
 It observes live systems of record, their interfaces, events, metadata, and
@@ -27,7 +27,7 @@ The product line is generic: it applies wherever source systems expose local
 truth that later becomes detached from its context as it moves through adjacent
 domains and transformations.
 
-`odd_domain` is also the concrete product domain that realizes this line of
+`odd_world_model` is also the concrete product domain that realizes this line of
 work. It is implemented in GTL/ABG as a specific domain, with its own
 constitutional surfaces, domain terms, and downstream realization path.
 
@@ -35,7 +35,7 @@ Within that realization path, semantic derivation is expected to be declared
 through GTL / graph functions, while deterministic `F_D` primitives are used
 for record and provenance/event materialization.
 
-Architecturally, `odd_domain` is a federated world-model mesh rather than a
+Architecturally, `odd_world_model` is a federated world-model mesh rather than a
 central monolith. Teams publish bounded world-model fragments from the source
 systems they comprehend, and higher-order domain views are stitched from those
 published fragments without erasing local authority.
@@ -86,7 +86,7 @@ and assured evidence.
 
 The product also stands in parallel with spec-driven development. A well-formed
 world model can project large parts of an application surface, including API,
-schema, workflow, validation, lineage, and test scaffolds. `odd_domain` does
+schema, workflow, validation, lineage, and test scaffolds. `odd_world_model` does
 not claim to replace every normative application specification, but it does aim
 to collapse duplicated semantic intent into governed domain truth wherever the
 application is mainly an interface over stable domain semantics.
@@ -95,7 +95,7 @@ application is mainly an interface over stable domain semantics.
 
 ### 1. Domain Build
 
-`odd_domain` builds published domain artifacts from source evidence.
+`odd_world_model` builds published domain artifacts from source evidence.
 
 Those artifacts make local domain truth explicit by publishing bounded contexts,
 fragments, world-model objects, Markov objects, treatment surfaces, covariance
@@ -103,7 +103,7 @@ edges, adjoint mappings, and temporal reference artifacts.
 
 ### 2. World-Model Composition
 
-`odd_domain` composes published domain artifacts into higher-order world
+`odd_world_model` composes published domain artifacts into higher-order world
 models.
 
 Composition is reference-preserving rather than flattening. The higher-order
@@ -126,7 +126,7 @@ constitutional identity of the product.
 
 ### World-Model Query And Traversal
 
-`odd_domain` makes published domain artifacts and composed world models
+`odd_world_model` makes published domain artifacts and composed world models
 queryable and traversable.
 
 The query target is not only a table or schema surface. It is the graph of
@@ -138,17 +138,17 @@ and downstream-explainability questions at any node in the world-model graph.
 
 ## Product Terms
 
-- **App**: the `odd_domain` builder application that observes source evidence
+- **App**: the `odd_world_model` builder application that observes source evidence
   and materializes governed world-model outputs.
-- **Source Project**: the mutable `odd_domain` workspace defining the next
-  released `odd_domain` product.
-- **Released Product**: a tapped immutable `odd_domain` release cut that can be
+- **Source Project**: the mutable `odd_world_model` workspace defining the next
+  released `odd_world_model` product.
+- **Released Product**: a tapped immutable `odd_world_model` release cut that can be
   installed into other workspaces.
-- **Install**: a stamped workspace instance of a released `odd_domain`
+- **Install**: a stamped workspace instance of a released `odd_world_model`
   product.
 - **Builder Project**: a configured source-project instance of the app with
   its own source inputs, build settings, and publication lane.
-- **Domain Artifact**: a published `odd_domain` output built by a builder
+- **Domain Artifact**: a published `odd_world_model` output built by a builder
   project and versioned as part of the product's semantic layer.
 - **Published Domain Artifact**: the durable semantic publication unit produced
   by a builder project and later referenced, composed, or queried by other
@@ -276,7 +276,7 @@ The end-state product is an inspectable world-model layer with:
 
 ## Current Product Definition
 
-The current source project defines the next `odd_domain` product as an initial
+The current source project defines the next `odd_world_model` product as an initial
 product vision and not yet a full materialized implementation.
 
 Today the product definition consists of:
@@ -287,7 +287,7 @@ Today the product definition consists of:
   domain build and world-model composition
 - a current three-pillar delivery line:
   domain build, world-model composition, and world-model query
-- a specific product-domain identity for `odd_domain` inside GTL/ABG
+- a specific product-domain identity for `odd_world_model` inside GTL/ABG
 - a planned Python realization tenant at `build_tenants/python/`
 - a first-slice boundary centered on one concrete source-to-downstream
   treatment path rather than on generalized enterprise coverage
@@ -323,7 +323,7 @@ The first decomposable product slice in this source project is the ability to:
 - provide enough world-model structure that `data_mapper` can emit one governed
   covariant stream end to end
 
-This first slice proves that the next `odd_domain` product can preserve
+This first slice proves that the next `odd_world_model` product can preserve
 semantic continuity from source-system function to downstream consequence
 without becoming another opaque data sink, and that it can outperform detached
 conventional delivery artifacts without refusing to generate them.

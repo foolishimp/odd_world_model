@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "odd_domain.treatment_surface.schema.json",
+  "$id": "odd_world_model.treatment_surface.schema.json",
   "title": "TreatmentSurface",
   "type": "object",
   "additionalProperties": false,
@@ -15,7 +15,7 @@
   ],
   "properties": {
     "schema_kind": {
-      "const": "odd_domain.treatment_surface"
+      "const": "odd_world_model.treatment_surface"
     },
     "schema_version": {
       "const": "v1"

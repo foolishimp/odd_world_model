@@ -1,11 +1,11 @@
 {
-  "schema_kind": "odd_domain.treatment_surface",
+  "schema_kind": "odd_world_model.treatment_surface",
   "schema_version": "v1",
-  "treatment_id": "odd_domain.treatment.apra_liquidity.reporting_position.classification.v1",
+  "treatment_id": "odd_world_model.treatment.apra_liquidity.reporting_position.classification.v1",
   "source_object_refs": [
-    "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+    "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
   ],
-  "target_domain": "odd_domain.domain.apra_liquidity.reporting.sandbox.v1",
+  "target_domain": "odd_world_model.domain.apra_liquidity.reporting.sandbox.v1",
   "preserved_structure": [
     "counterparty_bucket",
     "agreement_assessment",

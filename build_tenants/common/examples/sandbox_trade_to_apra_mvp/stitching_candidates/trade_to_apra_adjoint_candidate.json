@@ -1,10 +1,10 @@
 {
-  "schema_kind": "odd_domain.adjoint_mapping",
+  "schema_kind": "odd_world_model.adjoint_mapping",
   "schema_version": "v1",
-  "mapping_id": "odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
-  "forward_treatment_ref": "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1",
-  "source_domain": "odd_domain.domain.trade_representation.fpml_confirmation.v1",
-  "target_domain": "odd_domain.domain.apra_liquidity.reporting.sandbox.v1",
+  "mapping_id": "odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
+  "forward_treatment_ref": "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1",
+  "source_domain": "odd_world_model.domain.trade_representation.fpml_confirmation.v1",
+  "target_domain": "odd_world_model.domain.apra_liquidity.reporting.sandbox.v1",
   "interpret_back_summary": "The APRA-liquidity reporting position can be interpreted back as a liquidity-focused treatment over the imported FpML trade, party, and agreement surfaces, with loss of detailed product nuance.",
   "preserved_structure": [
     "trade_identifier",

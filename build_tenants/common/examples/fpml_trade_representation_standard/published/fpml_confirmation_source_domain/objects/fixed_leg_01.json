@@ -1,7 +1,7 @@
 {
-  "schema_kind": "odd_domain.world_model_object",
+  "schema_kind": "odd_world_model.world_model_object",
   "schema_version": "v1",
-  "object_id": "odd_domain.world_model_object.fpml_confirmation.commodity_swap_leg.fixed_leg_01",
+  "object_id": "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_leg.fixed_leg_01",
   "object_kind": "FpmlCommoditySwapLegSourceSurface",
   "bounded_context": "fpml_confirmation_source.commodity_swap",
   "semantic_role": "Official fixedLeg preserved as a direct source-domain surface.",
@@ -18,7 +18,7 @@
     "internal_claim": "Direction, quantity, price shape, and commodity reference are internal to this official source leg surface.",
     "external_claim": "Normalized trade semantics remain external to the source leg surface.",
     "adjacent_objects": [
-      "odd_domain.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001"
+      "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001"
     ],
     "adjacent_domains": [
       "trade_representation.fpml_confirmation"
@@ -59,9 +59,9 @@
     "loss_notes": []
   },
   "composition": {
-    "fragment_id": "odd_domain.fragment.fpml_confirmation_source.commodity_swap.v1",
+    "fragment_id": "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1",
     "parent_object_refs": [
-      "odd_domain.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001"
+      "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001"
     ],
     "child_object_refs": []
   }

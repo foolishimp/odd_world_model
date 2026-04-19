@@ -1,18 +1,18 @@
 # Installation
 
 This document defines the first explicit installation contract for
-`odd_domain`.
+`odd_world_model`.
 
 ## Position
 
-Installing `odd_domain` means stamping a target project workspace with the
+Installing `odd_world_model` means stamping a target project workspace with the
 builder package and the minimum supporting surfaces required to use that
 builder outside the source workspace.
 
 The install target is a configured source-project instance consuming a released
-`odd_domain` product.
+`odd_world_model` product.
 
-It is not the `odd_domain` source workspace itself.
+It is not the `odd_world_model` source workspace itself.
 
 This installer is intentionally kept close in structure to the `odd_sdlc`
 release installer.
@@ -21,9 +21,9 @@ The long-term direction is installer convergence across:
 
 - `abiogenesis`
 - `odd_sdlc`
-- `odd_domain`
+- `odd_world_model`
 
-The current slice accepts some duplication so the `odd_domain` install contract
+The current slice accepts some duplication so the `odd_world_model` install contract
 can become explicit now without waiting for the full shared-installer refactor.
 
 The current convergence design is recorded in:
@@ -36,11 +36,11 @@ The first installer is filesystem-first and release-oriented.
 
 It installs:
 
-- the `odd_domain` Python package under `.odd_domain/python/code/odd_domain`
+- the `odd_world_model` Python package under `.odd_world_model/python/code/odd_world_model`
 - the shared common carrier assets under `build_tenants/common/`
 - installed standards under `.genesis/docs/standards/`
 - workspace bootstrap under `.ai-workspace/`
-- install provenance under `.odd_domain/release/install_manifest.json`
+- install provenance under `.odd_world_model/release/install_manifest.json`
 - installed guidance into `AGENTS.md` and `CLAUDE.md`
 
 It does not yet install:
@@ -75,8 +75,8 @@ After install, a target project should contain at least:
 <project-root>/
   .ai-workspace/
   .genesis/docs/standards/
-  .odd_domain/
-    python/code/odd_domain/
+  .odd_world_model/
+    python/code/odd_world_model/
     release/install_manifest.json
   build_tenants/common/
   specification/
@@ -92,7 +92,7 @@ Run the installer from the source workspace with:
 
 ```bash
 PYTHONPATH=build_tenants/python/code \
-python -m odd_domain.release.install \
+python -m odd_world_model.release.install \
   --target /Users/jim/src/apps/ai_sdlc_examples/local_projects/odd_domains/project \
   --project-slug odd_domains
 ```
@@ -116,17 +116,17 @@ built.
 After install, the first verification commands are:
 
 ```bash
-PYTHONPATH=.odd_domain/python/code \
-python -m odd_domain.world_model.validate build_tenants/common/examples/world_fragment_minimal
+PYTHONPATH=.odd_world_model/python/code \
+python -m odd_world_model.world_model.validate build_tenants/common/examples/world_fragment_minimal
 
-PYTHONPATH=.odd_domain/python/code \
-python -m odd_domain.build_line.fpml_trade_domain
+PYTHONPATH=.odd_world_model/python/code \
+python -m odd_world_model.build_line.fpml_trade_domain
 
-PYTHONPATH=.odd_domain/python/code \
-python -m odd_domain.build_line.trade_to_apra
+PYTHONPATH=.odd_world_model/python/code \
+python -m odd_world_model.build_line.trade_to_apra
 
-PYTHONPATH=.odd_domain/python/code \
-python -m odd_domain.query.trade_to_apra
+PYTHONPATH=.odd_world_model/python/code \
+python -m odd_world_model.query.trade_to_apra
 ```
 
 ## Interpretation Rule

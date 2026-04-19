@@ -5,7 +5,7 @@
 - type: feature
 - status: completed
 - goal: proving-wave-01
-- change_intent: carry the ratified world-model method downstream into an explicit odd_domain requirement family for tracing, assurance, attribute-ledger materialization, immutable object-cut projection, composition, and current query/traversal delivery
+- change_intent: carry the ratified world-model method downstream into an explicit odd_world_model requirement family for tracing, assurance, attribute-ledger materialization, immutable object-cut projection, composition, and current query/traversal delivery
 - change_class: requirement_reprice
 - re_entry_point: requirements
 - triaged_at: 2026-04-15
@@ -21,7 +21,7 @@
 
 `source -> tracing -> assurance -> attribute ledger -> Markov object cut`
 
-`odd_domain` needs requirement authority that reflects this build law directly,
+`odd_world_model` needs requirement authority that reflects this build law directly,
 not only high-level product language.
 
 The current object-representation family is a start, but the line now needs
@@ -49,7 +49,7 @@ explicit downstream requirement coverage for:
 
 ## Acceptance
 
-- `odd_domain/specification/requirements/` contains an explicit requirement
+- `odd_world_model/specification/requirements/` contains an explicit requirement
   family or families covering the domain-build and composition line
 - the requirement set makes attribute-level sourceability mandatory
 - the requirement set makes documents, code, and data lawful evidence surfaces

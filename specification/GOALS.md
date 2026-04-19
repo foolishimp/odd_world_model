@@ -1,17 +1,17 @@
 # Goals
 
-**ID**: GOALS-ODD-DOMAIN-001
+**ID**: GOALS-ODD-WORLD-MODEL-001
 **Status**: Draft
 **Date**: 2026-04-15
 **Wave**: proving-wave-01
 
 ## Position
 
-Goals define the bounded proving wave for `odd_domain`.
+Goals define the bounded proving wave for `odd_world_model`.
 
 They are narrower than intent and product definition. Intent states why the
 product domain exists. Product definition states what the next released
-`odd_domain` product is becoming. Goals choose the next concrete slice that
+`odd_world_model` product is becoming. Goals choose the next concrete slice that
 proves the line can work in reality without pretending the whole federated
 world-model mesh is already built.
 
@@ -24,7 +24,7 @@ This wave follows three operating principles:
 
 ## Current Goals
 
-- Use `odd_domain` on one real source-system slice and force the product domain
+- Use `odd_world_model` on one real source-system slice and force the product domain
   to comprehend the function that creates the record of representation rather
   than relying on detached dumps or catalog descriptions alone.
 - Prove the first MVP in a sandbox install lane that ingests bounded source

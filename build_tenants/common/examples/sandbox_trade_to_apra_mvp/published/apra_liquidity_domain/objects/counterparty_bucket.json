@@ -1,7 +1,7 @@
 {
-  "schema_kind": "odd_domain.world_model_object",
+  "schema_kind": "odd_world_model.world_model_object",
   "schema_version": "v1",
-  "object_id": "odd_domain.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+  "object_id": "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
   "object_kind": "ApraCounterpartyBucket",
   "bounded_context": "sandbox.apra_liquidity.reporting",
   "semantic_role": "Regulatory counterparty bucket derived from the imported trade-party surfaces.",
@@ -15,12 +15,12 @@
     "internal_claim": "Counterparty bucket assignment is internal to the APRA-liquidity interpretation.",
     "external_claim": "The original trade party identifiers and names remain external to the bucket.",
     "adjacent_objects": [
-      "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
-      "odd_domain.world_model_object.trade_representation.party_profile.partyA",
-      "odd_domain.world_model_object.trade_representation.party_profile.partyB"
+      "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+      "odd_world_model.world_model_object.trade_representation.party_profile.partyB"
     ],
     "adjacent_domains": [
-      "odd_domain.domain.trade_representation.fpml_confirmation.v1"
+      "odd_world_model.domain.trade_representation.fpml_confirmation.v1"
     ]
   },
   "state": {
@@ -49,25 +49,25 @@
   },
   "cross_domain": {
     "treatment_refs": [
-      "odd_domain.treatment.apra_liquidity.reporting_position.classification.v1",
-      "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1"
+      "odd_world_model.treatment.apra_liquidity.reporting_position.classification.v1",
+      "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1"
     ],
     "covariance_edge_refs": [
-      "odd_domain.covariance.apra_liquidity.reporting_position.to_counterparty_bucket.v1",
-      "odd_domain.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+      "odd_world_model.covariance.apra_liquidity.reporting_position.to_counterparty_bucket.v1",
+      "odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
     ],
     "adjoint_mapping_refs": [
-      "odd_domain.adjoint.apra_liquidity.reporting_position.to_counterparty_bucket.v1",
-      "odd_domain.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+      "odd_world_model.adjoint.apra_liquidity.reporting_position.to_counterparty_bucket.v1",
+      "odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
     ],
     "loss_notes": [
       "Bucketing abstracts away the locally identified trade parties."
     ]
   },
   "composition": {
-    "fragment_id": "odd_domain.fragment.apra_liquidity.reporting.sandbox.v1",
+    "fragment_id": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
     "parent_object_refs": [
-      "odd_domain.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+      "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
     ],
     "child_object_refs": []
   }

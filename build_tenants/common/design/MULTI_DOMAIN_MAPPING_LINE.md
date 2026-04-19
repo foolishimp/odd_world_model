@@ -6,7 +6,7 @@ world-model domains
 
 ## Purpose
 
-Define the realization shape of the retained `odd_domain` mapping line:
+Define the realization shape of the retained `odd_world_model` mapping line:
 
 - consume published world-model domains
 - analyze cross-domain correspondence rigorously
@@ -31,7 +31,7 @@ mapping line over already-published semantic truth.
 
 Cross-domain mapping is not plain field matching.
 
-In `odd_domain`, mapping is a governed downstream treatment analysis over
+In `odd_world_model`, mapping is a governed downstream treatment analysis over
 published domains. The line must be explicit enough to answer:
 
 - what source object or attribute is being mapped

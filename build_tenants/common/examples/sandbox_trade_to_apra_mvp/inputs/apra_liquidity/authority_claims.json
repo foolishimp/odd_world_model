@@ -1,7 +1,7 @@
 {
   "source_id": "apra_liquidity.authority_claims",
-  "published_by": "odd_domain.review.apra_liquidity",
-  "summary": "Bounded extracted authority claims from official APRA liquidity sources for the first real APRA-liquidity domain slice in odd_domain.",
+  "published_by": "odd_world_model.review.apra_liquidity",
+  "summary": "Bounded extracted authority claims from official APRA liquidity sources for the first real APRA-liquidity domain slice in odd_world_model.",
   "claims": [
     {
       "claim_id": "counterparty_bucket_financial_institution",

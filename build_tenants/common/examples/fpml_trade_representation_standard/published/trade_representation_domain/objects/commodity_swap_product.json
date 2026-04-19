@@ -1,7 +1,7 @@
 {
-  "schema_kind": "odd_domain.world_model_object",
+  "schema_kind": "odd_world_model.world_model_object",
   "schema_version": "v1",
-  "object_id": "odd_domain.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+  "object_id": "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
   "object_kind": "CommoditySwapProductRepresentation",
   "bounded_context": "trade_representation.fpml_confirmation.commodity_swap",
   "semantic_role": "Commodity swap product surface recovered from the FpML trade.",
@@ -16,7 +16,7 @@
     "internal_claim": "Product type, asset class, and key dates are internal to the commodity swap product surface for this bounded world-model domain.",
     "external_claim": "Trade state and party obligations remain adjacent but external.",
     "adjacent_objects": [
-      "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
+      "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
     ],
     "adjacent_domains": []
   },
@@ -52,17 +52,17 @@
   "cross_domain": {
     "treatment_refs": [],
     "covariance_edge_refs": [
-      "odd_domain.covariance.trade_representation.trade_contract_to_product.v1"
+      "odd_world_model.covariance.trade_representation.trade_contract_to_product.v1"
     ],
     "adjoint_mapping_refs": [
-      "odd_domain.adjoint.trade_representation.trade_contract_to_product.v1"
+      "odd_world_model.adjoint.trade_representation.trade_contract_to_product.v1"
     ],
     "loss_notes": []
   },
   "composition": {
-    "fragment_id": "odd_domain.fragment.trade_representation.fpml_commodity_swap.v1",
+    "fragment_id": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
     "parent_object_refs": [
-      "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
+      "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
     ],
     "child_object_refs": []
   }

@@ -32,7 +32,7 @@ Completed by introducing:
 - shared JSON schema documents under `build_tenants/common/schemas/`
 - a minimal validated example fragment under `build_tenants/common/examples/`
 - deterministic Python validation and loading helpers under
-  `build_tenants/python/code/odd_domain/world_model/`
+  `build_tenants/python/code/odd_world_model/world_model/`
 
 ## Links
 

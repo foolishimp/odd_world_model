@@ -1,5 +1,5 @@
 {
-  "schema_kind": "odd_domain.world_fragment",
+  "schema_kind": "odd_world_model.world_fragment",
   "schema_version": "v1",
   "fragment_id": "fragment.tradesystem_xx.trade_slice",
   "bounded_context": "tradesystem_xx.trade_capture",

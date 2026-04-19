@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "odd_domain.fragment.schema.json",
+  "$id": "odd_world_model.fragment.schema.json",
   "title": "WorldFragment",
   "type": "object",
   "additionalProperties": false,
@@ -18,7 +18,7 @@
   ],
   "properties": {
     "schema_kind": {
-      "const": "odd_domain.world_fragment"
+      "const": "odd_world_model.world_fragment"
     },
     "schema_version": {
       "const": "v1"

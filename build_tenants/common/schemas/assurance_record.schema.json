@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "odd_domain.assurance_record.schema.json",
+  "$id": "odd_world_model.assurance_record.schema.json",
   "title": "AssuranceRecord",
   "type": "object",
   "additionalProperties": false,
@@ -18,7 +18,7 @@
   ],
   "properties": {
     "schema_kind": {
-      "const": "odd_domain.assurance_record"
+      "const": "odd_world_model.assurance_record"
     },
     "schema_version": {
       "const": "v1"

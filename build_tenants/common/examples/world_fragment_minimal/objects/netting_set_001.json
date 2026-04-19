@@ -1,5 +1,5 @@
 {
-  "schema_kind": "odd_domain.world_model_object",
+  "schema_kind": "odd_world_model.world_model_object",
   "schema_version": "v1",
   "object_id": "netting_set_001",
   "object_kind": "NettingSet",

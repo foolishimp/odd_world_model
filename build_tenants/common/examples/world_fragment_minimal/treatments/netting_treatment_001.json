@@ -1,5 +1,5 @@
 {
-  "schema_kind": "odd_domain.treatment_surface",
+  "schema_kind": "odd_world_model.treatment_surface",
   "schema_version": "v1",
   "treatment_id": "netting_treatment_001",
   "source_object_refs": [

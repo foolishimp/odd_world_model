@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "odd_domain.projection_spec.schema.json",
+  "$id": "odd_world_model.projection_spec.schema.json",
   "title": "ProjectionSpec",
   "type": "object",
   "additionalProperties": false,
@@ -13,7 +13,7 @@
   ],
   "properties": {
     "schema_kind": {
-      "const": "odd_domain.projection_spec"
+      "const": "odd_world_model.projection_spec"
     },
     "schema_version": {
       "const": "v1"

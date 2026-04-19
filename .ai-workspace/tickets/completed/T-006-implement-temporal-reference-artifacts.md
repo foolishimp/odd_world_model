@@ -32,7 +32,7 @@ surface.
 
 Completed by:
 
-- adding `odd_domain.temporal_reference_artifact` to the common carrier
+- adding `odd_world_model.temporal_reference_artifact` to the common carrier
 - extending fragment publication to carry `reference_artifacts`
 - updating deterministic validation and schema registry
 - adding a minimal reference-artifact example

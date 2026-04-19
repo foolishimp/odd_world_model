@@ -1,7 +1,7 @@
 {
-  "schema_kind": "odd_domain.world_model_object",
+  "schema_kind": "odd_world_model.world_model_object",
   "schema_version": "v1",
-  "object_id": "odd_domain.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001",
+  "object_id": "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001",
   "object_kind": "MasterAgreementReference",
   "bounded_context": "trade_representation.fpml_confirmation.commodity_swap",
   "semantic_role": "Master-agreement surface recovered from FpML documentation.",
@@ -16,7 +16,7 @@
     "internal_claim": "Agreement type, date, and version are internal to this agreement reference surface.",
     "external_claim": "Full legal agreement semantics remain external to the bounded representation.",
     "adjacent_objects": [
-      "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
+      "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
     ],
     "adjacent_domains": [
       "apra_liquidity.reporting"
@@ -40,7 +40,7 @@
   },
   "cross_domain": {
     "treatment_refs": [
-      "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1"
+      "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1"
     ],
     "covariance_edge_refs": [],
     "adjoint_mapping_refs": [],
@@ -49,9 +49,9 @@
     ]
   },
   "composition": {
-    "fragment_id": "odd_domain.fragment.trade_representation.fpml_commodity_swap.v1",
+    "fragment_id": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
     "parent_object_refs": [
-      "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
+      "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
     ],
     "child_object_refs": []
   }

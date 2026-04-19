@@ -1,12 +1,12 @@
 {
-  "schema_kind": "odd_domain.projection_spec",
+  "schema_kind": "odd_world_model.projection_spec",
   "schema_version": "v1",
-  "projection_id": "odd_domain.projection.trade_representation.table.v1",
+  "projection_id": "odd_world_model.projection.trade_representation.table.v1",
   "projection_kind": "table",
   "source_refs": [
-    "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
-    "odd_domain.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
-    "odd_domain.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001"
+    "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+    "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+    "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001"
   ],
   "output_summary": "Tabular projection over the FpML-derived trade fragment."
 }

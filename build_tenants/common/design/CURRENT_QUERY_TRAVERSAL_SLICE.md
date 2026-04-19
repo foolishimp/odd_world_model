@@ -6,7 +6,7 @@ composed world models
 
 ## Purpose
 
-Define the current `odd_domain` query and traversal slice without changing the
+Define the current `odd_world_model` query and traversal slice without changing the
 constitutional split between:
 
 - domain build

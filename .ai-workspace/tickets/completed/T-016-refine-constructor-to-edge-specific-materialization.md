@@ -5,7 +5,7 @@
 - type: feature
 - status: completed
 - goal: proving-wave-02
-- change_intent: narrow the retained odd_domain constructor so each GTL edge materializes the target surface it governs rather than rebuilding the full retained corpus for every step
+- change_intent: narrow the retained odd_world_model constructor so each GTL edge materializes the target surface it governs rather than rebuilding the full retained corpus for every step
 - change_class: realization_refactor
 - re_entry_point: realized_surface
 - triaged_at: 2026-04-16
@@ -18,7 +18,7 @@
 ## Context
 
 `T-015` proved that the retained GTL carrier is the live execution line for
-`odd_domain`. The remaining structural weakness was in the constructor:
+`odd_world_model`. The remaining structural weakness was in the constructor:
 
 - early retained edges still satisfied their target by calling coarse-grained
   build functions
@@ -45,7 +45,7 @@ runtime loop.
 
 ## Acceptance Realized
 
-- `odd_domain.constructor.construct_manifest()` now dispatches to named
+- `odd_world_model.constructor.construct_manifest()` now dispatches to named
   edge-specific retained materialization functions rather than using one broad
   rebuild path for most edges
 - the canonical `build_line/*` modules now expose retained materialization
@@ -59,12 +59,12 @@ runtime loop.
 
 ## Realized Surfaces
 
-- `build_tenants/python/code/odd_domain/build_line/fpml_trade_domain.py`
+- `build_tenants/python/code/odd_world_model/build_line/fpml_trade_domain.py`
   - `materialize_source_observation_surface()`
   - `materialize_trace_surface()`
   - `materialize_assurance_surface()`
   - `materialize_trade_domain_artifact()`
-- `build_tenants/python/code/odd_domain/build_line/trade_to_apra.py`
+- `build_tenants/python/code/odd_world_model/build_line/trade_to_apra.py`
   - `materialize_trade_domain_import()`
   - `materialize_trace_surface()`
   - `materialize_assurance_surface()`
@@ -72,8 +72,8 @@ runtime loop.
   - `materialize_markov_object_cut_surface()`
   - `materialize_published_domain_artifact_surface()`
   - `materialize_composed_world_model_surface()`
-- `build_tenants/python/code/odd_domain/constructor.py`
-- `build_tenants/python/code/odd_domain/query/trade_to_apra.py`
+- `build_tenants/python/code/odd_world_model/constructor.py`
+- `build_tenants/python/code/odd_world_model/query/trade_to_apra.py`
 
 ## Proof Outcome
 

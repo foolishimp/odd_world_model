@@ -17,7 +17,7 @@
 
 ## Context
 
-`abiogenesis`, `odd_sdlc`, and now `odd_domain` each carry installer logic.
+`abiogenesis`, `odd_sdlc`, and now `odd_world_model` each carry installer logic.
 
 That is acceptable for the first proving lanes, but the installers are clearly
 part of one family:
@@ -30,7 +30,7 @@ part of one family:
 
 The design direction should be:
 
-- keep `odd_domain` close to `odd_sdlc` installer structure in the short term
+- keep `odd_world_model` close to `odd_sdlc` installer structure in the short term
 - identify the common installer substrate between `abiogenesis` and `odd_*`
   products
 - converge on one shared installer line with product-local overrides rather
@@ -62,7 +62,7 @@ are now recorded in:
 - the common installer responsibilities are enumerated explicitly
 - the split between substrate installer, `odd_*` shared installer, and
   product-local install logic is made explicit
-- duplication between `odd_sdlc` and `odd_domain` installer code is reduced or
+- duplication between `odd_sdlc` and `odd_world_model` installer code is reduced or
   intentionally bounded
 - future installer work follows the converged design rather than adding more
   ad hoc divergence

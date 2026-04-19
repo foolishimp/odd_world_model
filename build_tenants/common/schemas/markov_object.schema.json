@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "odd_domain.markov_object.schema.json",
+  "$id": "odd_world_model.markov_object.schema.json",
   "title": "MarkovObject",
   "allOf": [
     {
@@ -15,7 +15,7 @@
       ],
       "properties": {
         "schema_kind": {
-          "const": "odd_domain.markov_object"
+          "const": "odd_world_model.markov_object"
         },
         "blanket": {
           "type": "object",

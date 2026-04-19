@@ -5,7 +5,7 @@
 - type: feature
 - status: completed
 - goal: proving-wave-04
-- change_intent: define the odd_domain mapping design from published world-model domains through mapping analysis into one durable mapping record and one projected mapping report
+- change_intent: define the odd_world_model mapping design from published world-model domains through mapping analysis into one durable mapping record and one projected mapping report
 - change_class: design_reframe
 - re_entry_point: design
 - triaged_at: 2026-04-16

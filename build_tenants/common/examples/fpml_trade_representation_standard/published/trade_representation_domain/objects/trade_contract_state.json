@@ -1,7 +1,7 @@
 {
-  "schema_kind": "odd_domain.markov_object",
+  "schema_kind": "odd_world_model.markov_object",
   "schema_version": "v1",
-  "object_id": "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+  "object_id": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
   "object_kind": "TradeContractState",
   "bounded_context": "trade_representation.fpml_confirmation.commodity_swap",
   "semantic_role": "Trade contract state materialized from a bounded FpML confirmation-view commodity swap representation.",
@@ -15,10 +15,10 @@
     "internal_claim": "Trade identifier, trade date, product linkage, party relationship, and documentation references are internal to the trade contract state.",
     "external_claim": "Regulatory liquidity treatment and downstream reporting consequences are external to the local trade object.",
     "adjacent_objects": [
-      "odd_domain.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
-      "odd_domain.world_model_object.trade_representation.party_profile.partyA",
-      "odd_domain.world_model_object.trade_representation.party_profile.partyB",
-      "odd_domain.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001"
+      "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+      "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+      "odd_world_model.world_model_object.trade_representation.party_profile.partyB",
+      "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001"
     ],
     "adjacent_domains": [
       "apra_liquidity.reporting"
@@ -42,10 +42,10 @@
       "terminate_trade"
     ],
     "adjacent_objects": [
-      "odd_domain.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
-      "odd_domain.world_model_object.trade_representation.party_profile.partyA",
-      "odd_domain.world_model_object.trade_representation.party_profile.partyB",
-      "odd_domain.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001"
+      "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+      "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+      "odd_world_model.world_model_object.trade_representation.party_profile.partyB",
+      "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001"
     ],
     "adjacent_domains": [
       "apra_liquidity.reporting"
@@ -113,26 +113,26 @@
   },
   "cross_domain": {
     "treatment_refs": [
-      "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1"
+      "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1"
     ],
     "covariance_edge_refs": [
-      "odd_domain.covariance.trade_representation.trade_contract_to_product.v1"
+      "odd_world_model.covariance.trade_representation.trade_contract_to_product.v1"
     ],
     "adjoint_mapping_refs": [
-      "odd_domain.adjoint.trade_representation.trade_contract_to_product.v1"
+      "odd_world_model.adjoint.trade_representation.trade_contract_to_product.v1"
     ],
     "loss_notes": [
       "Downstream regulatory views may collapse detailed product semantics into classification surfaces."
     ]
   },
   "composition": {
-    "fragment_id": "odd_domain.fragment.trade_representation.fpml_commodity_swap.v1",
+    "fragment_id": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
     "parent_object_refs": [],
     "child_object_refs": [
-      "odd_domain.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
-      "odd_domain.world_model_object.trade_representation.party_profile.partyA",
-      "odd_domain.world_model_object.trade_representation.party_profile.partyB",
-      "odd_domain.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001"
+      "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+      "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+      "odd_world_model.world_model_object.trade_representation.party_profile.partyB",
+      "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001"
     ]
   }
 }

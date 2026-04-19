@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "odd_domain.trace_record.schema.json",
+  "$id": "odd_world_model.trace_record.schema.json",
   "title": "TraceRecord",
   "type": "object",
   "additionalProperties": false,
@@ -17,7 +17,7 @@
   ],
   "properties": {
     "schema_kind": {
-      "const": "odd_domain.trace_record"
+      "const": "odd_world_model.trace_record"
     },
     "schema_version": {
       "const": "v1"

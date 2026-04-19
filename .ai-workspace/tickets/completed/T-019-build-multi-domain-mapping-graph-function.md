@@ -5,7 +5,7 @@
 - type: feature
 - status: completed
 - goal: proving-wave-04
-- change_intent: turn cross-domain mapping into a governed odd_domain build line that operates over published world-model domains and emits both a tool-usable mapping record and a detailed mapping report with confidence, reasoning, and unassigned attributes
+- change_intent: turn cross-domain mapping into a governed odd_world_model build line that operates over published world-model domains and emits both a tool-usable mapping record and a detailed mapping report with confidence, reasoning, and unassigned attributes
 - change_class: requirement_reprice
 - re_entry_point: requirements
 - triaged_at: 2026-04-16
@@ -17,7 +17,7 @@
 
 ## Context
 
-`odd_domain` can already:
+`odd_world_model` can already:
 
 - publish bounded source and interpreted world-model domains
 - compose published domains into higher-order world models
@@ -207,9 +207,9 @@ Downstream closure is complete:
 
 ## Acceptance
 
-- `odd_domain` has explicit requirements for multi-domain mapping as a
+- `odd_world_model` has explicit requirements for multi-domain mapping as a
   governed downstream capability over published world-model domains
-- `odd_domain` has a design surface that defines:
+- `odd_world_model` has a design surface that defines:
   - mapping graph-function boundaries
   - mapping asset boundaries
   - mapping category model
@@ -230,7 +230,7 @@ Downstream closure is complete:
   - unassigned source attributes
   - unassigned target attributes
 - the first proving slice runs against real published domains already present in
-  `odd_domain`, not synthetic placeholder domains
+  `odd_world_model`, not synthetic placeholder domains
 - the first proving slice is narrow enough to stay deterministic and reviewable
   while still demonstrating cross-domain rigor
 

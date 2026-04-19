@@ -1,10 +1,10 @@
 # FpML Trade Representation Standard
 
 This example is the first real published trade-representation ingestion lane
-for `odd_domain`.
+for `odd_world_model`.
 
 It takes a bounded FpML-shaped trade representation input and materializes a
-published `odd_domain` trade domain artifact in the common JSON carrier.
+published `odd_world_model` trade domain artifact in the common JSON carrier.
 
 The intent is not full FpML coverage.
 
@@ -19,13 +19,13 @@ The intent is to prove one lawful slice:
 ## Build
 
 ```bash
-PYTHONPATH=build_tenants/python/code python -m odd_domain.build_line.fpml_trade_domain
+PYTHONPATH=build_tenants/python/code python -m odd_world_model.build_line.fpml_trade_domain
 ```
 
 ## Validate
 
 ```bash
-PYTHONPATH=build_tenants/python/code python -m odd_domain.world_model.validate build_tenants/common/examples/fpml_trade_representation_standard/published
+PYTHONPATH=build_tenants/python/code python -m odd_world_model.world_model.validate build_tenants/common/examples/fpml_trade_representation_standard/published
 ```
 
 ## Inspect

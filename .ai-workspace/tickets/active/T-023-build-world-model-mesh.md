@@ -5,7 +5,7 @@
 - type: feature
 - status: active
 - goal: proving-wave-05
-- change_intent: turn the existing federated world-model direction in odd_domain into an explicit governed mesh line over published domain artifacts, common models, and composed world models
+- change_intent: turn the existing federated world-model direction in odd_world_model into an explicit governed mesh line over published domain artifacts, common models, and composed world models
 - change_class: requirement_reprice
 - re_entry_point: requirements
 - triaged_at: 2026-04-16
@@ -17,7 +17,7 @@
 
 ## Context
 
-`odd_domain` already has the local ingredients for a mesh:
+`odd_world_model` already has the local ingredients for a mesh:
 
 - published domain artifacts
 - source domains and interpreted domains
@@ -111,7 +111,7 @@ This ticket should carry downstream closure through:
 
 ## Acceptance
 
-- `odd_domain` has explicit requirements for a federated world-model mesh over
+- `odd_world_model` has explicit requirements for a federated world-model mesh over
   published semantic cuts
 - the requirements define lawful mesh participation for:
   - published domain artifacts
@@ -123,7 +123,7 @@ This ticket should carry downstream closure through:
   - version and supersession treatment
   - traversal and projection boundaries
 - the first retained implementation publishes a real mesh slice over domains
-  already present in `odd_domain`
+  already present in `odd_world_model`
 - the first retained proof can traverse across the mesh without flattening it
   into a central anonymous model
 

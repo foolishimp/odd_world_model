@@ -1,13 +1,13 @@
 {
-  "schema_kind": "odd_domain.treatment_surface",
+  "schema_kind": "odd_world_model.treatment_surface",
   "schema_version": "v1",
-  "treatment_id": "odd_domain.treatment.trade_representation.to_apra_liquidity.candidate.v1",
+  "treatment_id": "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1",
   "source_object_refs": [
-    "odd_domain.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
-    "odd_domain.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
-    "odd_domain.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001"
+    "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+    "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+    "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001"
   ],
-  "target_domain": "odd_domain.domain.apra_liquidity.reporting.sandbox.v1",
+  "target_domain": "odd_world_model.domain.apra_liquidity.reporting.sandbox.v1",
   "preserved_structure": [
     "trade_identifier",
     "party_identity",

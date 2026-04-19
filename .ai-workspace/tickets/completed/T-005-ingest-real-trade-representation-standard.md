@@ -16,7 +16,7 @@ hand-authored inputs.
 
 This ticket moved that lane onto one real published trade representation family
 by selecting FpML confirmation-view trade representation, bounded to one
-commodity swap slice, and translating it into a governed `odd_domain` domain
+commodity swap slice, and translating it into a governed `odd_world_model` domain
 artifact.
 
 ## Acceptance
@@ -42,9 +42,9 @@ Completed by:
 
 - selecting FpML confirmation view as the first source authority
 - adding a bounded FpML parser at
-  `build_tenants/python/code/odd_domain/adapters/fpml_confirmation.py`
+  `build_tenants/python/code/odd_world_model/adapters/fpml_confirmation.py`
 - adding the first real-standard builder at
-  `build_tenants/python/code/odd_domain/sandbox/fpml_trade_domain.py`
+  `build_tenants/python/code/odd_world_model/sandbox/fpml_trade_domain.py`
 - publishing the resulting FQN-compliant trade artifact under
   `build_tenants/common/examples/fpml_trade_representation_standard/`
 - feeding that published artifact into the trade-to-APRA sandbox lane
@@ -58,4 +58,4 @@ Completed by:
 - requirements: `specification/requirements/10-world-model-object-representation.md`
 - standard: `/Users/jim/src/apps/specification_methodology/specification/standards/WORLD_MODEL_GUIDE.md`
 - example: `build_tenants/common/examples/fpml_trade_representation_standard/README.md`
-- builder: `build_tenants/python/code/odd_domain/sandbox/fpml_trade_domain.py`
+- builder: `build_tenants/python/code/odd_world_model/sandbox/fpml_trade_domain.py`

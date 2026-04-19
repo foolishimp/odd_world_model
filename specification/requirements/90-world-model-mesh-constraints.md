@@ -1,10 +1,10 @@
 # World-Model Mesh Constraint Requirements
 
-**Family**: REQ-ODD-DOMAIN-MESH-CONSTRAINT-*
+**Family**: REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-*
 **Status**: Active
 **Category**: Constraint / Guarantee
 
-### REQ-ODD-DOMAIN-MESH-CONSTRAINT-001 — No Central Flattened Truth
+### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-001 — No Central Flattened Truth
 
 **Carries**:
 - `WORLD_MODEL_METHOD.md` — `Preferred Topology`
@@ -14,7 +14,7 @@
 The world-model mesh SHALL not become a central flattened super-model that
 erases bounded-context identity, publication cut, or domain ownership.
 
-### REQ-ODD-DOMAIN-MESH-CONSTRAINT-002 — Published Nodes Only
+### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-002 — Published Nodes Only
 
 **Carries**:
 - `WORLD_MODEL_METHOD.md` — `Key Product Taxonomy`, `Compositions Are Built By Reference`
@@ -25,7 +25,7 @@ Durable mesh participation SHALL be restricted to published semantic cuts.
 Mutable review observations, constructor aids, local adapter output, or
 unpublished workspace state SHALL not be admitted as durable mesh truth.
 
-### REQ-ODD-DOMAIN-MESH-CONSTRAINT-003 — Reference Before Copy
+### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-003 — Reference Before Copy
 
 **Carries**:
 - `WORLD_MODEL_METHOD.md` — `Compositions Are Built By Reference`
@@ -36,7 +36,7 @@ Cross-domain mesh linkage SHALL preserve upstream node identity by reference
 before any copied or projected convenience surface. If a local projection is
 materialized, its upstream mesh refs SHALL remain explicit.
 
-### REQ-ODD-DOMAIN-MESH-CONSTRAINT-004 — Version And Supersession Disclosure
+### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-004 — Version And Supersession Disclosure
 
 **Carries**:
 - `WORLD_MODEL_METHOD.md` — `Versioning`
@@ -47,7 +47,7 @@ Every durable mesh node and link SHALL disclose the publication cut or version
 it relies on, together with explicit supersession where a newer semantic cut
 replaces an older one.
 
-### REQ-ODD-DOMAIN-MESH-CONSTRAINT-005 — Query And Mapping Stay Downstream
+### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-005 — Query And Mapping Stay Downstream
 
 **Carries**:
 - `WORLD_MODEL_METHOD.md` — `Method Objectives`
@@ -58,7 +58,7 @@ Query, mapping, report, and proof surfaces SHALL remain downstream projections
 over the mesh. They SHALL not become a competing authority layer over mesh
 nodes or links.
 
-### REQ-ODD-DOMAIN-MESH-CONSTRAINT-006 — Common Models Are Reusable Published Nodes
+### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-006 — Common Models Are Reusable Published Nodes
 
 **Carries**:
 - `WORLD_MODEL_METHOD.md` — `Preferred Topology`
@@ -68,7 +68,7 @@ nodes or links.
 A common model admitted into the mesh SHALL be treated as a reusable published
 node, not as hidden ambient doctrine or an undeclared central default model.
 
-### REQ-ODD-DOMAIN-MESH-CONSTRAINT-007 — Mesh Line Must Be Generic
+### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-007 — Mesh Line Must Be Generic
 
 **Carries**:
 - `ODD_METHOD.md` — `Core Law / 2. Graph Functions Are The Primary Constructive Carrier`

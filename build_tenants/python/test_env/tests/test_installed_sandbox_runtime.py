@@ -1,4 +1,4 @@
-# Validates: REQ-ODD-DOMAIN-BUILD-VERIFY-004
+# Validates: REQ-ODD-WORLD-MODEL-BUILD-VERIFY-004
 from __future__ import annotations
 
 import json
@@ -7,7 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from odd_domain.release.install import install
+from odd_world_model.release.install import install
 
 
 EXPECTED_PROGRAM_STEPS = (
@@ -26,7 +26,7 @@ def _sandbox_env(target: Path) -> dict[str, str]:
     env["PYTHONPATH"] = os.pathsep.join(
         (
             str(target / ".genesis"),
-            str(target / ".odd_domain" / "python" / "code"),
+            str(target / ".odd_world_model" / "python" / "code"),
         )
     )
     env.pop("PYTEST_CURRENT_TEST", None)
@@ -35,7 +35,7 @@ def _sandbox_env(target: Path) -> dict[str, str]:
 
 def _run_installed(target: Path, *args: str) -> dict[str, object]:
     completed = subprocess.run(
-        [sys.executable, "-m", "odd_domain", *args, "--workspace", "."],
+        [sys.executable, "-m", "odd_world_model", *args, "--workspace", "."],
         cwd=target,
         env=_sandbox_env(target),
         capture_output=True,

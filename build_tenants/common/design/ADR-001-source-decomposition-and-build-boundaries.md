@@ -1,11 +1,11 @@
 # ADR-001 Source Decomposition And Build Boundaries
 
 **Status**: Accepted
-**Scope**: Source-ingestion, lineage, and publication boundaries for `odd_domain`
+**Scope**: Source-ingestion, lineage, and publication boundaries for `odd_world_model`
 
 ## Context
 
-`odd_domain` needs strong lineage and provenance over heterogeneous source
+`odd_world_model` needs strong lineage and provenance over heterogeneous source
 families such as:
 
 - PDF
@@ -134,7 +134,7 @@ structure, but the published source domain remains explorable.
 In the current FpML trade lane:
 
 - the adapter is categorical:
-  `build_tenants/python/code/odd_domain/adapters/fpml_confirmation.py`
+  `build_tenants/python/code/odd_world_model/adapters/fpml_confirmation.py`
 - the review observation is subordinate:
   `review/parsed_trade_observation.json`
 - the build line publishes:

@@ -4,8 +4,8 @@ This generated surface is a deterministic read model over imported project autho
 It is not a replacement for project-owned specification truth.
 
 ## Workspace Identity
-- workspace: `odd_domain`
-- project slug: `odd_domain`
+- workspace: `odd_world_model`
+- project slug: `odd_world_model`
 - platform: `python`
 
 ## Project Identity
@@ -15,10 +15,10 @@ It is not a replacement for project-owned specification truth.
 
 ## Source Titles
 - `specification/INTENT.md`: Intent
-- `README.md`: odd_domain [provenance/context]
+- `README.md`: odd_world_model [provenance/context]
 
 ## Ontology Anchors
-- `README.md` → odd_domain
+- `README.md` → odd_world_model
 
 ## Read Order
 - `specification/INTENT.md` when present
