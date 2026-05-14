@@ -1,0 +1,74 @@
+{
+  "source_standard": "FpML",
+  "source_view": "confirmation",
+  "fpml_version": "5-12",
+  "trade_xml_id": "",
+  "trade_id": "1234",
+  "trade_identifiers": [
+    "1234",
+    "2345"
+  ],
+  "trade_date": "2006-06-01",
+  "product": {
+    "product_xml_id": "",
+    "product_type": "CommoditySwap",
+    "product_id": "",
+    "asset_class": "Commodity",
+    "effective_date": "2006-07-01",
+    "termination_date": "2006-07-31",
+    "legs": [
+      {
+        "leg_id": "fixedleg_01",
+        "leg_kind": "fixedLeg",
+        "payer_party_ref": "partyA",
+        "receiver_party_ref": "partyB",
+        "quantity": "2500.0",
+        "quantity_unit": "MMBTU",
+        "quantity_frequency": "PerCalendarDay",
+        "total_notional_quantity": "77500.0",
+        "fixed_price": "6.295",
+        "price_currency": "USD",
+        "price_unit": "MMBTU",
+        "commodity_instrument_id": null,
+        "calculation_schedule_ref": "floatingLegCalculationPeriods"
+      },
+      {
+        "leg_id": "floatingleg_02",
+        "leg_kind": "floatingLeg",
+        "payer_party_ref": "partyB",
+        "receiver_party_ref": "partyA",
+        "quantity": "2500.0",
+        "quantity_unit": "MMBTU",
+        "quantity_frequency": "PerCalendarDay",
+        "total_notional_quantity": "77500.0",
+        "fixed_price": null,
+        "price_currency": null,
+        "price_unit": null,
+        "commodity_instrument_id": "NATURAL GAS-HENRY HUB-NYMEX",
+        "calculation_schedule_ref": "floatingLegCalculationPeriods"
+      }
+    ],
+    "leg_count": 2
+  },
+  "party_refs": [
+    "partyA",
+    "partyB"
+  ],
+  "parties": [
+    {
+      "xml_id": "partyA",
+      "party_id": "549300KFSLY4U7N3LL12",
+      "party_name": "Bank"
+    },
+    {
+      "xml_id": "partyB",
+      "party_id": "549300AJRHKBLY9GM262",
+      "party_name": "Energy Co."
+    }
+  ],
+  "agreement": {
+    "type": "ISDA",
+    "date": null,
+    "version": null
+  }
+}

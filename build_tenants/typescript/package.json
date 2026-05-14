@@ -1,0 +1,12 @@
+{
+  "name": "@odd-world-model/typescript-tenant",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "odd-world-model-ts": "./code/src/cli/main.ts"
+  },
+  "scripts": {
+    "examples": "node ./code/src/cli/main.ts run-examples --workspace ../..",
+    "test": "node --test ./test_env/tests/*.test.ts"
+  }
+}

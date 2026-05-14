@@ -1,0 +1,17 @@
+{
+  "schema_kind": "odd_world_model.assurance_record",
+  "schema_version": "v1",
+  "assurance_id": "odd_world_model.assurance.sandbox_apra_liquidity_reporting.apra_liquidity_position_001.lifecycle_state.v1",
+  "object_ref": "odd_world_model.markov_object.sandbox_apra_liquidity_reporting.reportingposition.apra_liquidity_position_001",
+  "claim_key": "lifecycle_state",
+  "claim_kind": "state",
+  "accepted_value": "draft_classified",
+  "trace_record_refs": [
+    "review://traces/apra_liquidity_position_001/lifecycle_state.json"
+  ],
+  "authority_basis": [
+    "source:sandbox.apra_liquidity",
+    "builder:domain_input_seed.lifecycle_state"
+  ],
+  "accepted_at": "2026-04-20T00:00:00Z"
+}

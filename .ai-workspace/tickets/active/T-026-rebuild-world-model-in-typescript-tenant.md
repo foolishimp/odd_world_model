@@ -14,7 +14,7 @@
 - triaged_at: 2026-05-14
 - priority: high
 - dependencies: T-023, T-025
-- links: basis:T-023, basis:T-024, basis:T-025, basis:build_tenants/TENANT_REGISTRY.md, basis:build_tenants/typescript/README.md, basis:build_tenants/typescript/design/adrs/ADR-001-typescript-gtl-abg-tech-stack.md, basis:build_tenants/typescript/design/adrs/ADR-002-odd-sdlc-build-component-inheritance.md, basis:build_tenants/typescript/design/adrs/ADR-003-reference-derived-design-carry-forward.md, basis:AGENTS.md, basis:CLAUDE.md, basis:.abiogenesis/docs/standards/SPEC_METHOD.md, basis:.abiogenesis/docs/standards/TICKET_METHOD.md, basis:.abiogenesis/docs/standards/DESIGN_MODULE_METHOD.md, basis:.abiogenesis/docs/standards/ODD_METHOD.md, basis:/Users/jim/src/apps/abiogenesis/docs/LLM_GTL_APP_BUILDER_GUIDE.md
+- links: basis:T-023, basis:T-024, basis:T-025, basis:build_tenants/TENANT_REGISTRY.md, basis:build_tenants/typescript/README.md, basis:build_tenants/typescript/design/adrs/ADR-001-typescript-gtl-abg-tech-stack.md, basis:build_tenants/typescript/design/adrs/ADR-002-odd-sdlc-build-component-inheritance.md, basis:build_tenants/typescript/design/adrs/ADR-003-reference-derived-design-carry-forward.md, basis:build_tenants/typescript/design/adrs/ADR-004-reuse-odd-sdlc-gap-tracking.md, basis:build_tenants/typescript/design/adrs/ADR-005-source-lineage-markov-object-carrier.md, basis:AGENTS.md, basis:CLAUDE.md, basis:.abiogenesis/docs/standards/SPEC_METHOD.md, basis:.abiogenesis/docs/standards/TICKET_METHOD.md, basis:.abiogenesis/docs/standards/DESIGN_MODULE_METHOD.md, basis:.abiogenesis/docs/standards/ODD_METHOD.md, basis:/Users/jim/src/apps/abiogenesis/docs/LLM_GTL_APP_BUILDER_GUIDE.md
 - intake_source: F_H authority after odd_sdlc.TS install migration
 - affected_boundary: world-model realization tenant and active implementation authority
 - created_at: 2026-05-14
@@ -76,6 +76,8 @@ The first accepted TypeScript tenant design decisions are:
 - `build_tenants/typescript/design/adrs/ADR-001-typescript-gtl-abg-tech-stack.md`
 - `build_tenants/typescript/design/adrs/ADR-002-odd-sdlc-build-component-inheritance.md`
 - `build_tenants/typescript/design/adrs/ADR-003-reference-derived-design-carry-forward.md`
+- `build_tenants/typescript/design/adrs/ADR-004-reuse-odd-sdlc-gap-tracking.md`
+- `build_tenants/typescript/design/adrs/ADR-005-source-lineage-markov-object-carrier.md`
 
 ADR-001 selects the TypeScript stack, binds graph construction to GTL
 `GraphFunction` / `Job` / `Module` publication, and keeps ABG as the owner of
@@ -98,6 +100,26 @@ evidence. Relevant feature layering, component responsibilities, module groups,
 and proof lanes are carried forward into the TypeScript design pack, while
 Python-specific stack, package, command, and test-runner choices are demoted to
 historical evidence.
+
+ADR-004 records that `odd_world_model` reuses installed `odd_sdlc` feature-gap,
+requirement-pressure, execution, proof, repair, and closure tracking for
+governed build work. Solution-architecture overlay outputs are read models
+over `odd_sdlc` pressure, not a new world-model feature-gap registry.
+
+ADR-005 records the product-owned world-model contribution: every external
+information piece admitted into the product must remain recoverable through
+source observation, traced evidence, assurance claim, accepted attribute,
+append-only attribute ledger entry, immutable Markov-object cut, and published
+domain artifact.
+
+The earlier solution-architecture overlay run started on 2026-05-15 was
+intentionally stopped before accepting an implementation-design surface so
+implementation design could be regenerated from ADR-004 and ADR-005. The rerun
+completed in
+`.ai-workspace/runtime/odd_sdlc/operator-runs/20260514T162053340Z_pid79255/`
+and accepted
+`build_tenants/typescript/design/adrs/ADR-002-implementation-design-surface.md`
+as an overlay read model under those ADRs.
 
 This ticket is therefore the durable STDO work authority for the parent rebuild
 line. Later sprints or execution contracts may refine the implementation wave,
@@ -162,6 +184,48 @@ Each `.TS` comparison projection should use the same
 published, review, query, mapping, and proof outputs where applicable. The
 comparison target is source-to-artifact behavior and recoverability, not
 Python runtime payload parity.
+
+## Implementation Evidence - TypeScript Example Runner
+
+The first TypeScript materialization slice now exists under
+`build_tenants/typescript/code/src/`.
+
+It provides:
+
+- `build_line/domain_input_seed.ts` for retained `domain_input.json` source
+  corpora
+- `adapters/fpml_confirmation.ts` and `build_line/fpml_source_seed.ts` for the
+  retained FpML source example
+- `sandbox/run_examples.ts` and `cli/main.ts` for stamping sibling `.TS`
+  comparison cuts
+- `test_env/tests/example_runner.test.ts` for parser and all-example runner
+  coverage
+
+The runnable commands are:
+
+```bash
+npm --prefix build_tenants/typescript test
+npm --prefix build_tenants/typescript run examples -- --run-id 20260515T000000Z_v1.TS
+node build_tenants/typescript/code/src/cli/main.ts compare-examples --workspace . --run-id 20260515T000000Z_v1.TS --reference-run-id 20260419T000000Z_v1
+```
+
+The run stamps generated TypeScript comparison cuts under:
+
+```text
+examples/apra_liquidity_model/sandbox/20260515T000000Z_v1.TS/
+examples/banking_product_model/sandbox/20260515T000000Z_v1.TS/
+examples/trade_representation_model/sandbox/20260515T000000Z_v1.TS/
+examples/trade_source_model/sandbox/20260515T000000Z_v1.TS/
+```
+
+This slice proves source observation, trace, assurance, attribute ledger,
+object cut, published domain artifact, composed world model, query projection,
+event, manifest, result, and TypeScript install-manifest surfaces for all
+retained source corpora.
+
+Residual parity pressure remains for the richer historical trade/APRA mapping
+and proof surfaces in the Python reference cuts. Those surfaces are not yet
+ported as TypeScript semantic constructors.
 
 ## Disable Python Tenant
 

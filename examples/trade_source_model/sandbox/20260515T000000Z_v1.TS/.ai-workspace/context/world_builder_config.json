@@ -1,0 +1,16 @@
+{
+  "configuration_version": "v1",
+  "workspace_kind": "installed_example_sandbox",
+  "builder": {
+    "kind": "fpml_source_seed",
+    "self_test_program": "build_and_query_world_model"
+  },
+  "domain": {
+    "example_name": "trade_source_model",
+    "artifact_slug": "fpml_confirmation_source_domain",
+    "source_xml": "../../sources/data/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+    "examples_index": "../../sources/data/authority/fpml-5-12-examples.html",
+    "source_authority": "../../sources/uri_ledger/source_authority.md",
+    "source_notes": "../../sources/uri_ledger/source_notes.md"
+  }
+}

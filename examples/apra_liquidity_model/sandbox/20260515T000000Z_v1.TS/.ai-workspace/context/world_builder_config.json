@@ -1,0 +1,13 @@
+{
+  "configuration_version": "v1",
+  "workspace_kind": "installed_example_sandbox",
+  "builder": {
+    "kind": "domain_input_seed",
+    "self_test_program": "build_and_query_world_model"
+  },
+  "domain": {
+    "example_name": "apra_liquidity_model",
+    "artifact_slug": "apra_liquidity_domain",
+    "source_manifest": "../../sources/data/domain_input.json"
+  }
+}

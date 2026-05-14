@@ -9,6 +9,7 @@ bootstrap/
 node_modules/
 package.json
 package-lock.json
+!build_tenants/typescript/package.json
 
 # Python cache and local test noise.
 .pytest_cache/

@@ -1,0 +1,7 @@
+{
+  "edge": "materialize_attribute_ledger",
+  "target_asset": "attribute_ledger_surface",
+  "actor": "odd_world_model_ts_constructor",
+  "result_path": "/Users/jim/src/apps/odd_world_model/examples/trade_source_model/sandbox/20260515T000000Z_v1.TS/.ai-workspace/fp_results/materialize_attribute_ledger_20260420T00000003Z.json",
+  "generated_by": "build_tenants/typescript/code/src/sandbox/run_examples.ts"
+}

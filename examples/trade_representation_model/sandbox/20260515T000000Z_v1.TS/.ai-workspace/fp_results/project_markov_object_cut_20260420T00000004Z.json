@@ -1,0 +1,11 @@
+{
+  "edge": "project_markov_object_cut",
+  "actor": "odd_world_model_ts_constructor",
+  "assessments": [
+    {
+      "evaluator": "markov_object_cut_surface_materialized",
+      "result": "pass",
+      "evidence": "TypeScript example runner materialized markov_object_cut_surface."
+    }
+  ]
+}

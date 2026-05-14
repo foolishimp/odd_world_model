@@ -1,0 +1,12 @@
+{
+  "schema_kind": "odd_world_model.trace_record",
+  "schema_version": "v1",
+  "trace_id": "odd_world_model.trace.sandbox_banking_product_catalog.loan_001.market_segment.v1",
+  "source_ref": "input://examples/banking_product_model/sources/data/domain_input.json",
+  "source_kind": "domain_input_json",
+  "claim_key": "market_segment",
+  "locator": "products[0].market_segment",
+  "observed_at": "2026-04-20T00:00:00Z",
+  "observed_value": "retail",
+  "summary": "Observed market_segment for LoanOrCredit from retained domain_input source."
+}

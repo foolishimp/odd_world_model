@@ -1,0 +1,35 @@
+{
+  "schema_kind": "odd_world_model.world_fragment",
+  "schema_version": "v1",
+  "fragment_id": "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1",
+  "bounded_context": "fpml_confirmation_source.commodity_swap",
+  "published_at": "2026-04-20T00:00:00Z",
+  "published_by": "odd_world_model.project.trade_source_model",
+  "summary": "Published trade-source fragment built in the versioned trade-source sandbox over the retained official FpML confirmation authority.",
+  "objects": [
+    "objects/source_trade_record.json",
+    "objects/source_commodity_swap_surface.json",
+    "objects/fixed_leg_01.json",
+    "objects/floating_leg_02.json"
+  ],
+  "attribute_ledger_entries": [
+    "attribute_ledger/source_trade_record/trade_identifier.json",
+    "attribute_ledger/source_trade_record/trade_date.json",
+    "attribute_ledger/source_trade_record/product_surface_ref.json"
+  ],
+  "reference_artifacts": [],
+  "treatments": [],
+  "edges": [],
+  "projections": [
+    "projections/domain_summary.json"
+  ],
+  "evidence_manifests": [
+    "evidence/manifests/fpml_source_manifest.json"
+  ],
+  "links": [
+    "../../sources/uri_ledger/source_authority.md",
+    "../../sources/data/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+    "../../sources/data/authority/fpml-5-12-examples.html",
+    "../../review/source_observation.json"
+  ]
+}

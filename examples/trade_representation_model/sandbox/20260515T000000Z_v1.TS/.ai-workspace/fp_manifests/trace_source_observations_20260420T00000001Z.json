@@ -1,0 +1,7 @@
+{
+  "edge": "trace_source_observations",
+  "target_asset": "source_observation_surface",
+  "actor": "odd_world_model_ts_constructor",
+  "result_path": "/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260515T000000Z_v1.TS/.ai-workspace/fp_results/trace_source_observations_20260420T00000001Z.json",
+  "generated_by": "build_tenants/typescript/code/src/sandbox/run_examples.ts"
+}

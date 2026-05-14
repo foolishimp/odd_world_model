@@ -1,0 +1,12 @@
+{
+  "schema_kind": "odd_world_model.trace_record",
+  "schema_version": "v1",
+  "trace_id": "odd_world_model.trace.sandbox_apra_liquidity_reporting.apra_liquidity_position_001.position_id.v1",
+  "source_ref": "input://examples/apra_liquidity_model/sources/data/domain_input.json",
+  "source_kind": "domain_input_json",
+  "claim_key": "position_id",
+  "locator": "reporting_position.position_id",
+  "observed_at": "2026-04-20T00:00:00Z",
+  "observed_value": "apra_liquidity_position_001",
+  "summary": "Observed position_id for ReportingPosition from retained domain_input source."
+}

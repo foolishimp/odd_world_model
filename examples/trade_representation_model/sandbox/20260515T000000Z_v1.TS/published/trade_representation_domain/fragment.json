@@ -1,0 +1,33 @@
+{
+  "schema_kind": "odd_world_model.world_fragment",
+  "schema_version": "v1",
+  "fragment_id": "odd_world_model.fragment.sandbox_trade_representation_capture.v1",
+  "bounded_context": "sandbox.trade_representation.capture",
+  "published_at": "2026-04-20T00:00:00Z",
+  "published_by": "team.sandbox.trade",
+  "summary": "Sandbox trade representation input for the first odd_world_model MVP lane.",
+  "objects": [
+    "objects/trade_sandbox_001.json"
+  ],
+  "attribute_ledger_entries": [
+    "attribute_ledger/trade_sandbox_001/trade_id.json",
+    "attribute_ledger/trade_sandbox_001/product_name.json",
+    "attribute_ledger/trade_sandbox_001/commodity_family.json",
+    "attribute_ledger/trade_sandbox_001/commodity_name.json",
+    "attribute_ledger/trade_sandbox_001/counterparty_id.json",
+    "attribute_ledger/trade_sandbox_001/agreement_id.json",
+    "attribute_ledger/trade_sandbox_001/lifecycle_state.json"
+  ],
+  "reference_artifacts": [],
+  "treatments": [],
+  "edges": [],
+  "projections": [
+    "projections/domain_summary.json"
+  ],
+  "evidence_manifests": [
+    "evidence/manifests/domain_source_manifest.json"
+  ],
+  "links": [
+    "../../sources/data/domain_input.json"
+  ]
+}

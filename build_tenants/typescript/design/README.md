@@ -39,11 +39,28 @@ comparison projections from those generic runs, not a separate runner.
 - `adrs/ADR-001-typescript-gtl-abg-tech-stack.md`
 - `adrs/ADR-002-odd-sdlc-build-component-inheritance.md`
 - `adrs/ADR-003-reference-derived-design-carry-forward.md`
+- `adrs/ADR-004-reuse-odd-sdlc-gap-tracking.md`
+- `adrs/ADR-005-source-lineage-markov-object-carrier.md`
 - `20-feature-decomposition.md`
 - `30-world-model-odd-design.md`
 - `40-module-boundaries.md`
 - `50-test-and-proof-design.md`
 - `55-scenario-sandbox-proof-structure.md`
+
+## Overlay Read Models
+
+The installed `odd_sdlc` solution-architecture overlay may generate tenant-local
+read models such as:
+
+- `feature_decomp_surface.md`
+- `adrs/ADR-001-design-surface.md`
+- `scenario_surface.md`
+- `adrs/ADR-002-implementation-design-surface.md`
+
+These surfaces are build-planning projections over `odd_sdlc` pressure. They
+may use framework-selected edge output names and do not participate in the
+accepted ADR numbering sequence above. They do not create a new world-model
+feature-gap registry and do not outrank the accepted ADRs above.
 
 ## Design Position
 
@@ -72,8 +89,14 @@ tracking registers. It does not own the `odd_world_model` product identity,
 world-model domain semantics, or public graph-function namespace.
 
 This lets the TypeScript tenant build custom world-model domain graphs while
-reusing robust SDLC lineage and tracking evidence. Those registers prove and
-project the governed build; they do not replace the world-model semantic layer.
+reusing robust SDLC feature-gap, lineage, and tracking evidence. Those
+registers prove and project the governed build; they do not replace the
+world-model semantic layer.
+
+The world-model semantic layer owns source lineage into coherent Markov
+objects. Every external information piece admitted into the product must be
+recoverable through source observation, traced evidence, assurance claim,
+attribute ledger entry, immutable object cut, and published domain artifact.
 
 The retained Python tenant remains historical reference and comparison
 evidence. Its module layout and imperative runner shape are not target

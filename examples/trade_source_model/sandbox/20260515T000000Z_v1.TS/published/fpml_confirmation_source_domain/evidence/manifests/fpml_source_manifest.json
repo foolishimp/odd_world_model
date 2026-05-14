@@ -1,0 +1,13 @@
+{
+  "schema_kind": "odd_world_model.evidence_manifest",
+  "schema_version": "v1",
+  "manifest_id": "odd_world_model.evidence.fpml_confirmation_source.commodity_swap.v1",
+  "summary": "Evidence manifest for the official FpML confirmation-view source domain.",
+  "refs": [
+    "input://examples/trade_source_model/sources/data/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+    "input://examples/trade_source_model/sources/data/authority/fpml-5-12-examples.html",
+    "input://examples/trade_source_model/sources/uri_ledger/source_authority.md",
+    "review://source_observation.json",
+    "input://examples/trade_source_model/sources/uri_ledger/source_notes.md"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "world_model_id": "odd_world_model.world_model.fpml_confirmation_source.commodity_swap.v1",
+  "fragments": [
+    "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1"
+  ],
+  "bounded_contexts": [
+    "fpml_confirmation_source.commodity_swap"
+  ],
+  "summary": "Single-domain world-model composition for the retained FpML confirmation source."
+}

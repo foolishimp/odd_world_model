@@ -1,0 +1,32 @@
+{
+  "schema_kind": "odd_world_model.world_fragment",
+  "schema_version": "v1",
+  "fragment_id": "odd_world_model.fragment.sandbox_apra_liquidity_reporting.v1",
+  "bounded_context": "sandbox.apra_liquidity.reporting",
+  "published_at": "2026-04-20T00:00:00Z",
+  "published_by": "team.sandbox.regulatory",
+  "summary": "Sandbox APRA liquidity input for the first odd_world_model MVP lane.",
+  "objects": [
+    "objects/apra_liquidity_position_001.json"
+  ],
+  "attribute_ledger_entries": [
+    "attribute_ledger/apra_liquidity_position_001/position_id.json",
+    "attribute_ledger/apra_liquidity_position_001/reporting_regime.json",
+    "attribute_ledger/apra_liquidity_position_001/counterparty_bucket.json",
+    "attribute_ledger/apra_liquidity_position_001/agreement_assessment.json",
+    "attribute_ledger/apra_liquidity_position_001/liquidity_bucket.json",
+    "attribute_ledger/apra_liquidity_position_001/lifecycle_state.json"
+  ],
+  "reference_artifacts": [],
+  "treatments": [],
+  "edges": [],
+  "projections": [
+    "projections/domain_summary.json"
+  ],
+  "evidence_manifests": [
+    "evidence/manifests/domain_source_manifest.json"
+  ],
+  "links": [
+    "../../sources/data/domain_input.json"
+  ]
+}

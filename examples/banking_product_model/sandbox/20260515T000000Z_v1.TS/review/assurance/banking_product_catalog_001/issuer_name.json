@@ -1,0 +1,17 @@
+{
+  "schema_kind": "odd_world_model.assurance_record",
+  "schema_version": "v1",
+  "assurance_id": "odd_world_model.assurance.sandbox_banking_product_catalog.banking_product_catalog_001.issuer_name.v1",
+  "object_ref": "odd_world_model.markov_object.sandbox_banking_product_catalog.bankingproductcatalog.banking_product_catalog_001",
+  "claim_key": "issuer_name",
+  "claim_kind": "attribute",
+  "accepted_value": "Example Global Bank",
+  "trace_record_refs": [
+    "review://traces/banking_product_catalog_001/issuer_name.json"
+  ],
+  "authority_basis": [
+    "source:banking_product_model.catalog.v1",
+    "builder:domain_input_seed.issuer_name"
+  ],
+  "accepted_at": "2026-04-20T00:00:00Z"
+}

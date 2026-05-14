@@ -1,0 +1,11 @@
+{
+  "edge": "publish_domain_artifact",
+  "actor": "odd_world_model_ts_constructor",
+  "assessments": [
+    {
+      "evaluator": "published_domain_artifact_surface_materialized",
+      "result": "pass",
+      "evidence": "TypeScript example runner materialized published_domain_artifact_surface."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_kind": "odd_world_model.attribute_ledger_entry",
+  "schema_version": "v1",
+  "entry_id": "odd_world_model.attribute_ledger.sandbox_trade_representation_capture.trade_sandbox_001.lifecycle_state.v1",
+  "object_ref": "odd_world_model.markov_object.sandbox_trade_representation_capture.trade.trade_sandbox_001",
+  "claim_key": "lifecycle_state",
+  "claim_kind": "state",
+  "value": "booked",
+  "trace_record_refs": [
+    "review://traces/trade_sandbox_001/lifecycle_state.json"
+  ],
+  "assurance_record_refs": [
+    "review://assurance/trade_sandbox_001/lifecycle_state.json"
+  ],
+  "published_at": "2026-04-20T00:00:00Z"
+}

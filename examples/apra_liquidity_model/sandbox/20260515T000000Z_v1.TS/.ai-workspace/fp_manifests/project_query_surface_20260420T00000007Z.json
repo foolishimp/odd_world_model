@@ -1,0 +1,7 @@
+{
+  "edge": "project_query_surface",
+  "target_asset": "query_projection_surface",
+  "actor": "odd_world_model_ts_constructor",
+  "result_path": "/Users/jim/src/apps/odd_world_model/examples/apra_liquidity_model/sandbox/20260515T000000Z_v1.TS/.ai-workspace/fp_results/project_query_surface_20260420T00000007Z.json",
+  "generated_by": "build_tenants/typescript/code/src/sandbox/run_examples.ts"
+}

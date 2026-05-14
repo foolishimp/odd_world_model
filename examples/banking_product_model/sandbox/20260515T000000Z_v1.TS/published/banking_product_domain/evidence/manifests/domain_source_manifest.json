@@ -1,0 +1,16 @@
+{
+  "schema_kind": "odd_world_model.evidence_manifest",
+  "schema_version": "v1",
+  "manifest_id": "odd_world_model.evidence.sandbox_banking_product_catalog.v1",
+  "refs": [
+    "input://examples/banking_product_model/sources/data/domain_input.json",
+    "input://examples/banking_product_model/sources/data/schema_snapshot.json",
+    "input://examples/banking_product_model/sources/data/fibo_category_snapshot.json",
+    "input://examples/banking_product_model/sources/data/authority/fibo_home.html",
+    "input://examples/banking_product_model/sources/data/authority/fibo_products.html",
+    "input://examples/banking_product_model/sources/data/authority/fibo_schema_financial.html",
+    "input://examples/banking_product_model/sources/code/fibo_credit_card_markup_example.jsonld",
+    "input://examples/banking_product_model/sources/uri_ledger/source_authority.md",
+    "input://examples/banking_product_model/sources/uri_ledger/source_notes.md"
+  ]
+}

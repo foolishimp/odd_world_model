@@ -1,0 +1,16 @@
+{
+  "schema_kind": "odd_world_model.attribute_ledger_entry",
+  "schema_version": "v1",
+  "entry_id": "odd_world_model.attribute_ledger.sandbox_apra_liquidity_reporting.apra_liquidity_position_001.liquidity_bucket.v1",
+  "object_ref": "odd_world_model.markov_object.sandbox_apra_liquidity_reporting.reportingposition.apra_liquidity_position_001",
+  "claim_key": "liquidity_bucket",
+  "claim_kind": "attribute",
+  "value": "contractual_outflow_assessment",
+  "trace_record_refs": [
+    "review://traces/apra_liquidity_position_001/liquidity_bucket.json"
+  ],
+  "assurance_record_refs": [
+    "review://assurance/apra_liquidity_position_001/liquidity_bucket.json"
+  ],
+  "published_at": "2026-04-20T00:00:00Z"
+}

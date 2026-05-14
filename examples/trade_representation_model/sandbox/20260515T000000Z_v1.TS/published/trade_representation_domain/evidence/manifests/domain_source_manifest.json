@@ -1,0 +1,11 @@
+{
+  "schema_kind": "odd_world_model.evidence_manifest",
+  "schema_version": "v1",
+  "manifest_id": "odd_world_model.evidence.sandbox_trade_representation_capture.v1",
+  "refs": [
+    "input://examples/trade_representation_model/sources/data/domain_input.json",
+    "input://examples/trade_representation_model/sources/data/schema_snapshot.json",
+    "input://examples/trade_representation_model/sources/uri_ledger/source_authority.md",
+    "input://examples/trade_representation_model/sources/uri_ledger/source_notes.md"
+  ]
+}

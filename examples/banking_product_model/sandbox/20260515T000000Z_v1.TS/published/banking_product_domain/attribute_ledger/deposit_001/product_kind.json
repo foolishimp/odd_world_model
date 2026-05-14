@@ -1,0 +1,16 @@
+{
+  "schema_kind": "odd_world_model.attribute_ledger_entry",
+  "schema_version": "v1",
+  "entry_id": "odd_world_model.attribute_ledger.sandbox_banking_product_catalog.deposit_001.product_kind.v1",
+  "object_ref": "odd_world_model.markov_object.sandbox_banking_product_catalog.depositaccount.deposit_001",
+  "claim_key": "product_kind",
+  "claim_kind": "attribute",
+  "value": "DepositAccount",
+  "trace_record_refs": [
+    "review://traces/deposit_001/product_kind.json"
+  ],
+  "assurance_record_refs": [
+    "review://assurance/deposit_001/product_kind.json"
+  ],
+  "published_at": "2026-04-20T00:00:00Z"
+}

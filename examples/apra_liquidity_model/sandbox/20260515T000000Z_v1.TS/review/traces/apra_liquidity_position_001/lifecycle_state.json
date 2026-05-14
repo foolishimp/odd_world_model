@@ -1,0 +1,12 @@
+{
+  "schema_kind": "odd_world_model.trace_record",
+  "schema_version": "v1",
+  "trace_id": "odd_world_model.trace.sandbox_apra_liquidity_reporting.apra_liquidity_position_001.lifecycle_state.v1",
+  "source_ref": "input://examples/apra_liquidity_model/sources/data/domain_input.json",
+  "source_kind": "domain_input_json",
+  "claim_key": "lifecycle_state",
+  "locator": "reporting_position.lifecycle_state",
+  "observed_at": "2026-04-20T00:00:00Z",
+  "observed_value": "draft_classified",
+  "summary": "Observed lifecycle_state for ReportingPosition from retained domain_input source."
+}

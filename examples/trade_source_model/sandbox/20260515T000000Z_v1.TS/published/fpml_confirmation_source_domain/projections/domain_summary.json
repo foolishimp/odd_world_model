@@ -1,0 +1,10 @@
+{
+  "schema_kind": "odd_world_model.projection_spec",
+  "schema_version": "v1",
+  "projection_id": "odd_world_model.projection.fpml_confirmation_source.summary.v1",
+  "projection_kind": "domain_summary",
+  "source_refs": [
+    "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1"
+  ],
+  "summary": "Summary projection for the standalone FpML confirmation source domain."
+}

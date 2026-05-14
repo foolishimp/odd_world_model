@@ -1,0 +1,17 @@
+{
+  "schema_kind": "odd_world_model.assurance_record",
+  "schema_version": "v1",
+  "assurance_id": "odd_world_model.assurance.sandbox_trade_representation_capture.trade_sandbox_001.commodity_name.v1",
+  "object_ref": "odd_world_model.markov_object.sandbox_trade_representation_capture.trade.trade_sandbox_001",
+  "claim_key": "commodity_name",
+  "claim_kind": "attribute",
+  "accepted_value": "Brent crude",
+  "trace_record_refs": [
+    "review://traces/trade_sandbox_001/commodity_name.json"
+  ],
+  "authority_basis": [
+    "source:sandbox.trade_representation",
+    "builder:domain_input_seed.commodity_name"
+  ],
+  "accepted_at": "2026-04-20T00:00:00Z"
+}

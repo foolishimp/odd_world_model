@@ -1,0 +1,11 @@
+{
+  "edge": "trace_source_observations",
+  "actor": "odd_world_model_ts_constructor",
+  "assessments": [
+    {
+      "evaluator": "source_observation_surface_materialized",
+      "result": "pass",
+      "evidence": "TypeScript example runner materialized source_observation_surface."
+    }
+  ]
+}

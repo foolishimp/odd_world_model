@@ -1,0 +1,17 @@
+{
+  "schema_kind": "odd_world_model.assurance_record",
+  "schema_version": "v1",
+  "assurance_id": "odd_world_model.assurance.fpml_confirmation_source.trade_record.trade_date.v1",
+  "object_ref": "odd_world_model.world_model_object.fpml_confirmation.trade_record.trade_fpml_001",
+  "claim_key": "trade_date",
+  "claim_kind": "state",
+  "accepted_value": "2006-06-01",
+  "trace_record_refs": [
+    "review://traces/source_trade_record/trade_date.json"
+  ],
+  "authority_basis": [
+    "document:fpml_confirmation_source",
+    "parser:fpml_confirmation.trade_date"
+  ],
+  "accepted_at": "2026-04-20T00:00:00Z"
+}

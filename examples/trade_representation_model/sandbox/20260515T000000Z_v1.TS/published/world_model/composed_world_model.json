@@ -1,0 +1,10 @@
+{
+  "world_model_id": "odd_world_model.world_model.sandbox_trade_representation_capture.v1",
+  "fragments": [
+    "odd_world_model.fragment.sandbox_trade_representation_capture.v1"
+  ],
+  "bounded_contexts": [
+    "sandbox.trade_representation.capture"
+  ],
+  "summary": "Single-domain composed world model for trade_representation_model."
+}

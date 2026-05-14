@@ -1,0 +1,10 @@
+{
+  "world_model_id": "odd_world_model.world_model.sandbox_apra_liquidity_reporting.v1",
+  "fragments": [
+    "odd_world_model.fragment.sandbox_apra_liquidity_reporting.v1"
+  ],
+  "bounded_contexts": [
+    "sandbox.apra_liquidity.reporting"
+  ],
+  "summary": "Single-domain composed world model for apra_liquidity_model."
+}

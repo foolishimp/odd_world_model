@@ -1,0 +1,11 @@
+{
+  "edge": "project_query_surface",
+  "actor": "odd_world_model_ts_constructor",
+  "assessments": [
+    {
+      "evaluator": "query_projection_surface_materialized",
+      "result": "pass",
+      "evidence": "TypeScript example runner materialized query_projection_surface."
+    }
+  ]
+}

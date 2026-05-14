@@ -1,0 +1,7 @@
+{
+  "edge": "compose_world_model",
+  "target_asset": "composed_world_model_surface",
+  "actor": "odd_world_model_ts_constructor",
+  "result_path": "/Users/jim/src/apps/odd_world_model/examples/banking_product_model/sandbox/20260515T000000Z_v1.TS/.ai-workspace/fp_results/compose_world_model_20260420T00000006Z.json",
+  "generated_by": "build_tenants/typescript/code/src/sandbox/run_examples.ts"
+}

@@ -1,0 +1,108 @@
+{
+  "schema_kind": "odd_world_model.markov_object",
+  "schema_version": "v1",
+  "object_id": "odd_world_model.markov_object.sandbox_trade_representation_capture.trade.trade_sandbox_001",
+  "object_kind": "Trade",
+  "bounded_context": "sandbox.trade_representation.capture",
+  "semantic_role": "Trade recovered from retained domain_input evidence for trade_representation_model.",
+  "identity": {
+    "authority_basis": "sandbox.trade_representation",
+    "aliases": [
+      "trade:trade_sandbox_001"
+    ]
+  },
+  "boundary": {
+    "internal_claim": "Trade claims are bounded to the local sandbox.trade_representation.capture publication cut.",
+    "external_claim": "Cross-domain mappings, treatments, and external projections remain downstream work.",
+    "adjacent_objects": [],
+    "adjacent_domains": []
+  },
+  "blanket": {
+    "ingress_surfaces": [
+      "domain_input.json"
+    ],
+    "egress_surfaces": [
+      "trade_representation_domain_publication"
+    ],
+    "observable_surfaces": [
+      "source_observation.json"
+    ],
+    "control_surfaces": [
+      "inspect_source",
+      "publish_domain_artifact"
+    ],
+    "adjacent_objects": [],
+    "adjacent_domains": [],
+    "internal_claim": "Trade is a local semantic object for the configured sandbox source corpus.",
+    "external_claim": "Further world-model stitching is not implied by the local single-domain publication cut."
+  },
+  "state": {
+    "lifecycle_state": "booked",
+    "state_summary": "Trade published from retained sandbox source evidence.",
+    "effective_time": "2026-04-20T00:00:00Z",
+    "observation_time": "2026-04-20T00:00:00Z",
+    "ambiguity_status": "bounded"
+  },
+  "constraints": {
+    "invariants": [
+      "trade_sandbox_001_identity_present"
+    ],
+    "policies": [
+      "trade_representation_model_publication_policy"
+    ],
+    "valid_transitions": [
+      "review",
+      "republish"
+    ]
+  },
+  "evidence": {
+    "refs": [
+      "input://examples/trade_representation_model/sources/data/domain_input.json",
+      "input://examples/trade_representation_model/sources/data/schema_snapshot.json",
+      "input://examples/trade_representation_model/sources/uri_ledger/source_authority.md",
+      "input://examples/trade_representation_model/sources/uri_ledger/source_notes.md"
+    ],
+    "summary": "Sandbox trade representation input for the first odd_world_model MVP lane."
+  },
+  "materialization": {
+    "projection_summary": "Immutable object cut projected from the attribute ledger for Trade.",
+    "attribute_ledger_entry_refs": [
+      "ledger://trade_sandbox_001/trade_id.json",
+      "ledger://trade_sandbox_001/product_name.json",
+      "ledger://trade_sandbox_001/commodity_family.json",
+      "ledger://trade_sandbox_001/commodity_name.json",
+      "ledger://trade_sandbox_001/counterparty_id.json",
+      "ledger://trade_sandbox_001/agreement_id.json",
+      "ledger://trade_sandbox_001/lifecycle_state.json"
+    ],
+    "assurance_record_refs": [
+      "review://assurance/trade_sandbox_001/trade_id.json",
+      "review://assurance/trade_sandbox_001/product_name.json",
+      "review://assurance/trade_sandbox_001/commodity_family.json",
+      "review://assurance/trade_sandbox_001/commodity_name.json",
+      "review://assurance/trade_sandbox_001/counterparty_id.json",
+      "review://assurance/trade_sandbox_001/agreement_id.json",
+      "review://assurance/trade_sandbox_001/lifecycle_state.json"
+    ],
+    "trace_record_refs": [
+      "review://traces/trade_sandbox_001/trade_id.json",
+      "review://traces/trade_sandbox_001/product_name.json",
+      "review://traces/trade_sandbox_001/commodity_family.json",
+      "review://traces/trade_sandbox_001/commodity_name.json",
+      "review://traces/trade_sandbox_001/counterparty_id.json",
+      "review://traces/trade_sandbox_001/agreement_id.json",
+      "review://traces/trade_sandbox_001/lifecycle_state.json"
+    ]
+  },
+  "cross_domain": {
+    "treatment_refs": [],
+    "covariance_edge_refs": [],
+    "adjoint_mapping_refs": [],
+    "loss_notes": []
+  },
+  "composition": {
+    "fragment_id": "odd_world_model.fragment.sandbox_trade_representation_capture.v1",
+    "parent_object_refs": [],
+    "child_object_refs": []
+  }
+}

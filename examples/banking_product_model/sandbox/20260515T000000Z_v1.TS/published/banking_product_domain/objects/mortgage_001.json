@@ -1,0 +1,106 @@
+{
+  "schema_kind": "odd_world_model.markov_object",
+  "schema_version": "v1",
+  "object_id": "odd_world_model.markov_object.sandbox_banking_product_catalog.mortgageloan.mortgage_001",
+  "object_kind": "MortgageLoan",
+  "bounded_context": "sandbox.banking_product.catalog",
+  "semantic_role": "MortgageLoan recovered from retained domain_input evidence for banking_product_model.",
+  "identity": {
+    "authority_basis": "banking_product_model.catalog.v1",
+    "aliases": [
+      "products[1]:mortgage_001"
+    ]
+  },
+  "boundary": {
+    "internal_claim": "MortgageLoan claims are bounded to the local sandbox.banking_product.catalog publication cut.",
+    "external_claim": "Cross-domain mappings, treatments, and external projections remain downstream work.",
+    "adjacent_objects": [],
+    "adjacent_domains": []
+  },
+  "blanket": {
+    "ingress_surfaces": [
+      "domain_input.json"
+    ],
+    "egress_surfaces": [
+      "banking_product_domain_publication"
+    ],
+    "observable_surfaces": [
+      "source_observation.json"
+    ],
+    "control_surfaces": [
+      "inspect_source",
+      "publish_domain_artifact"
+    ],
+    "adjacent_objects": [],
+    "adjacent_domains": [],
+    "internal_claim": "MortgageLoan is a local semantic object for the configured sandbox source corpus.",
+    "external_claim": "Further world-model stitching is not implied by the local single-domain publication cut."
+  },
+  "state": {
+    "lifecycle_state": "observed",
+    "state_summary": "MortgageLoan published from retained sandbox source evidence.",
+    "effective_time": "2026-04-20T00:00:00Z",
+    "observation_time": "2026-04-20T00:00:00Z",
+    "ambiguity_status": "bounded"
+  },
+  "constraints": {
+    "invariants": [
+      "mortgage_001_identity_present"
+    ],
+    "policies": [
+      "banking_product_model_publication_policy"
+    ],
+    "valid_transitions": [
+      "review",
+      "republish"
+    ]
+  },
+  "evidence": {
+    "refs": [
+      "input://examples/banking_product_model/sources/data/domain_input.json",
+      "input://examples/banking_product_model/sources/data/schema_snapshot.json",
+      "input://examples/banking_product_model/sources/data/fibo_category_snapshot.json",
+      "input://examples/banking_product_model/sources/data/authority/fibo_home.html",
+      "input://examples/banking_product_model/sources/data/authority/fibo_products.html",
+      "input://examples/banking_product_model/sources/data/authority/fibo_schema_financial.html",
+      "input://examples/banking_product_model/sources/code/fibo_credit_card_markup_example.jsonld",
+      "input://examples/banking_product_model/sources/uri_ledger/source_authority.md",
+      "input://examples/banking_product_model/sources/uri_ledger/source_notes.md"
+    ],
+    "summary": "Bounded retail-banking product catalog used to seed the banking product example domain."
+  },
+  "materialization": {
+    "projection_summary": "Immutable object cut projected from the attribute ledger for MortgageLoan.",
+    "attribute_ledger_entry_refs": [
+      "ledger://mortgage_001/product_id.json",
+      "ledger://mortgage_001/product_kind.json",
+      "ledger://mortgage_001/product_name.json",
+      "ledger://mortgage_001/market_segment.json"
+    ],
+    "assurance_record_refs": [
+      "review://assurance/mortgage_001/product_id.json",
+      "review://assurance/mortgage_001/product_kind.json",
+      "review://assurance/mortgage_001/product_name.json",
+      "review://assurance/mortgage_001/market_segment.json"
+    ],
+    "trace_record_refs": [
+      "review://traces/mortgage_001/product_id.json",
+      "review://traces/mortgage_001/product_kind.json",
+      "review://traces/mortgage_001/product_name.json",
+      "review://traces/mortgage_001/market_segment.json"
+    ]
+  },
+  "cross_domain": {
+    "treatment_refs": [],
+    "covariance_edge_refs": [],
+    "adjoint_mapping_refs": [],
+    "loss_notes": []
+  },
+  "composition": {
+    "fragment_id": "odd_world_model.fragment.sandbox_banking_product_catalog.v1",
+    "parent_object_refs": [
+      "odd_world_model.markov_object.sandbox_banking_product_catalog.bankingproductcatalog.banking_product_catalog_001"
+    ],
+    "child_object_refs": []
+  }
+}

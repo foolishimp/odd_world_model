@@ -1,0 +1,11 @@
+{
+  "edge": "assure_attribute_claims",
+  "actor": "odd_world_model_ts_constructor",
+  "assessments": [
+    {
+      "evaluator": "assurance_surface_materialized",
+      "result": "pass",
+      "evidence": "TypeScript example runner materialized assurance_surface."
+    }
+  ]
+}

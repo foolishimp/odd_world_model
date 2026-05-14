@@ -1,0 +1,7 @@
+{"event":"fp_step_completed","edge":"trace_source_observations","target_asset":"source_observation_surface","observed_at":"2026-04-20T00:00:00Z"}
+{"event":"fp_step_completed","edge":"assure_attribute_claims","target_asset":"assurance_surface","observed_at":"2026-04-20T00:00:00Z"}
+{"event":"fp_step_completed","edge":"materialize_attribute_ledger","target_asset":"attribute_ledger_surface","observed_at":"2026-04-20T00:00:00Z"}
+{"event":"fp_step_completed","edge":"project_markov_object_cut","target_asset":"markov_object_cut_surface","observed_at":"2026-04-20T00:00:00Z"}
+{"event":"fp_step_completed","edge":"publish_domain_artifact","target_asset":"published_domain_artifact_surface","observed_at":"2026-04-20T00:00:00Z"}
+{"event":"fp_step_completed","edge":"compose_world_model","target_asset":"composed_world_model_surface","observed_at":"2026-04-20T00:00:00Z"}
+{"event":"fp_step_completed","edge":"project_query_surface","target_asset":"query_projection_surface","observed_at":"2026-04-20T00:00:00Z"}

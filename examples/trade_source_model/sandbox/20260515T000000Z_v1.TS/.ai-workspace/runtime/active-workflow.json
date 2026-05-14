@@ -1,0 +1,20 @@
+{
+  "status": "converged",
+  "scope": "executive_program",
+  "program": "build_and_query_world_model",
+  "completed_edges": [
+    "trace_source_observations",
+    "assure_attribute_claims",
+    "materialize_attribute_ledger",
+    "project_markov_object_cut",
+    "publish_domain_artifact",
+    "compose_world_model",
+    "project_query_surface"
+  ],
+  "outputs": {
+    "sourceObservation": "review/source_observation.json",
+    "fragment": "published/fpml_confirmation_source_domain/fragment.json",
+    "worldModel": "published/world_model/composed_world_model.json",
+    "querySummary": "query/world_model_query_summary.json"
+  }
+}

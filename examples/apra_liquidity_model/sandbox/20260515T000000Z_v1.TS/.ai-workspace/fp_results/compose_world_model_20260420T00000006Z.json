@@ -1,0 +1,11 @@
+{
+  "edge": "compose_world_model",
+  "actor": "odd_world_model_ts_constructor",
+  "assessments": [
+    {
+      "evaluator": "composed_world_model_surface_materialized",
+      "result": "pass",
+      "evidence": "TypeScript example runner materialized composed_world_model_surface."
+    }
+  ]
+}

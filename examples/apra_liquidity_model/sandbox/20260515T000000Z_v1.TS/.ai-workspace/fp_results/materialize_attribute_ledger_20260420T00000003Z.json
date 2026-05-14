@@ -1,0 +1,11 @@
+{
+  "edge": "materialize_attribute_ledger",
+  "actor": "odd_world_model_ts_constructor",
+  "assessments": [
+    {
+      "evaluator": "attribute_ledger_surface_materialized",
+      "result": "pass",
+      "evidence": "TypeScript example runner materialized attribute_ledger_surface."
+    }
+  ]
+}

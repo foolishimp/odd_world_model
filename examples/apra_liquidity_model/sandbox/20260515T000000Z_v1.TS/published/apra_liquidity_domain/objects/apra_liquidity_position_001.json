@@ -1,0 +1,111 @@
+{
+  "schema_kind": "odd_world_model.markov_object",
+  "schema_version": "v1",
+  "object_id": "odd_world_model.markov_object.sandbox_apra_liquidity_reporting.reportingposition.apra_liquidity_position_001",
+  "object_kind": "ReportingPosition",
+  "bounded_context": "sandbox.apra_liquidity.reporting",
+  "semantic_role": "ReportingPosition recovered from retained domain_input evidence for apra_liquidity_model.",
+  "identity": {
+    "authority_basis": "sandbox.apra_liquidity",
+    "aliases": [
+      "reporting_position:apra_liquidity_position_001"
+    ]
+  },
+  "boundary": {
+    "internal_claim": "ReportingPosition claims are bounded to the local sandbox.apra_liquidity.reporting publication cut.",
+    "external_claim": "Cross-domain mappings, treatments, and external projections remain downstream work.",
+    "adjacent_objects": [],
+    "adjacent_domains": []
+  },
+  "blanket": {
+    "ingress_surfaces": [
+      "domain_input.json"
+    ],
+    "egress_surfaces": [
+      "apra_liquidity_domain_publication"
+    ],
+    "observable_surfaces": [
+      "source_observation.json"
+    ],
+    "control_surfaces": [
+      "inspect_source",
+      "publish_domain_artifact"
+    ],
+    "adjacent_objects": [],
+    "adjacent_domains": [],
+    "internal_claim": "ReportingPosition is a local semantic object for the configured sandbox source corpus.",
+    "external_claim": "Further world-model stitching is not implied by the local single-domain publication cut."
+  },
+  "state": {
+    "lifecycle_state": "draft_classified",
+    "state_summary": "ReportingPosition published from retained sandbox source evidence.",
+    "effective_time": "2026-04-20T00:00:00Z",
+    "observation_time": "2026-04-20T00:00:00Z",
+    "ambiguity_status": "bounded"
+  },
+  "constraints": {
+    "invariants": [
+      "apra_liquidity_position_001_identity_present"
+    ],
+    "policies": [
+      "apra_liquidity_model_publication_policy"
+    ],
+    "valid_transitions": [
+      "review",
+      "republish"
+    ]
+  },
+  "evidence": {
+    "refs": [
+      "input://examples/apra_liquidity_model/sources/data/domain_input.json",
+      "input://examples/apra_liquidity_model/sources/data/requirements_snapshot.json",
+      "input://examples/apra_liquidity_model/sources/uri_ledger/source_notes.md",
+      "input://examples/apra_liquidity_model/sources/uri_ledger/source_authority.md",
+      "input://examples/apra_liquidity_model/sources/data/authority_claims.json",
+      "input://examples/apra_liquidity_model/sources/data/authority/apra_liquidity_landing_page.html",
+      "input://examples/apra_liquidity_model/sources/data/authority/aps_210_liquidity_2025.html",
+      "input://examples/apra_liquidity_model/sources/pdfs/apg_210_liquidity_2025.pdf",
+      "input://examples/apra_liquidity_model/sources/data/authority/ars_210_0_liquidity_2023.html",
+      "input://examples/apra_liquidity_model/sources/data/authority/apra_liquidity_faq.html"
+    ],
+    "summary": "Sandbox APRA liquidity input for the first odd_world_model MVP lane."
+  },
+  "materialization": {
+    "projection_summary": "Immutable object cut projected from the attribute ledger for ReportingPosition.",
+    "attribute_ledger_entry_refs": [
+      "ledger://apra_liquidity_position_001/position_id.json",
+      "ledger://apra_liquidity_position_001/reporting_regime.json",
+      "ledger://apra_liquidity_position_001/counterparty_bucket.json",
+      "ledger://apra_liquidity_position_001/agreement_assessment.json",
+      "ledger://apra_liquidity_position_001/liquidity_bucket.json",
+      "ledger://apra_liquidity_position_001/lifecycle_state.json"
+    ],
+    "assurance_record_refs": [
+      "review://assurance/apra_liquidity_position_001/position_id.json",
+      "review://assurance/apra_liquidity_position_001/reporting_regime.json",
+      "review://assurance/apra_liquidity_position_001/counterparty_bucket.json",
+      "review://assurance/apra_liquidity_position_001/agreement_assessment.json",
+      "review://assurance/apra_liquidity_position_001/liquidity_bucket.json",
+      "review://assurance/apra_liquidity_position_001/lifecycle_state.json"
+    ],
+    "trace_record_refs": [
+      "review://traces/apra_liquidity_position_001/position_id.json",
+      "review://traces/apra_liquidity_position_001/reporting_regime.json",
+      "review://traces/apra_liquidity_position_001/counterparty_bucket.json",
+      "review://traces/apra_liquidity_position_001/agreement_assessment.json",
+      "review://traces/apra_liquidity_position_001/liquidity_bucket.json",
+      "review://traces/apra_liquidity_position_001/lifecycle_state.json"
+    ]
+  },
+  "cross_domain": {
+    "treatment_refs": [],
+    "covariance_edge_refs": [],
+    "adjoint_mapping_refs": [],
+    "loss_notes": []
+  },
+  "composition": {
+    "fragment_id": "odd_world_model.fragment.sandbox_apra_liquidity_reporting.v1",
+    "parent_object_refs": [],
+    "child_object_refs": []
+  }
+}

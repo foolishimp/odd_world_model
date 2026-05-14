@@ -1,0 +1,69 @@
+{
+  "schema_kind": "odd_world_model.world_model_object",
+  "schema_version": "v1",
+  "object_id": "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_leg.fixed_leg_01",
+  "object_kind": "FpmlCommoditySwapLegSourceSurface",
+  "bounded_context": "fpml_confirmation_source.commodity_swap",
+  "semantic_role": "Official fixedLeg preserved as a direct source-domain surface.",
+  "identity": {
+    "authority_basis": "Official FpML commoditySwap leg source representation",
+    "aliases": [
+      "leg_id:fixedleg_01",
+      "leg_kind:fixedLeg",
+      "payer:partyA",
+      "receiver:partyB"
+    ]
+  },
+  "boundary": {
+    "internal_claim": "Direction, quantity, price shape, and commodity reference are internal to this official source leg surface.",
+    "external_claim": "Normalized trade semantics remain external to the source leg surface.",
+    "adjacent_objects": [
+      "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001"
+    ],
+    "adjacent_domains": [
+      "trade_representation.fpml_confirmation"
+    ]
+  },
+  "state": {
+    "lifecycle_state": "captured",
+    "state_summary": "Official fixedLeg captured with 2500.0 MMBTU.",
+    "effective_time": "2006-07-01T00:00:00Z",
+    "observation_time": "2026-04-20T00:00:00Z",
+    "ambiguity_status": "low"
+  },
+  "constraints": {
+    "invariants": [
+      "source_leg_must_preserve_official_direction",
+      "source_leg_must_preserve_official_notional_shape"
+    ],
+    "policies": [
+      "fpml_source_leg_capture_policy"
+    ],
+    "valid_transitions": [
+      "supersede_with_new_source_cut"
+    ]
+  },
+  "evidence": {
+    "refs": [
+      "input://examples/trade_source_model/sources/data/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+      "input://examples/trade_source_model/sources/data/authority/fpml-5-12-examples.html",
+      "input://examples/trade_source_model/sources/uri_ledger/source_authority.md",
+      "review://source_observation.json",
+      "input://examples/trade_source_model/sources/uri_ledger/source_notes.md"
+    ],
+    "summary": "fixedLeg preserved directly from the official FpML example."
+  },
+  "cross_domain": {
+    "treatment_refs": [],
+    "covariance_edge_refs": [],
+    "adjoint_mapping_refs": [],
+    "loss_notes": []
+  },
+  "composition": {
+    "fragment_id": "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1",
+    "parent_object_refs": [
+      "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001"
+    ],
+    "child_object_refs": []
+  }
+}

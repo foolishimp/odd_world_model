@@ -1,0 +1,16 @@
+{
+  "schema_kind": "odd_world_model.attribute_ledger_entry",
+  "schema_version": "v1",
+  "entry_id": "odd_world_model.attribute_ledger.fpml_confirmation_source.trade_record.product_surface_ref.v1",
+  "object_ref": "odd_world_model.world_model_object.fpml_confirmation.trade_record.trade_fpml_001",
+  "claim_key": "product_surface_ref",
+  "claim_kind": "attribute",
+  "value": "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001",
+  "trace_record_refs": [
+    "review://traces/source_trade_record/product_surface_ref.json"
+  ],
+  "assurance_record_refs": [
+    "review://assurance/source_trade_record/product_surface_ref.json"
+  ],
+  "published_at": "2026-04-20T00:00:00Z"
+}

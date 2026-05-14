@@ -3,7 +3,7 @@
 `build_tenants/typescript/` is the selected forward realization tenant for the
 `odd_world_model` rebuild.
 
-Current status: design active, implementation pending.
+Current status: first implementation slice active.
 
 This tenant records the source-side landing zone for a TypeScript realization
 of `odd_world_model`. Product `WHAT` remains under `specification/`. This tenant
@@ -22,6 +22,40 @@ The installed governance/runtime payload for `odd_sdlc.TS` lives under
 - `design/30-world-model-odd-design.md`
 - `design/40-module-boundaries.md`
 - `design/50-test-and-proof-design.md`
+
+## Runnable Slice
+
+The first TypeScript materialization slice is a deterministic filesystem
+runner for retained example sources. It is not the final ABG-backed graph
+execution path, but it proves the source-observation to published-artifact to
+query projection carrier for all retained example corpora.
+
+Run the retained examples from the repo root:
+
+```bash
+npm --prefix build_tenants/typescript run examples -- --run-id 20260515T000000Z_v1.TS
+```
+
+Compare generated `.TS` cuts against the Python-built reference cuts:
+
+```bash
+node build_tenants/typescript/code/src/cli/main.ts compare-examples --workspace . --run-id 20260515T000000Z_v1.TS --reference-run-id 20260419T000000Z_v1
+```
+
+Run the TypeScript tenant tests:
+
+```bash
+npm --prefix build_tenants/typescript test
+```
+
+The generated comparison cuts are under:
+
+```text
+examples/<domain>/sandbox/20260515T000000Z_v1.TS/
+```
+
+They omit Python runtime payloads and write a TypeScript install manifest under
+`.genesis/odd_world_model/typescript/release/install_manifest.json`.
 
 ## Stack Position
 
@@ -70,9 +104,11 @@ examples/<domain>/sandbox/<datetime>_<version>.TS/
 ```
 
 Those cuts should use the same source corpus and preserve comparable published,
-query, mapping, proof, and event evidence while omitting old Python runtime or
-`.genesis` payloads. They are projections from the generic scenario sandbox
-run, not a separate sandbox mechanism.
+query, mapping, proof, and event evidence where the TypeScript slice implements
+the corresponding carrier while omitting old Python runtime payloads. The first
+slice preserves source, review, published, composed-world-model, query, event,
+manifest, and result evidence. Rich historical APRA/trade mapping and proof
+surfaces remain parity pressure for the next implementation slice.
 
 The first graph-build trigger is designed around:
 
