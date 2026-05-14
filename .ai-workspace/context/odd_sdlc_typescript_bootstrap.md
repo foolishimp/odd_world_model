@@ -1,4 +1,3 @@
-<!-- ODD_SDLC_BOOTLOADER_START -->
 # odd_sdlc TypeScript Workspace Governance Surface
 
 This workspace contains a target project governed by `odd_sdlc.TS`.
@@ -70,4 +69,3 @@ Imported project authority defines what the project is.
 
 If those layers disagree, imported project authority wins for project identity,
 and GTL/ABG plus `odd_sdlc` govern how work proceeds over that authority.
-<!-- ODD_SDLC_BOOTLOADER_END -->

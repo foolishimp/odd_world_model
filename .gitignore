@@ -1,8 +1,14 @@
 .DS_Store
 
 # Installed products and bootstrapped toolsets are not project source truth.
+.abiogenesis/
 .genesis/
 .odd_sdlc/
+.npm-cache/
+bootstrap/
+node_modules/
+package.json
+package-lock.json
 
 # Python cache and local test noise.
 .pytest_cache/
