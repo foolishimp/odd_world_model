@@ -19,6 +19,7 @@ Use `.genesis/docs/standards/` as the governing method reference when writing or
 
 ## Current Families
 
+- `05-product-definition-authority.md`
 - `10-world-model-object-representation.md`
 - `20-domain-build-and-composition-capability.md`
 - `30-domain-build-and-composition-constraints.md`
@@ -28,3 +29,4 @@ Use `.genesis/docs/standards/` as the governing method reference when writing or
 - `70-multi-domain-mapping-constraints.md`
 - `80-world-model-mesh-capability.md`
 - `90-world-model-mesh-constraints.md`
+- `95-release-installation-governance.md`

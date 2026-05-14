@@ -1,8 +1,8 @@
 # Product
 
 **ID**: PROD-ODD-WORLD-MODEL-001
-**Status**: Draft
-**Date**: 2026-04-15
+**Status**: Active
+**Date**: 2026-05-15
 
 This document is the current product-definition surface of the mutable
 `odd_world_model` source project.
@@ -28,11 +28,11 @@ truth that later becomes detached from its context as it moves through adjacent
 domains and transformations.
 
 `odd_world_model` is also the concrete product domain that realizes this line of
-work. It is implemented in GTL/ABG as a specific domain, with its own
-constitutional surfaces, domain terms, and downstream realization path.
+work. It has its own constitutional surfaces, domain terms, and downstream
+realization path.
 
-Within that realization path, semantic derivation is expected to be declared
-through GTL / graph functions, while deterministic `F_D` primitives are used
+Within that product path, semantic derivation is expected to be declared
+through published graph functions, while deterministic materializers are used
 for record and provenance/event materialization.
 
 Architecturally, `odd_world_model` is a federated world-model mesh rather than a
@@ -44,6 +44,81 @@ The product therefore has two core intents:
 
 1. build published domain artifacts
 2. compose those artifacts into higher-order world models
+
+## Product Definition Boundary
+
+The product definition is technology-independent.
+
+The product is not defined by a programming language, package manager, test
+runner, tenant implementation, or historical prototype. Those surfaces may
+realize, prove, or compare the product, but they do not define the product
+`WHAT`.
+
+The product is defined by the semantic chain it must make true:
+
+`source observation -> traced evidence -> assured claim -> attribute ledger -> immutable object cut -> published domain artifact -> composed world model -> query/proof projection`
+
+Any conformant realization must be derivable from this chain and from the live
+requirements under `specification/requirements/`.
+
+For project governance, `specification/` is the source of product-definition
+authority. For world-model output, the single semantic truth surface is the
+published semantic layer.
+
+## Single Truth Surface
+
+The product's single semantic truth surface is the published world-model layer.
+
+That layer consists of:
+
+- published domain artifacts
+- bounded fragments inside those artifacts
+- published Markov-object cuts
+- treatment surfaces
+- covariance edges
+- adjoint mappings
+- temporal reference artifacts
+- composed world models built by reference from published artifacts
+
+Everything else is downstream, supporting, or evidentiary:
+
+- retained source corpora
+- source inventories and traced observations
+- assurance review surfaces
+- epistemic overlays
+- query planes
+- mapping reports
+- conventional projections
+- compiled deterministic execution artifacts
+- generated views and dashboards
+
+Those surfaces may be necessary for construction, proof, inspection, or use.
+They do not create a second semantic truth surface.
+
+## Release And Install Boundary
+
+`odd_world_model` is a builder product.
+
+A released cut of the product may be installed into a builder project that has
+its own source inputs, settings, and publication lane. The install gives that
+builder project the product assets needed to construct published domain
+artifacts and composed world models.
+
+The install is not the mutable source project and not a new product
+definition. It is a stamped use of a released product.
+
+An installed builder project must preserve:
+
+- product identity and release provenance
+- installed product assets
+- required method and operating guidance
+- project-local source inputs and settings
+- a publication lane for the builder project's outputs
+- evidence that published outputs were produced through the installed product
+
+This boundary lets the product be consumed outside its source workspace without
+leaking source-project realization structure into the installed builder
+project.
 
 ## Product Vision
 
@@ -237,6 +312,9 @@ The end-state product is an inspectable world-model layer with:
 
 - released builder products that can be consumed immutably by downstream
   builder projects
+- installable builder-product cuts that carry product identity, release
+  provenance, product assets, method guidance, and a project-local publication
+  lane
 - observed source systems linked to the functions, code paths, interfaces, and
   records they enact
 - published domain artifacts as the durable semantic publication units for
@@ -287,8 +365,10 @@ Today the product definition consists of:
   domain build and world-model composition
 - a current three-pillar delivery line:
   domain build, world-model composition, and world-model query
-- a specific product-domain identity for `odd_world_model` inside GTL/ABG
-- a planned Python realization tenant at `build_tenants/python/`
+- a specific product-domain identity for `odd_world_model`
+- a technology-independent product boundary in which realization tenants,
+  languages, package managers, and runtime substrates are downstream design
+  choices rather than product-definition authority
 - a first-slice boundary centered on one concrete source-to-downstream
   treatment path rather than on generalized enterprise coverage
 - an architectural direction toward federated publication and recursive

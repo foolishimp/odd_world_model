@@ -7,7 +7,7 @@
 ### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-001 — No Central Flattened Truth
 
 **Carries**:
-- `WORLD_MODEL_METHOD.md` — `Preferred Topology`
+- `WORLD_MODEL_METHOD.md` — `Single Truth Surface`, `Composition Law`
 - `INTENT.md` — `Constraints`
 - `PRODUCT.md` — `Product Vision`, `Current Product Definition`
 
@@ -17,7 +17,7 @@ erases bounded-context identity, publication cut, or domain ownership.
 ### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-002 — Published Nodes Only
 
 **Carries**:
-- `WORLD_MODEL_METHOD.md` — `Key Product Taxonomy`, `Compositions Are Built By Reference`
+- `WORLD_MODEL_METHOD.md` — `Single Truth Surface`, `Method Units`
 - `INTENT.md` — `Constraints`
 - `PRODUCT.md` — `Published Domain Artifact`, `Composed World Model`
 
@@ -28,7 +28,7 @@ unpublished workspace state SHALL not be admitted as durable mesh truth.
 ### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-003 — Reference Before Copy
 
 **Carries**:
-- `WORLD_MODEL_METHOD.md` — `Compositions Are Built By Reference`
+- `WORLD_MODEL_METHOD.md` — `Composition Law`
 - `INTENT.md` — `Constraints`
 - `PRODUCT.md` — `Core Product Intent / World-Model Composition`
 
@@ -39,7 +39,7 @@ materialized, its upstream mesh refs SHALL remain explicit.
 ### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-004 — Version And Supersession Disclosure
 
 **Carries**:
-- `WORLD_MODEL_METHOD.md` — `Versioning`
+- `WORLD_MODEL_METHOD.md` — `Publication Law`
 - `INTENT.md` — `Constraints`
 - `PRODUCT.md` — `Product End State`
 
@@ -61,7 +61,7 @@ nodes or links.
 ### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-006 — Common Models Are Reusable Published Nodes
 
 **Carries**:
-- `WORLD_MODEL_METHOD.md` — `Preferred Topology`
+- `WORLD_MODEL_METHOD.md` — `Composition Law`, `Single Truth Surface`
 - `INTENT.md` — `Constraints`
 - `PRODUCT.md` — `Common Model`
 

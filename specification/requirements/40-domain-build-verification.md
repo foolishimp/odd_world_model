@@ -54,3 +54,28 @@ When an existing prototype predates the current ratified requirement or design
 line, `odd_world_model` SHALL treat that prototype as a readback surface for
 requirement and design refinement rather than as implicit authority to preserve
 unchallenged.
+
+### REQ-ODD-WORLD-MODEL-BUILD-VERIFY-005 — Realization-Independent Product Proof
+
+**Carries**:
+- `SPEC_METHOD.md` — `Reconstruction Litmus`, `Specification Surface Rule`
+- `WORLD_MODEL_METHOD.md` — `Proof Law`
+- `PRODUCT.md` — `Product Definition Boundary`, `Current Product Definition`
+
+Product proof SHALL validate the live product requirements and scenarios rather
+than merely proving that one historical implementation continues to run.
+Tenant-local tests, generated reports, and runtime projections MAY provide
+evidence, but the accepted proof claim SHALL trace back to product requirements,
+scenario coverage, and the source-to-publication semantic chain.
+
+### REQ-ODD-WORLD-MODEL-BUILD-VERIFY-006 — Installed Builder Product Proof
+
+**Carries**:
+- `SPEC_METHOD.md` — `Recursive Product Taxonomy`, `Reconstruction Litmus`
+- `PRODUCT.md` — `Release And Install Boundary`
+
+When `odd_world_model` claims installable builder-product behavior, proof SHALL
+exercise a stamped install rather than only the mutable source workspace. The
+proof SHALL show that the installed product can use project-local source
+configuration to produce or inspect the expected published semantic outputs
+without relying on uninstalled source-project realization structure.

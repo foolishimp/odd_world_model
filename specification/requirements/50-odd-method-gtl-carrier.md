@@ -12,7 +12,7 @@
 
 `odd_world_model` SHALL publish explicit typed domain asset and node surfaces for
 its retained build line rather than leaving the active domain-build carrier
-implicit inside Python orchestration only.
+implicit inside realization-local orchestration only.
 
 ### REQ-ODD-WORLD-MODEL-ODD-CARRIER-002 — Graph Functions As Primary Carrier
 
@@ -45,16 +45,17 @@ typed input/output boundaries, and their outer callable contracts.
 environment contracts and explicit traversal-boundary publication rather than
 simple output-piped composition or hidden inner-vector jobs.
 
-### REQ-ODD-WORLD-MODEL-ODD-CARRIER-005 — Python GTL And ABG Tenant For First Live Line
+### REQ-ODD-WORLD-MODEL-ODD-CARRIER-005 — Governed Graph Carrier For The Live Line
 
 **Carries**:
 - `ODD_METHOD.md` — `What An ODD Product Is`, `Invocation Rule`
-- `PRODUCT.md` — `Current Product Definition`
+- `PRODUCT.md` — `Product Definition Boundary`, `Current Product Definition`
 
-`odd_world_model` SHALL realize its first live ODD-method carrier line under the
-Python tenant, using GTL as the constructive carrier and ABG-aligned runtime
-publication boundaries rather than introducing a parallel implementation stack
-in the same wave.
+`odd_world_model` SHALL define its live constructive carrier as explicit typed
+assets, published graph functions, function catalog, graph module, and
+projection surfaces. A realization tenant may implement that carrier, but the
+carrier contract SHALL remain derivable from product requirements rather than
+from one tenant's historical implementation structure.
 
 ### REQ-ODD-WORLD-MODEL-ODD-CARRIER-006 — Query As Projection Over Constructive History
 

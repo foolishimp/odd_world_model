@@ -7,7 +7,7 @@
 ### REQ-ODD-WORLD-MODEL-MESH-CAP-001 — Federated Mesh Over Published Semantic Cuts
 
 **Carries**:
-- `WORLD_MODEL_METHOD.md` — `Compositions Are Built By Reference`, `Preferred Topology`
+- `WORLD_MODEL_METHOD.md` — `Single Truth Surface`, `Composition Law`
 - `INTENT.md` — `Outcomes`, `Constraints`
 - `PRODUCT.md` — `Product Vision`, `Current Product Definition`, `Product End State`
 
@@ -17,7 +17,7 @@ semantic cuts rather than from one flattened central enterprise model.
 ### REQ-ODD-WORLD-MODEL-MESH-CAP-002 — Lawful Mesh Participation
 
 **Carries**:
-- `WORLD_MODEL_METHOD.md` — `Key Product Taxonomy`, `Compositions Are Built By Reference`
+- `WORLD_MODEL_METHOD.md` — `Method Units`, `Composition Law`
 - `INTENT.md` — `Outcomes`
 - `PRODUCT.md` — `Published Domain Artifact`, `Common Model`, `Composed World Model`
 
@@ -33,7 +33,7 @@ into one anonymous node kind.
 ### REQ-ODD-WORLD-MODEL-MESH-CAP-003 — Versioned Reference-Based Composition
 
 **Carries**:
-- `WORLD_MODEL_METHOD.md` — `Compositions Are Built By Reference`, `Versioning`
+- `WORLD_MODEL_METHOD.md` — `Composition Law`, `Publication Law`
 - `INTENT.md` — `Constraints`
 - `PRODUCT.md` — `Core Product Intent / World-Model Composition`, `Product End State`
 
@@ -44,7 +44,7 @@ remain inspectable at every mesh node.
 ### REQ-ODD-WORLD-MODEL-MESH-CAP-004 — Cross-Domain Traversal
 
 **Carries**:
-- `WORLD_MODEL_METHOD.md` — `Method Objectives`
+- `WORLD_MODEL_METHOD.md` — `Method Units / Query Plane`, `Projection Law`
 - `INTENT.md` — `Outcomes`
 - `PRODUCT.md` — `World-Model Query`, `Current Delivery Pillars`, `Product End State`
 
@@ -56,7 +56,7 @@ mesh into one local projection.
 ### REQ-ODD-WORLD-MODEL-MESH-CAP-005 — Common-Model Reuse
 
 **Carries**:
-- `WORLD_MODEL_METHOD.md` — `Preferred Topology`
+- `WORLD_MODEL_METHOD.md` — `Single Truth Surface`, `Composition Law`
 - `INTENT.md` — `Outcomes`, `Constraints`
 - `PRODUCT.md` — `Common Model`, `Product Vision`
 
@@ -67,7 +67,7 @@ duplicating it into separate hidden local truth surfaces.
 ### REQ-ODD-WORLD-MODEL-MESH-CAP-006 — Incremental Mesh Growth
 
 **Carries**:
-- `WORLD_MODEL_METHOD.md` — `Versioning`, `Compositions Are Built By Reference`
+- `WORLD_MODEL_METHOD.md` — `Publication Law`, `Composition Law`
 - `ODD_METHOD.md` — `Invocation Rule`
 - `PRODUCT.md` — `Current Product Definition`, `Product End State`
 
@@ -78,7 +78,7 @@ full rebuild of previously published mesh truth.
 ### REQ-ODD-WORLD-MODEL-MESH-CAP-007 — Mesh-Aware Downstream Projection
 
 **Carries**:
-- `WORLD_MODEL_METHOD.md` — `Method Objectives`
+- `WORLD_MODEL_METHOD.md` — `Projection Law`, `Composition Law`
 - `INTENT.md` — `Outcomes`
 - `PRODUCT.md` — `World-Model Query`, `Projection Layer`, `Product End State`
 

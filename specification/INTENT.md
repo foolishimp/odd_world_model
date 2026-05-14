@@ -1,9 +1,9 @@
 # Intent
 
 **ID**: INT-ODD-WORLD-MODEL-001
-**Status**: Draft
-**Date**: 2026-04-15
-**Profile**: initial vision
+**Status**: Active
+**Date**: 2026-05-15
+**Profile**: product intent
 
 ## Purpose
 
@@ -23,7 +23,7 @@ history as an inspectable world model rather than accepting detached data as the
 best available representation of reality.
 
 `odd_world_model` is the concrete product domain for this line of work. It is
-implemented as a specific GTL/ABG domain rather than remaining only as an
+specified as a governed graph-native product rather than remaining only as an
 abstract product thesis or generic commentary about domains.
 
 This intent surface defines what the current `odd_world_model` source project is
@@ -32,6 +32,10 @@ release artifact itself.
 
 This line is governed by `SPEC_METHOD.md` as refined by
 `WORLD_MODEL_METHOD.md` for world-model construction and composition.
+
+This intent is independent of programming language, tenant implementation, or
+runtime packaging choice. Those choices belong to design and realization unless
+the live specification explicitly promotes a boundary into product law.
 
 ## Outcomes
 
@@ -66,8 +70,8 @@ This line is governed by `SPEC_METHOD.md` as refined by
 - `odd_world_model` is the product domain itself. The project is not only describing
   domain comprehension in the abstract; it is realizing that capability as a
   specific GTL/ABG domain.
-- The build line should declare semantic derivation through GTL / graph
-  functions and use deterministic `F_D` primitives for record and
+- The build line should declare semantic derivation through published graph
+  functions and use deterministic materializers for record and
   provenance/event materialization rather than allowing one-off loader sprawl.
 - This source project defines the next `odd_world_model` product. Installed
   workspaces consume released `odd_world_model` products to build project-owned
@@ -101,4 +105,4 @@ This line is governed by `SPEC_METHOD.md` as refined by
   downstream treatment slice rather than prematurely expanding into every
   possible domain at once.
 - Deployment and runtime-observation stages remain out of scope until explicit
-  capability contracts are declared for the active tenant.
+  capability contracts are declared for the product line.
