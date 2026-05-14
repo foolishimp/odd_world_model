@@ -18,18 +18,51 @@ def load_fragment(fragment_path: Path) -> dict[str, Any]:
     return load_json(fragment_path)
 
 
+def project_root_from_domain_root(domain_root: Path) -> Path:
+    current = domain_root.resolve()
+    fallback: Path | None = None
+    for candidate in current.parents:
+        if (candidate / "specification").exists() and (candidate / ".genesis").exists():
+            if fallback is None:
+                fallback = candidate
+        if (candidate / "specification").exists() and (candidate / "examples").exists() and (candidate / ".genesis").exists():
+            return candidate
+    if fallback is not None:
+        return fallback
+    raise RuntimeError(f"unable to resolve project root from domain root {domain_root}")
+
+
+def example_root_from_domain_root(domain_root: Path) -> Path:
+    current = domain_root.resolve()
+    for candidate in current.parents:
+        if candidate.name == "sandbox":
+            return candidate.parent
+    raise RuntimeError(f"unable to resolve example root from domain root {domain_root}")
+
+
 def workspace_root_from_domain_root(domain_root: Path) -> Path:
+    current = domain_root.resolve()
+    for candidate in current.parents:
+        if candidate.parent.name == "sandbox":
+            return candidate
     return domain_root.parent.parent
 
 
 def resolve_ref(domain_root: Path, ref: str) -> Path:
+    project_root = project_root_from_domain_root(domain_root)
     workspace_root = workspace_root_from_domain_root(domain_root)
     if ref.startswith("ledger://"):
         return domain_root / "attribute_ledger" / ref.removeprefix("ledger://")
     if ref.startswith("review://"):
-        return workspace_root / "review" / ref.removeprefix("review://")
+        relative = ref.removeprefix("review://")
+        if relative.startswith("examples/"):
+            return project_root / relative
+        return workspace_root / "review" / relative
     if ref.startswith("input://"):
-        return workspace_root / "inputs" / ref.removeprefix("input://")
+        relative = ref.removeprefix("input://")
+        if relative.startswith("examples/"):
+            return project_root / relative
+        return example_root_from_domain_root(domain_root) / "sources" / relative
     return domain_root / ref
 
 

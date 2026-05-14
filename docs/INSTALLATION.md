@@ -36,11 +36,12 @@ The first installer is filesystem-first and release-oriented.
 
 It installs:
 
-- the `odd_world_model` Python package under `.odd_world_model/python/code/odd_world_model`
-- the shared common carrier assets under `build_tenants/common/`
+- the `odd_world_model` Python package under `.genesis/odd_world_model/python/code/odd_world_model`
+- the installed carrier assets under `.genesis/odd_world_model/python/code/odd_world_model/assets/`
+- the retained root-level example hierarchy under `examples/`
 - installed standards under `.genesis/docs/standards/`
 - workspace bootstrap under `.ai-workspace/`
-- install provenance under `.odd_world_model/release/install_manifest.json`
+- install provenance under `.genesis/odd_world_model/release/install_manifest.json`
 - installed guidance into `AGENTS.md` and `CLAUDE.md`
 
 It does not yet install:
@@ -74,11 +75,13 @@ After install, a target project should contain at least:
 ```text
 <project-root>/
   .ai-workspace/
-  .genesis/docs/standards/
-  .odd_world_model/
-    python/code/odd_world_model/
-    release/install_manifest.json
-  build_tenants/common/
+  .genesis/
+    docs/standards/
+    odd_world_model/
+      python/code/odd_world_model/
+        assets/
+      release/install_manifest.json
+  examples/
   specification/
   docs/
   domain_artifacts/
@@ -116,16 +119,14 @@ built.
 After install, the first verification commands are:
 
 ```bash
-PYTHONPATH=.odd_world_model/python/code \
-python -m odd_world_model.world_model.validate build_tenants/common/examples/world_fragment_minimal
+PYTHONPATH=.genesis:.genesis/odd_world_model/python/code \
+python -m odd_world_model.world_model.validate \
+  examples/trade_representation_model/sandbox/20260419T000000Z_v1/published/trade_representation_domain
 
-PYTHONPATH=.odd_world_model/python/code \
-python -m odd_world_model.build_line.fpml_trade_domain
-
-PYTHONPATH=.odd_world_model/python/code \
+PYTHONPATH=.genesis:.genesis/odd_world_model/python/code \
 python -m odd_world_model.build_line.trade_to_apra
 
-PYTHONPATH=.odd_world_model/python/code \
+PYTHONPATH=.genesis:.genesis/odd_world_model/python/code \
 python -m odd_world_model.query.trade_to_apra
 ```
 
@@ -138,5 +139,12 @@ Installed standards tell you how world-model work should be done.
 Project-owned specification tells you what the configured project is trying to
 build.
 
-Published outputs under `domain_artifacts/` are the project's own domain
-artifacts, not source-workspace examples.
+Within each example domain, `sources/` is the retained rebuild authority:
+source data, PDFs, code samples, and URI ledgers that remain stable as the
+world-model build line changes.
+
+Published example outputs under `examples/<domain>/sandbox/<datetime>_<version>/`
+are the project's own retained domain-model instances, not source-workspace
+commentary. New sandbox versions may be stamped alongside earlier cuts from the
+same `sources/` corpus as different `odd_world_model` versions rebuild the
+domain.

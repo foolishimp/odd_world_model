@@ -9,16 +9,16 @@ from pathlib import Path
 from typing import Any
 
 from odd_world_model.build_line.fpml_trade_domain import OFFICIAL_SAMPLE_INPUT_REF
-from odd_world_model.build_line.trade_to_apra import build as build_trade_to_apra_sandbox
-from odd_world_model.build_line.trade_to_apra import sandbox_root
+from odd_world_model.build_line.trade_to_apra import (
+    apra_domain_root,
+    build as build_trade_to_apra_sandbox,
+    sandbox_root,
+    trade_domain_root,
+)
 
 
 def proof_root() -> Path:
     return sandbox_root() / "proof"
-
-
-def published_root() -> Path:
-    return sandbox_root() / "published"
 
 
 def stitching_root() -> Path:
@@ -45,15 +45,17 @@ def _write_text(path: Path, content: str) -> None:
 
 def _bundle() -> dict[str, Any]:
     build_trade_to_apra_sandbox()
-    trade_fragment = _load_json(published_root() / "trade_representation_domain" / "fragment.json")
-    trade_object = _load_json(published_root() / "trade_representation_domain" / "objects" / "trade_contract_state.json")
-    trade_product = _load_json(published_root() / "trade_representation_domain" / "objects" / "commodity_swap_product.json")
-    trade_agreement = _load_json(published_root() / "trade_representation_domain" / "objects" / "master_agreement_reference.json")
-    apra_fragment = _load_json(published_root() / "apra_liquidity_domain" / "fragment.json")
-    apra_object = _load_json(published_root() / "apra_liquidity_domain" / "objects" / "reporting_position.json")
-    apra_bucket = _load_json(published_root() / "apra_liquidity_domain" / "objects" / "counterparty_bucket.json")
-    apra_agreement = _load_json(published_root() / "apra_liquidity_domain" / "objects" / "agreement_treatment_basis.json")
-    treatment = _load_json(published_root() / "trade_representation_domain" / "treatments" / "trade_to_apra_liquidity_candidate.json")
+    trade_root = trade_domain_root()
+    apra_root = apra_domain_root()
+    trade_fragment = _load_json(trade_root / "fragment.json")
+    trade_object = _load_json(trade_root / "objects" / "trade_contract_state.json")
+    trade_product = _load_json(trade_root / "objects" / "commodity_swap_product.json")
+    trade_agreement = _load_json(trade_root / "objects" / "master_agreement_reference.json")
+    apra_fragment = _load_json(apra_root / "fragment.json")
+    apra_object = _load_json(apra_root / "objects" / "reporting_position.json")
+    apra_bucket = _load_json(apra_root / "objects" / "counterparty_bucket.json")
+    apra_agreement = _load_json(apra_root / "objects" / "agreement_treatment_basis.json")
+    treatment = _load_json(trade_root / "treatments" / "trade_to_apra_liquidity_candidate.json")
     covariance = _load_json(stitching_root() / "trade_to_apra_covariance_candidate.json")
     adjoint = _load_json(stitching_root() / "trade_to_apra_adjoint_candidate.json")
     return {
@@ -125,8 +127,8 @@ def _mapping_document(bundle: dict[str, Any]) -> str:
 ## Traceability
 
 - Source evidence: `{OFFICIAL_SAMPLE_INPUT_REF}`
-- Target evidence: `input://apra_liquidity/authority_claims.json`
-- Review surface: `review://fpml_trade_representation_standard/parsed_trade_observation.json`
+- Target evidence: `input://examples/apra_liquidity_model/sources/data/authority_claims.json`
+- Review surface: `review://examples/trade_representation_model/sandbox/20260419T000000Z_v1/review/parsed_trade_observation.json`
 """
 
 

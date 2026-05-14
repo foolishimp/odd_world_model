@@ -1,0 +1,24 @@
+{
+  "edge": "trace_source_observations",
+  "actor": "odd_world_model_constructor",
+  "attestation": {
+    "asset_id": "trace_surface",
+    "path": "/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/review/traces",
+    "exists": true,
+    "actual_kind": "directory",
+    "expected_kind": "directory",
+    "contract_satisfied": true
+  },
+  "assessments": [
+    {
+      "evaluator": "odd_world_model_fd_trace_surface",
+      "result": "pass",
+      "evidence": "Rebuilt retained odd_world_model steel thread and satisfied generated-asset contract for trace_surface"
+    },
+    {
+      "evaluator": "odd_world_model_fp_semantic_constructor",
+      "result": "pass",
+      "evidence": "Rebuilt retained odd_world_model steel thread and satisfied generated-asset contract for trace_surface"
+    }
+  ]
+}

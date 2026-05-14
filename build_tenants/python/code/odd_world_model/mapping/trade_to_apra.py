@@ -20,7 +20,12 @@ import shutil
 from pathlib import Path
 from typing import Any
 
-from odd_world_model.build_line.trade_to_apra import materialize_composed_world_model_surface, sandbox_root
+from odd_world_model.build_line.trade_to_apra import (
+    apra_domain_root,
+    materialize_composed_world_model_surface,
+    sandbox_root,
+    trade_domain_root,
+)
 from odd_world_model.world_model.load import load_json
 
 
@@ -40,14 +45,10 @@ def report_path() -> Path:
     return mapping_root() / "reports" / "trade_to_apra_mapping_report.md"
 
 
-def published_root() -> Path:
-    return sandbox_root() / "published"
-
-
 def _artifact_roots() -> dict[str, Path]:
     return {
-        "trade": published_root() / "trade_representation_domain",
-        "apra": published_root() / "apra_liquidity_domain",
+        "trade": trade_domain_root(),
+        "apra": apra_domain_root(),
     }
 
 
@@ -215,7 +216,7 @@ def build_analysis(*, reset: bool = True) -> dict[str, Any]:
                 "rationale": [
                     "published treatment explicitly reinterprets the trade object as a regulatory reporting position",
                     "published covariance and adjoint surfaces bind the object pair directly",
-                    "target object evidence declares imported trade artifact dependence",
+                    "target object evidence declares retained sandbox trade-domain dependence",
                 ],
                 "supporting_refs": [
                     bundle["treatment"]["treatment_id"],

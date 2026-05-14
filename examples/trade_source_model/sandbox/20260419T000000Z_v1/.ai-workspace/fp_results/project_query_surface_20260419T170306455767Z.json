@@ -1,0 +1,24 @@
+{
+  "edge": "project_query_surface",
+  "actor": "odd_world_model_constructor",
+  "attestation": {
+    "asset_id": "query_projection_surface",
+    "path": "/Users/jim/src/apps/odd_world_model/examples/trade_source_model/sandbox/20260419T000000Z_v1/query/world_model_query_summary.json",
+    "exists": true,
+    "actual_kind": "file",
+    "expected_kind": "file",
+    "contract_satisfied": true
+  },
+  "assessments": [
+    {
+      "evaluator": "odd_world_model_fd_query_projection_surface",
+      "result": "pass",
+      "evidence": "Rebuilt retained odd_world_model steel thread and satisfied generated-asset contract for query_projection_surface"
+    },
+    {
+      "evaluator": "odd_world_model_fp_semantic_constructor",
+      "result": "pass",
+      "evidence": "Rebuilt retained odd_world_model steel thread and satisfied generated-asset contract for query_projection_surface"
+    }
+  ]
+}

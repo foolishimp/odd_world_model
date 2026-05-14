@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.adjoint_mapping.schema.json",
+  "title": "AdjointMapping",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_kind",
+    "schema_version",
+    "mapping_id",
+    "forward_treatment_ref",
+    "source_domain",
+    "target_domain",
+    "interpret_back_summary"
+  ],
+  "properties": {
+    "schema_kind": {
+      "const": "odd_world_model.adjoint_mapping"
+    },
+    "schema_version": {
+      "const": "v1"
+    },
+    "mapping_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "forward_treatment_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "interpret_back_summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "preserved_structure": {
+      "$ref": "world_model_object.schema.json#/$defs/string_array"
+    },
+    "loss_notes": {
+      "$ref": "world_model_object.schema.json#/$defs/string_array"
+    },
+    "surplus_notes": {
+      "$ref": "world_model_object.schema.json#/$defs/string_array"
+    }
+  }
+}

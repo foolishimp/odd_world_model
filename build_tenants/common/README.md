@@ -14,4 +14,3 @@ Current shared roots:
 
 - `build_tenants/common/design/`
 - `build_tenants/common/schemas/`
-- `build_tenants/common/examples/`

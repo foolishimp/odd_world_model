@@ -1,0 +1,12 @@
+{
+  "schema_kind": "odd_world_model.covariance_edge",
+  "schema_version": "v1",
+  "edge_id": "odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
+  "source_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+  "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "relationship_kind": "partial_correspondence",
+  "ambiguity_notes": [
+    "The APRA reporting position captures only the liquidity-relevant slice of the retained trade-representation example domain.",
+    "Counterparty and agreement treatments remain sparse and should be deepened before this edge is promoted to stronger correspondence."
+  ]
+}

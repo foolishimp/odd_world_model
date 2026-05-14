@@ -1,0 +1,26 @@
+{
+  "source_id": "sandbox.apra_liquidity",
+  "published_by": "team.sandbox.regulatory",
+  "bounded_context": "sandbox.apra_liquidity.reporting",
+  "summary": "Sandbox APRA liquidity input for the first odd_world_model MVP lane.",
+  "reporting_position": {
+    "position_id": "apra_liquidity_position_001",
+    "reporting_regime": "APRA liquidity",
+    "counterparty_bucket": "financial_institution",
+    "agreement_assessment": "master_agreement_reviewed",
+    "liquidity_bucket": "contractual_outflow_assessment",
+    "lifecycle_state": "draft_classified"
+  },
+  "evidence_refs": [
+    "input://examples/apra_liquidity_model/sources/data/domain_input.json",
+    "input://examples/apra_liquidity_model/sources/data/requirements_snapshot.json",
+    "input://examples/apra_liquidity_model/sources/uri_ledger/source_notes.md",
+    "input://examples/apra_liquidity_model/sources/uri_ledger/source_authority.md",
+    "input://examples/apra_liquidity_model/sources/data/authority_claims.json",
+    "input://examples/apra_liquidity_model/sources/data/authority/apra_liquidity_landing_page.html",
+    "input://examples/apra_liquidity_model/sources/data/authority/aps_210_liquidity_2025.html",
+    "input://examples/apra_liquidity_model/sources/pdfs/apg_210_liquidity_2025.pdf",
+    "input://examples/apra_liquidity_model/sources/data/authority/ars_210_0_liquidity_2023.html",
+    "input://examples/apra_liquidity_model/sources/data/authority/apra_liquidity_faq.html"
+  ]
+}

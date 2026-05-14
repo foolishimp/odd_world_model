@@ -1,0 +1,309 @@
+{
+  "manifest_id": "project_query_surface_20260419T170306407579Z",
+  "call_id": "call-d96a05fa-73c8-4236-90d4-cec1ccac6c12",
+  "edge": "project_query_surface",
+  "vector_id": "b9798106-fdbc-4ef4-b3a4-40e2a31f7f19",
+  "job_id": "e10780e7-07da-4ad1-81c8-9c1b4dcdb8dd",
+  "graph_function_id": "03f38f89-7a9c-4b8e-ae3f-cb26ac8950df",
+  "materialization_id": "8d33c20e72c88db7",
+  "source_asset": [
+    "published_domain_artifact_surface",
+    "composed_world_model_surface"
+  ],
+  "target_asset": "query_projection_surface",
+  "source_markov": {
+    "published_domain_artifact_surface": [],
+    "composed_world_model_surface": []
+  },
+  "target_markov": [],
+  "failing_evaluators": [
+    {
+      "name": "odd_world_model_fd_query_projection_surface",
+      "regime": "F_D",
+      "description": "The retained query projection surface is present over the current constructive history."
+    },
+    {
+      "name": "odd_world_model_fp_semantic_constructor",
+      "regime": "F_P",
+      "description": "Primary constructive evaluator for the retained odd_world_model GTL carrier."
+    }
+  ],
+  "fd_failures": [
+    {
+      "name": "odd_world_model_fd_query_projection_surface",
+      "binding": "exec://python -m odd_world_model.fd_checks query-projection-surface-present --workspace .",
+      "description": "The retained query projection surface is present over the current constructive history."
+    }
+  ],
+  "fd_results": {
+    "odd_world_model_fd_query_projection_surface": {
+      "passes": false,
+      "detail": {
+        "returncode": 1,
+        "stdout": "{\n  \"check\": \"query-projection-surface-present\",\n  \"workspace_root\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1\",\n  \"asset_assessments\": [\n    {\n      \"asset_id\": \"published_domain_artifact_surface\",\n      \"path\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/published/trade_representation_domain/fragment.json\",\n      \"exists\": true,\n      \"actual_kind\": \"file\",\n      \"expected_kind\": \"file\",\n      \"contract_satisfied\": true\n    },\n    {\n      \"asset_id\": \"composed_world_model_surface\",\n      \"path\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/published/world_model\",\n      \"exists\": true,\n      \"actual_kind\": \"directory\",\n      \"expected_kind\": \"directory\",\n      \"contract_satisfied\": true\n    },\n    {\n      \"asset_id\": \"query_projection_surface\",\n      \"path\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/query/world_model_query_summary.json\",\n      \"exists\": false,\n      \"actual_kind\": \"missing\",\n      \"expected_kind\": \"file\",\n      \"contract_satisfied\": false\n    }\n  ]\n}\n",
+        "stderr": ""
+      }
+    }
+  },
+  "delta": 1.0,
+  "unresolved_count": 2,
+  "delta_summary": "delta = 2 \u2014 2 evaluator(s) failing:\n  odd_world_model_fd_query_projection_surface (F_D): {'returncode': 1, 'stdout': '{\\n  \"check\": \"query-projection-surface-present\",\\n  \"workspace_root\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1\",\\n  \"asset_assessments\": [\\n    {\\n      \"asset_id\": \"published_domain_artifact_surface\",\\n      \"path\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/published/trade_representation_domain/fragment.json\",\\n      \"exists\": true,\\n      \"actual_kind\": \"file\",\\n      \"expected_kind\": \"file\",\\n      \"contract_satisfied\": true\\n    },\\n    {\\n      \"asset_id\": \"composed_world_model_surface\",\\n      \"path\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/published/world_model\",\\n      \"exists\": true,\\n      \"actual_kind\": \"directory\",\\n      \"expected_kind\": \"directory\",\\n      \"contract_satisfied\": true\\n    },\\n    {\\n      \"asset_id\": \"query_projection_surface\",\\n      \"path\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/query/world_model_query_summary.json\",\\n      \"exists\": false,\\n      \"actual_kind\": \"missing\",\\n      \"expected_kind\": \"file\",\\n      \"contract_satisfied\": false\\n    }\\n  ]\\n}\\n', 'stderr': ''}\n  odd_world_model_fp_semantic_constructor (F_P): {}",
+  "contexts": [],
+  "current_asset": {
+    "asset_type": "published_domain_artifact_surface",
+    "instance_id": "current",
+    "status": "in_progress",
+    "edges_converged": [],
+    "event_count": 1
+  },
+  "prompt": "[PRECONDITIONS] \u2014 upstream asset stability (these hold):\n  published_domain_artifact_surface: (no markov conditions)\n  composed_world_model_surface: (no markov conditions)\n\n[CURRENT STATE]\nEdge: project_query_surface\nSource asset: published_domain_artifact_surface \u00d7 composed_world_model_surface\nTarget asset: query_projection_surface\nStatus: in_progress\nEdges converged: []\n\n[WORKING METHOD] \u2014 current-state-first execution is mandatory:\n  1. Inspect the current target asset state at query/world_model_query_summary.json before making changes.\n  2. Determine what is already realized and what remains unresolved.\n  3. Treat the current workspace state as truth; prior manifests and prior prompts are historical evidence only.\n  4. Continue construction from the present state and reduce the unresolved gap before assessment.\n\n[GAP] \u2014 2 evaluator(s) failing:\n  odd_world_model_fd_query_projection_surface (F_D): The retained query projection surface is present over the current constructive history.\n    F_D result: {'returncode': 1, 'stdout': '{\\n  \"check\": \"query-projection-surface-present\",\\n  \"workspace_root\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1\",\\n  \"asset_assessments\": [\\n    {\\n      \"asset_id\": \"published_domain_artifact_surface\",\\n      \"path\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/published/trade_representation_domain/fragment.json\",\\n      \"exists\": true,\\n      \"actual_kind\": \"file\",\\n      \"expected_kind\": \"file\",\\n      \"contract_satisfied\": true\\n    },\\n    {\\n      \"asset_id\": \"composed_world_model_surface\",\\n      \"path\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/published/world_model\",\\n      \"exists\": true,\\n      \"actual_kind\": \"directory\",\\n      \"expected_kind\": \"directory\",\\n      \"contract_satisfied\": true\\n    },\\n    {\\n      \"asset_id\": \"query_projection_surface\",\\n      \"path\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/query/world_model_query_summary.json\",\\n      \"exists\": false,\\n      \"actual_kind\": \"missing\",\\n      \"expected_kind\": \"file\",\\n      \"contract_satisfied\": false\\n    }\\n  ]\\n}\\n', 'stderr': ''}\n  odd_world_model_fp_semantic_constructor (F_P): Primary constructive evaluator for the retained odd_world_model GTL carrier.\n\n[DETERMINISTIC FAILURES] \u2014 clear these before asking for assessment:\n  odd_world_model_fd_query_projection_surface: {\n  \"check\": \"query-projection-surface-present\",\n  \"workspace_root\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1\",\n  \"asset_assessments\": [\n    {\n      \"asset_id\": \"published_domain_artifact_surface\",\n      \"path\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/published/trade_representation_domain/fragment.json\",\n      \"exists\": true,\n      \"actual_kind\": \"file\",\n      \"expected_kind\": \"file\",\n      \"contract_satisfied\": true\n    },\n    {\n      \"asset_id\": \"composed_world_model_surface\",\n      \"path\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/published/world_model\",\n      \"exists\": true,\n      \"actual_kind\": \"directory\",\n      \"expected_kind\": \"directory\",\n      \"contract_satisfied\": true\n    },\n    {\n      \"asset_id\": \"query_projection_surface\",\n      \"path\": \"/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/query/world_model_query_summary.json\",\n      \"exists\": false,\n      \"actual_kind\": \"missing\",\n      \"expected_kind\": \"file\",\n      \"contract_satisfied\": false\n    }\n  ]\n}\n\n[ENVIRONMENT] \u2014 resolved runtime environment for this edge:\n  source_observation_surface [carried] schema='odd.asset.source_observation_surface' status=external_authority origin=external_entry asset_kind=source_observation_surface path=review/source_observation.json kind=file exists=true uri=file://review/source_observation.json\n  trace_surface [carried] schema='odd.asset.trace_surface' status=in_progress origin=internal_carrier asset_kind=trace_surface path=review/traces kind=dir exists=true uri=file://review/traces\n  assurance_surface [carried] schema='odd.asset.assurance_surface' status=in_progress origin=internal_carrier asset_kind=assurance_surface path=review/assurance kind=dir exists=true uri=file://review/assurance\n  attribute_ledger_surface [carried] schema='odd.asset.attribute_ledger_surface' status=in_progress origin=internal_carrier asset_kind=attribute_ledger_surface path=published/trade_representation_domain/attribute_ledger kind=dir exists=true uri=file://published/trade_representation_domain/attribute_ledger\n  markov_object_cut_surface [carried] schema='odd.asset.markov_object_cut_surface' status=in_progress origin=internal_carrier asset_kind=markov_object_cut_surface path=published/trade_representation_domain/objects/trade_sandbox_001.json kind=file exists=true uri=file://published/trade_representation_domain/objects/trade_sandbox_001.json\n  published_domain_artifact_surface [required] schema='odd.asset.published_domain_artifact_surface' status=in_progress origin=internal_carrier required_via=vector_source+asset_surface asset_kind=published_domain_artifact_surface path=published/trade_representation_domain/fragment.json kind=file exists=true uri=file://published/trade_representation_domain/fragment.json\n  composed_world_model_surface [required] schema='odd.asset.composed_world_model_surface' status=in_progress origin=internal_carrier required_via=vector_source+asset_surface asset_kind=composed_world_model_surface path=published/world_model kind=dir exists=true uri=file://published/world_model\n  query_projection_surface [provided] schema='odd.asset.query_projection_surface' status=not_started origin=internal_carrier asset_kind=query_projection_surface path=query/world_model_query_summary.json kind=file exists=false uri=file://query/world_model_query_summary.json\n\n[REQUIRED BOUNDARY] \u2014 invocation-local effective required bindings for this edge:\n  vector_source_required_contexts: published_domain_artifact_surface, composed_world_model_surface\n  asset_surface_required_contexts: published_domain_artifact_surface, composed_world_model_surface\n  asset_surface_injected_required_contexts: (none)\n  effective_required_contexts: published_domain_artifact_surface, composed_world_model_surface\n  note: this merge is invocation-local runtime interpretation, not a rewrite of published GTL module topology.\n\n[ASSET SURFACE] \u2014 declared target asset contract:\n  kind: query_projection_surface\n  schema: odd.asset.query_projection_surface\n  required_contexts: published_domain_artifact_surface, composed_world_model_surface\n  output_contract_refs: query_projection_surface_present\n\n[TARGET BINDING] \u2014 concrete workspace destination for the produced asset:\n  asset_id: query_projection_surface\n  uri: file://query/world_model_query_summary.json\n  relative_path: query/world_model_query_summary.json\n  path_kind: file\n  exists: false\n\n[OUTPUT CONTRACT]\nProduce: query_projection_surface asset\nSatisfying markov conditions: ()\nEvaluators to pass: ['odd_world_model_fd_query_projection_surface', 'odd_world_model_fp_semantic_constructor']\n\nWrite assessment JSON to: /Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/.ai-workspace/fp_results/project_query_surface_20260419T170306407579Z.json\nFormat: {{'edge': 'project_query_surface', 'actor': '<your_agent_id>', 'assessments': [{\"evaluator\": \"odd_world_model_fd_query_projection_surface\", \"result\": \"pass|fail\", \"evidence\": \"...\"}, {\"evaluator\": \"odd_world_model_fp_semantic_constructor\", \"result\": \"pass|fail\", \"evidence\": \"...\"}]}}\nThe app reads this file and emits assessed events \u2014 do NOT call emit-event yourself.\n\n[EXECUTION RULES]\n- Update the workspace artifact(s), not just the assessment file.\n- Clear every deterministic F_D failure before treating the work as done.\n- Treat standards and output-contract contexts as mandatory acceptance checks.\n- Self-check the artifact against the target markov conditions before writing assessment JSON.\n- Mandatory contexts for this edge: query_projection_surface_present",
+  "result_path": "/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/.ai-workspace/fp_results/project_query_surface_20260419T170306407579Z.json",
+  "target_asset_binding": {
+    "asset_id": "query_projection_surface",
+    "uri": "file://query/world_model_query_summary.json",
+    "relative_path": "query/world_model_query_summary.json",
+    "path_kind": "file",
+    "exists": false,
+    "binding_source": "runtime_config.domain_package"
+  },
+  "environment_asset_bindings": {
+    "source_observation_surface": {
+      "asset_id": "source_observation_surface",
+      "uri": "file://review/source_observation.json",
+      "relative_path": "review/source_observation.json",
+      "path_kind": "file",
+      "exists": true,
+      "binding_source": "runtime_config.domain_package"
+    },
+    "trace_surface": {
+      "asset_id": "trace_surface",
+      "uri": "file://review/traces",
+      "relative_path": "review/traces",
+      "path_kind": "dir",
+      "exists": true,
+      "binding_source": "runtime_config.domain_package"
+    },
+    "assurance_surface": {
+      "asset_id": "assurance_surface",
+      "uri": "file://review/assurance",
+      "relative_path": "review/assurance",
+      "path_kind": "dir",
+      "exists": true,
+      "binding_source": "runtime_config.domain_package"
+    },
+    "attribute_ledger_surface": {
+      "asset_id": "attribute_ledger_surface",
+      "uri": "file://published/trade_representation_domain/attribute_ledger",
+      "relative_path": "published/trade_representation_domain/attribute_ledger",
+      "path_kind": "dir",
+      "exists": true,
+      "binding_source": "runtime_config.domain_package"
+    },
+    "markov_object_cut_surface": {
+      "asset_id": "markov_object_cut_surface",
+      "uri": "file://published/trade_representation_domain/objects/trade_sandbox_001.json",
+      "relative_path": "published/trade_representation_domain/objects/trade_sandbox_001.json",
+      "path_kind": "file",
+      "exists": true,
+      "binding_source": "runtime_config.domain_package"
+    },
+    "published_domain_artifact_surface": {
+      "asset_id": "published_domain_artifact_surface",
+      "uri": "file://published/trade_representation_domain/fragment.json",
+      "relative_path": "published/trade_representation_domain/fragment.json",
+      "path_kind": "file",
+      "exists": true,
+      "binding_source": "runtime_config.domain_package"
+    },
+    "composed_world_model_surface": {
+      "asset_id": "composed_world_model_surface",
+      "uri": "file://published/world_model",
+      "relative_path": "published/world_model",
+      "path_kind": "dir",
+      "exists": true,
+      "binding_source": "runtime_config.domain_package"
+    },
+    "query_projection_surface": {
+      "asset_id": "query_projection_surface",
+      "uri": "file://query/world_model_query_summary.json",
+      "relative_path": "query/world_model_query_summary.json",
+      "path_kind": "file",
+      "exists": false,
+      "binding_source": "runtime_config.domain_package"
+    }
+  },
+  "target_asset_surface": {
+    "kind": "query_projection_surface",
+    "schema": "odd.asset.query_projection_surface",
+    "required_contexts": [
+      "published_domain_artifact_surface",
+      "composed_world_model_surface"
+    ],
+    "standards_refs": [],
+    "output_contract_refs": [
+      "query_projection_surface_present"
+    ]
+  },
+  "environment_asset_surfaces": {
+    "source_observation_surface": {
+      "kind": "source_observation_surface",
+      "schema": "odd.asset.source_observation_surface",
+      "required_contexts": [],
+      "standards_refs": [],
+      "output_contract_refs": [
+        "source_observation_surface_present"
+      ]
+    },
+    "trace_surface": {
+      "kind": "trace_surface",
+      "schema": "odd.asset.trace_surface",
+      "required_contexts": [
+        "source_observation_surface"
+      ],
+      "standards_refs": [],
+      "output_contract_refs": [
+        "trace_surface_present"
+      ]
+    },
+    "assurance_surface": {
+      "kind": "assurance_surface",
+      "schema": "odd.asset.assurance_surface",
+      "required_contexts": [
+        "source_observation_surface",
+        "trace_surface"
+      ],
+      "standards_refs": [],
+      "output_contract_refs": [
+        "assurance_surface_present"
+      ]
+    },
+    "attribute_ledger_surface": {
+      "kind": "attribute_ledger_surface",
+      "schema": "odd.asset.attribute_ledger_surface",
+      "required_contexts": [
+        "source_observation_surface",
+        "trace_surface",
+        "assurance_surface"
+      ],
+      "standards_refs": [],
+      "output_contract_refs": [
+        "attribute_ledger_surface_present"
+      ]
+    },
+    "markov_object_cut_surface": {
+      "kind": "markov_object_cut_surface",
+      "schema": "odd.asset.markov_object_cut_surface",
+      "required_contexts": [
+        "source_observation_surface",
+        "trace_surface",
+        "assurance_surface",
+        "attribute_ledger_surface"
+      ],
+      "standards_refs": [],
+      "output_contract_refs": [
+        "markov_object_cut_surface_present"
+      ]
+    },
+    "published_domain_artifact_surface": {
+      "kind": "published_domain_artifact_surface",
+      "schema": "odd.asset.published_domain_artifact_surface",
+      "required_contexts": [
+        "source_observation_surface",
+        "trace_surface",
+        "assurance_surface",
+        "attribute_ledger_surface",
+        "markov_object_cut_surface"
+      ],
+      "standards_refs": [],
+      "output_contract_refs": [
+        "published_domain_artifact_surface_present"
+      ]
+    },
+    "composed_world_model_surface": {
+      "kind": "composed_world_model_surface",
+      "schema": "odd.asset.composed_world_model_surface",
+      "required_contexts": [
+        "published_domain_artifact_surface"
+      ],
+      "standards_refs": [],
+      "output_contract_refs": [
+        "composed_world_model_surface_present"
+      ]
+    },
+    "query_projection_surface": {
+      "kind": "query_projection_surface",
+      "schema": "odd.asset.query_projection_surface",
+      "required_contexts": [
+        "published_domain_artifact_surface",
+        "composed_world_model_surface"
+      ],
+      "standards_refs": [],
+      "output_contract_refs": [
+        "query_projection_surface_present"
+      ]
+    }
+  },
+  "runtime_environment_contract": {
+    "vector_source_required_contexts": [
+      "published_domain_artifact_surface",
+      "composed_world_model_surface"
+    ],
+    "asset_surface_required_contexts": [
+      "published_domain_artifact_surface",
+      "composed_world_model_surface"
+    ],
+    "asset_surface_injected_required_contexts": [],
+    "effective_required_contexts": [
+      "published_domain_artifact_surface",
+      "composed_world_model_surface"
+    ]
+  },
+  "spec_hash": "97e812940a2623ff",
+  "requirements": [
+    "REQ-ODD-WORLD-MODEL-ODD-CARRIER-001",
+    "REQ-ODD-WORLD-MODEL-ODD-CARRIER-002",
+    "REQ-ODD-WORLD-MODEL-ODD-CARRIER-003",
+    "REQ-ODD-WORLD-MODEL-ODD-CARRIER-004",
+    "REQ-ODD-WORLD-MODEL-ODD-CARRIER-005",
+    "REQ-ODD-WORLD-MODEL-ODD-CARRIER-006"
+  ],
+  "workflow_version": "abiogenesis.standard@3.0.0",
+  "run_id": "d96a05fa-73c8-4236-90d4-cec1ccac6c12",
+  "worker_id": "genesis",
+  "resolved_policy_bundle_ref": "genesis.policy_defaults:broad_fp_first_bundle",
+  "resolved_policy": {
+    "resolved_policy_bundle_ref": "genesis.policy_defaults:broad_fp_first_bundle",
+    "bundle_refs": [
+      "genesis.policy_defaults:broad_fp_first_bundle"
+    ],
+    "sources": {
+      "dispatch": "abg_default:bundle",
+      "evaluation": "abg_default:bundle",
+      "escalation": "abg_default:bundle",
+      "proof": "abg_default:bundle",
+      "closure": "abg_default:bundle"
+    },
+    "dispatch": {
+      "ref": "genesis.dispatch_runtime:dispatch_bound_manifest_via_transport",
+      "config": {}
+    },
+    "evaluation": {
+      "ref": "genesis.policy_defaults:evaluation_declared_then_generic",
+      "config": {}
+    },
+    "escalation": {
+      "ref": "genesis.policy_defaults:escalation_fp_first",
+      "config": {}
+    },
+    "proof": {
+      "ref": "genesis.policy_defaults:proof_recheck_after_fp",
+      "config": {}
+    },
+    "closure": {
+      "ref": "genesis.policy_defaults:closure_require_resolution_or_fh",
+      "config": {}
+    }
+  },
+  "graph_call_terminal_on_result": true,
+  "role_id": "fe6fd9bd-408b-41bc-a9d8-fe4af98ce711"
+}

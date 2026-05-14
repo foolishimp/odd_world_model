@@ -1,0 +1,12 @@
+{
+  "schema_kind": "odd_world_model.evidence_manifest",
+  "schema_version": "v1",
+  "manifest_id": "odd_world_model.evidence.trade_representation.fpml_trade_manifest.v1",
+  "summary": "Evidence manifest for the bounded FpML trade ingestion lane.",
+  "refs": [
+    "input://examples/trade_source_model/sources/data/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+    "input://examples/trade_source_model/sources/data/authority/fpml-5-12-examples.html",
+    "input://examples/trade_source_model/sources/uri_ledger/source_authority.md",
+    "review://parsed_trade_observation.json"
+  ]
+}

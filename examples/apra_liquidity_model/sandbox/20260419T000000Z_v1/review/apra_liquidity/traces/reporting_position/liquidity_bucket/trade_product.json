@@ -1,0 +1,54 @@
+{
+  "schema_kind": "odd_world_model.trace_record",
+  "schema_version": "v1",
+  "trace_id": "odd_world_model.trace.apra_liquidity.reporting_position.apra_liquidity_position_001.liquidity_bucket.trade_product.v1",
+  "source_ref": "review://examples/trade_representation_model/sandbox/20260419T000000Z_v1/review/parsed_trade_observation.json",
+  "source_kind": "data",
+  "claim_key": "liquidity_bucket",
+  "locator": "product",
+  "observation_kind": "composed",
+  "observed_at": "2026-04-15T00:10:00Z",
+  "observed_value": {
+    "product_xml_id": "",
+    "product_type": "CommoditySwap",
+    "product_id": "",
+    "asset_class": "Commodity",
+    "effective_date": "2006-07-01",
+    "termination_date": "2006-07-31",
+    "legs": [
+      {
+        "leg_id": "fixedleg_06",
+        "leg_kind": "fixedLeg",
+        "payer_party_ref": "partyA",
+        "receiver_party_ref": "partyB",
+        "quantity": "2500.0",
+        "quantity_unit": "MMBTU",
+        "quantity_frequency": "PerCalendarDay",
+        "total_notional_quantity": "77500.0",
+        "fixed_price": "6.295",
+        "price_currency": "USD",
+        "price_unit": "MMBTU",
+        "commodity_instrument_id": null,
+        "calculation_schedule_ref": "floatingLegCalculationPeriods"
+      },
+      {
+        "leg_id": "floatingleg_07",
+        "leg_kind": "floatingLeg",
+        "payer_party_ref": "partyB",
+        "receiver_party_ref": "partyA",
+        "quantity": "2500.0",
+        "quantity_unit": "MMBTU",
+        "quantity_frequency": "PerCalendarDay",
+        "total_notional_quantity": "77500.0",
+        "fixed_price": null,
+        "price_currency": null,
+        "price_unit": null,
+        "commodity_instrument_id": "NATURAL GAS-HENRY HUB-NYMEX",
+        "calculation_schedule_ref": "floatingLegCalculationPeriods"
+      }
+    ],
+    "leg_count": 2
+  },
+  "object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "summary": "Imported derivative-product evidence used to bound the liquidity outflow assessment."
+}

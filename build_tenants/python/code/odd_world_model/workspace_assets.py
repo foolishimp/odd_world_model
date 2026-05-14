@@ -9,6 +9,8 @@ from dataclasses import dataclass
 import hashlib
 from pathlib import Path
 
+from .build_line.domain_input_seed import configured_asset_paths as configured_domain_seed_asset_paths
+from .build_line.fpml_source_seed import configured_asset_paths as configured_fpml_source_asset_paths
 from .domain_model import (
     Asset,
     AssetCheckpoint,
@@ -17,25 +19,49 @@ from .domain_model import (
     AssetProvenance,
     relative_file_uri,
 )
+from .sandbox_config import configured_builder_kind
 
 
-ASSET_PATHS: tuple[tuple[str, str, str], ...] = (
+PACKAGE_ASSET_PREFIX = "@package/"
+
+
+LEGACY_ASSET_PATHS: tuple[tuple[str, str, str], ...] = (
     ("intent_surface", "intent_surface", "specification/INTENT.md"),
     ("product_surface", "product_surface", "specification/PRODUCT.md"),
     ("odd_method_carrier_requirements_surface", "published_domain_artifact_surface", "specification/requirements/50-odd-method-gtl-carrier.md"),
-    ("attribute_ledger_build_line_surface", "published_domain_artifact_surface", "build_tenants/common/design/ATTRIBUTE_LEDGER_BUILD_LINE.md"),
-    ("odd_gtl_attribute_ledger_carrier_surface", "published_domain_artifact_surface", "build_tenants/common/design/ODD_GTL_ATTRIBUTE_LEDGER_CARRIER.md"),
-    ("source_observation_surface", "source_observation_surface", "build_tenants/common/examples/fpml_trade_representation_standard/review/parsed_trade_observation.json"),
-    ("trace_surface", "trace_surface", "build_tenants/common/examples/sandbox_trade_to_apra_mvp/review/traces"),
-    ("assurance_surface", "assurance_surface", "build_tenants/common/examples/sandbox_trade_to_apra_mvp/review/assurance"),
-    ("attribute_ledger_surface", "attribute_ledger_surface", "build_tenants/common/examples/sandbox_trade_to_apra_mvp/published/trade_representation_domain/attribute_ledger"),
-    ("markov_object_cut_surface", "markov_object_cut_surface", "build_tenants/common/examples/sandbox_trade_to_apra_mvp/published/trade_representation_domain/objects/trade_contract_state.json"),
-    ("published_domain_artifact_surface", "published_domain_artifact_surface", "build_tenants/common/examples/sandbox_trade_to_apra_mvp/published/trade_representation_domain/fragment.json"),
-    ("composed_world_model_surface", "composed_world_model_surface", "build_tenants/common/examples/sandbox_trade_to_apra_mvp/published"),
-    ("query_projection_surface", "query_projection_surface", "build_tenants/common/examples/sandbox_trade_to_apra_mvp/query/trade_to_apra_query_summary.json"),
-    ("mapping_analysis_surface", "mapping_analysis_surface", "build_tenants/common/examples/sandbox_trade_to_apra_mvp/mapping/analysis/trade_to_apra_mapping_analysis.json"),
-    ("mapping_record_surface", "mapping_record_surface", "build_tenants/common/examples/sandbox_trade_to_apra_mvp/mapping/records/trade_to_apra_mapping_record.json"),
-    ("mapping_report_surface", "mapping_report_surface", "build_tenants/common/examples/sandbox_trade_to_apra_mvp/mapping/reports/trade_to_apra_mapping_report.md"),
+    (
+        "attribute_ledger_build_line_surface",
+        "published_domain_artifact_surface",
+        f"{PACKAGE_ASSET_PREFIX}assets/design/ATTRIBUTE_LEDGER_BUILD_LINE.md",
+    ),
+    (
+        "odd_gtl_attribute_ledger_carrier_surface",
+        "published_domain_artifact_surface",
+        f"{PACKAGE_ASSET_PREFIX}assets/design/ODD_GTL_ATTRIBUTE_LEDGER_CARRIER.md",
+    ),
+    ("source_observation_surface", "source_observation_surface", "examples/trade_representation_model/sandbox/20260419T000000Z_v1/review/parsed_trade_observation.json"),
+    ("trace_surface", "trace_surface", "examples/trade_representation_model/sandbox/20260419T000000Z_v1/review/traces"),
+    ("assurance_surface", "assurance_surface", "examples/trade_representation_model/sandbox/20260419T000000Z_v1/review/assurance"),
+    ("attribute_ledger_surface", "attribute_ledger_surface", "examples/trade_representation_model/sandbox/20260419T000000Z_v1/published/trade_representation_domain/attribute_ledger"),
+    ("markov_object_cut_surface", "markov_object_cut_surface", "examples/trade_representation_model/sandbox/20260419T000000Z_v1/published/trade_representation_domain/objects/trade_contract_state.json"),
+    ("published_domain_artifact_surface", "published_domain_artifact_surface", "examples/trade_representation_model/sandbox/20260419T000000Z_v1/published/trade_representation_domain/fragment.json"),
+    ("composed_world_model_surface", "composed_world_model_surface", "examples/apra_liquidity_model/sandbox/20260419T000000Z_v1/published"),
+    ("query_projection_surface", "query_projection_surface", "examples/apra_liquidity_model/sandbox/20260419T000000Z_v1/query/trade_to_apra_query_summary.json"),
+    (
+        "mapping_analysis_surface",
+        "mapping_analysis_surface",
+        "mapping/four_domain_topology/analysis/four_domain_topology_mapping_analysis.json",
+    ),
+    (
+        "mapping_record_surface",
+        "mapping_record_surface",
+        "mapping/four_domain_topology/records/four_domain_topology_mapping_record.json",
+    ),
+    (
+        "mapping_report_surface",
+        "mapping_report_surface",
+        "mapping/four_domain_topology/reports/four_domain_topology_mapping_report.md",
+    ),
 )
 
 INPUT_SET_ASSET_IDS: tuple[str, ...] = (
@@ -92,8 +118,11 @@ GENERATED_ASSET_CONTRACTS: dict[str, GeneratedAssetContract] = {
 
 
 def asset_path(workspace_root: Path, asset_id: str) -> Path:
-    for declared_asset_id, _, relative_path in ASSET_PATHS:
+    for declared_asset_id, _, relative_path in _declared_asset_paths(workspace_root):
         if declared_asset_id == asset_id:
+            if relative_path.startswith(PACKAGE_ASSET_PREFIX):
+                package_relative = relative_path.removeprefix(PACKAGE_ASSET_PREFIX)
+                return Path(__file__).resolve().parent / package_relative
             return workspace_root / relative_path
     raise KeyError(f"Unknown odd_world_model asset id: {asset_id}")
 
@@ -149,12 +178,13 @@ def _checkpoint(path: Path) -> AssetCheckpoint:
 
 
 def _asset(asset_id: str, declared_type: str, relative_path: str, *, workspace_root: Path) -> Asset:
-    path = workspace_root / relative_path
+    path = asset_path(workspace_root, asset_id)
+    resolved_relative_path = path.resolve().relative_to(workspace_root.resolve()).as_posix()
     return Asset(
         asset_id=asset_id,
         uri=relative_file_uri(path, workspace_root=workspace_root),
         declared_type=declared_type,
-        metadata={"relative_path": relative_path},
+        metadata={"relative_path": resolved_relative_path},
         provenance=AssetProvenance(
             model="odd_world_model",
             source="workspace_scan",
@@ -168,7 +198,7 @@ def _asset(asset_id: str, declared_type: str, relative_path: str, *, workspace_r
 def bootstrap_assets(workspace_root: Path) -> tuple[Asset, ...]:
     return tuple(
         _asset(asset_id, declared_type, relative_path, workspace_root=workspace_root)
-        for asset_id, declared_type, relative_path in ASSET_PATHS
+        for asset_id, declared_type, relative_path in _declared_asset_paths(workspace_root)
     )
 
 
@@ -189,3 +219,12 @@ def bootstrap_bindings(workspace_root: Path) -> tuple[AssetNodeBinding, ...]:
         )
         for node, bound_asset_ids in NODE_BINDINGS
     )
+
+
+def _declared_asset_paths(workspace_root: Path) -> tuple[tuple[str, str, str], ...]:
+    builder_kind = configured_builder_kind(workspace_root)
+    if builder_kind == "domain_input_seed":
+        return configured_domain_seed_asset_paths(workspace_root)
+    if builder_kind == "fpml_source_seed":
+        return configured_fpml_source_asset_paths(workspace_root)
+    return LEGACY_ASSET_PATHS

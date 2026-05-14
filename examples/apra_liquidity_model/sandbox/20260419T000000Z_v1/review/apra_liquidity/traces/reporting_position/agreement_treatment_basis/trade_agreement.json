@@ -1,0 +1,18 @@
+{
+  "schema_kind": "odd_world_model.trace_record",
+  "schema_version": "v1",
+  "trace_id": "odd_world_model.trace.apra_liquidity.reporting_position.apra_liquidity_position_001.agreement_treatment_basis.trade_agreement.v1",
+  "source_ref": "review://examples/trade_representation_model/sandbox/20260419T000000Z_v1/review/parsed_trade_observation.json",
+  "source_kind": "data",
+  "claim_key": "agreement_treatment_basis",
+  "locator": "agreement",
+  "observation_kind": "composed",
+  "observed_at": "2026-04-15T00:10:00Z",
+  "observed_value": {
+    "type": "ISDA",
+    "date": null,
+    "version": null
+  },
+  "object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "summary": "Imported trade agreement reference used to ground the reviewed master-agreement treatment basis."
+}

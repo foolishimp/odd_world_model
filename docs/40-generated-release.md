@@ -44,7 +44,7 @@ The current release scope includes:
   - published domain artifacts
   - composed world-model slice
 - the filesystem-first query/proof surfaces over the retained trade/APRA corpus
-- the release/install surface that stamps `.odd_world_model/`, common assets, and governing docs into a sandbox workspace
+- the release/install surface that stamps `.genesis/odd_world_model/`, common assets, example hierarchies, and governing docs into a sandbox workspace
 - the released `odd_sdlc -> odd_world_model` dogfood proof that generated downstream SDLC surfaces for this source project
 
 In practical terms, the current release qualifies `odd_world_model` as:

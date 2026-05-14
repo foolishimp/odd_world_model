@@ -15,10 +15,12 @@ def test_release_install_stamps_workspace_layout(tmp_path: Path) -> None:
     result = install(target, project_slug="sandbox_domain")
 
     assert result["status"] == "installed"
-    assert (target / ".odd_world_model" / "python" / "code" / "odd_world_model").exists()
+    assert (target / ".genesis" / "odd_world_model" / "python" / "code" / "odd_world_model").exists()
+    assert (target / ".genesis" / "odd_world_model" / "python" / "code" / "odd_world_model" / "assets").exists()
     assert (target / ".genesis" / "genesis").exists()
     assert (target / ".genesis" / "gtl").exists()
-    assert (target / "build_tenants" / "common").exists()
+    assert not (target / "build_tenants").exists()
+    assert (target / "examples").exists()
     assert (target / ".genesis" / "docs" / "standards").exists()
     assert (target / ".ai-workspace").exists()
 
@@ -39,7 +41,7 @@ def test_installed_package_exposes_program_catalog_in_sandbox(tmp_path: Path) ->
         cwd=target,
         env={
             **dict(os.environ),
-            "PYTHONPATH": f"{target / '.genesis'}:{target / '.odd_world_model' / 'python' / 'code'}",
+            "PYTHONPATH": f"{target / '.genesis'}:{target / '.genesis' / 'odd_world_model' / 'python' / 'code'}",
         },
         capture_output=True,
         text=True,

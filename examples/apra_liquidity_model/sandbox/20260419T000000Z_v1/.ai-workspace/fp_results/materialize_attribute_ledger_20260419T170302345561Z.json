@@ -1,0 +1,24 @@
+{
+  "edge": "materialize_attribute_ledger",
+  "actor": "odd_world_model_constructor",
+  "attestation": {
+    "asset_id": "attribute_ledger_surface",
+    "path": "/Users/jim/src/apps/odd_world_model/examples/apra_liquidity_model/sandbox/20260419T000000Z_v1/published/apra_liquidity_domain/attribute_ledger",
+    "exists": true,
+    "actual_kind": "directory",
+    "expected_kind": "directory",
+    "contract_satisfied": true
+  },
+  "assessments": [
+    {
+      "evaluator": "odd_world_model_fd_attribute_ledger_surface",
+      "result": "pass",
+      "evidence": "Rebuilt retained odd_world_model steel thread and satisfied generated-asset contract for attribute_ledger_surface"
+    },
+    {
+      "evaluator": "odd_world_model_fp_semantic_constructor",
+      "result": "pass",
+      "evidence": "Rebuilt retained odd_world_model steel thread and satisfied generated-asset contract for attribute_ledger_surface"
+    }
+  ]
+}

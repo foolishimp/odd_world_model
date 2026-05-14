@@ -51,7 +51,7 @@ premature multi-language or service-boundary drift.
 | Module execution | `python -m <module>` | Current operator surface for build/query/proof/install |
 | Syntax/compile sanity | `python -m py_compile` | Used in the current proving line |
 | Test runner | `pytest` | Current non-live test convention across the line |
-| Package resolution | `PYTHONPATH=.genesis:build_tenants/python/code` (source) or `.odd_world_model/python/code` (installed) | Matches current runtime contracts |
+| Package resolution | `PYTHONPATH=.genesis:build_tenants/python/code` (source) or `.genesis/odd_world_model/python/code` (installed) | Matches current runtime contracts |
 | Workspace governance | installed `odd_sdlc` over mutable `odd_world_model` source project | Current dogfood boundary |
 
 The stack profile resolves the blank normalized project-constraint fields in

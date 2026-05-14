@@ -84,3 +84,43 @@ than presenting a falsely complete mapping.
 The first retained proving slice for governed mapping SHALL run over real
 published domains already present in the product line rather than over
 synthetic placeholder domains or detached sample tables.
+
+### REQ-ODD-WORLD-MODEL-MAPPING-CAP-008 — Topology-Aware Semantic Matching
+
+**Carries**:
+- `WORLD_MODEL_METHOD.md` — `Method Objectives`, `Mappings Are Semantic Treatments`
+- `INTENT.md` — `Outcomes`, `Constraints`
+- `PRODUCT.md` — `Product Vision`, `World-Model Query And Traversal`
+
+`odd_world_model` SHALL support topology-aware semantic matching over published
+objects rather than relying on lexical similarity alone. The retained mapping
+line SHALL be able to consider object boundary, adjacency, composition,
+treatment, covariance, adjoint support, and constructive-history signals when
+analyzing cross-domain correspondence.
+
+### REQ-ODD-WORLD-MODEL-MAPPING-CAP-009 — Higher-Order Concept Synthesis
+
+**Carries**:
+- `WORLD_MODEL_METHOD.md` — `Method Objectives`, `Mappings Are Semantic Treatments`
+- `INTENT.md` — `Outcomes`
+- `PRODUCT.md` — `Product Vision`, `Core Product Intent`
+
+`odd_world_model` SHALL be able to synthesize higher-order cross-domain concepts
+from repeated object correspondence and topology structure so the mapping line
+can express concept-level meaning in addition to pairwise object or attribute
+alignment.
+
+### REQ-ODD-WORLD-MODEL-MAPPING-CAP-010 — Hierarchical And Intersectional Boundary Candidates
+
+**Carries**:
+- `WORLD_MODEL_METHOD.md` — `Method Objectives`
+- `INTENT.md` — `Outcomes`, `Constraints`
+- `PRODUCT.md` — `World-Model Composition`, `Product Vision`
+
+The mapping line SHALL be able to project candidate Markov-boundary structures
+over synthesized higher-order concepts. Those candidates SHALL support both:
+
+- hierarchical containment relationships
+- intersectional overlap relationships
+
+so cross-domain concept structure is not forced into a false single tree.

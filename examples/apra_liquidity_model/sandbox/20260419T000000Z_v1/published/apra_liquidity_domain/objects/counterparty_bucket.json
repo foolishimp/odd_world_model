@@ -1,0 +1,74 @@
+{
+  "schema_kind": "odd_world_model.world_model_object",
+  "schema_version": "v1",
+  "object_id": "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+  "object_kind": "ApraCounterpartyBucket",
+  "bounded_context": "sandbox.apra_liquidity.reporting",
+  "semantic_role": "Regulatory counterparty bucket derived from the retained trade-party surfaces.",
+  "identity": {
+    "authority_basis": "official APRA counterparty classification applied to retained trade-representation evidence",
+    "aliases": [
+      "financial_institution"
+    ]
+  },
+  "boundary": {
+    "internal_claim": "Counterparty bucket assignment is internal to the APRA-liquidity interpretation.",
+    "external_claim": "The original trade party identifiers and names remain external to the bucket.",
+    "adjacent_objects": [
+      "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+      "odd_world_model.world_model_object.trade_representation.party_profile.partyB"
+    ],
+    "adjacent_domains": [
+      "odd_world_model.domain.trade_representation.fpml_confirmation.v1"
+    ]
+  },
+  "state": {
+    "lifecycle_state": "classified",
+    "state_summary": "Counterparty bucket is assigned for the bounded reporting position.",
+    "effective_time": "2026-04-15T00:00:00Z",
+    "observation_time": "2026-04-15T00:10:00Z",
+    "ambiguity_status": "medium"
+  },
+  "evidence": {
+    "refs": [
+      "input://examples/apra_liquidity_model/sources/data/domain_input.json",
+      "input://examples/apra_liquidity_model/sources/data/requirements_snapshot.json",
+      "input://examples/apra_liquidity_model/sources/uri_ledger/source_notes.md",
+      "input://examples/apra_liquidity_model/sources/uri_ledger/source_authority.md",
+      "input://examples/apra_liquidity_model/sources/data/authority_claims.json",
+      "input://examples/apra_liquidity_model/sources/data/authority/apra_liquidity_landing_page.html",
+      "input://examples/apra_liquidity_model/sources/data/authority/aps_210_liquidity_2025.html",
+      "input://examples/apra_liquidity_model/sources/pdfs/apg_210_liquidity_2025.pdf",
+      "input://examples/apra_liquidity_model/sources/data/authority/ars_210_0_liquidity_2023.html",
+      "input://examples/apra_liquidity_model/sources/data/authority/apra_liquidity_faq.html",
+      "input://examples/trade_source_model/sources/data/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+      "review://examples/trade_representation_model/sandbox/20260419T000000Z_v1/review/parsed_trade_observation.json"
+    ],
+    "summary": "Counterparty bucket derived from APRA authority claims and upstream party evidence."
+  },
+  "cross_domain": {
+    "treatment_refs": [
+      "odd_world_model.treatment.apra_liquidity.reporting_position.classification.v1",
+      "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1"
+    ],
+    "covariance_edge_refs": [
+      "odd_world_model.covariance.apra_liquidity.reporting_position.to_counterparty_bucket.v1",
+      "odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+    ],
+    "adjoint_mapping_refs": [
+      "odd_world_model.adjoint.apra_liquidity.reporting_position.to_counterparty_bucket.v1",
+      "odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+    ],
+    "loss_notes": [
+      "Bucketing abstracts away the locally identified trade parties."
+    ]
+  },
+  "composition": {
+    "fragment_id": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+    "parent_object_refs": [
+      "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+    ],
+    "child_object_refs": []
+  }
+}

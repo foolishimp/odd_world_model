@@ -1,0 +1,146 @@
+{
+  "schema_kind": "odd_world_model.markov_object",
+  "schema_version": "v1",
+  "object_id": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "object_kind": "ApraLiquidityReportingPosition",
+  "bounded_context": "sandbox.apra_liquidity.reporting",
+  "semantic_role": "Regulatory reporting position composed against the retained trade-representation example domain.",
+  "identity": {
+    "authority_basis": "bounded APRA liquidity interpretation over official APRA source claims and retained trade-representation evidence",
+    "aliases": [
+      "position_id:apra_liquidity_position_001",
+      "reporting_regime:APRA liquidity"
+    ]
+  },
+  "boundary": {
+    "internal_claim": "Counterparty bucket, agreement treatment basis, liquidity bucket, and reporting position lifecycle are internal to this regulatory object.",
+    "external_claim": "Detailed FpML trade economics and local trade confirmation semantics remain outside the reporting position.",
+    "adjacent_objects": [
+      "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+      "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
+      "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001"
+    ],
+    "adjacent_domains": [
+      "odd_world_model.domain.trade_representation.fpml_confirmation.v1"
+    ]
+  },
+  "blanket": {
+    "ingress_surfaces": [
+      "apra_liquidity_input",
+      "fpml_trade_artifact"
+    ],
+    "egress_surfaces": [
+      "apra_reporting_publication"
+    ],
+    "observable_surfaces": [
+      "examples/apra_liquidity_model/sources/data/domain_input.json",
+      "examples/apra_liquidity_model/sources/data/authority_claims.json",
+      "examples/apra_liquidity_model/sources/data/requirements_snapshot.json",
+      "examples/trade_representation_model/sandbox/20260419T000000Z_v1/review/parsed_trade_observation.json"
+    ],
+    "control_surfaces": [
+      "classify_counterparty",
+      "review_agreement_treatment",
+      "assign_liquidity_bucket"
+    ],
+    "adjacent_objects": [
+      "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+      "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
+      "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
+    ],
+    "adjacent_domains": [
+      "odd_world_model.domain.trade_representation.fpml_confirmation.v1"
+    ],
+    "internal_claim": "This object bounds the APRA-liquidity reporting interpretation over the retained trade-representation example domain.",
+    "external_claim": "The upstream trade domain remains an external evidence and treatment source."
+  },
+  "state": {
+    "lifecycle_state": "draft_classified",
+    "state_summary": "Regulatory reporting position is classified enough for bounded APRA inspection and remains intentionally narrow.",
+    "effective_time": "2026-04-15T00:00:00Z",
+    "observation_time": "2026-04-15T00:10:00Z",
+    "ambiguity_status": "high"
+  },
+  "constraints": {
+    "invariants": [
+      "reporting_position_must_have_counterparty_bucket",
+      "reporting_position_must_have_agreement_treatment_basis",
+      "reporting_position_must_have_liquidity_bucket"
+    ],
+    "policies": [
+      "bounded_apra_liquidity_policy"
+    ],
+    "valid_transitions": [
+      "classify",
+      "reclassify",
+      "submit"
+    ]
+  },
+  "evidence": {
+    "refs": [
+      "input://examples/apra_liquidity_model/sources/data/domain_input.json",
+      "input://examples/apra_liquidity_model/sources/data/requirements_snapshot.json",
+      "input://examples/apra_liquidity_model/sources/uri_ledger/source_notes.md",
+      "input://examples/apra_liquidity_model/sources/uri_ledger/source_authority.md",
+      "input://examples/apra_liquidity_model/sources/data/authority_claims.json",
+      "input://examples/apra_liquidity_model/sources/data/authority/apra_liquidity_landing_page.html",
+      "input://examples/apra_liquidity_model/sources/data/authority/aps_210_liquidity_2025.html",
+      "input://examples/apra_liquidity_model/sources/pdfs/apg_210_liquidity_2025.pdf",
+      "input://examples/apra_liquidity_model/sources/data/authority/ars_210_0_liquidity_2023.html",
+      "input://examples/apra_liquidity_model/sources/data/authority/apra_liquidity_faq.html",
+      "input://examples/trade_source_model/sources/data/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+      "review://examples/trade_representation_model/sandbox/20260419T000000Z_v1/review/parsed_trade_observation.json"
+    ],
+    "summary": "Built from official APRA authority claims, bounded APRA input, and the retained trade-representation example domain."
+  },
+  "materialization": {
+    "projection_summary": "Immutable reporting-position object cut projected from the APRA attribute ledger over document-traced and composed regulatory claims.",
+    "attribute_ledger_entry_refs": [
+      "ledger://reporting_position/counterparty_bucket.json",
+      "ledger://reporting_position/agreement_treatment_basis.json",
+      "ledger://reporting_position/liquidity_bucket.json",
+      "ledger://reporting_position/reporting_lifecycle_state.json"
+    ],
+    "assurance_record_refs": [
+      "review://apra_liquidity/assurance/reporting_position/counterparty_bucket.json",
+      "review://apra_liquidity/assurance/reporting_position/agreement_treatment_basis.json",
+      "review://apra_liquidity/assurance/reporting_position/liquidity_bucket.json",
+      "review://apra_liquidity/assurance/reporting_position/reporting_lifecycle_state.json"
+    ],
+    "trace_record_refs": [
+      "review://apra_liquidity/traces/reporting_position/counterparty_bucket/authority_claim.json",
+      "review://apra_liquidity/traces/reporting_position/counterparty_bucket/trade_counterparty.json",
+      "review://apra_liquidity/traces/reporting_position/agreement_treatment_basis/authority_claim.json",
+      "review://apra_liquidity/traces/reporting_position/agreement_treatment_basis/trade_agreement.json",
+      "review://apra_liquidity/traces/reporting_position/liquidity_bucket/authority_claim.json",
+      "review://apra_liquidity/traces/reporting_position/liquidity_bucket/trade_product.json",
+      "review://apra_liquidity/traces/reporting_position/reporting_lifecycle_state/domain_input.json"
+    ]
+  },
+  "cross_domain": {
+    "treatment_refs": [
+      "odd_world_model.treatment.apra_liquidity.reporting_position.classification.v1",
+      "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1"
+    ],
+    "covariance_edge_refs": [
+      "odd_world_model.covariance.apra_liquidity.reporting_position.to_counterparty_bucket.v1",
+      "odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+    ],
+    "adjoint_mapping_refs": [
+      "odd_world_model.adjoint.apra_liquidity.reporting_position.to_counterparty_bucket.v1",
+      "odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"
+    ],
+    "loss_notes": [
+      "Regulatory reporting position does not preserve full upstream commodity trade semantics."
+    ]
+  },
+  "composition": {
+    "fragment_id": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+    "parent_object_refs": [],
+    "child_object_refs": [
+      "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+      "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed"
+    ]
+  }
+}

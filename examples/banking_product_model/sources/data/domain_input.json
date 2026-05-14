@@ -1,0 +1,47 @@
+{
+  "source_id": "banking_product_model.catalog.v1",
+  "published_by": "team.sandbox.banking",
+  "bounded_context": "sandbox.banking_product.catalog",
+  "summary": "Bounded retail-banking product catalog used to seed the banking product example domain.",
+  "banking_product_catalog": {
+    "catalog_id": "banking_product_catalog_001",
+    "issuer_name": "Example Global Bank",
+    "products": [
+      {
+        "product_id": "loan_001",
+        "product_kind": "LoanOrCredit",
+        "product_name": "Personal Loan",
+        "market_segment": "retail"
+      },
+      {
+        "product_id": "mortgage_001",
+        "product_kind": "MortgageLoan",
+        "product_name": "Home Loan",
+        "market_segment": "retail"
+      },
+      {
+        "product_id": "deposit_001",
+        "product_kind": "DepositAccount",
+        "product_name": "Savings Account",
+        "market_segment": "retail"
+      },
+      {
+        "product_id": "card_001",
+        "product_kind": "CreditCard",
+        "product_name": "Rewards Credit Card",
+        "market_segment": "retail"
+      }
+    ]
+  },
+  "evidence_refs": [
+    "input://examples/banking_product_model/sources/data/domain_input.json",
+    "input://examples/banking_product_model/sources/data/schema_snapshot.json",
+    "input://examples/banking_product_model/sources/data/fibo_category_snapshot.json",
+    "input://examples/banking_product_model/sources/data/authority/fibo_home.html",
+    "input://examples/banking_product_model/sources/data/authority/fibo_products.html",
+    "input://examples/banking_product_model/sources/data/authority/fibo_schema_financial.html",
+    "input://examples/banking_product_model/sources/code/fibo_credit_card_markup_example.jsonld",
+    "input://examples/banking_product_model/sources/uri_ledger/source_authority.md",
+    "input://examples/banking_product_model/sources/uri_ledger/source_notes.md"
+  ]
+}

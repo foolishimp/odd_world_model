@@ -237,7 +237,7 @@ No new wrapper layer should be introduced just to preserve old names.
 
 ### 6.3 No Manual Install Mirroring
 
-Installed `.genesis/` or `.odd_world_model/` trees are refreshed by running install,
+Installed `.genesis/` or `.genesis/odd_world_model/` trees are refreshed by running install,
 not by hand-copying source standards or runtime files into installs.
 
 ### 6.4 Traceability And Requirement Discipline

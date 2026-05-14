@@ -1,0 +1,10 @@
+{
+  "world_model_id": "odd_world_model.world_model.sandbox_banking_product_catalog.v1",
+  "fragments": [
+    "odd_world_model.fragment.sandbox_banking_product_catalog.v1"
+  ],
+  "bounded_contexts": [
+    "sandbox.banking_product.catalog"
+  ],
+  "summary": "Single-domain composed world model for banking_product_model."
+}

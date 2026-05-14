@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.evidence_manifest.schema.json",
+  "title": "EvidenceManifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_kind",
+    "schema_version",
+    "manifest_id",
+    "refs"
+  ],
+  "properties": {
+    "schema_kind": {
+      "const": "odd_world_model.evidence_manifest"
+    },
+    "schema_version": {
+      "const": "v1"
+    },
+    "manifest_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string"
+    },
+    "refs": {
+      "$ref": "world_model_object.schema.json#/$defs/string_array"
+    }
+  }
+}

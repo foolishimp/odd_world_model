@@ -9,6 +9,26 @@ import json
 from pathlib import Path
 from typing import Any
 
+from .build_line.domain_input_seed import (
+    materialize_assurance_surface as materialize_seed_assurance_surface,
+    materialize_attribute_ledger_surface as materialize_seed_attribute_ledger_surface,
+    materialize_composed_world_model_surface as materialize_seed_composed_world_model_surface,
+    materialize_markov_object_cut_surface as materialize_seed_markov_object_cut_surface,
+    materialize_published_domain_artifact_surface as materialize_seed_published_domain_artifact_surface,
+    materialize_query_projection_surface as materialize_seed_query_projection_surface,
+    materialize_source_observation_surface as materialize_seed_source_observation_surface,
+    materialize_trace_surface as materialize_seed_trace_surface,
+)
+from .build_line.fpml_source_seed import (
+    materialize_assurance_surface as materialize_fpml_source_assurance_surface,
+    materialize_attribute_ledger_surface as materialize_fpml_source_attribute_ledger_surface,
+    materialize_composed_world_model_surface as materialize_fpml_source_composed_world_model_surface,
+    materialize_markov_object_cut_surface as materialize_fpml_source_markov_object_cut_surface,
+    materialize_published_domain_artifact_surface as materialize_fpml_source_published_domain_artifact_surface,
+    materialize_query_projection_surface as materialize_fpml_source_query_projection_surface,
+    materialize_source_observation_surface as materialize_fpml_source_source_observation_surface,
+    materialize_trace_surface as materialize_fpml_source_trace_surface,
+)
 from .build_line.fpml_trade_domain import materialize_source_observation_surface
 from .build_line.trade_to_apra import (
     materialize_assurance_surface,
@@ -18,10 +38,11 @@ from .build_line.trade_to_apra import (
     materialize_published_domain_artifact_surface,
     materialize_trace_surface,
 )
-from .mapping.trade_to_apra import build_analysis as build_trade_to_apra_mapping_analysis
-from .mapping.trade_to_apra import build_record as build_trade_to_apra_mapping_record
-from .mapping.trade_to_apra import build_report as build_trade_to_apra_mapping_report
+from .mapping.four_domain_topology import build_analysis as build_four_domain_mapping_analysis
+from .mapping.four_domain_topology import build_record as build_four_domain_mapping_record
+from .mapping.four_domain_topology import build_report as build_four_domain_mapping_report
 from .query.trade_to_apra import build as build_trade_to_apra_query
+from .sandbox_config import configured_builder_kind
 from .workspace_assets import assess_generated_asset_contract
 
 
@@ -33,6 +54,62 @@ def _read_json(path: Path, *, label: str) -> dict[str, Any]:
     if not isinstance(raw, dict):
         raise ValueError(f"{label} must contain a JSON object")
     return raw
+
+
+def _run_seed_build(target_asset: str, *, workspace_root: Path) -> None:
+    if target_asset == "source_observation_surface":
+        materialize_seed_source_observation_surface(workspace_root=workspace_root, reset=True)
+        return
+    if target_asset == "trace_surface":
+        materialize_seed_trace_surface(workspace_root=workspace_root, reset=True)
+        return
+    if target_asset == "assurance_surface":
+        materialize_seed_assurance_surface(workspace_root=workspace_root, reset=True)
+        return
+    if target_asset == "attribute_ledger_surface":
+        materialize_seed_attribute_ledger_surface(workspace_root=workspace_root, reset=True)
+        return
+    if target_asset == "markov_object_cut_surface":
+        materialize_seed_markov_object_cut_surface(workspace_root=workspace_root, reset=True)
+        return
+    if target_asset == "published_domain_artifact_surface":
+        materialize_seed_published_domain_artifact_surface(workspace_root=workspace_root, reset=True)
+        return
+    if target_asset == "composed_world_model_surface":
+        materialize_seed_composed_world_model_surface(workspace_root=workspace_root, reset=True)
+        return
+    if target_asset == "query_projection_surface":
+        materialize_seed_query_projection_surface(workspace_root=workspace_root, reset=True)
+        return
+    raise ValueError(f"Unsupported target_asset {target_asset!r} for domain_input_seed builder")
+
+
+def _run_fpml_source_build(target_asset: str, *, workspace_root: Path) -> None:
+    if target_asset == "source_observation_surface":
+        materialize_fpml_source_source_observation_surface(workspace_root=workspace_root, reset=True)
+        return
+    if target_asset == "trace_surface":
+        materialize_fpml_source_trace_surface(workspace_root=workspace_root, reset=True)
+        return
+    if target_asset == "assurance_surface":
+        materialize_fpml_source_assurance_surface(workspace_root=workspace_root, reset=True)
+        return
+    if target_asset == "attribute_ledger_surface":
+        materialize_fpml_source_attribute_ledger_surface(workspace_root=workspace_root, reset=True)
+        return
+    if target_asset == "markov_object_cut_surface":
+        materialize_fpml_source_markov_object_cut_surface(workspace_root=workspace_root, reset=True)
+        return
+    if target_asset == "published_domain_artifact_surface":
+        materialize_fpml_source_published_domain_artifact_surface(workspace_root=workspace_root, reset=True)
+        return
+    if target_asset == "composed_world_model_surface":
+        materialize_fpml_source_composed_world_model_surface(workspace_root=workspace_root, reset=True)
+        return
+    if target_asset == "query_projection_surface":
+        materialize_fpml_source_query_projection_surface(workspace_root=workspace_root, reset=True)
+        return
+    raise ValueError(f"Unsupported target_asset {target_asset!r} for fpml_source_seed builder")
 
 
 def _run_retained_build(target_asset: str) -> None:
@@ -61,13 +138,13 @@ def _run_retained_build(target_asset: str) -> None:
         build_trade_to_apra_query()
         return
     if target_asset == "mapping_analysis_surface":
-        build_trade_to_apra_mapping_analysis(reset=True)
+        build_four_domain_mapping_analysis(reset=True)
         return
     if target_asset == "mapping_record_surface":
-        build_trade_to_apra_mapping_record(reset=True)
+        build_four_domain_mapping_record(reset=True)
         return
     if target_asset == "mapping_report_surface":
-        build_trade_to_apra_mapping_report(reset=True)
+        build_four_domain_mapping_report(reset=True)
         return
     raise ValueError(f"Unsupported target_asset {target_asset!r}")
 
@@ -87,7 +164,13 @@ def construct_manifest(manifest_path: str | Path, *, workspace_root: str | Path 
     if not isinstance(failing_evaluators, list) or not failing_evaluators:
         raise ValueError("manifest must provide failing_evaluators")
 
-    _run_retained_build(target_asset)
+    builder_kind = configured_builder_kind(workspace)
+    if builder_kind == "domain_input_seed":
+        _run_seed_build(target_asset, workspace_root=workspace)
+    elif builder_kind == "fpml_source_seed":
+        _run_fpml_source_build(target_asset, workspace_root=workspace)
+    else:
+        _run_retained_build(target_asset)
 
     attestation = assess_generated_asset_contract(workspace, target_asset)
     if not attestation["contract_satisfied"]:

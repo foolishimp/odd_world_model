@@ -32,7 +32,7 @@ The roles stay distinct:
 
 - `.odd_sdlc/` is the installed immutable SDLC product used to govern work
 - `/Users/jim/src/apps/odd_world_model` is the mutable source project being built
-- `.odd_world_model/` or downstream sandbox installs remain separate released
+- `.genesis/odd_world_model/` or downstream sandbox installs remain separate released
   `odd_world_model` product instances
 
 `odd_sdlc` does not become the `odd_world_model` product domain.

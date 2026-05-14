@@ -1,0 +1,12 @@
+{
+  "schema_kind": "odd_world_model.trace_record",
+  "schema_version": "v1",
+  "trace_id": "odd_world_model.trace.sandbox_banking_product_catalog.banking_product_catalog_001.catalog_id.v1",
+  "source_ref": "input://examples/banking_product_model/sources/data/domain_input.json",
+  "source_kind": "domain_input_json",
+  "claim_key": "catalog_id",
+  "locator": "banking_product_catalog.catalog_id",
+  "observed_at": "2026-04-19T15:58:26Z",
+  "observed_value": "banking_product_catalog_001",
+  "summary": "Observed catalog_id for BankingProductCatalog from retained domain_input source."
+}

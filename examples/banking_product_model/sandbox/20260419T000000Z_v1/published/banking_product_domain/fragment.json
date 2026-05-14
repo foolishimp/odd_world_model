@@ -1,0 +1,48 @@
+{
+  "schema_kind": "odd_world_model.world_fragment",
+  "schema_version": "v1",
+  "fragment_id": "odd_world_model.fragment.sandbox_banking_product_catalog.v1",
+  "bounded_context": "sandbox.banking_product.catalog",
+  "published_at": "2026-04-20T00:00:00Z",
+  "published_by": "team.sandbox.banking",
+  "summary": "Bounded retail-banking product catalog used to seed the banking product example domain.",
+  "objects": [
+    "objects/banking_product_catalog_001.json",
+    "objects/loan_001.json",
+    "objects/mortgage_001.json",
+    "objects/deposit_001.json",
+    "objects/card_001.json"
+  ],
+  "attribute_ledger_entries": [
+    "attribute_ledger/banking_product_catalog_001/catalog_id.json",
+    "attribute_ledger/banking_product_catalog_001/issuer_name.json",
+    "attribute_ledger/loan_001/product_id.json",
+    "attribute_ledger/loan_001/product_kind.json",
+    "attribute_ledger/loan_001/product_name.json",
+    "attribute_ledger/loan_001/market_segment.json",
+    "attribute_ledger/mortgage_001/product_id.json",
+    "attribute_ledger/mortgage_001/product_kind.json",
+    "attribute_ledger/mortgage_001/product_name.json",
+    "attribute_ledger/mortgage_001/market_segment.json",
+    "attribute_ledger/deposit_001/product_id.json",
+    "attribute_ledger/deposit_001/product_kind.json",
+    "attribute_ledger/deposit_001/product_name.json",
+    "attribute_ledger/deposit_001/market_segment.json",
+    "attribute_ledger/card_001/product_id.json",
+    "attribute_ledger/card_001/product_kind.json",
+    "attribute_ledger/card_001/product_name.json",
+    "attribute_ledger/card_001/market_segment.json"
+  ],
+  "reference_artifacts": [],
+  "treatments": [],
+  "edges": [],
+  "projections": [
+    "projections/domain_summary.json"
+  ],
+  "evidence_manifests": [
+    "evidence/manifests/domain_source_manifest.json"
+  ],
+  "links": [
+    "../../sources/data/domain_input.json"
+  ]
+}

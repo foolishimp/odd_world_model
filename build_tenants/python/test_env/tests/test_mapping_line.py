@@ -5,23 +5,28 @@
 # Validates: REQ-ODD-WORLD-MODEL-MAPPING-CAP-005
 # Validates: REQ-ODD-WORLD-MODEL-MAPPING-CAP-006
 # Validates: REQ-ODD-WORLD-MODEL-MAPPING-CAP-007
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CAP-008
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CAP-009
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CAP-010
 # Validates: REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-001
 # Validates: REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-002
 # Validates: REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-003
 # Validates: REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-004
 # Validates: REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-005
 # Validates: REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-006
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-007
+# Validates: REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-008
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
 from odd_world_model.constructor import construct_manifest
-from odd_world_model.mapping.trade_to_apra import analysis_path, build, record_path, report_path
+from odd_world_model.mapping.four_domain_topology import analysis_path, build, record_path, report_path
 from odd_world_model.world_model.load import load_json
 
 
-def test_mapping_line_materializes_governed_analysis_record_and_report() -> None:
+def test_mapping_line_materializes_topology_aware_analysis_record_and_report() -> None:
     build()
 
     analysis = load_json(analysis_path())
@@ -31,34 +36,48 @@ def test_mapping_line_materializes_governed_analysis_record_and_report() -> None
     assert analysis["schema_kind"] == "odd_world_model.mapping_analysis"
     assert record["schema_kind"] == "odd_world_model.mapping_record"
     assert record["mapping_record_id"].startswith("odd_world_model.")
-    assert analysis["source_fragment_ref"] == record["source_fragment_ref"]
-    assert analysis["target_fragment_ref"] == record["target_fragment_ref"]
-
-    assert {entry["source_claim_key"] for entry in record["attribute_mappings"]} == {
-        "party_a_reference",
-        "master_agreement_reference",
-        "product_reference",
-    }
-    assert record["category_breakdown"] == {
-        "derived_mapping": 1,
-        "treatment_projection": 2,
-    }
-    assert record["confidence_breakdown"] == {
-        "moderate": 1,
-        "strong": 2,
-    }
-    assert {entry["claim_key"] for entry in record["unassigned_source_attributes"]} == {
-        "party_b_reference",
-        "trade_date",
-        "trade_identifier",
-    }
-    assert {entry["claim_key"] for entry in record["unassigned_target_attributes"]} == {
-        "reporting_lifecycle_state",
+    assert len(analysis["domains_in_scope"]) == 4
+    assert "boundary adjacency and composition" in analysis["matcher_signals"]
+    assert "treatment, covariance, and adjoint support" in analysis["matcher_signals"]
+    assert {domain["example_name"] for domain in analysis["domains_in_scope"]} == {
+        "trade_source_model",
+        "trade_representation_model",
+        "apra_liquidity_model",
+        "banking_product_model",
     }
 
-    assert "Trade To APRA Mapping Report" in report
-    assert "`party_a_reference` -> `counterparty_bucket`" in report
-    assert "`product_reference` -> `liquidity_bucket`" in report
+    object_mapping_ids = {entry["mapping_id"] for entry in record["object_mappings"]}
+    assert any("trade_source_model.to.trade_representation_model" in item for item in object_mapping_ids)
+    assert any("trade_representation_model.to.apra_liquidity_model" in item for item in object_mapping_ids)
+
+    concept_ids = {entry["concept_id"] for entry in record["higher_order_concepts"]}
+    assert "odd_world_model.concept.four_domain.financial_product_surface.v1" in concept_ids
+    assert "odd_world_model.concept.four_domain.trade_lifecycle_surface.v1" in concept_ids
+
+    product_concept = next(
+        entry
+        for entry in record["higher_order_concepts"]
+        if entry["concept_id"] == "odd_world_model.concept.four_domain.financial_product_surface.v1"
+    )
+    assert len(product_concept["domain_refs"]) == 4
+    assert "shared topology-aware concept tags across published domains" in product_concept["inference_basis"]
+
+    boundary_kinds = {entry["boundary_kind"] for entry in record["boundary_candidates"]}
+    assert {"hierarchical", "intersectional"}.issubset(boundary_kinds)
+    product_boundary = next(
+        entry
+        for entry in record["boundary_candidates"]
+        if entry["boundary_id"] == "odd_world_model.boundary_candidate.four_domain.financial_product_surface.v1"
+    )
+    assert product_boundary["parent_boundary_refs"] == [
+        "odd_world_model.boundary_candidate.four_domain.financial_instrument_envelope.v1"
+    ]
+    assert product_boundary["overlap_boundary_refs"]
+    assert "mapping_mode" in record
+
+    assert "Four-Domain Topology Mapping Report" in report
+    assert "Higher-Order Concepts" in report
+    assert "Boundary Candidates" in report
 
 
 def test_constructor_can_materialize_mapping_report_surface(tmp_path: Path) -> None:

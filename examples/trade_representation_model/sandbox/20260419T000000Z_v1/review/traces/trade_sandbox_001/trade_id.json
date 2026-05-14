@@ -1,0 +1,12 @@
+{
+  "schema_kind": "odd_world_model.trace_record",
+  "schema_version": "v1",
+  "trace_id": "odd_world_model.trace.sandbox_trade_representation_capture.trade_sandbox_001.trade_id.v1",
+  "source_ref": "input://examples/trade_representation_model/sources/data/domain_input.json",
+  "source_kind": "domain_input_json",
+  "claim_key": "trade_id",
+  "locator": "trade.trade_id",
+  "observed_at": "2026-04-19T17:03:06Z",
+  "observed_value": "trade_sandbox_001",
+  "summary": "Observed trade_id for Trade from retained domain_input source."
+}

@@ -18,25 +18,43 @@ from typing import Any
 
 from odd_world_model.build_line.fpml_trade_domain import (
     OFFICIAL_SAMPLE_INPUT_REF,
-    build as build_fpml_trade_domain,
     materialize_trade_domain_artifact as materialize_fpml_trade_domain_artifact,
-    source_domain_root as fpml_source_domain_root,
 )
-from odd_world_model.build_line.fpml_trade_domain import example_root as fpml_example_root
+from odd_world_model.examples_layout import (
+    APRA_LIQUIDITY_MODEL,
+    TRADE_REPRESENTATION_MODEL,
+    apra_liquidity_data_root,
+    apra_liquidity_pdfs_root,
+    apra_liquidity_sandbox_root,
+    apra_liquidity_uri_ledger_root,
+    example_relative_input_ref,
+    example_relative_review_ref,
+    relative_path,
+    trade_representation_sandbox_root,
+    trade_source_sandbox_root,
+)
 from odd_world_model.world_model.materialize import attribute_ledger_entry, assurance_record, trace_record
-from odd_world_model.world_model.registry import examples_root
 
 
 PUBLISHED_AT = "2026-04-15T00:00:00Z"
 OBSERVED_AT = "2026-04-15T00:10:00Z"
+APRA_DOMAIN_INPUT_REF = example_relative_input_ref(APRA_LIQUIDITY_MODEL, Path("data") / "domain_input.json")
+APRA_AUTHORITY_CLAIMS_REF = example_relative_input_ref(APRA_LIQUIDITY_MODEL, Path("data") / "authority_claims.json")
+APRA_REQUIREMENTS_SNAPSHOT_REF = example_relative_input_ref(APRA_LIQUIDITY_MODEL, Path("data") / "requirements_snapshot.json")
+APRA_SOURCE_AUTHORITY_REF = example_relative_input_ref(APRA_LIQUIDITY_MODEL, Path("uri_ledger") / "source_authority.md")
+APRA_SOURCE_NOTES_REF = example_relative_input_ref(APRA_LIQUIDITY_MODEL, Path("uri_ledger") / "source_notes.md")
+APRA_LANDING_PAGE_REF = example_relative_input_ref(APRA_LIQUIDITY_MODEL, Path("data") / "authority" / "apra_liquidity_landing_page.html")
+APS_210_REF = example_relative_input_ref(APRA_LIQUIDITY_MODEL, Path("data") / "authority" / "aps_210_liquidity_2025.html")
+ARS_210_REF = example_relative_input_ref(APRA_LIQUIDITY_MODEL, Path("data") / "authority" / "ars_210_0_liquidity_2023.html")
+APRA_FAQ_REF = example_relative_input_ref(APRA_LIQUIDITY_MODEL, Path("data") / "authority" / "apra_liquidity_faq.html")
+APG_210_REF = example_relative_input_ref(APRA_LIQUIDITY_MODEL, Path("pdfs") / "apg_210_liquidity_2025.pdf")
+TRADE_REPRESENTATION_REVIEW_REF = example_relative_review_ref(
+    TRADE_REPRESENTATION_MODEL, "parsed_trade_observation.json"
+)
 
 
 def sandbox_root() -> Path:
-    return examples_root() / "sandbox_trade_to_apra_mvp"
-
-
-def inputs_root() -> Path:
-    return sandbox_root() / "inputs"
+    return apra_liquidity_sandbox_root()
 
 
 def published_root() -> Path:
@@ -52,31 +70,31 @@ def stitching_root() -> Path:
 
 
 def _trade_domain_root() -> Path:
-    return published_root() / "trade_representation_domain"
+    return trade_representation_sandbox_root() / "published" / "trade_representation_domain"
 
 
 def _trade_source_domain_root() -> Path:
-    return published_root() / "fpml_confirmation_source_domain"
+    return trade_source_sandbox_root() / "published" / "fpml_confirmation_source_domain"
 
 
 def _apra_domain_root() -> Path:
     return published_root() / "apra_liquidity_domain"
 
 
-def _source_trade_root() -> Path:
-    return fpml_example_root() / "published" / "trade_representation_domain"
+def trade_domain_root() -> Path:
+    return _trade_domain_root()
 
 
-def _source_trade_source_domain_root() -> Path:
-    return fpml_source_domain_root()
+def trade_source_domain_root() -> Path:
+    return _trade_source_domain_root()
 
 
-def _source_trade_review_root() -> Path:
-    return fpml_example_root() / "review"
+def apra_domain_root() -> Path:
+    return _apra_domain_root()
 
 
-def _source_trade_review_path() -> Path:
-    return _source_trade_review_root() / "parsed_trade_observation.json"
+def _trade_review_path() -> Path:
+    return trade_representation_sandbox_root() / "review" / "parsed_trade_observation.json"
 
 
 def _load_json(path: Path) -> dict[str, Any]:
@@ -102,21 +120,18 @@ def _reset_generated_output() -> None:
 
 
 def _apra_input() -> dict[str, Any]:
-    return _load_json(inputs_root() / "apra_liquidity" / "domain_input.json")
+    return _load_json(apra_liquidity_data_root() / "domain_input.json")
 
 
 def _apra_authority_claims_input() -> dict[str, Any]:
-    return _load_json(inputs_root() / "apra_liquidity" / "authority_claims.json")
+    return _load_json(apra_liquidity_data_root() / "authority_claims.json")
 
 
-def _source_trade_bundle(*, reset_source: bool = True) -> dict[str, Any]:
-    if reset_source:
-        materialize_fpml_trade_domain_artifact(reset=True)
-    else:
-        build_fpml_trade_domain()
-    root = _source_trade_root()
+def _trade_bundle(*, reset_source: bool = True) -> dict[str, Any]:
+    materialize_fpml_trade_domain_artifact(reset=reset_source)
+    root = _trade_domain_root()
     fragment = _load_json(root / "fragment.json")
-    observation = _load_json(_source_trade_review_path())
+    observation = _load_json(_trade_review_path())
     objects_by_file = {
         path.name: _load_json(path)
         for path in sorted((root / "objects").glob("*.json"))
@@ -131,8 +146,6 @@ def _source_trade_bundle(*, reset_source: bool = True) -> dict[str, Any]:
     ]
 
     return {
-        "root": root,
-        "review_root": _source_trade_review_root(),
         "fragment": fragment,
         "observation": observation,
         "trade_object": trade_object,
@@ -142,86 +155,74 @@ def _source_trade_bundle(*, reset_source: bool = True) -> dict[str, Any]:
     }
 
 
-def _copy_trade_domain(bundle: dict[str, Any]) -> None:
-    source_root = bundle["root"]
-    source_review_root = bundle["review_root"]
-    source_source_domain_root = _source_trade_source_domain_root()
-    for path in sorted(source_review_root.rglob("*.json")):
-        relative = path.relative_to(source_review_root)
-        _write_json(review_root() / relative, _load_json(path))
-    for path in sorted(source_source_domain_root.rglob("*.json")):
-        relative = path.relative_to(source_source_domain_root)
-        _write_json(_trade_source_domain_root() / relative, _load_json(path))
+def _decorate_trade_domain_for_sandbox(bundle: dict[str, Any]) -> None:
+    trade_domain_root = _trade_domain_root()
     fragment = dict(bundle["fragment"])
     fragment["summary"] = (
-        "Sandbox trade-representation domain fragment imported from the bounded "
-        "FpML real-standard ingestion lane."
+        "Trade-representation fragment linked into the APRA-liquidity sandbox "
+        "through published cross-domain stitching candidates."
     )
     fragment["links"] = sorted(
         set(
             fragment.get("links", [])
             + [
-                "../apra_liquidity_domain/fragment.json",
-                "../../stitching_candidates/trade_to_apra_covariance_candidate.json",
-                "../../stitching_candidates/trade_to_apra_adjoint_candidate.json",
+                relative_path(trade_domain_root, _apra_domain_root() / "fragment.json"),
+                relative_path(trade_domain_root, stitching_root() / "trade_to_apra_covariance_candidate.json"),
+                relative_path(trade_domain_root, stitching_root() / "trade_to_apra_adjoint_candidate.json"),
             ]
         )
     )
-    _write_json(_trade_domain_root() / "fragment.json", fragment)
+    _write_json(trade_domain_root / "fragment.json", fragment)
 
     trade_object_id = bundle["trade_object"]["object_id"]
     party_object_ids = [party["object_id"] for party in bundle["party_objects"]]
     agreement_object_id = bundle["agreement_object"]["object_id"]
 
-    for path in sorted(source_root.rglob("*.json")):
-        relative = path.relative_to(source_root)
-        if relative == Path("fragment.json"):
-            continue
+    for path in sorted((_trade_domain_root() / "objects").glob("*.json")):
         payload = _load_json(path)
 
-        if relative.parts[:1] == ("objects",):
-            object_id = payload.get("object_id")
-            cross_domain = payload.setdefault("cross_domain", {})
-            boundary = payload.setdefault("boundary", {})
+        object_id = payload.get("object_id")
+        cross_domain = payload.setdefault("cross_domain", {})
+        boundary = payload.setdefault("boundary", {})
 
-            if object_id == trade_object_id:
-                cross_domain["covariance_edge_refs"] = sorted(
-                    set(
-                        cross_domain.get("covariance_edge_refs", [])
-                        + ["odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1"]
-                    )
+        if object_id == trade_object_id:
+            cross_domain["covariance_edge_refs"] = sorted(
+                set(
+                    cross_domain.get("covariance_edge_refs", [])
+                    + ["odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1"]
                 )
-                cross_domain["adjoint_mapping_refs"] = sorted(
-                    set(
-                        cross_domain.get("adjoint_mapping_refs", [])
-                        + ["odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"]
-                    )
+            )
+            cross_domain["adjoint_mapping_refs"] = sorted(
+                set(
+                    cross_domain.get("adjoint_mapping_refs", [])
+                    + ["odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"]
                 )
-                boundary["adjacent_domains"] = sorted(
-                    set(boundary.get("adjacent_domains", []) + ["odd_world_model.domain.apra_liquidity.reporting.sandbox.v1"])
+            )
+            boundary["adjacent_domains"] = sorted(
+                set(boundary.get("adjacent_domains", []) + ["odd_world_model.domain.apra_liquidity.reporting.sandbox.v1"])
+            )
+            blanket = payload.setdefault("blanket", {})
+            blanket["adjacent_domains"] = sorted(
+                set(blanket.get("adjacent_domains", []) + ["odd_world_model.domain.apra_liquidity.reporting.sandbox.v1"])
+            )
+        elif object_id in party_object_ids or object_id == agreement_object_id:
+            cross_domain["covariance_edge_refs"] = sorted(
+                set(
+                    cross_domain.get("covariance_edge_refs", [])
+                    + ["odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1"]
                 )
-                blanket = payload.setdefault("blanket", {})
-                blanket["adjacent_domains"] = sorted(
-                    set(blanket.get("adjacent_domains", []) + ["odd_world_model.domain.apra_liquidity.reporting.sandbox.v1"])
+            )
+            cross_domain["adjoint_mapping_refs"] = sorted(
+                set(
+                    cross_domain.get("adjoint_mapping_refs", [])
+                    + ["odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"]
                 )
-            elif object_id in party_object_ids or object_id == agreement_object_id:
-                cross_domain["covariance_edge_refs"] = sorted(
-                    set(
-                        cross_domain.get("covariance_edge_refs", [])
-                        + ["odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1"]
-                    )
-                )
-                cross_domain["adjoint_mapping_refs"] = sorted(
-                    set(
-                        cross_domain.get("adjoint_mapping_refs", [])
-                        + ["odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1"]
-                    )
-                )
-                boundary["adjacent_domains"] = sorted(
-                    set(boundary.get("adjacent_domains", []) + ["odd_world_model.domain.apra_liquidity.reporting.sandbox.v1"])
-                )
+            )
+            boundary["adjacent_domains"] = sorted(
+                set(boundary.get("adjacent_domains", []) + ["odd_world_model.domain.apra_liquidity.reporting.sandbox.v1"])
+            )
 
-        _write_json(_trade_domain_root() / relative, payload)
+        _write_json(path, payload)
 
 
 def _apra_ids(apra_input: dict[str, Any]) -> dict[str, str]:
@@ -320,7 +321,7 @@ def _apra_claim_specs(
                 "trade:parsed_trade_observation.primary_counterparty",
                 "interpretation:bounded_apra_counterparty_classification_from_imported_trade",
             ],
-            "summary": "Counterparty bucket classified from official APRA reporting definitions and imported trade counterparty evidence.",
+            "summary": "Counterparty bucket classified from official APRA reporting definitions and retained trade-representation evidence.",
             "qualifiers": {
                 "bucket_code": position["counterparty_bucket"],
                 "counterparty_name": primary_counterparty["party_name"],
@@ -329,7 +330,7 @@ def _apra_claim_specs(
             "sources": [
                 {
                     "label": "authority_claim",
-                    "source_ref": "input://apra_liquidity/authority_claims.json",
+                    "source_ref": APRA_AUTHORITY_CLAIMS_REF,
                     "source_kind": "document_review",
                     "locator": f"claims.{counterparty_authority['claim_id']}",
                     "observed_value": counterparty_authority["value_code"],
@@ -337,7 +338,7 @@ def _apra_claim_specs(
                 },
                 {
                     "label": "trade_counterparty",
-                    "source_ref": "review://parsed_trade_observation.json",
+                    "source_ref": TRADE_REPRESENTATION_REVIEW_REF,
                     "source_kind": "data",
                     "locator": "parties[0]",
                     "observed_value": {
@@ -357,7 +358,7 @@ def _apra_claim_specs(
                 "trade:parsed_trade_observation.agreement",
                 "interpretation:reviewed_master_agreement_as_contractual_treatment_basis",
             ],
-            "summary": "Agreement treatment basis composed from official APRA contractual-treatment guidance and imported master-agreement evidence.",
+            "summary": "Agreement treatment basis composed from official APRA contractual-treatment guidance and retained master-agreement evidence.",
             "qualifiers": {
                 "agreement_assessment": position["agreement_assessment"],
                 "master_agreement_type": agreement["type"],
@@ -367,7 +368,7 @@ def _apra_claim_specs(
             "sources": [
                 {
                     "label": "authority_claim",
-                    "source_ref": "input://apra_liquidity/authority_claims.json",
+                    "source_ref": APRA_AUTHORITY_CLAIMS_REF,
                     "source_kind": "document_review",
                     "locator": f"claims.{agreement_authority['claim_id']}",
                     "observed_value": agreement_authority["value_code"],
@@ -375,7 +376,7 @@ def _apra_claim_specs(
                 },
                 {
                     "label": "trade_agreement",
-                    "source_ref": "review://parsed_trade_observation.json",
+                    "source_ref": TRADE_REPRESENTATION_REVIEW_REF,
                     "source_kind": "data",
                     "locator": "agreement",
                     "observed_value": agreement,
@@ -393,7 +394,7 @@ def _apra_claim_specs(
                 "trade:parsed_trade_observation.product",
                 "interpretation:bounded_derivative_liquidity_outflow_bucket",
             ],
-            "summary": "Liquidity bucket composed from official APRA liquidity outflow guidance and imported derivative trade evidence.",
+            "summary": "Liquidity bucket composed from official APRA liquidity outflow guidance and retained derivative trade evidence.",
             "qualifiers": {
                 "product_type": product["product_type"],
                 "asset_class": product["asset_class"],
@@ -402,7 +403,7 @@ def _apra_claim_specs(
             "sources": [
                 {
                     "label": "authority_claim",
-                    "source_ref": "input://apra_liquidity/authority_claims.json",
+                    "source_ref": APRA_AUTHORITY_CLAIMS_REF,
                     "source_kind": "document_review",
                     "locator": f"claims.{liquidity_authority['claim_id']}",
                     "observed_value": liquidity_authority["value_code"],
@@ -410,7 +411,7 @@ def _apra_claim_specs(
                 },
                 {
                     "label": "trade_product",
-                    "source_ref": "review://parsed_trade_observation.json",
+                    "source_ref": TRADE_REPRESENTATION_REVIEW_REF,
                     "source_kind": "data",
                     "locator": "product",
                     "observed_value": product,
@@ -429,7 +430,7 @@ def _apra_claim_specs(
             "sources": [
                 {
                     "label": "domain_input",
-                    "source_ref": "input://apra_liquidity/domain_input.json",
+                    "source_ref": APRA_DOMAIN_INPUT_REF,
                     "source_kind": "data",
                     "locator": "reporting_position.lifecycle_state",
                     "observed_value": position["lifecycle_state"],
@@ -445,14 +446,15 @@ def _apra_fragment(
     ids: dict[str, str],
     claim_specs: list[dict[str, Any]],
 ) -> dict[str, Any]:
+    apra_domain_root = _apra_domain_root()
     return {
         "schema_kind": "odd_world_model.world_fragment",
         "schema_version": "v1",
         "fragment_id": ids["fragment_id"],
         "bounded_context": apra_input["bounded_context"],
         "published_at": PUBLISHED_AT,
-        "published_by": "odd_world_model.project.sandbox_trade_to_apra_mvp",
-        "summary": "Bounded APRA-liquidity fragment grounded in official APRA authority claims and composed against the imported FpML trade artifact.",
+        "published_by": "odd_world_model.project.apra_liquidity_model",
+        "summary": "Bounded APRA-liquidity fragment grounded in official APRA authority claims and stitched against the trade-representation example domain.",
         "objects": [
             "objects/reporting_position.json",
             "objects/counterparty_bucket.json",
@@ -481,9 +483,9 @@ def _apra_fragment(
             "evidence/manifests/apra_liquidity_manifest.json"
         ],
         "links": [
-            "../trade_representation_domain/fragment.json",
-            "../../stitching_candidates/trade_to_apra_covariance_candidate.json",
-            "../../stitching_candidates/trade_to_apra_adjoint_candidate.json",
+            relative_path(apra_domain_root, _trade_domain_root() / "fragment.json"),
+            relative_path(apra_domain_root, stitching_root() / "trade_to_apra_covariance_candidate.json"),
+            relative_path(apra_domain_root, stitching_root() / "trade_to_apra_adjoint_candidate.json"),
         ],
     }
 
@@ -503,9 +505,9 @@ def _apra_objects(
         dict.fromkeys(
             apra_input["evidence_refs"]
             + [
-                "input://apra_liquidity/authority_claims.json",
+                APRA_AUTHORITY_CLAIMS_REF,
                 OFFICIAL_SAMPLE_INPUT_REF,
-                "review://parsed_trade_observation.json",
+                TRADE_REPRESENTATION_REVIEW_REF,
             ]
         )
     )
@@ -518,9 +520,9 @@ def _apra_objects(
                 "object_id": ids["reporting_position_id"],
                 "object_kind": "ApraLiquidityReportingPosition",
                 "bounded_context": apra_input["bounded_context"],
-                "semantic_role": "Regulatory reporting position composed against the imported FpML trade artifact.",
+                "semantic_role": "Regulatory reporting position composed against the retained trade-representation example domain.",
                 "identity": {
-                    "authority_basis": "bounded APRA liquidity interpretation over official APRA source claims and imported trade evidence",
+                    "authority_basis": "bounded APRA liquidity interpretation over official APRA source claims and retained trade-representation evidence",
                     "aliases": [
                         f"position_id:{position['position_id']}",
                         f"reporting_regime:{position['reporting_regime']}",
@@ -548,10 +550,10 @@ def _apra_objects(
                         "apra_reporting_publication"
                     ],
                     "observable_surfaces": [
-                        "apra_liquidity/domain_input.json",
-                        "apra_liquidity/authority_claims.json",
-                        "apra_liquidity/requirements_snapshot.json",
-                        "parsed_trade_observation.json",
+                        "examples/apra_liquidity_model/sources/data/domain_input.json",
+                        "examples/apra_liquidity_model/sources/data/authority_claims.json",
+                        "examples/apra_liquidity_model/sources/data/requirements_snapshot.json",
+                        "examples/trade_representation_model/sandbox/20260419T000000Z_v1/review/parsed_trade_observation.json",
                     ],
                     "control_surfaces": [
                         "classify_counterparty",
@@ -566,8 +568,8 @@ def _apra_objects(
                     "adjacent_domains": [
                         "odd_world_model.domain.trade_representation.fpml_confirmation.v1"
                     ],
-                    "internal_claim": "This object bounds the APRA-liquidity reporting interpretation over the imported trade artifact.",
-                    "external_claim": "The upstream trade artifact remains an external evidence and treatment source.",
+                    "internal_claim": "This object bounds the APRA-liquidity reporting interpretation over the retained trade-representation example domain.",
+                    "external_claim": "The upstream trade domain remains an external evidence and treatment source.",
                 },
                 "state": {
                     "lifecycle_state": position["lifecycle_state"],
@@ -593,7 +595,7 @@ def _apra_objects(
                 },
                 "evidence": {
                     "refs": evidence_refs,
-                    "summary": "Built from official APRA authority claims, bounded APRA input, and the imported FpML trade artifact.",
+                    "summary": "Built from official APRA authority claims, bounded APRA input, and the retained trade-representation example domain.",
                 },
                 "materialization": {
                     "projection_summary": "Immutable reporting-position object cut projected from the APRA attribute ledger over document-traced and composed regulatory claims.",
@@ -646,9 +648,9 @@ def _apra_objects(
                 "object_id": ids["counterparty_bucket_id"],
                 "object_kind": "ApraCounterpartyBucket",
                 "bounded_context": apra_input["bounded_context"],
-                "semantic_role": "Regulatory counterparty bucket derived from the imported trade-party surfaces.",
+                "semantic_role": "Regulatory counterparty bucket derived from the retained trade-party surfaces.",
                 "identity": {
-                    "authority_basis": "official APRA counterparty classification applied to imported trade evidence",
+                    "authority_basis": "official APRA counterparty classification applied to retained trade-representation evidence",
                     "aliases": [
                         position["counterparty_bucket"]
                     ],
@@ -962,14 +964,14 @@ def _apra_manifest(apra_input: dict[str, Any]) -> tuple[str, dict[str, Any]]:
             "schema_kind": "odd_world_model.evidence_manifest",
             "schema_version": "v1",
             "manifest_id": "odd_world_model.evidence.apra_liquidity.reporting.sandbox.v1",
-            "summary": "Evidence manifest for the bounded APRA-liquidity fragment grounded in official APRA authority claims and composed against the FpML trade artifact.",
+            "summary": "Evidence manifest for the bounded APRA-liquidity fragment grounded in official APRA authority claims and composed against the trade-representation example artifact.",
             "refs": list(
                 dict.fromkeys(
                     apra_input["evidence_refs"]
                     + [
-                        "input://apra_liquidity/authority_claims.json",
+                        APRA_AUTHORITY_CLAIMS_REF,
                         OFFICIAL_SAMPLE_INPUT_REF,
-                        "review://parsed_trade_observation.json",
+                        TRADE_REPRESENTATION_REVIEW_REF,
                     ]
                 )
             ),
@@ -1023,10 +1025,10 @@ def _apra_reference_artifacts(ids: dict[str, str]) -> list[tuple[str, dict[str, 
                 "supersession": {},
                 "evidence": {
                     "refs": [
-                        "input://apra_liquidity/source_authority.md",
-                        "input://apra_liquidity/authority_claims.json",
-                        "input://apra_liquidity/requirements_snapshot.json",
-                        "input://apra_liquidity/source_notes.md"
+                        APRA_SOURCE_AUTHORITY_REF,
+                        APRA_AUTHORITY_CLAIMS_REF,
+                        APRA_REQUIREMENTS_SNAPSHOT_REF,
+                        APRA_SOURCE_NOTES_REF,
                     ],
                     "summary": "Governed temporal reference artifact for the bounded APRA counterparty bucket values grounded in official APRA authority claims."
                 },
@@ -1066,7 +1068,7 @@ def _stitching_candidates(ids: dict[str, str], bundle: dict[str, Any]) -> list[t
                 "target_object_ref": ids["reporting_position_id"],
                 "relationship_kind": "partial_correspondence",
                 "ambiguity_notes": [
-                    "The APRA reporting position captures only the liquidity-relevant slice of the imported trade artifact.",
+                    "The APRA reporting position captures only the liquidity-relevant slice of the retained trade-representation example domain.",
                     "Counterparty and agreement treatments remain sparse and should be deepened before this edge is promoted to stronger correspondence.",
                 ],
             },
@@ -1080,7 +1082,7 @@ def _stitching_candidates(ids: dict[str, str], bundle: dict[str, Any]) -> list[t
                 "forward_treatment_ref": "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1",
                 "source_domain": "odd_world_model.domain.trade_representation.fpml_confirmation.v1",
                 "target_domain": ids["domain_id"],
-                "interpret_back_summary": "The APRA-liquidity reporting position can be interpreted back as a liquidity-focused treatment over the imported FpML trade, party, and agreement surfaces, with loss of detailed product nuance.",
+                "interpret_back_summary": "The APRA-liquidity reporting position can be interpreted back as a liquidity-focused treatment over the retained sandbox trade, party, and agreement surfaces, with loss of detailed product nuance.",
                 "preserved_structure": [
                     "trade_identifier",
                     "party_identity",
@@ -1101,8 +1103,8 @@ def _stitching_candidates(ids: dict[str, str], bundle: dict[str, Any]) -> list[t
 def materialize_trade_domain_import(*, reset: bool = False) -> dict[str, Any]:
     if reset:
         _reset_generated_output()
-    bundle = _source_trade_bundle(reset_source=True)
-    _copy_trade_domain(bundle)
+    bundle = _trade_bundle(reset_source=False)
+    _decorate_trade_domain_for_sandbox(bundle)
     return bundle
 
 

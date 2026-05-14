@@ -1,0 +1,12 @@
+{
+  "query_id": "odd_world_model.query.sandbox_trade_representation_capture.v1",
+  "lane": "filesystem_first",
+  "fragment_ref": "odd_world_model.fragment.sandbox_trade_representation_capture.v1",
+  "question": "What did the configured sandbox publish for sandbox.trade_representation.capture?",
+  "answer": "Sandbox trade representation input for the first odd_world_model MVP lane.",
+  "objects": [
+    "odd_world_model.markov_object.sandbox_trade_representation_capture.trade.trade_sandbox_001"
+  ],
+  "source_manifest": "../../sources/data/domain_input.json",
+  "world_model_ref": "published/world_model/composed_world_model.json"
+}

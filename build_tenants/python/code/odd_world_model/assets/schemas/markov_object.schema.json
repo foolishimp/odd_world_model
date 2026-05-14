@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.markov_object.schema.json",
+  "title": "MarkovObject",
+  "allOf": [
+    {
+      "$ref": "world_model_object.schema.json"
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_kind",
+        "blanket"
+      ],
+      "properties": {
+        "schema_kind": {
+          "const": "odd_world_model.markov_object"
+        },
+        "blanket": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "ingress_surfaces",
+            "egress_surfaces",
+            "observable_surfaces",
+            "internal_claim",
+            "external_claim"
+          ],
+          "properties": {
+            "ingress_surfaces": {
+              "$ref": "world_model_object.schema.json#/$defs/string_array"
+            },
+            "egress_surfaces": {
+              "$ref": "world_model_object.schema.json#/$defs/string_array"
+            },
+            "observable_surfaces": {
+              "$ref": "world_model_object.schema.json#/$defs/string_array"
+            },
+            "control_surfaces": {
+              "$ref": "world_model_object.schema.json#/$defs/string_array"
+            },
+            "adjacent_objects": {
+              "$ref": "world_model_object.schema.json#/$defs/string_array"
+            },
+            "adjacent_domains": {
+              "$ref": "world_model_object.schema.json#/$defs/string_array"
+            },
+            "internal_claim": {
+              "type": "string",
+              "minLength": 1
+            },
+            "external_claim": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

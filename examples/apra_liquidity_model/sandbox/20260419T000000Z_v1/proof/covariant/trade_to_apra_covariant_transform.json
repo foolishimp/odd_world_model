@@ -1,0 +1,65 @@
+{
+  "transform_id": "data_mapper.covariant_transform.trade_to_apra_liquidity.v1",
+  "transform_kind": "covariant_transform",
+  "source_domain": "odd_world_model.domain.trade_representation.fpml_confirmation.v1",
+  "target_domain": "odd_world_model.domain.apra_liquidity.reporting.sandbox.v1",
+  "source_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+  "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "treatment_ref": "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1",
+  "covariance_edge_ref": "odd_world_model.covariance.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
+  "adjoint_mapping_ref": "odd_world_model.adjoint.trade_representation.to_apra_liquidity.trade_fpml_001.v1",
+  "relationship_kind": "partial_correspondence",
+  "preserved_structure": [
+    "trade_identifier",
+    "party_identity",
+    "master_agreement_reference",
+    "trade_lifecycle_state"
+  ],
+  "loss_notes": [
+    "Detailed commodity product semantics do not survive intact into the APRA-liquidity reporting view."
+  ],
+  "surplus_notes": [
+    "The target adds reporting-position, bucket, and regulatory-classification semantics."
+  ],
+  "event_stream": [
+    {
+      "event_kind": "source_state_observed",
+      "object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "state": "confirmed"
+    },
+    {
+      "event_kind": "cross_domain_treatment_applied",
+      "treatment_ref": "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1",
+      "changed_meaning": [
+        "Trade representation is reinterpreted as a regulatory liquidity position rather than a confirmation-view trade object."
+      ]
+    },
+    {
+      "event_kind": "target_state_emitted",
+      "object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "state": "draft_classified"
+    }
+  ],
+  "traceability": {
+    "source_evidence_refs": [
+      "input://examples/trade_source_model/sources/data/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+      "input://examples/trade_source_model/sources/data/authority/fpml-5-12-examples.html",
+      "input://examples/trade_source_model/sources/uri_ledger/source_authority.md",
+      "review://parsed_trade_observation.json"
+    ],
+    "target_evidence_refs": [
+      "input://examples/apra_liquidity_model/sources/data/domain_input.json",
+      "input://examples/apra_liquidity_model/sources/data/requirements_snapshot.json",
+      "input://examples/apra_liquidity_model/sources/uri_ledger/source_notes.md",
+      "input://examples/apra_liquidity_model/sources/uri_ledger/source_authority.md",
+      "input://examples/apra_liquidity_model/sources/data/authority_claims.json",
+      "input://examples/apra_liquidity_model/sources/data/authority/apra_liquidity_landing_page.html",
+      "input://examples/apra_liquidity_model/sources/data/authority/aps_210_liquidity_2025.html",
+      "input://examples/apra_liquidity_model/sources/pdfs/apg_210_liquidity_2025.pdf",
+      "input://examples/apra_liquidity_model/sources/data/authority/ars_210_0_liquidity_2023.html",
+      "input://examples/apra_liquidity_model/sources/data/authority/apra_liquidity_faq.html",
+      "input://examples/trade_source_model/sources/data/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+      "review://examples/trade_representation_model/sandbox/20260419T000000Z_v1/review/parsed_trade_observation.json"
+    ]
+  }
+}

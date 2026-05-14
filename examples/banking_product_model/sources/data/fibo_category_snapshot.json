@@ -1,0 +1,62 @@
+{
+  "source_id": "banking_product_model.fibo_category_snapshot.v1",
+  "published_by": "odd_world_model.review.banking_product_model",
+  "summary": "Bounded retained snapshot of the FIBO financial-product hierarchy used by the banking product example domain.",
+  "source_refs": [
+    "input://examples/banking_product_model/sources/data/authority/fibo_home.html",
+    "input://examples/banking_product_model/sources/data/authority/fibo_products.html",
+    "input://examples/banking_product_model/sources/data/authority/fibo_schema_financial.html"
+  ],
+  "categories": [
+    {
+      "category_id": "fibo.financial_product",
+      "label": "FinancialProduct",
+      "source_ref": "input://examples/banking_product_model/sources/data/authority/fibo_schema_financial.html",
+      "summary": "Top-level financial product category from the retained FIBO schema.org financial hierarchy."
+    },
+    {
+      "category_id": "fibo.deposit_account",
+      "label": "DepositAccount",
+      "parent_category_id": "fibo.financial_product",
+      "source_ref": "input://examples/banking_product_model/sources/data/authority/fibo_schema_financial.html",
+      "summary": "Deposit-account product category retained for savings-account offers."
+    },
+    {
+      "category_id": "fibo.loan_or_credit",
+      "label": "LoanOrCredit",
+      "parent_category_id": "fibo.financial_product",
+      "source_ref": "input://examples/banking_product_model/sources/data/authority/fibo_schema_financial.html",
+      "summary": "Loan or credit category retained for general consumer lending offers."
+    },
+    {
+      "category_id": "fibo.mortgage_loan",
+      "label": "MortgageLoan",
+      "parent_category_id": "fibo.loan_or_credit",
+      "source_ref": "input://examples/banking_product_model/sources/data/authority/fibo_schema_financial.html",
+      "summary": "Mortgage-loan category retained for home-loan offers."
+    },
+    {
+      "category_id": "fibo.credit_card",
+      "label": "CreditCard",
+      "parent_category_id": "fibo.loan_or_credit",
+      "source_ref": "input://examples/banking_product_model/sources/data/authority/fibo_schema_financial.html",
+      "summary": "Credit-card product category retained for revolving card offers."
+    }
+  ],
+  "example_properties": {
+    "mortgage_loan": [
+      "amount",
+      "interestRate",
+      "annualPercentageRate",
+      "loanTerm",
+      "loanRepaymentForm"
+    ],
+    "credit_card": [
+      "annualPercentageRate",
+      "interestRate",
+      "feesAndCommissionsSpecification",
+      "gracePeriod",
+      "contactlessPayment"
+    ]
+  }
+}

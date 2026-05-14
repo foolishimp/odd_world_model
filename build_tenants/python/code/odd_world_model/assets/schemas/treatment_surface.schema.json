@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.treatment_surface.schema.json",
+  "title": "TreatmentSurface",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_kind",
+    "schema_version",
+    "treatment_id",
+    "source_object_refs",
+    "target_domain",
+    "preserved_structure",
+    "changed_meaning"
+  ],
+  "properties": {
+    "schema_kind": {
+      "const": "odd_world_model.treatment_surface"
+    },
+    "schema_version": {
+      "const": "v1"
+    },
+    "treatment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_object_refs": {
+      "$ref": "world_model_object.schema.json#/$defs/string_array"
+    },
+    "target_domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "preserved_structure": {
+      "$ref": "world_model_object.schema.json#/$defs/string_array"
+    },
+    "changed_meaning": {
+      "$ref": "world_model_object.schema.json#/$defs/string_array"
+    },
+    "loss_notes": {
+      "$ref": "world_model_object.schema.json#/$defs/string_array"
+    },
+    "surplus_notes": {
+      "$ref": "world_model_object.schema.json#/$defs/string_array"
+    }
+  }
+}

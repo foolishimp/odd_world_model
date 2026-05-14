@@ -10,6 +10,8 @@ Define the realization shape of the retained `odd_world_model` mapping line:
 
 - consume published world-model domains
 - analyze cross-domain correspondence rigorously
+- synthesize higher-order concepts from repeated correspondence structure
+- project candidate boundary structure over those concepts
 - publish one durable machine-usable mapping record
 - project one human-usable mapping report
 
@@ -41,6 +43,8 @@ published domains. The line must be explicit enough to answer:
 - what evidence supports the assessment
 - what loss, ambiguity, or surplus remains
 - which source and target surfaces remain unassigned
+- which higher-order concepts are implied by repeated cross-domain structure
+- which candidate Markov boundaries those concepts fall into
 
 The line should be as explicit and reviewable as the SDLC constructive line.
 
@@ -64,8 +68,7 @@ The line must not publish a second co-equal truth surface for the same mapping.
 
 The retained mapping line operates over published assets such as:
 
-- source published domain artifacts
-- target published domain artifacts
+- several published domain artifacts
 - composed world models when the mapping question is already composition-level
 - supporting semantic surfaces where needed:
   - treatments
@@ -74,13 +77,20 @@ The retained mapping line operates over published assets such as:
   - reference artifacts
   - query projections for explainability only
 
-The first proving slice should use the existing trade-to-APRA retained corpus.
+The current proving slice should be able to operate across the retained
+root-level example domains without collapsing them back into one shared
+sandbox:
+
+- `trade_source_model`
+- `trade_representation_model`
+- `apra_liquidity_model`
+- `banking_product_model`
 
 ## Mapping Build Line
 
 The build line is:
 
-`published world-model domains -> mapping analysis -> mapping record -> mapping report`
+`published world-model domains -> topology-aware mapping analysis -> higher-order concept synthesis -> boundary-candidate projection -> mapping record -> mapping report`
 
 ### 1. Published Domain Selection
 
@@ -88,41 +98,99 @@ The line starts from explicit published domain refs.
 
 Selection must preserve:
 
-- source artifact identity and version
-- target artifact identity and version
+- artifact identity and version for every participating domain
 - bounded-context meaning
 - any supporting treatment or composition surfaces already in force
 
-### 2. Mapping Analysis
+### 2. Topology-Aware Mapping Analysis
 
 `mapping_analysis_surface` is the constructive working surface.
 
 It should inventory at least:
 
-- source objects and attributes in scope
-- target objects and attributes in scope
+- published domains in scope
+- objects and attributes in scope
 - candidate object pairings
 - candidate attribute pairings
 - relation and topology correspondences
 - unit or basis compatibility
 - treatment, covariance, or adjoint support
+- boundary and blanket placement
+- process and constructive-history signals where retained source depth allows
 - ambiguity and surplus
 
 This surface is reviewable and replayable, but it is not the durable truth
 surface of the mapping line.
 
-### 3. Mapping Record
+Topology-aware matching should treat the published world-model carrier as the
+primary semantic tether:
+
+- object boundary
+- adjacency
+- composition
+- lifecycle and control surfaces
+- treatment and covariance support
+- adjoint support
+- constructive history
+
+Lexical similarity may contribute, but it must not outrank published
+world-model structure.
+
+### 3. Higher-Order Concept Synthesis
+
+The retained mapping line should be able to synthesize higher-order concepts
+from repeated correspondence structure.
+
+Those concepts are not promoted automatically into domain truth.
+
+They remain downstream mapping artifacts that help explain:
+
+- why several objects from different domains are part of the same semantic
+  family
+- which objects are primarily containment-related
+- which objects participate in overlapping semantic blankets
+- where abstraction, treatment, or classification is occurring
+
+The synthesis should preserve:
+
+- member object refs
+- participating domain refs
+- concept-level semantic summary
+- inference basis
+- confidence
+- declared loss and ambiguity
+
+### 4. Boundary-Candidate Projection
+
+The retained mapping line should project candidate boundary structure over the
+synthesized higher-order concepts.
+
+The candidate shape must support both:
+
+- hierarchical boundaries
+  containment or abstraction structure
+- intersectional boundaries
+  overlapping semantic blankets that cut across containment
+
+Boundary candidates should therefore allow:
+
+- member object refs
+- member concept refs
+- parent boundary refs
+- overlap boundary refs
+- ingress and egress indications where visible
+- supporting mapping refs
+- declared loss and ambiguity
+
+### 5. Mapping Record
 
 `mapping_record_surface` is the durable machine-usable mapping artifact.
 
 Each retained mapping entry should carry at least:
 
-- source domain artifact ref
-- target domain artifact ref
-- source object ref
-- source attribute or relation ref
-- target object ref
-- target attribute or relation ref
+- participating domain refs
+- source object or attribute refs where directionality is meaningful
+- target object or attribute refs where directionality is meaningful
 - mapping category
 - mapping directionality
 - confidence band
@@ -133,26 +201,28 @@ Each retained mapping entry should carry at least:
 
 The record should also publish:
 
-- unassigned source attributes
-- unassigned target attributes
+- unassigned surfaces by participating domain
+- synthesized higher-order concepts
+- candidate boundary structures
 - scope summary
 - record provenance back to the governing published domains
 
-### 4. Mapping Report
+### 6. Mapping Report
 
 `mapping_report_surface` is a human-facing projection over the mapping record
 and supporting analysis.
 
 It should explain:
 
-- scope and domain pair
+- scope and participating domains
 - object pairing basis
 - attribute-level rationale
+- higher-order concepts
+- candidate boundary hierarchy and overlap
 - category breakdown
 - confidence breakdown
 - loss, surplus, and ambiguity
-- unassigned source attributes
-- unassigned target attributes
+- unassigned surfaces by domain
 - recommended next actions
 
 The report may be Markdown-first in the first retained slice, but it remains a
@@ -247,21 +317,23 @@ The first retained carrier shape should include at least:
 - `project_mapping_report`
 - an executive carrier such as `build_mapping_assets`
 
-## First Proving Slice
+## Current Proving Slice
 
-The first retained slice should prove mapping over real published domains
-already present in the repository:
+The current retained slice should prove generic governed mapping over the real
+published example domains already present in the repository:
 
-- source:
-  `trade_representation_domain`
-- target:
-  `apra_liquidity_domain`
+- `fpml_confirmation_source_domain`
+- `trade_representation_domain`
+- `apra_liquidity_domain`
+- `banking_product_domain`
 
-The proving slice should stay narrow and deterministic while demonstrating:
+The proving slice should stay bounded and reviewable while demonstrating:
 
-- object-level correspondence
-- attribute-level categorized correspondence
+- topology-aware object correspondence
+- attribute-level correspondence where the retained source depth supports it
+- higher-order concept synthesis across more than one domain pair
+- both hierarchical and intersectional boundary candidates
 - confidence with reasons
 - declared loss and ambiguity
-- unassigned source and target attributes
+- unassigned surfaces by participating domain
 - lineage back to the published domain artifacts

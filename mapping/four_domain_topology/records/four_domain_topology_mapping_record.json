@@ -1,0 +1,1405 @@
+{
+  "schema_kind": "odd_world_model.mapping_record",
+  "schema_version": "v1",
+  "mapping_record_id": "odd_world_model.mapping_record.four_domain_topology.v1",
+  "analysis_ref": "mapping://four_domain_topology/analysis/four_domain_topology_mapping_analysis.json",
+  "mapping_mode": "generic_topology_and_concept_matching",
+  "domain_refs": [
+    "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1",
+    "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
+    "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+    "odd_world_model.fragment.sandbox_banking_product_catalog.v1"
+  ],
+  "domain_scope": [
+    {
+      "domain_key": "trade_source",
+      "example_name": "trade_source_model",
+      "fragment_id": "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1",
+      "bounded_context": "fpml_confirmation_source.commodity_swap",
+      "published_root": "/Users/jim/src/apps/odd_world_model/examples/trade_source_model/sandbox/20260419T000000Z_v1/published/fpml_confirmation_source_domain",
+      "sandbox_version": "20260419T000000Z_v1",
+      "object_count": 4
+    },
+    {
+      "domain_key": "trade_representation",
+      "example_name": "trade_representation_model",
+      "fragment_id": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
+      "bounded_context": "trade_representation.fpml_confirmation.commodity_swap",
+      "published_root": "/Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260419T000000Z_v1/published/trade_representation_domain",
+      "sandbox_version": "20260419T000000Z_v1",
+      "object_count": 5
+    },
+    {
+      "domain_key": "apra_liquidity",
+      "example_name": "apra_liquidity_model",
+      "fragment_id": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+      "bounded_context": "sandbox.apra_liquidity.reporting",
+      "published_root": "/Users/jim/src/apps/odd_world_model/examples/apra_liquidity_model/sandbox/20260419T000000Z_v1/published/apra_liquidity_domain",
+      "sandbox_version": "20260419T000000Z_v1",
+      "object_count": 3
+    },
+    {
+      "domain_key": "banking_product",
+      "example_name": "banking_product_model",
+      "fragment_id": "odd_world_model.fragment.sandbox_banking_product_catalog.v1",
+      "bounded_context": "sandbox.banking_product.catalog",
+      "published_root": "/Users/jim/src/apps/odd_world_model/examples/banking_product_model/sandbox/20260419T000000Z_v1/published/banking_product_domain",
+      "sandbox_version": "20260419T000000Z_v1",
+      "object_count": 5
+    }
+  ],
+  "object_mappings": [
+    {
+      "mapping_id": "odd_world_model.mapping_candidate.trade_source_model.to.trade_representation_model.source_commodity_swap_surface.to.commodity_swap_product.v1",
+      "source_domain_ref": "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1",
+      "target_domain_ref": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
+      "source_object_ref": "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001",
+      "target_object_ref": "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+      "directionality": "bidirectional",
+      "category": "constrained_equivalence",
+      "confidence_band": "moderate",
+      "confidence_score": 0.6398,
+      "shared_tokens": [
+        "00",
+        "001",
+        "01",
+        "04",
+        "07",
+        "12",
+        "15",
+        "2",
+        "2006",
+        "2026",
+        "5",
+        "asset",
+        "authority",
+        "class",
+        "com",
+        "commodity",
+        "confirmation",
+        "count",
+        "daily",
+        "data",
+        "dates",
+        "delivery",
+        "ex28",
+        "fp",
+        "fpml",
+        "gas",
+        "html",
+        "json",
+        "last",
+        "ledger",
+        "leg",
+        "low",
+        "md",
+        "ml",
+        "must",
+        "observation",
+        "option",
+        "parsed",
+        "policy",
+        "prices",
+        "product",
+        "remain",
+        "representation",
+        "review",
+        "sources",
+        "structure",
+        "swap",
+        "t00",
+        "to",
+        "trade",
+        "type",
+        "uri",
+        "xml"
+      ],
+      "shared_alias_tokens": [
+        "2",
+        "commodity",
+        "count",
+        "leg",
+        "product",
+        "swap",
+        "type"
+      ],
+      "shared_concepts": [
+        "financial_product_surface"
+      ],
+      "score_components": {
+        "token_similarity": 0.5824,
+        "alias_similarity": 0.7778,
+        "concept_similarity": 0.5,
+        "topology_similarity": 0.5641,
+        "direct_reference_support": 0.55,
+        "identifier_support": 1.0
+      },
+      "confidence_rationale": [
+        "shared semantic tokens anchor the correspondence",
+        "shared aliases or qualifier values anchor the correspondence",
+        "shared higher-order concept tags place the objects in the same semantic family",
+        "topology and constructive shape are materially similar",
+        "adjacent-domain placement points at the paired bounded context",
+        "evidence refs already cross the paired example boundary",
+        "shared stable identifier values anchor the correspondence",
+        "shared identifier semantics survive across the paired objects"
+      ],
+      "ambiguity_notes": [],
+      "declared_loss": []
+    },
+    {
+      "mapping_id": "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1",
+      "source_domain_ref": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
+      "target_domain_ref": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+      "source_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "directionality": "source_to_target",
+      "category": "derived_mapping",
+      "confidence_band": "moderate",
+      "confidence_score": 0.602,
+      "shared_tokens": [
+        "00",
+        "001",
+        "04",
+        "15",
+        "2026",
+        "549300",
+        "adjoint",
+        "agreement",
+        "apra",
+        "assurance",
+        "attribute",
+        "authority",
+        "bank",
+        "classification",
+        "com",
+        "commodity",
+        "confirmation",
+        "contract",
+        "covariance",
+        "daily",
+        "data",
+        "delivery",
+        "detailed",
+        "entry",
+        "ex28",
+        "fp",
+        "fpml",
+        "gas",
+        "have",
+        "html",
+        "id",
+        "inspection",
+        "interpretation",
+        "is",
+        "isda",
+        "json",
+        "kfsly4",
+        "last",
+        "ledger",
+        "liquidity",
+        "ll12",
+        "markov",
+        "master",
+        "md",
+        "ml",
+        "must",
+        "n3",
+        "notes",
+        "observation",
+        "official",
+        "option",
+        "parsed",
+        "party",
+        "policy",
+        "prices",
+        "product",
+        "regulatory",
+        "reporting",
+        "representation",
+        "review",
+        "sources",
+        "state",
+        "swap",
+        "t00",
+        "to",
+        "traces",
+        "trade",
+        "treatment",
+        "u7",
+        "uri",
+        "xml"
+      ],
+      "shared_alias_tokens": [
+        "001",
+        "549300",
+        "agreement",
+        "bank",
+        "commodity",
+        "id",
+        "isda",
+        "kfsly4",
+        "ll12",
+        "master",
+        "n3",
+        "party",
+        "swap",
+        "u7"
+      ],
+      "shared_concepts": [
+        "trade_lifecycle_surface"
+      ],
+      "score_components": {
+        "token_similarity": 0.3989,
+        "alias_similarity": 0.3182,
+        "concept_similarity": 0.25,
+        "topology_similarity": 0.7051,
+        "direct_reference_support": 1.0,
+        "identifier_support": 1.0
+      },
+      "confidence_rationale": [
+        "shared semantic tokens anchor the correspondence",
+        "shared aliases or qualifier values anchor the correspondence",
+        "shared higher-order concept tags place the objects in the same semantic family",
+        "topology and constructive shape are materially similar",
+        "published adjacency directly references the paired object",
+        "adjacent-domain placement points at the paired bounded context",
+        "evidence refs already cross the paired example boundary",
+        "shared stable identifier values anchor the correspondence",
+        "shared identifier semantics survive across the paired objects"
+      ],
+      "ambiguity_notes": [],
+      "declared_loss": [
+        "Downstream regulatory views may collapse detailed product semantics into classification surfaces.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics."
+      ]
+    },
+    {
+      "mapping_id": "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.master_agreement_reference.to.agreement_treatment_basis.v1",
+      "source_domain_ref": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
+      "target_domain_ref": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+      "source_object_ref": "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001",
+      "target_object_ref": "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
+      "directionality": "source_to_target",
+      "category": "treatment_projection",
+      "confidence_band": "moderate",
+      "confidence_score": 0.5723,
+      "shared_tokens": [
+        "00",
+        "001",
+        "04",
+        "15",
+        "2026",
+        "adjoint",
+        "agreement",
+        "apra",
+        "authority",
+        "com",
+        "confirmation",
+        "covariance",
+        "daily",
+        "data",
+        "delivery",
+        "does",
+        "ex28",
+        "fp",
+        "fpml",
+        "full",
+        "gas",
+        "html",
+        "is",
+        "json",
+        "last",
+        "ledger",
+        "legal",
+        "liquidity",
+        "markov",
+        "master",
+        "md",
+        "ml",
+        "not",
+        "observation",
+        "option",
+        "parsed",
+        "prices",
+        "reference",
+        "remain",
+        "reporting",
+        "representation",
+        "review",
+        "sources",
+        "swap",
+        "t00",
+        "to",
+        "trade",
+        "treatment",
+        "uri",
+        "xml"
+      ],
+      "shared_alias_tokens": [
+        "agreement",
+        "master"
+      ],
+      "shared_concepts": [
+        "agreement_governance_surface"
+      ],
+      "score_components": {
+        "token_similarity": 0.4717,
+        "alias_similarity": 0.2857,
+        "concept_similarity": 0.5,
+        "topology_similarity": 0.8077,
+        "direct_reference_support": 1.0,
+        "identifier_support": 0.3
+      },
+      "confidence_rationale": [
+        "shared semantic tokens anchor the correspondence",
+        "shared aliases or qualifier values anchor the correspondence",
+        "shared higher-order concept tags place the objects in the same semantic family",
+        "topology and constructive shape are materially similar",
+        "published adjacency directly references the paired object",
+        "adjacent-domain placement points at the paired bounded context",
+        "evidence refs already cross the paired example boundary",
+        "shared identifier semantics survive across the paired objects"
+      ],
+      "ambiguity_notes": [],
+      "declared_loss": [
+        "Bounded FpML documentation does not capture the full legal agreement semantics.",
+        "Regulatory agreement treatment basis does not preserve the full legal semantics of the source agreement."
+      ]
+    },
+    {
+      "mapping_id": "odd_world_model.mapping_candidate.trade_source_model.to.trade_representation_model.source_trade_record.to.trade_contract_state.v1",
+      "source_domain_ref": "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1",
+      "target_domain_ref": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
+      "source_object_ref": "odd_world_model.world_model_object.fpml_confirmation.trade_record.trade_fpml_001",
+      "target_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "directionality": "bidirectional",
+      "category": "constrained_equivalence",
+      "confidence_band": "moderate",
+      "confidence_score": 0.5703,
+      "shared_tokens": [
+        "00",
+        "001",
+        "01",
+        "04",
+        "06",
+        "12",
+        "1234",
+        "15",
+        "2006",
+        "2026",
+        "5",
+        "authority",
+        "com",
+        "commodity",
+        "confirmation",
+        "daily",
+        "data",
+        "date",
+        "delivery",
+        "ex28",
+        "fp",
+        "fpml",
+        "gas",
+        "header",
+        "html",
+        "id",
+        "json",
+        "last",
+        "ledger",
+        "md",
+        "ml",
+        "observation",
+        "official",
+        "option",
+        "parsed",
+        "prices",
+        "product",
+        "representation",
+        "review",
+        "sources",
+        "swap",
+        "t00",
+        "to",
+        "trade",
+        "uri",
+        "xml"
+      ],
+      "shared_alias_tokens": [
+        "1234",
+        "id",
+        "trade"
+      ],
+      "shared_concepts": [
+        "trade_lifecycle_surface"
+      ],
+      "score_components": {
+        "token_similarity": 0.3382,
+        "alias_similarity": 0.1034,
+        "concept_similarity": 1.0,
+        "topology_similarity": 0.1538,
+        "direct_reference_support": 0.55,
+        "identifier_support": 1.0
+      },
+      "confidence_rationale": [
+        "shared semantic tokens anchor the correspondence",
+        "shared aliases or qualifier values anchor the correspondence",
+        "shared higher-order concept tags place the objects in the same semantic family",
+        "adjacent-domain placement points at the paired bounded context",
+        "evidence refs already cross the paired example boundary",
+        "shared stable identifier values anchor the correspondence",
+        "shared identifier semantics survive across the paired objects"
+      ],
+      "ambiguity_notes": [],
+      "declared_loss": [
+        "Downstream regulatory views may collapse detailed product semantics into classification surfaces."
+      ]
+    },
+    {
+      "mapping_id": "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.reporting_position.v1",
+      "source_domain_ref": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
+      "target_domain_ref": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+      "source_object_ref": "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+      "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "directionality": "source_to_target",
+      "category": "treatment_projection",
+      "confidence_band": "weak",
+      "confidence_score": 0.5008,
+      "shared_tokens": [
+        "00",
+        "001",
+        "04",
+        "15",
+        "2026",
+        "549300",
+        "adjoint",
+        "apra",
+        "authority",
+        "bank",
+        "bucket",
+        "com",
+        "commodity",
+        "confirmation",
+        "contract",
+        "covariance",
+        "daily",
+        "data",
+        "delivery",
+        "ex28",
+        "fp",
+        "fpml",
+        "gas",
+        "html",
+        "id",
+        "is",
+        "json",
+        "kfsly4",
+        "last",
+        "ledger",
+        "liquidity",
+        "ll12",
+        "markov",
+        "md",
+        "ml",
+        "n3",
+        "observation",
+        "option",
+        "parsed",
+        "party",
+        "prices",
+        "regulatory",
+        "reporting",
+        "representation",
+        "review",
+        "sources",
+        "state",
+        "swap",
+        "t00",
+        "to",
+        "trade",
+        "treatment",
+        "u7",
+        "uri",
+        "xml"
+      ],
+      "shared_alias_tokens": [
+        "549300",
+        "bank",
+        "id",
+        "kfsly4",
+        "ll12",
+        "n3",
+        "party",
+        "u7"
+      ],
+      "shared_concepts": [
+        "party_qualification_surface",
+        "trade_lifecycle_surface"
+      ],
+      "score_components": {
+        "token_similarity": 0.3873,
+        "alias_similarity": 0.2667,
+        "concept_similarity": 0.5,
+        "topology_similarity": 0.1731,
+        "direct_reference_support": 0.55,
+        "identifier_support": 1.0
+      },
+      "confidence_rationale": [
+        "shared semantic tokens anchor the correspondence",
+        "shared aliases or qualifier values anchor the correspondence",
+        "shared higher-order concept tags place the objects in the same semantic family",
+        "adjacent-domain placement points at the paired bounded context",
+        "evidence refs already cross the paired example boundary",
+        "shared stable identifier values anchor the correspondence",
+        "shared identifier semantics survive across the paired objects"
+      ],
+      "ambiguity_notes": [],
+      "declared_loss": [
+        "Local party identity may be reduced to a counterparty bucket downstream.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics."
+      ]
+    },
+    {
+      "mapping_id": "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.counterparty_bucket.v1",
+      "source_domain_ref": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
+      "target_domain_ref": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+      "source_object_ref": "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+      "target_object_ref": "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+      "directionality": "source_to_target",
+      "category": "treatment_projection",
+      "confidence_band": "weak",
+      "confidence_score": 0.4763,
+      "shared_tokens": [
+        "00",
+        "001",
+        "04",
+        "15",
+        "2026",
+        "adjoint",
+        "apra",
+        "authority",
+        "bucket",
+        "bucketing",
+        "com",
+        "confirmation",
+        "covariance",
+        "daily",
+        "data",
+        "delivery",
+        "ex28",
+        "fpml",
+        "gas",
+        "html",
+        "is",
+        "json",
+        "last",
+        "ledger",
+        "liquidity",
+        "markov",
+        "md",
+        "medium",
+        "observation",
+        "option",
+        "parsed",
+        "party",
+        "prices",
+        "profile",
+        "regulatory",
+        "reporting",
+        "representation",
+        "review",
+        "sources",
+        "swap",
+        "t00",
+        "to",
+        "trade",
+        "treatment",
+        "uri",
+        "xml"
+      ],
+      "shared_alias_tokens": [],
+      "shared_concepts": [
+        "party_qualification_surface"
+      ],
+      "score_components": {
+        "token_similarity": 0.4182,
+        "alias_similarity": 0.0,
+        "concept_similarity": 0.5,
+        "topology_similarity": 0.7179,
+        "direct_reference_support": 1.0,
+        "identifier_support": 0.0
+      },
+      "confidence_rationale": [
+        "shared semantic tokens anchor the correspondence",
+        "shared higher-order concept tags place the objects in the same semantic family",
+        "topology and constructive shape are materially similar",
+        "published adjacency directly references the paired object",
+        "adjacent-domain placement points at the paired bounded context",
+        "evidence refs already cross the paired example boundary"
+      ],
+      "ambiguity_notes": [],
+      "declared_loss": [
+        "Bucketing abstracts away the locally identified trade parties.",
+        "Local party identity may be reduced to a counterparty bucket downstream."
+      ]
+    },
+    {
+      "mapping_id": "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_b_profile.to.counterparty_bucket.v1",
+      "source_domain_ref": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
+      "target_domain_ref": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+      "source_object_ref": "odd_world_model.world_model_object.trade_representation.party_profile.partyB",
+      "target_object_ref": "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+      "directionality": "source_to_target",
+      "category": "treatment_projection",
+      "confidence_band": "weak",
+      "confidence_score": 0.4763,
+      "shared_tokens": [
+        "00",
+        "001",
+        "04",
+        "15",
+        "2026",
+        "adjoint",
+        "apra",
+        "authority",
+        "bucket",
+        "bucketing",
+        "com",
+        "confirmation",
+        "covariance",
+        "daily",
+        "data",
+        "delivery",
+        "ex28",
+        "fpml",
+        "gas",
+        "html",
+        "is",
+        "json",
+        "last",
+        "ledger",
+        "liquidity",
+        "markov",
+        "md",
+        "medium",
+        "observation",
+        "option",
+        "parsed",
+        "party",
+        "prices",
+        "profile",
+        "regulatory",
+        "reporting",
+        "representation",
+        "review",
+        "sources",
+        "swap",
+        "t00",
+        "to",
+        "trade",
+        "treatment",
+        "uri",
+        "xml"
+      ],
+      "shared_alias_tokens": [],
+      "shared_concepts": [
+        "party_qualification_surface"
+      ],
+      "score_components": {
+        "token_similarity": 0.4182,
+        "alias_similarity": 0.0,
+        "concept_similarity": 0.5,
+        "topology_similarity": 0.7179,
+        "direct_reference_support": 1.0,
+        "identifier_support": 0.0
+      },
+      "confidence_rationale": [
+        "shared semantic tokens anchor the correspondence",
+        "shared higher-order concept tags place the objects in the same semantic family",
+        "topology and constructive shape are materially similar",
+        "published adjacency directly references the paired object",
+        "adjacent-domain placement points at the paired bounded context",
+        "evidence refs already cross the paired example boundary"
+      ],
+      "ambiguity_notes": [],
+      "declared_loss": [
+        "Bucketing abstracts away the locally identified trade parties.",
+        "Local party identity may be reduced to a counterparty bucket downstream."
+      ]
+    }
+  ],
+  "attribute_mappings": [
+    {
+      "mapping_id": "odd_world_model.attribute_mapping.party_a_reference.to.counterparty_bucket.v1",
+      "source_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "source_attribute_ref": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.party_a_reference.v1",
+      "source_claim_key": "party_a_reference",
+      "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "target_attribute_ref": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.counterparty_bucket.v1",
+      "target_claim_key": "counterparty_bucket",
+      "category": "derived_mapping",
+      "directionality": "source_to_target",
+      "confidence_band": "moderate",
+      "confidence_score": 0.564,
+      "supporting_object_mapping_ref": "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1",
+      "confidence_rationale": [
+        "attribute claim tokens align across the paired objects",
+        "object-level correspondence already places the objects in a lawful mapping path"
+      ],
+      "ambiguity_notes": [],
+      "declared_loss": [
+        "Downstream regulatory views may collapse detailed product semantics into classification surfaces.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics."
+      ]
+    },
+    {
+      "mapping_id": "odd_world_model.attribute_mapping.master_agreement_reference.to.agreement_treatment_basis.v1",
+      "source_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "source_attribute_ref": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.master_agreement_reference.v1",
+      "source_claim_key": "master_agreement_reference",
+      "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "target_attribute_ref": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.agreement_treatment_basis.v1",
+      "target_claim_key": "agreement_treatment_basis",
+      "category": "derived_mapping",
+      "directionality": "source_to_target",
+      "confidence_band": "weak",
+      "confidence_score": 0.4617,
+      "supporting_object_mapping_ref": "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1",
+      "confidence_rationale": [
+        "attribute claim tokens align across the paired objects",
+        "object-level correspondence already places the objects in a lawful mapping path"
+      ],
+      "ambiguity_notes": [],
+      "declared_loss": [
+        "Downstream regulatory views may collapse detailed product semantics into classification surfaces.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics.",
+        "attribute-level semantic narrowing remains partially unresolved"
+      ]
+    },
+    {
+      "mapping_id": "odd_world_model.attribute_mapping.product_reference.to.liquidity_bucket.v1",
+      "source_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "source_attribute_ref": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.product_reference.v1",
+      "source_claim_key": "product_reference",
+      "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "target_attribute_ref": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.liquidity_bucket.v1",
+      "target_claim_key": "liquidity_bucket",
+      "category": "derived_mapping",
+      "directionality": "source_to_target",
+      "confidence_band": "weak",
+      "confidence_score": 0.4443,
+      "supporting_object_mapping_ref": "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1",
+      "confidence_rationale": [
+        "attribute claim tokens align across the paired objects",
+        "object-level correspondence already places the objects in a lawful mapping path"
+      ],
+      "ambiguity_notes": [],
+      "declared_loss": [
+        "Downstream regulatory views may collapse detailed product semantics into classification surfaces.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics.",
+        "attribute-level semantic narrowing remains partially unresolved"
+      ]
+    },
+    {
+      "mapping_id": "odd_world_model.attribute_mapping.trade_date.to.reporting_lifecycle_state.v1",
+      "source_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "source_attribute_ref": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.trade_date.v1",
+      "source_claim_key": "trade_date",
+      "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "target_attribute_ref": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.reporting_lifecycle_state.v1",
+      "target_claim_key": "reporting_lifecycle_state",
+      "category": "derived_mapping",
+      "directionality": "source_to_target",
+      "confidence_band": "rejected",
+      "confidence_score": 0.3568,
+      "supporting_object_mapping_ref": "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1",
+      "confidence_rationale": [
+        "attribute claim tokens align across the paired objects",
+        "object-level correspondence already places the objects in a lawful mapping path"
+      ],
+      "ambiguity_notes": [],
+      "declared_loss": [
+        "Downstream regulatory views may collapse detailed product semantics into classification surfaces.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics.",
+        "attribute-level semantic narrowing remains partially unresolved"
+      ]
+    },
+    {
+      "mapping_id": "odd_world_model.attribute_mapping.party_b_reference.to.counterparty_bucket.v1",
+      "source_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "source_attribute_ref": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.party_b_reference.v1",
+      "source_claim_key": "party_b_reference",
+      "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "target_attribute_ref": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.counterparty_bucket.v1",
+      "target_claim_key": "counterparty_bucket",
+      "category": "derived_mapping",
+      "directionality": "source_to_target",
+      "confidence_band": "rejected",
+      "confidence_score": 0.354,
+      "supporting_object_mapping_ref": "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1",
+      "confidence_rationale": [
+        "attribute claim tokens align across the paired objects",
+        "object-level correspondence already places the objects in a lawful mapping path"
+      ],
+      "ambiguity_notes": [],
+      "declared_loss": [
+        "Downstream regulatory views may collapse detailed product semantics into classification surfaces.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics.",
+        "attribute-level semantic narrowing remains partially unresolved"
+      ]
+    },
+    {
+      "mapping_id": "odd_world_model.attribute_mapping.trade_identifier.to.reporting_lifecycle_state.v1",
+      "source_object_ref": "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+      "source_attribute_ref": "odd_world_model.attribute_ledger.trade_representation.trade_contract_state.trade_fpml_001.trade_identifier.v1",
+      "source_claim_key": "trade_identifier",
+      "target_object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+      "target_attribute_ref": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.reporting_lifecycle_state.v1",
+      "target_claim_key": "reporting_lifecycle_state",
+      "category": "derived_mapping",
+      "directionality": "source_to_target",
+      "confidence_band": "rejected",
+      "confidence_score": 0.3517,
+      "supporting_object_mapping_ref": "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1",
+      "confidence_rationale": [
+        "attribute claim tokens align across the paired objects",
+        "object-level correspondence already places the objects in a lawful mapping path"
+      ],
+      "ambiguity_notes": [],
+      "declared_loss": [
+        "Downstream regulatory views may collapse detailed product semantics into classification surfaces.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics.",
+        "attribute-level semantic narrowing remains partially unresolved"
+      ]
+    }
+  ],
+  "higher_order_concepts": [
+    {
+      "concept_id": "odd_world_model.concept.four_domain.agreement_governance_surface.v1",
+      "label": "Agreement Governance Surface",
+      "boundary_kind": "intersectional",
+      "domain_refs": [
+        "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+        "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1"
+      ],
+      "member_object_refs": [
+        "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001",
+        "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
+        "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+      ],
+      "inference_basis": [
+        "shared topology-aware concept tags across published domains",
+        "repeated correspondence structure over the retained example domains"
+      ],
+      "supporting_mapping_refs": [
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.master_agreement_reference.to.agreement_treatment_basis.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.reporting_position.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1"
+      ],
+      "confidence_band": "confirmed",
+      "confidence_score": 0.825,
+      "semantic_summary": "Agreement semantics that move from local contract reference into downstream treatment basis.",
+      "declared_loss": [
+        "Bounded FpML documentation does not capture the full legal agreement semantics.",
+        "Regulatory agreement treatment basis does not preserve the full legal semantics of the source agreement.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics."
+      ],
+      "ambiguity_notes": []
+    },
+    {
+      "concept_id": "odd_world_model.concept.four_domain.financial_product_surface.v1",
+      "label": "Financial Product Surface",
+      "boundary_kind": "intersectional",
+      "domain_refs": [
+        "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+        "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1",
+        "odd_world_model.fragment.sandbox_banking_product_catalog.v1",
+        "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1"
+      ],
+      "member_object_refs": [
+        "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_leg.fixed_leg_01",
+        "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_leg.floating_leg_02",
+        "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001",
+        "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+        "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.bankingproductcatalog.banking_product_catalog_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.creditcard.card_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.depositaccount.deposit_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.loanorcredit.loan_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.mortgageloan.mortgage_001"
+      ],
+      "inference_basis": [
+        "shared topology-aware concept tags across published domains",
+        "repeated correspondence structure over the retained example domains"
+      ],
+      "supporting_mapping_refs": [
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.reporting_position.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1",
+        "odd_world_model.mapping_candidate.trade_source_model.to.trade_representation_model.source_commodity_swap_surface.to.commodity_swap_product.v1"
+      ],
+      "confidence_band": "strong",
+      "confidence_score": 0.755,
+      "semantic_summary": "Product-like objects that express instrument, catalog, or classification meaning across trade, regulatory, and banking domains.",
+      "declared_loss": [
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics."
+      ],
+      "ambiguity_notes": []
+    },
+    {
+      "concept_id": "odd_world_model.concept.four_domain.party_qualification_surface.v1",
+      "label": "Party Qualification Surface",
+      "boundary_kind": "intersectional",
+      "domain_refs": [
+        "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+        "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1"
+      ],
+      "member_object_refs": [
+        "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+        "odd_world_model.world_model_object.trade_representation.party_profile.partyB",
+        "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+        "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+      ],
+      "inference_basis": [
+        "shared topology-aware concept tags across published domains",
+        "repeated correspondence structure over the retained example domains"
+      ],
+      "supporting_mapping_refs": [
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.counterparty_bucket.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.reporting_position.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_b_profile.to.counterparty_bucket.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1"
+      ],
+      "confidence_band": "confirmed",
+      "confidence_score": 0.825,
+      "semantic_summary": "Party or counterparty semantics that are preserved locally and reclassified downstream.",
+      "declared_loss": [
+        "Bucketing abstracts away the locally identified trade parties.",
+        "Local party identity may be reduced to a counterparty bucket downstream.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics."
+      ],
+      "ambiguity_notes": []
+    },
+    {
+      "concept_id": "odd_world_model.concept.four_domain.trade_lifecycle_surface.v1",
+      "label": "Trade Lifecycle Surface",
+      "boundary_kind": "hierarchical",
+      "domain_refs": [
+        "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+        "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1",
+        "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1"
+      ],
+      "member_object_refs": [
+        "odd_world_model.world_model_object.fpml_confirmation.trade_record.trade_fpml_001",
+        "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+        "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001",
+        "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+        "odd_world_model.world_model_object.trade_representation.party_profile.partyB",
+        "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+        "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+      ],
+      "inference_basis": [
+        "shared topology-aware concept tags across published domains",
+        "repeated correspondence structure over the retained example domains"
+      ],
+      "supporting_mapping_refs": [
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.master_agreement_reference.to.agreement_treatment_basis.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.counterparty_bucket.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.reporting_position.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_b_profile.to.counterparty_bucket.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1",
+        "odd_world_model.mapping_candidate.trade_source_model.to.trade_representation_model.source_commodity_swap_surface.to.commodity_swap_product.v1",
+        "odd_world_model.mapping_candidate.trade_source_model.to.trade_representation_model.source_trade_record.to.trade_contract_state.v1"
+      ],
+      "confidence_band": "confirmed",
+      "confidence_score": 0.9125,
+      "semantic_summary": "Trade capture, interpreted trade state, and downstream regulatory position aligned through shared lifecycle and treatment structure.",
+      "declared_loss": [
+        "Bounded FpML documentation does not capture the full legal agreement semantics.",
+        "Downstream regulatory views may collapse detailed product semantics into classification surfaces.",
+        "Local party identity may be reduced to a counterparty bucket downstream.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics."
+      ],
+      "ambiguity_notes": []
+    }
+  ],
+  "boundary_candidates": [
+    {
+      "boundary_id": "odd_world_model.boundary_candidate.four_domain.financial_instrument_envelope.v1",
+      "boundary_kind": "hierarchical",
+      "semantic_role": "Financial Instrument Envelope",
+      "member_object_refs": [
+        "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.bankingproductcatalog.banking_product_catalog_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.creditcard.card_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.depositaccount.deposit_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.loanorcredit.loan_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.mortgageloan.mortgage_001",
+        "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+        "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
+        "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+        "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_leg.fixed_leg_01",
+        "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_leg.floating_leg_02",
+        "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001",
+        "odd_world_model.world_model_object.fpml_confirmation.trade_record.trade_fpml_001",
+        "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+        "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001",
+        "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+        "odd_world_model.world_model_object.trade_representation.party_profile.partyB"
+      ],
+      "member_concept_refs": [
+        "odd_world_model.concept.four_domain.agreement_governance_surface.v1",
+        "odd_world_model.concept.four_domain.financial_product_surface.v1",
+        "odd_world_model.concept.four_domain.party_qualification_surface.v1",
+        "odd_world_model.concept.four_domain.trade_lifecycle_surface.v1"
+      ],
+      "domain_refs": [
+        "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+        "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1",
+        "odd_world_model.fragment.sandbox_banking_product_catalog.v1",
+        "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1"
+      ],
+      "parent_boundary_refs": [],
+      "overlap_boundary_refs": [],
+      "supporting_mapping_refs": [
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.master_agreement_reference.to.agreement_treatment_basis.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.counterparty_bucket.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.reporting_position.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_b_profile.to.counterparty_bucket.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1",
+        "odd_world_model.mapping_candidate.trade_source_model.to.trade_representation_model.source_commodity_swap_surface.to.commodity_swap_product.v1",
+        "odd_world_model.mapping_candidate.trade_source_model.to.trade_representation_model.source_trade_record.to.trade_contract_state.v1"
+      ],
+      "ingress_surfaces": [],
+      "egress_surfaces": [],
+      "confidence_band": "confirmed",
+      "confidence_score": 0.8294,
+      "semantic_summary": "Higher-order containment envelope over the retained multi-domain trade, regulatory, and banking semantic families.",
+      "declared_loss": [
+        "Bounded FpML documentation does not capture the full legal agreement semantics.",
+        "Bucketing abstracts away the locally identified trade parties.",
+        "Downstream regulatory views may collapse detailed product semantics into classification surfaces.",
+        "Local party identity may be reduced to a counterparty bucket downstream.",
+        "Regulatory agreement treatment basis does not preserve the full legal semantics of the source agreement.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics."
+      ],
+      "ambiguity_notes": []
+    },
+    {
+      "boundary_id": "odd_world_model.boundary_candidate.four_domain.agreement_governance_surface.v1",
+      "boundary_kind": "intersectional",
+      "semantic_role": "Agreement Governance Surface",
+      "member_object_refs": [
+        "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001",
+        "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
+        "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+      ],
+      "member_concept_refs": [
+        "odd_world_model.concept.four_domain.agreement_governance_surface.v1"
+      ],
+      "domain_refs": [
+        "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+        "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1"
+      ],
+      "parent_boundary_refs": [
+        "odd_world_model.boundary_candidate.four_domain.financial_instrument_envelope.v1"
+      ],
+      "overlap_boundary_refs": [
+        "odd_world_model.boundary_candidate.four_domain.financial_product_surface.v1",
+        "odd_world_model.boundary_candidate.four_domain.party_qualification_surface.v1",
+        "odd_world_model.boundary_candidate.four_domain.trade_lifecycle_surface.v1"
+      ],
+      "supporting_mapping_refs": [
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.master_agreement_reference.to.agreement_treatment_basis.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.reporting_position.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1"
+      ],
+      "ingress_surfaces": [
+        "apra_liquidity_input",
+        "fpml_trade_artifact"
+      ],
+      "egress_surfaces": [
+        "apra_reporting_publication"
+      ],
+      "confidence_band": "confirmed",
+      "confidence_score": 0.825,
+      "semantic_summary": "Agreement semantics that move from local contract reference into downstream treatment basis.",
+      "declared_loss": [
+        "Bounded FpML documentation does not capture the full legal agreement semantics.",
+        "Regulatory agreement treatment basis does not preserve the full legal semantics of the source agreement.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics."
+      ],
+      "ambiguity_notes": []
+    },
+    {
+      "boundary_id": "odd_world_model.boundary_candidate.four_domain.financial_product_surface.v1",
+      "boundary_kind": "intersectional",
+      "semantic_role": "Financial Product Surface",
+      "member_object_refs": [
+        "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_leg.fixed_leg_01",
+        "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_leg.floating_leg_02",
+        "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001",
+        "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+        "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.bankingproductcatalog.banking_product_catalog_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.creditcard.card_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.depositaccount.deposit_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.loanorcredit.loan_001",
+        "odd_world_model.markov_object.sandbox_banking_product_catalog.mortgageloan.mortgage_001"
+      ],
+      "member_concept_refs": [
+        "odd_world_model.concept.four_domain.financial_product_surface.v1"
+      ],
+      "domain_refs": [
+        "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+        "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1",
+        "odd_world_model.fragment.sandbox_banking_product_catalog.v1",
+        "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1"
+      ],
+      "parent_boundary_refs": [
+        "odd_world_model.boundary_candidate.four_domain.financial_instrument_envelope.v1"
+      ],
+      "overlap_boundary_refs": [
+        "odd_world_model.boundary_candidate.four_domain.party_qualification_surface.v1",
+        "odd_world_model.boundary_candidate.four_domain.trade_lifecycle_surface.v1"
+      ],
+      "supporting_mapping_refs": [
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.reporting_position.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1",
+        "odd_world_model.mapping_candidate.trade_source_model.to.trade_representation_model.source_commodity_swap_surface.to.commodity_swap_product.v1"
+      ],
+      "ingress_surfaces": [
+        "apra_liquidity_input",
+        "domain_input.json",
+        "fpml_trade_artifact"
+      ],
+      "egress_surfaces": [
+        "apra_reporting_publication",
+        "banking_product_domain_publication"
+      ],
+      "confidence_band": "strong",
+      "confidence_score": 0.755,
+      "semantic_summary": "Product-like objects that express instrument, catalog, or classification meaning across trade, regulatory, and banking domains.",
+      "declared_loss": [
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics."
+      ],
+      "ambiguity_notes": []
+    },
+    {
+      "boundary_id": "odd_world_model.boundary_candidate.four_domain.party_qualification_surface.v1",
+      "boundary_kind": "intersectional",
+      "semantic_role": "Party Qualification Surface",
+      "member_object_refs": [
+        "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+        "odd_world_model.world_model_object.trade_representation.party_profile.partyB",
+        "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+        "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+      ],
+      "member_concept_refs": [
+        "odd_world_model.concept.four_domain.party_qualification_surface.v1"
+      ],
+      "domain_refs": [
+        "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+        "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1"
+      ],
+      "parent_boundary_refs": [
+        "odd_world_model.boundary_candidate.four_domain.financial_instrument_envelope.v1"
+      ],
+      "overlap_boundary_refs": [
+        "odd_world_model.boundary_candidate.four_domain.trade_lifecycle_surface.v1"
+      ],
+      "supporting_mapping_refs": [
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.counterparty_bucket.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.reporting_position.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_b_profile.to.counterparty_bucket.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1"
+      ],
+      "ingress_surfaces": [
+        "apra_liquidity_input",
+        "fpml_trade_artifact"
+      ],
+      "egress_surfaces": [
+        "apra_reporting_publication"
+      ],
+      "confidence_band": "confirmed",
+      "confidence_score": 0.825,
+      "semantic_summary": "Party or counterparty semantics that are preserved locally and reclassified downstream.",
+      "declared_loss": [
+        "Bucketing abstracts away the locally identified trade parties.",
+        "Local party identity may be reduced to a counterparty bucket downstream.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics."
+      ],
+      "ambiguity_notes": []
+    },
+    {
+      "boundary_id": "odd_world_model.boundary_candidate.four_domain.trade_lifecycle_surface.v1",
+      "boundary_kind": "hierarchical",
+      "semantic_role": "Trade Lifecycle Surface",
+      "member_object_refs": [
+        "odd_world_model.world_model_object.fpml_confirmation.trade_record.trade_fpml_001",
+        "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+        "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001",
+        "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+        "odd_world_model.world_model_object.trade_representation.party_profile.partyB",
+        "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001",
+        "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+      ],
+      "member_concept_refs": [
+        "odd_world_model.concept.four_domain.trade_lifecycle_surface.v1"
+      ],
+      "domain_refs": [
+        "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+        "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1",
+        "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1"
+      ],
+      "parent_boundary_refs": [
+        "odd_world_model.boundary_candidate.four_domain.financial_instrument_envelope.v1"
+      ],
+      "overlap_boundary_refs": [],
+      "supporting_mapping_refs": [
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.master_agreement_reference.to.agreement_treatment_basis.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.counterparty_bucket.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_a_profile.to.reporting_position.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.party_b_profile.to.counterparty_bucket.v1",
+        "odd_world_model.mapping_candidate.trade_representation_model.to.apra_liquidity_model.trade_contract_state.to.reporting_position.v1",
+        "odd_world_model.mapping_candidate.trade_source_model.to.trade_representation_model.source_commodity_swap_surface.to.commodity_swap_product.v1",
+        "odd_world_model.mapping_candidate.trade_source_model.to.trade_representation_model.source_trade_record.to.trade_contract_state.v1"
+      ],
+      "ingress_surfaces": [
+        "apra_liquidity_input",
+        "fpml_confirmation_document",
+        "fpml_trade_artifact"
+      ],
+      "egress_surfaces": [
+        "apra_liquidity_candidate_treatment",
+        "apra_reporting_publication",
+        "trade_world_fragment_publication"
+      ],
+      "confidence_band": "confirmed",
+      "confidence_score": 0.9125,
+      "semantic_summary": "Trade capture, interpreted trade state, and downstream regulatory position aligned through shared lifecycle and treatment structure.",
+      "declared_loss": [
+        "Bounded FpML documentation does not capture the full legal agreement semantics.",
+        "Downstream regulatory views may collapse detailed product semantics into classification surfaces.",
+        "Local party identity may be reduced to a counterparty bucket downstream.",
+        "Regulatory reporting position does not preserve full upstream commodity trade semantics."
+      ],
+      "ambiguity_notes": []
+    }
+  ],
+  "coverage": {
+    "objects_in_scope": 17,
+    "mapped_objects": 10,
+    "conceptualized_objects": 17,
+    "domains": [
+      {
+        "domain_ref": "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1",
+        "object_refs": [
+          "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_leg.fixed_leg_01",
+          "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_leg.floating_leg_02",
+          "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001",
+          "odd_world_model.world_model_object.fpml_confirmation.trade_record.trade_fpml_001"
+        ],
+        "mapped_object_refs": [
+          "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001",
+          "odd_world_model.world_model_object.fpml_confirmation.trade_record.trade_fpml_001"
+        ],
+        "unmapped_object_refs": [
+          "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_leg.fixed_leg_01",
+          "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_leg.floating_leg_02"
+        ],
+        "conceptualized_object_refs": [
+          "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_leg.fixed_leg_01",
+          "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_leg.floating_leg_02",
+          "odd_world_model.world_model_object.fpml_confirmation.commodity_swap_source.product_fpml_001",
+          "odd_world_model.world_model_object.fpml_confirmation.trade_record.trade_fpml_001"
+        ],
+        "unconceptualized_object_refs": []
+      },
+      {
+        "domain_ref": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
+        "object_refs": [
+          "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+          "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001",
+          "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+          "odd_world_model.world_model_object.trade_representation.party_profile.partyB",
+          "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
+        ],
+        "mapped_object_refs": [
+          "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+          "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001",
+          "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+          "odd_world_model.world_model_object.trade_representation.party_profile.partyB",
+          "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
+        ],
+        "unmapped_object_refs": [],
+        "conceptualized_object_refs": [
+          "odd_world_model.world_model_object.trade_representation.commodity_swap_product.product_fpml_001",
+          "odd_world_model.world_model_object.trade_representation.master_agreement_reference.trade_fpml_001",
+          "odd_world_model.world_model_object.trade_representation.party_profile.partyA",
+          "odd_world_model.world_model_object.trade_representation.party_profile.partyB",
+          "odd_world_model.markov_object.trade_representation.trade_contract_state.trade_fpml_001"
+        ],
+        "unconceptualized_object_refs": []
+      },
+      {
+        "domain_ref": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+        "object_refs": [
+          "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
+          "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+          "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+        ],
+        "mapped_object_refs": [
+          "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
+          "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+          "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+        ],
+        "unmapped_object_refs": [],
+        "conceptualized_object_refs": [
+          "odd_world_model.world_model_object.apra_liquidity.agreement_treatment_basis.master_agreement_reviewed",
+          "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+          "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+        ],
+        "unconceptualized_object_refs": []
+      },
+      {
+        "domain_ref": "odd_world_model.fragment.sandbox_banking_product_catalog.v1",
+        "object_refs": [
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.bankingproductcatalog.banking_product_catalog_001",
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.creditcard.card_001",
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.depositaccount.deposit_001",
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.loanorcredit.loan_001",
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.mortgageloan.mortgage_001"
+        ],
+        "mapped_object_refs": [],
+        "unmapped_object_refs": [
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.bankingproductcatalog.banking_product_catalog_001",
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.creditcard.card_001",
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.depositaccount.deposit_001",
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.loanorcredit.loan_001",
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.mortgageloan.mortgage_001"
+        ],
+        "conceptualized_object_refs": [
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.bankingproductcatalog.banking_product_catalog_001",
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.creditcard.card_001",
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.depositaccount.deposit_001",
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.loanorcredit.loan_001",
+          "odd_world_model.markov_object.sandbox_banking_product_catalog.mortgageloan.mortgage_001"
+        ],
+        "unconceptualized_object_refs": []
+      }
+    ]
+  },
+  "category_breakdown": {
+    "constrained_equivalence": 2,
+    "derived_mapping": 1,
+    "treatment_projection": 4
+  },
+  "confidence_breakdown": {
+    "moderate": 4,
+    "weak": 3
+  },
+  "notes": [
+    "Higher-order concepts and boundary candidates remain downstream mapping artifacts until separately ratified.",
+    "Operational-semantics enrichment beyond the published blanket/control surfaces remains future work gated on richer source corpora."
+  ]
+}

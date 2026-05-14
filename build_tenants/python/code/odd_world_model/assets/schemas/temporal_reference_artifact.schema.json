@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.temporal_reference_artifact.schema.json",
+  "title": "TemporalReferenceArtifact",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_kind",
+    "schema_version",
+    "artifact_id",
+    "artifact_kind",
+    "bounded_context",
+    "identity",
+    "effective_period",
+    "values",
+    "evidence",
+    "usage",
+    "composition"
+  ],
+  "properties": {
+    "schema_kind": {
+      "const": "odd_world_model.temporal_reference_artifact"
+    },
+    "schema_version": {
+      "const": "v1"
+    },
+    "artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_kind": {
+      "type": "string",
+      "enum": [
+        "reference_set",
+        "code_set",
+        "classification_set",
+        "value_list"
+      ]
+    },
+    "bounded_context": {
+      "type": "string",
+      "minLength": 1
+    },
+    "semantic_role": {
+      "type": "string"
+    },
+    "identity": {
+      "$ref": "world_model_object.schema.json#/$defs/identity"
+    },
+    "effective_period": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "effective_from"
+      ],
+      "properties": {
+        "effective_from": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "effective_to": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "values": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "value_code",
+          "value_label",
+          "value_meaning"
+        ],
+        "properties": {
+          "value_code": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value_label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value_meaning": {
+            "type": "string",
+            "minLength": 1
+          },
+          "aliases": {
+            "$ref": "world_model_object.schema.json#/$defs/string_array"
+          },
+          "effective_from": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "effective_to": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "superseded_by_value_code": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "supersession": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "previous_artifact_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "superseded_by_artifact_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "evidence": {
+      "$ref": "world_model_object.schema.json#/$defs/evidence"
+    },
+    "usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "object_refs": {
+          "$ref": "world_model_object.schema.json#/$defs/string_array"
+        },
+        "attribute_refs": {
+          "$ref": "world_model_object.schema.json#/$defs/string_array"
+        },
+        "treatment_refs": {
+          "$ref": "world_model_object.schema.json#/$defs/string_array"
+        }
+      }
+    },
+    "composition": {
+      "$ref": "world_model_object.schema.json#/$defs/composition"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema_kind": "odd_world_model.attribute_ledger_entry",
+  "schema_version": "v1",
+  "entry_id": "odd_world_model.attribute_ledger.apra_liquidity.reporting_position.apra_liquidity_position_001.liquidity_bucket.v1",
+  "object_ref": "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001",
+  "claim_key": "liquidity_bucket",
+  "claim_kind": "composed",
+  "value": "contractual_outflow_assessment",
+  "trace_record_refs": [
+    "review://apra_liquidity/traces/reporting_position/liquidity_bucket/authority_claim.json",
+    "review://apra_liquidity/traces/reporting_position/liquidity_bucket/trade_product.json"
+  ],
+  "assurance_record_refs": [
+    "review://apra_liquidity/assurance/reporting_position/liquidity_bucket.json"
+  ],
+  "published_at": "2026-04-15T00:00:00Z",
+  "qualifiers": {
+    "product_type": "CommoditySwap",
+    "asset_class": "Commodity",
+    "liquidity_bucket": "contractual_outflow_assessment"
+  },
+  "observed_at": "2026-04-15T00:10:00Z",
+  "summary": "Liquidity bucket composed from official APRA liquidity outflow guidance and retained derivative trade evidence."
+}

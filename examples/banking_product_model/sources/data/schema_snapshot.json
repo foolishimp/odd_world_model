@@ -1,0 +1,11 @@
+{
+  "schema_name": "banking_product_catalog_schema",
+  "fields": [
+    "catalog_id",
+    "issuer_name",
+    "product_id",
+    "product_kind",
+    "product_name",
+    "market_segment"
+  ]
+}

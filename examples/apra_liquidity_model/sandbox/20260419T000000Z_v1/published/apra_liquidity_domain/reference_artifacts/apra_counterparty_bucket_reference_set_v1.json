@@ -1,0 +1,68 @@
+{
+  "schema_kind": "odd_world_model.temporal_reference_artifact",
+  "schema_version": "v1",
+  "artifact_id": "odd_world_model.reference_artifact.apra_liquidity.counterparty_bucket_set.v1",
+  "artifact_kind": "classification_set",
+  "bounded_context": "sandbox.apra_liquidity.reference_data",
+  "semantic_role": "Sandbox APRA-liquidity counterparty bucket reference set used by the reporting position.",
+  "identity": {
+    "authority_basis": "bounded APRA-liquidity reference semantics",
+    "aliases": [
+      "apra_counterparty_bucket_set_v1"
+    ]
+  },
+  "effective_period": {
+    "effective_from": "2026-01-01T00:00:00Z"
+  },
+  "values": [
+    {
+      "value_code": "financial_institution",
+      "value_label": "Financial Institution",
+      "value_meaning": "Counterparty bucket used when the reporting position treats the counterparty as a financial institution.",
+      "effective_from": "2026-01-01T00:00:00Z",
+      "status": "active"
+    },
+    {
+      "value_code": "non_financial_corporate",
+      "value_label": "Non-Financial Corporate",
+      "value_meaning": "Counterparty bucket used when the reporting position treats the counterparty as a non-financial corporate.",
+      "effective_from": "2026-01-01T00:00:00Z",
+      "status": "active"
+    },
+    {
+      "value_code": "sovereign_public_sector",
+      "value_label": "Sovereign Or Public Sector",
+      "value_meaning": "Counterparty bucket used when the reporting position treats the counterparty as sovereign or public sector.",
+      "effective_from": "2026-01-01T00:00:00Z",
+      "status": "active"
+    }
+  ],
+  "supersession": {},
+  "evidence": {
+    "refs": [
+      "input://examples/apra_liquidity_model/sources/uri_ledger/source_authority.md",
+      "input://examples/apra_liquidity_model/sources/data/authority_claims.json",
+      "input://examples/apra_liquidity_model/sources/data/requirements_snapshot.json",
+      "input://examples/apra_liquidity_model/sources/uri_ledger/source_notes.md"
+    ],
+    "summary": "Governed temporal reference artifact for the bounded APRA counterparty bucket values grounded in official APRA authority claims."
+  },
+  "usage": {
+    "object_refs": [
+      "odd_world_model.world_model_object.apra_liquidity.counterparty_bucket.financial_institution",
+      "odd_world_model.markov_object.apra_liquidity.reporting_position.apra_liquidity_position_001"
+    ],
+    "attribute_refs": [
+      "odd_world_model.attribute.apra_liquidity.reporting_position.counterparty_bucket"
+    ],
+    "treatment_refs": [
+      "odd_world_model.treatment.apra_liquidity.reporting_position.classification.v1",
+      "odd_world_model.treatment.trade_representation.to_apra_liquidity.candidate.v1"
+    ]
+  },
+  "composition": {
+    "fragment_id": "odd_world_model.fragment.apra_liquidity.reporting.sandbox.v1",
+    "parent_object_refs": [],
+    "child_object_refs": []
+  }
+}

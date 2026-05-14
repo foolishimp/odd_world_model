@@ -19,35 +19,47 @@ from pathlib import Path
 from typing import Any
 
 from odd_world_model.adapters.fpml_confirmation import parse_fpml_trade
+from odd_world_model.examples_layout import (
+    APRA_LIQUIDITY_MODEL,
+    TRADE_REPRESENTATION_MODEL,
+    trade_representation_sandbox_root,
+    trade_source_data_root,
+    trade_source_sandbox_root,
+    trade_source_uri_ledger_root,
+    relative_path,
+    example_relative_input_ref,
+    example_relative_review_ref,
+)
 from odd_world_model.world_model.materialize import attribute_ledger_entry, assurance_record, trace_record
-from odd_world_model.world_model.registry import examples_root
 
 
 PUBLISHED_AT = "2026-04-15T00:00:00Z"
 OFFICIAL_SAMPLE_RELATIVE_PATH = Path("authority") / "com-ex28-gas-swap-daily-delivery-prices-option-last.xml"
 OFFICIAL_EXAMPLES_INDEX_RELATIVE_PATH = Path("authority") / "fpml-5-12-examples.html"
-OFFICIAL_SAMPLE_INPUT_REF = f"input://trade_representation/{OFFICIAL_SAMPLE_RELATIVE_PATH.as_posix()}"
-OFFICIAL_EXAMPLES_INDEX_REF = f"input://trade_representation/{OFFICIAL_EXAMPLES_INDEX_RELATIVE_PATH.as_posix()}"
-
-
-def example_root() -> Path:
-    return examples_root() / "fpml_trade_representation_standard"
-
-
-def inputs_root() -> Path:
-    return example_root() / "inputs" / "trade_representation"
+OFFICIAL_SAMPLE_INPUT_REF = example_relative_input_ref(
+    "trade_source_model", Path("data") / OFFICIAL_SAMPLE_RELATIVE_PATH
+)
+OFFICIAL_EXAMPLES_INDEX_REF = example_relative_input_ref(
+    "trade_source_model", Path("data") / OFFICIAL_EXAMPLES_INDEX_RELATIVE_PATH
+)
+TRADE_SOURCE_AUTHORITY_REF = example_relative_input_ref(
+    "trade_source_model", Path("uri_ledger") / "source_authority.md"
+)
+TRADE_REPRESENTATION_REVIEW_REF = example_relative_review_ref(
+    TRADE_REPRESENTATION_MODEL, "parsed_trade_observation.json"
+)
 
 
 def review_root() -> Path:
-    return example_root() / "review"
+    return trade_representation_sandbox_root() / "review"
 
 
 def published_catalog_root() -> Path:
-    return example_root() / "published"
+    return trade_representation_sandbox_root() / "published"
 
 
 def source_domain_root() -> Path:
-    return published_catalog_root() / "fpml_confirmation_source_domain"
+    return trade_source_sandbox_root() / "published" / "fpml_confirmation_source_domain"
 
 
 def published_root() -> Path:
@@ -59,9 +71,20 @@ def _remove_tree(root: Path) -> None:
 
 
 def _reset_generated_output() -> None:
-    for root in (review_root(), published_catalog_root()):
-        if root.exists():
-            _remove_tree(root)
+    generated_paths = (
+        review_root() / "parsed_trade_observation.json",
+        review_root() / "traces" / "trade_contract_state",
+        review_root() / "assurance" / "trade_contract_state",
+        source_domain_root(),
+        published_root(),
+    )
+    for path in generated_paths:
+        if not path.exists():
+            continue
+        if path.is_dir():
+            _remove_tree(path)
+        else:
+            path.unlink()
 
 
 def _write_json(path: Path, payload: dict[str, Any]) -> None:
@@ -72,15 +95,15 @@ def _write_json(path: Path, payload: dict[str, Any]) -> None:
 
 
 def _source_xml_path() -> Path:
-    return inputs_root() / OFFICIAL_SAMPLE_RELATIVE_PATH
+    return trade_source_data_root() / OFFICIAL_SAMPLE_RELATIVE_PATH
 
 
 def _source_examples_index_path() -> Path:
-    return inputs_root() / OFFICIAL_EXAMPLES_INDEX_RELATIVE_PATH
+    return trade_source_data_root() / OFFICIAL_EXAMPLES_INDEX_RELATIVE_PATH
 
 
 def _source_authority_path() -> Path:
-    return inputs_root() / "source_authority.md"
+    return trade_source_uri_ledger_root() / "source_authority.md"
 
 
 def _observation() -> dict[str, Any]:
@@ -282,14 +305,20 @@ def _trade_claim_specs(observation: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def _trade_fragment(observation: dict[str, Any]) -> dict[str, Any]:
+    trade_domain_root = published_root()
+    trade_review_path = review_root() / "parsed_trade_observation.json"
+    source_fragment_path = source_domain_root() / "fragment.json"
+    source_authority_path = _source_authority_path()
+    source_xml_path = _source_xml_path()
+    source_examples_index_path = _source_examples_index_path()
     return {
         "schema_kind": "odd_world_model.world_fragment",
         "schema_version": "v1",
         "fragment_id": "odd_world_model.fragment.trade_representation.fpml_commodity_swap.v1",
         "bounded_context": "trade_representation.fpml_confirmation.commodity_swap",
         "published_at": PUBLISHED_AT,
-        "published_by": "odd_world_model.project.fpml_trade_representation_standard",
-        "summary": "Published trade fragment materialized from an official FpML commodity-swap confirmation example.",
+        "published_by": "odd_world_model.project.trade_representation_model",
+        "summary": "Published trade-representation fragment built in the versioned trade-representation sandbox from the retained trade-source model authority.",
         "objects": [
             "objects/trade_contract_state.json",
             "objects/commodity_swap_product.json",
@@ -318,11 +347,11 @@ def _trade_fragment(observation: dict[str, Any]) -> dict[str, Any]:
             "evidence/manifests/fpml_trade_manifest.json"
         ],
         "links": [
-            "../../review/parsed_trade_observation.json",
-            "../fpml_confirmation_source_domain/fragment.json",
-            "../../inputs/trade_representation/source_authority.md",
-            f"../../inputs/trade_representation/{OFFICIAL_SAMPLE_RELATIVE_PATH.as_posix()}",
-            f"../../inputs/trade_representation/{OFFICIAL_EXAMPLES_INDEX_RELATIVE_PATH.as_posix()}",
+            relative_path(trade_domain_root, trade_review_path),
+            relative_path(trade_domain_root, source_fragment_path),
+            relative_path(trade_domain_root, source_authority_path),
+            relative_path(trade_domain_root, source_xml_path),
+            relative_path(trade_domain_root, source_examples_index_path),
         ]
     }
 
@@ -332,7 +361,7 @@ def _trade_objects(observation: dict[str, Any]) -> list[tuple[str, dict[str, Any
     evidence_refs = [
         OFFICIAL_SAMPLE_INPUT_REF,
         OFFICIAL_EXAMPLES_INDEX_REF,
-        "input://trade_representation/source_authority.md",
+        TRADE_SOURCE_AUTHORITY_REF,
         "review://parsed_trade_observation.json"
     ]
     trade_object_id = _trade_markov_object_id()
@@ -714,6 +743,12 @@ def _trade_objects(observation: dict[str, Any]) -> list[tuple[str, dict[str, Any
 
 
 def _source_fragment(observation: dict[str, Any]) -> dict[str, Any]:
+    source_root = source_domain_root()
+    source_authority_path = _source_authority_path()
+    source_xml_path = _source_xml_path()
+    source_examples_index_path = _source_examples_index_path()
+    trade_review_path = review_root() / "parsed_trade_observation.json"
+    trade_fragment_path = published_root() / "fragment.json"
     leg_files = [
         f"objects/{_source_leg_file_name(leg['leg_kind'], index)}"
         for index, leg in enumerate(observation["product"]["legs"], start=1)
@@ -724,8 +759,8 @@ def _source_fragment(observation: dict[str, Any]) -> dict[str, Any]:
         "fragment_id": "odd_world_model.fragment.fpml_confirmation_source.commodity_swap.v1",
         "bounded_context": "fpml_confirmation_source.commodity_swap",
         "published_at": PUBLISHED_AT,
-        "published_by": "odd_world_model.project.fpml_trade_representation_standard",
-        "summary": "Published source-truth domain cut over the official FpML confirmation-view commodity swap example.",
+        "published_by": "odd_world_model.project.trade_source_model",
+        "summary": "Published trade-source fragment built in the versioned trade-source sandbox over the retained official FpML confirmation authority.",
         "objects": [
             "objects/source_trade_record.json",
             "objects/source_commodity_swap_surface.json",
@@ -740,11 +775,11 @@ def _source_fragment(observation: dict[str, Any]) -> dict[str, Any]:
             "evidence/manifests/fpml_source_manifest.json",
         ],
         "links": [
-            "../../review/parsed_trade_observation.json",
-            "../trade_representation_domain/fragment.json",
-            "../../inputs/trade_representation/source_authority.md",
-            f"../../inputs/trade_representation/{OFFICIAL_SAMPLE_RELATIVE_PATH.as_posix()}",
-            f"../../inputs/trade_representation/{OFFICIAL_EXAMPLES_INDEX_RELATIVE_PATH.as_posix()}",
+            relative_path(source_root, trade_review_path),
+            relative_path(source_root, trade_fragment_path),
+            relative_path(source_root, source_authority_path),
+            relative_path(source_root, source_xml_path),
+            relative_path(source_root, source_examples_index_path),
         ],
     }
 
@@ -753,8 +788,8 @@ def _source_objects(observation: dict[str, Any]) -> list[tuple[str, dict[str, An
     evidence_refs = [
         OFFICIAL_SAMPLE_INPUT_REF,
         OFFICIAL_EXAMPLES_INDEX_REF,
-        "input://trade_representation/source_authority.md",
-        "review://parsed_trade_observation.json",
+        TRADE_SOURCE_AUTHORITY_REF,
+        TRADE_REPRESENTATION_REVIEW_REF,
     ]
     source_trade_id = _source_trade_object_id()
     source_product_id = _source_product_object_id()
@@ -967,8 +1002,8 @@ def _source_manifest() -> tuple[str, dict[str, Any]]:
             "refs": [
                 OFFICIAL_SAMPLE_INPUT_REF,
                 OFFICIAL_EXAMPLES_INDEX_REF,
-                "input://trade_representation/source_authority.md",
-                "review://parsed_trade_observation.json",
+                TRADE_SOURCE_AUTHORITY_REF,
+                TRADE_REPRESENTATION_REVIEW_REF,
             ],
         },
     )
@@ -1159,7 +1194,7 @@ def _trade_manifest() -> tuple[str, dict[str, Any]]:
             "refs": [
                 OFFICIAL_SAMPLE_INPUT_REF,
                 OFFICIAL_EXAMPLES_INDEX_REF,
-                "input://trade_representation/source_authority.md",
+                TRADE_SOURCE_AUTHORITY_REF,
                 "review://parsed_trade_observation.json"
             ]
         }
@@ -1223,7 +1258,7 @@ def build() -> None:
 
 def main() -> int:
     build()
-    print(example_root())
+    print(trade_representation_sandbox_root())
     return 0
 
 

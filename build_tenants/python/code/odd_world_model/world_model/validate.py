@@ -10,6 +10,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from odd_world_model.examples_layout import trade_representation_sandbox_root
 from odd_world_model.world_model.registry import SCHEMA_FILE_NAMES, schemas_root
 
 
@@ -131,9 +132,24 @@ def validate_tree(root: Path) -> list[ValidationResult]:
     return results
 
 
+def _default_validation_path() -> str:
+    default_root = trade_representation_sandbox_root() / "published" / "trade_representation_domain"
+    if default_root.exists():
+        return str(default_root)
+    current = Path(".").resolve()
+    if (current / "published").exists():
+        return str(current / "published")
+    return str(current)
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Validate odd_world_model world-model carrier JSON files.")
-    parser.add_argument("path", nargs="?", default=str(schemas_root().parent / "examples"), help="Path to a fragment root or example tree.")
+    parser.add_argument(
+        "path",
+        nargs="?",
+        default=_default_validation_path(),
+        help="Path to a fragment root or example tree.",
+    )
     return parser
 
 

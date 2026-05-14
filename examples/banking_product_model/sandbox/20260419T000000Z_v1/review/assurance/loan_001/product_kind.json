@@ -1,0 +1,17 @@
+{
+  "schema_kind": "odd_world_model.assurance_record",
+  "schema_version": "v1",
+  "assurance_id": "odd_world_model.assurance.sandbox_banking_product_catalog.loan_001.product_kind.v1",
+  "object_ref": "odd_world_model.markov_object.sandbox_banking_product_catalog.loanorcredit.loan_001",
+  "claim_key": "product_kind",
+  "claim_kind": "attribute",
+  "accepted_value": "LoanOrCredit",
+  "trace_record_refs": [
+    "review://traces/loan_001/product_kind.json"
+  ],
+  "authority_basis": [
+    "source:banking_product_model.catalog.v1",
+    "builder:domain_input_seed.product_kind"
+  ],
+  "accepted_at": "2026-04-20T00:00:00Z"
+}

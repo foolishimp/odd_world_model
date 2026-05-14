@@ -1,0 +1,24 @@
+{
+  "edge": "project_markov_object_cut",
+  "actor": "odd_world_model_constructor",
+  "attestation": {
+    "asset_id": "markov_object_cut_surface",
+    "path": "/Users/jim/src/apps/odd_world_model/examples/trade_source_model/sandbox/20260419T000000Z_v1/published/fpml_confirmation_source_domain/objects/source_trade_record.json",
+    "exists": true,
+    "actual_kind": "file",
+    "expected_kind": "file",
+    "contract_satisfied": true
+  },
+  "assessments": [
+    {
+      "evaluator": "odd_world_model_fd_markov_object_cut_surface",
+      "result": "pass",
+      "evidence": "Rebuilt retained odd_world_model steel thread and satisfied generated-asset contract for markov_object_cut_surface"
+    },
+    {
+      "evaluator": "odd_world_model_fp_semantic_constructor",
+      "result": "pass",
+      "evidence": "Rebuilt retained odd_world_model steel thread and satisfied generated-asset contract for markov_object_cut_surface"
+    }
+  ]
+}

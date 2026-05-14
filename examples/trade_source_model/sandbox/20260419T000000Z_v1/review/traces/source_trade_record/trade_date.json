@@ -1,0 +1,12 @@
+{
+  "schema_kind": "odd_world_model.trace_record",
+  "schema_version": "v1",
+  "trace_id": "odd_world_model.trace.fpml_confirmation_source.trade_record.trade_date.v1",
+  "source_ref": "input://examples/trade_source_model/sources/data/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+  "source_kind": "fpml_confirmation_xml",
+  "claim_key": "trade_date",
+  "locator": "trade.tradeHeader.tradeDate",
+  "observed_at": "2026-04-20T00:00:00Z",
+  "observed_value": "2006-06-01",
+  "summary": "Trade date observed from the official FpML trade header."
+}

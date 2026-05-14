@@ -10,18 +10,16 @@ from pathlib import Path
 from typing import Any
 
 from odd_world_model.build_line.trade_to_apra import (
+    apra_domain_root,
     materialize_composed_world_model_surface,
     sandbox_root,
+    trade_domain_root,
 )
-from odd_world_model.world_model.load import load_json, resolve_ref
+from odd_world_model.world_model.load import load_json, project_root_from_domain_root, resolve_ref
 
 
 def query_root() -> Path:
     return sandbox_root() / "query"
-
-
-def published_root() -> Path:
-    return sandbox_root() / "published"
 
 
 def stitching_root() -> Path:
@@ -43,8 +41,8 @@ def _write_text(path: Path, content: str) -> None:
 
 def _artifact_roots() -> dict[str, Path]:
     return {
-        "trade": published_root() / "trade_representation_domain",
-        "apra": published_root() / "apra_liquidity_domain",
+        "trade": trade_domain_root(),
+        "apra": apra_domain_root(),
     }
 
 
@@ -77,6 +75,7 @@ def _refs_for_claim(refs: list[str], claim_key: str) -> list[str]:
 
 def _counterparty_bucket_explainability(bundle: dict[str, Any]) -> dict[str, Any]:
     roots = bundle["roots"]
+    project_root = project_root_from_domain_root(roots["apra"])
     apra_object = bundle["apra_object"]
     materialization = apra_object["materialization"]
     ledger_ref = _ref_with_suffix(materialization["attribute_ledger_entry_refs"], "counterparty_bucket.json")
@@ -97,7 +96,7 @@ def _counterparty_bucket_explainability(bundle: dict[str, Any]) -> dict[str, Any
                 "trace_record_ref": trace_ref,
                 "trace_record_path": str(trace_path.relative_to(sandbox_root())),
                 "source_ref": trace_record["source_ref"],
-                "source_path": str(source_path.relative_to(sandbox_root())),
+                "source_path": str(source_path.relative_to(project_root)),
                 "source_locator": trace_record["locator"],
             }
         )

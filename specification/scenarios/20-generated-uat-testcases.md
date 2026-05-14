@@ -119,7 +119,7 @@ filesystem-first query over constructive history.
 
 ### Steps
 
-1. Compose the imported trade artifact with the APRA liquidity domain.
+1. Compose the retained sandbox trade domain with the APRA liquidity domain.
 2. Inspect the stitched outputs, composition edges, and preserved object references.
 
 ### Expected Outcome

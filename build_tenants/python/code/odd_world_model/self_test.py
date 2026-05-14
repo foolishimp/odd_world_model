@@ -12,6 +12,7 @@ from .app import OddWorldModelApp, start
 from .app import gaps as runtime_gaps
 from .constructor import construct_manifest
 from .function_catalog import active_programs, program_by_name
+from .sandbox_config import configured_self_test_program
 
 
 DEFAULT_SELF_TEST_PROGRAM = "build_and_query_world_model"
@@ -106,4 +107,10 @@ def run_program(app: OddWorldModelApp, *, name: str) -> dict[str, Any]:
 
 
 def self_test(app: OddWorldModelApp) -> dict[str, Any]:
-    return run_program(app, name=DEFAULT_SELF_TEST_PROGRAM)
+    return run_program(
+        app,
+        name=configured_self_test_program(
+            app.config.workspace_root,
+            default=DEFAULT_SELF_TEST_PROGRAM,
+        ),
+    )

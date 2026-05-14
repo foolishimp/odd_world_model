@@ -1,0 +1,16 @@
+{
+  "query_id": "odd_world_model.query.sandbox_banking_product_catalog.v1",
+  "lane": "filesystem_first",
+  "fragment_ref": "odd_world_model.fragment.sandbox_banking_product_catalog.v1",
+  "question": "What did the configured sandbox publish for sandbox.banking_product.catalog?",
+  "answer": "Bounded retail-banking product catalog used to seed the banking product example domain.",
+  "objects": [
+    "odd_world_model.markov_object.sandbox_banking_product_catalog.bankingproductcatalog.banking_product_catalog_001",
+    "odd_world_model.markov_object.sandbox_banking_product_catalog.loanorcredit.loan_001",
+    "odd_world_model.markov_object.sandbox_banking_product_catalog.mortgageloan.mortgage_001",
+    "odd_world_model.markov_object.sandbox_banking_product_catalog.depositaccount.deposit_001",
+    "odd_world_model.markov_object.sandbox_banking_product_catalog.creditcard.card_001"
+  ],
+  "source_manifest": "../../sources/data/domain_input.json",
+  "world_model_ref": "published/world_model/composed_world_model.json"
+}

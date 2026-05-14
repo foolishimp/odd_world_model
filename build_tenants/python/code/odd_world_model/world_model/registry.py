@@ -24,13 +24,25 @@ SCHEMA_FILE_NAMES = {
 }
 
 
+def package_root() -> Path:
+    return Path(__file__).resolve().parents[1]
+
+
+def package_assets_root() -> Path:
+    return package_root() / "assets"
+
+
 def project_root() -> Path:
-    return Path(__file__).resolve().parents[5]
+    current = Path(__file__).resolve()
+    for candidate in current.parents:
+        if (candidate / "specification").exists() and (candidate / ".genesis").exists():
+            return candidate
+    raise RuntimeError(f"unable to locate odd_world_model project root from {current}")
 
 
 def schemas_root() -> Path:
-    return project_root() / "build_tenants" / "common" / "schemas"
+    return package_assets_root() / "schemas"
 
 
 def examples_root() -> Path:
-    return project_root() / "build_tenants" / "common" / "examples"
+    return project_root() / "examples"
