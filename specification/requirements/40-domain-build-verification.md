@@ -79,3 +79,38 @@ exercise a stamped install rather than only the mutable source workspace. The
 proof SHALL show that the installed product can use project-local source
 configuration to produce or inspect the expected published semantic outputs
 without relying on uninstalled source-project realization structure.
+
+### REQ-ODD-WORLD-MODEL-BUILD-VERIFY-007 — Candidate Markov-Object Cut Proof
+
+**Carries**:
+- `WORLD_MODEL_METHOD.md` — `Markov Object Construction Law`, `Epistemic Status Of The Construct`
+- `PRODUCT.md` — `Markov Objects As The Semantic Kernel`
+
+Proof for a published candidate Markov-object cut SHALL recover the identity
+direction or equivalent projection, distributed ledger evidence, paired
+candidate and null-peer basis, held-out treatment verification, boundary
+characterization, and publication classification. Structural shape or schema
+membership alone SHALL NOT count as object-cut proof.
+
+### REQ-ODD-WORLD-MODEL-BUILD-VERIFY-008 — Established Status Proof
+
+**Carries**:
+- `WORLD_MODEL_METHOD.md` — `Epistemic Status Of The Construct`
+- `PRODUCT.md` — `Product Terms / Established Markov-Object Cut`
+
+Any proof claiming an `established` Markov-object cut SHALL include the exact
+direction-native conditional-independence method, corpus, treatments,
+threshold, result, and provenance that satisfied the promotion gate. A missing,
+inconclusive, or failed result SHALL leave the publication at `candidate`.
+
+### REQ-ODD-WORLD-MODEL-BUILD-VERIFY-009 — Semantic Admission Chain Proof
+
+**Carries**:
+- `PRODUCT.md` — `Semantic Construction And Admission Boundary`
+- `ODD_METHOD.md` — `What An ODD Product Is / ABG`
+
+Proof for probabilistically proposed semantic content SHALL recover the chain
+from the declared graph-function invocation and calibrated `F_P` proposal,
+through deterministic checks and ABG admission, to attributed WM semantic
+acceptance and publication. The proof SHALL demonstrate that the probabilistic
+worker did not directly write runtime or published semantic truth.

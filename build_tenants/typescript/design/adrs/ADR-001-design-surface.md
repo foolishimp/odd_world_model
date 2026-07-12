@@ -1,3 +1,5 @@
+> **Classification**: Superseded generated planning read model; retained as lineage only.
+
 ## Execution Plan
 
 Read authority for this transform:

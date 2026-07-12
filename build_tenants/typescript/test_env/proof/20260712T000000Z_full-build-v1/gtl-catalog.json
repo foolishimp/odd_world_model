@@ -1,0 +1,280 @@
+{
+  "schema_kind": "odd_world_model.gtl_graph_function_catalog",
+  "schema_version": "v1",
+  "catalog_version": "0.1.0-proving.1",
+  "catalog_digest": "sha256:741520d329d640e0f8ae8ad2da6b0d81a13ceceaec569db5a7fb92acc6d21fda",
+  "exact_product_binding": {
+    "kind": "odd_world_model.exact_product_binding_evidence",
+    "abiogenesis_package": "@abiogenesis/typescript-tenant",
+    "abiogenesis_version": "4.6.0-rc.3",
+    "abiogenesis_tarball_sha256": "9cffb372c0dfc00983a5d0e882efbc3d0c3ac937a56f313000f35a4473358113",
+    "odd_glc_package": "@odd-glc/route-one-typescript",
+    "odd_glc_version": "0.1.0",
+    "odd_glc_tarball_sha256": "7e548f92ecd6b4442f9c9f1feb46dd2edd7e9610a7dae8706482fc65d80fa578",
+    "odd_glc_startup_config_ref": "gtl-startup-config://odd_glc/abg-4.2/route-1",
+    "odd_glc_lifecycle_overlay_ref": "overlay://odd_glc/general-lifecycle",
+    "compatibility_status": "compatible"
+  },
+  "module_ref": "gtl://module/odd_world_model/context-memory/v1",
+  "overlay_refs": [
+    "overlay://odd_world_model/context-memory/v1",
+    "overlay://odd_glc/general-lifecycle"
+  ],
+  "entries": [
+    {
+      "handle": "odd_world_model.publish_domain_model",
+      "visibility": "public",
+      "availability": "runnable",
+      "execution_mode": "reference_digest_bridge",
+      "graph_function_ref": "graph-function://odd_world_model/publish-domain-model/v1",
+      "input_asset_refs": [
+        "node://odd_world_model/domain-publication-request/v1"
+      ],
+      "output_asset_refs": [
+        "node://odd_world_model/published-domain-outcome/v1"
+      ],
+      "compute_regimes": [
+        "F_D",
+        "F_P",
+        "F_H"
+      ],
+      "refinement_of": null,
+      "module_ref": "gtl://module/odd_world_model/context-memory/v1",
+      "runtime_entry_ref": "registry-entry://odd_world_model/publish-domain-model/v1"
+    },
+    {
+      "handle": "odd_world_model.publish_semantic_links",
+      "visibility": "public",
+      "availability": "runnable",
+      "execution_mode": "reference_digest_bridge",
+      "graph_function_ref": "graph-function://odd_world_model/publish-semantic-links/v1",
+      "input_asset_refs": [
+        "node://odd_world_model/semantic-link-publication-request/v1"
+      ],
+      "output_asset_refs": [
+        "node://odd_world_model/published-semantic-link-outcome/v1"
+      ],
+      "compute_regimes": [
+        "F_D",
+        "F_P",
+        "F_H"
+      ],
+      "refinement_of": null,
+      "module_ref": "gtl://module/odd_world_model/context-memory/v1",
+      "runtime_entry_ref": "registry-entry://odd_world_model/publish-semantic-links/v1"
+    },
+    {
+      "handle": "odd_world_model.compose_world_model",
+      "visibility": "public",
+      "availability": "runnable",
+      "execution_mode": "reference_digest_bridge",
+      "graph_function_ref": "graph-function://odd_world_model/compose-world-model/v1",
+      "input_asset_refs": [
+        "node://odd_world_model/world-model-composition-request/v1"
+      ],
+      "output_asset_refs": [
+        "node://odd_world_model/composed-world-model-outcome/v1"
+      ],
+      "compute_regimes": [
+        "F_D",
+        "F_P",
+        "F_H"
+      ],
+      "refinement_of": null,
+      "module_ref": "gtl://module/odd_world_model/context-memory/v1",
+      "runtime_entry_ref": "registry-entry://odd_world_model/compose-world-model/v1"
+    },
+    {
+      "handle": "odd_world_model.resolve_mesh_cut",
+      "visibility": "public",
+      "availability": "runnable",
+      "execution_mode": "reference_digest_bridge",
+      "graph_function_ref": "graph-function://odd_world_model/resolve-mesh-cut/v1",
+      "input_asset_refs": [
+        "node://odd_world_model/mesh-resolution-request/v1"
+      ],
+      "output_asset_refs": [
+        "node://odd_world_model/bounded-mesh-outcome/v1"
+      ],
+      "compute_regimes": [
+        "F_D",
+        "F_P"
+      ],
+      "refinement_of": null,
+      "module_ref": "gtl://module/odd_world_model/context-memory/v1",
+      "runtime_entry_ref": "registry-entry://odd_world_model/resolve-mesh-cut/v1"
+    },
+    {
+      "handle": "odd_world_model.project_context",
+      "visibility": "public",
+      "availability": "runnable",
+      "execution_mode": "reference_digest_bridge",
+      "graph_function_ref": "graph-function://odd_world_model/project-context/v1",
+      "input_asset_refs": [
+        "node://odd_world_model/context-projection-request/v1"
+      ],
+      "output_asset_refs": [
+        "node://odd_world_model/context-projection-outcome/v1"
+      ],
+      "compute_regimes": [
+        "F_D"
+      ],
+      "refinement_of": null,
+      "module_ref": "gtl://module/odd_world_model/context-memory/v1",
+      "runtime_entry_ref": "registry-entry://odd_world_model/project-context/v1"
+    },
+    {
+      "handle": "odd_world_model.interpret_context",
+      "visibility": "public",
+      "availability": "runnable",
+      "execution_mode": "reference_digest_bridge",
+      "graph_function_ref": "graph-function://odd_world_model/interpret-context/v1",
+      "input_asset_refs": [
+        "node://odd_world_model/context-interpretation-request/v1"
+      ],
+      "output_asset_refs": [
+        "node://odd_world_model/context-interpretation-outcome/v1"
+      ],
+      "compute_regimes": [
+        "F_P",
+        "F_D"
+      ],
+      "refinement_of": null,
+      "module_ref": "gtl://module/odd_world_model/context-memory/v1",
+      "runtime_entry_ref": "registry-entry://odd_world_model/interpret-context/v1"
+    },
+    {
+      "handle": "odd_world_model.query_world_model",
+      "visibility": "public",
+      "availability": "runnable",
+      "execution_mode": "reference_digest_bridge",
+      "graph_function_ref": "graph-function://odd_world_model/query-world-model/v1",
+      "input_asset_refs": [
+        "node://odd_world_model/world-model-query-request/v1"
+      ],
+      "output_asset_refs": [
+        "node://odd_world_model/world-model-query-outcome/v1"
+      ],
+      "compute_regimes": [
+        "F_D"
+      ],
+      "refinement_of": null,
+      "module_ref": "gtl://module/odd_world_model/context-memory/v1",
+      "runtime_entry_ref": "registry-entry://odd_world_model/query-world-model/v1"
+    },
+    {
+      "handle": "odd_world_model.internal.observe_source_evidence",
+      "visibility": "private",
+      "availability": "refinement_only",
+      "execution_mode": "reference_digest_bridge",
+      "graph_function_ref": "graph-function://odd_world_model/internal/observe-source-evidence/v1",
+      "input_asset_refs": [
+        "node://odd_world_model/domain-publication-request/v1"
+      ],
+      "output_asset_refs": [
+        "node://odd_world_model/observed-source-evidence/v1"
+      ],
+      "compute_regimes": [
+        "F_D"
+      ],
+      "refinement_of": "odd_world_model.publish_domain_model",
+      "module_ref": "gtl://module/odd_world_model/context-memory/v1",
+      "runtime_entry_ref": null
+    },
+    {
+      "handle": "odd_world_model.internal.construct_domain_semantics",
+      "visibility": "private",
+      "availability": "refinement_only",
+      "execution_mode": "reference_digest_bridge",
+      "graph_function_ref": "graph-function://odd_world_model/internal/construct-domain-semantics/v1",
+      "input_asset_refs": [
+        "node://odd_world_model/observed-source-evidence/v1"
+      ],
+      "output_asset_refs": [
+        "node://odd_world_model/constructed-domain-semantics/v1"
+      ],
+      "compute_regimes": [
+        "F_P",
+        "F_D"
+      ],
+      "refinement_of": "odd_world_model.publish_domain_model",
+      "module_ref": "gtl://module/odd_world_model/context-memory/v1",
+      "runtime_entry_ref": null
+    },
+    {
+      "handle": "odd_world_model.internal.admit_domain_claims",
+      "visibility": "private",
+      "availability": "refinement_only",
+      "execution_mode": "reference_digest_bridge",
+      "graph_function_ref": "graph-function://odd_world_model/internal/admit-domain-claims/v1",
+      "input_asset_refs": [
+        "node://odd_world_model/constructed-domain-semantics/v1"
+      ],
+      "output_asset_refs": [
+        "node://odd_world_model/admitted-domain-claims/v1"
+      ],
+      "compute_regimes": [
+        "F_D",
+        "F_H"
+      ],
+      "refinement_of": "odd_world_model.publish_domain_model",
+      "module_ref": "gtl://module/odd_world_model/context-memory/v1",
+      "runtime_entry_ref": null
+    },
+    {
+      "handle": "odd_world_model.internal.project_domain_cut",
+      "visibility": "private",
+      "availability": "refinement_only",
+      "execution_mode": "reference_digest_bridge",
+      "graph_function_ref": "graph-function://odd_world_model/internal/project-domain-cut/v1",
+      "input_asset_refs": [
+        "node://odd_world_model/admitted-domain-claims/v1"
+      ],
+      "output_asset_refs": [
+        "node://odd_world_model/projected-domain-cut/v1"
+      ],
+      "compute_regimes": [
+        "F_D"
+      ],
+      "refinement_of": "odd_world_model.publish_domain_model",
+      "module_ref": "gtl://module/odd_world_model/context-memory/v1",
+      "runtime_entry_ref": null
+    },
+    {
+      "handle": "odd_world_model.internal.materialize_attested_cut",
+      "visibility": "private",
+      "availability": "refinement_only",
+      "execution_mode": "reference_digest_bridge",
+      "graph_function_ref": "graph-function://odd_world_model/internal/materialize-attested-cut/v1",
+      "input_asset_refs": [
+        "node://odd_world_model/projected-domain-cut/v1"
+      ],
+      "output_asset_refs": [
+        "node://odd_world_model/published-domain-outcome/v1"
+      ],
+      "compute_regimes": [
+        "F_D"
+      ],
+      "refinement_of": "odd_world_model.publish_domain_model",
+      "module_ref": "gtl://module/odd_world_model/context-memory/v1",
+      "runtime_entry_ref": null
+    },
+    {
+      "handle": "odd_world_model.map_domains",
+      "visibility": "public",
+      "availability": "deferred",
+      "execution_mode": "deferred",
+      "graph_function_ref": null,
+      "input_asset_refs": [],
+      "output_asset_refs": [],
+      "compute_regimes": [
+        "F_P",
+        "F_D",
+        "F_H"
+      ],
+      "refinement_of": null,
+      "module_ref": null,
+      "runtime_entry_ref": null
+    }
+  ]
+}

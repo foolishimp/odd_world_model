@@ -1,4 +1,9 @@
 import { readFile } from "node:fs/promises";
+import { XMLParser } from "fast-xml-parser";
+import { SyntaxValidator } from "fast-xml-validator";
+import type { DeterministicPayloadCheck } from "../domain/semantic_publication.ts";
+import type { TypedGap } from "../domain/semantic_memory.ts";
+import type { JsonObject } from "../domain/types.ts";
 
 export interface FpmlLegObservation {
   leg_id: string;
@@ -43,68 +48,113 @@ export interface FpmlTradeObservation {
   };
 }
 
-function attr(source: string, name: string): string {
-  const match = source.match(new RegExp(`${name}="([^"]*)"`));
-  return match?.[1] ?? "";
-}
-
-function firstBlock(source: string, tag: string): string {
-  const match = source.match(new RegExp(`<${tag}\\b[^>]*>([\\s\\S]*?)</${tag}>`));
-  return match?.[1] ?? "";
-}
-
-function firstOpenTag(source: string, tag: string): string {
-  const match = source.match(new RegExp(`<${tag}\\b[^>]*>`));
-  return match?.[0] ?? "";
-}
-
-function firstText(source: string, tag: string): string | null {
-  const match = source.match(new RegExp(`<${tag}\\b[^>]*>([\\s\\S]*?)</${tag}>`));
-  const value = match?.[1]?.trim();
-  return value ? value : null;
-}
-
-function allBlocks(source: string, tag: string): Array<{ openTag: string; body: string }> {
-  const blocks: Array<{ openTag: string; body: string }> = [];
-  const regex = new RegExp(`(<${tag}\\b[^>]*>)([\\s\\S]*?)</${tag}>`, "g");
-  let match: RegExpExecArray | null;
-  while ((match = regex.exec(source)) !== null) {
-    blocks.push({ openTag: match[1] ?? "", body: match[2] ?? "" });
+export const fpmlTradeObservationPayloadCheck: DeterministicPayloadCheck = Object.freeze({
+  contractRef: "workspace://build_tenants/common/schemas/fpml_trade_observation.schema.json",
+  validate: (payload: JsonObject): readonly TypedGap[] => {
+    const candidate = payload as unknown as Partial<FpmlTradeObservation>;
+    if (candidate.source_standard !== "FpML" || candidate.source_view !== "confirmation") {
+      throw new Error("FpML observation must declare the FpML confirmation source view");
+    }
+    if (typeof candidate.fpml_version !== "string" || candidate.fpml_version.length === 0) {
+      throw new Error("FpML observation has no version");
+    }
+    if (typeof candidate.trade_id !== "string" || candidate.trade_id.length === 0) {
+      throw new Error("FpML observation has no trade identity");
+    }
+    if (typeof candidate.trade_date !== "string" || candidate.trade_date.length === 0) {
+      throw new Error("FpML observation has no trade date");
+    }
+    const product = candidate.product;
+    if (product === undefined || !Array.isArray(product.legs) || product.legs.length === 0) {
+      throw new Error("FpML observation has no product legs");
+    }
+    if (product.leg_count !== product.legs.length) {
+      throw new Error("FpML observation leg_count does not match its legs");
+    }
+    return Object.freeze([]);
   }
-  return blocks;
-}
+});
 
-function allOpenTags(source: string, tag: string): string[] {
-  const tags: string[] = [];
-  const regex = new RegExp(`<${tag}\\b[^>]*>`, "g");
-  let match: RegExpExecArray | null;
-  while ((match = regex.exec(source)) !== null) {
-    tags.push(match[0] ?? "");
+type XmlRecord = Record<string, unknown>;
+
+const repeatedFpmlElements = new Set([
+  "partyTradeIdentifier",
+  "party",
+  "fixedLeg",
+  "floatingLeg"
+]);
+
+const fpmlParser = new XMLParser({
+  ignoreAttributes: false,
+  attributeNamePrefix: "@_",
+  removeNSPrefix: true,
+  parseTagValue: false,
+  parseAttributeValue: false,
+  trimValues: true,
+  processEntities: true,
+  isArray: (tagName) => repeatedFpmlElements.has(tagName)
+});
+
+function xmlRecord(value: unknown, label: string): XmlRecord {
+  if (value === null || typeof value !== "object" || Array.isArray(value)) {
+    throw new Error(`${label} must be an XML element`);
   }
-  return tags;
+  return value as XmlRecord;
 }
 
-function firstHref(source: string, tag: string): string {
-  return attr(firstOpenTag(source, tag), "href");
+function optionalXmlRecord(value: unknown): XmlRecord | null {
+  return value !== null && typeof value === "object" && !Array.isArray(value)
+    ? value as XmlRecord
+    : null;
 }
 
-function extractLeg(body: string, legKind: string, index: number): FpmlLegObservation {
-  const openTag = firstOpenTag(`<${legKind}>${body}</${legKind}>`, legKind);
-  const pricingDates = firstBlock(body, "pricingDates");
+function xmlRecords(value: unknown, label: string): readonly XmlRecord[] {
+  if (value === undefined) return [];
+  const values = Array.isArray(value) ? value : [value];
+  return values.map((item, index) => xmlRecord(item, `${label}[${index}]`));
+}
+
+function xmlText(value: unknown): string | null {
+  if (typeof value === "string") return value.length > 0 ? value : null;
+  const record = optionalXmlRecord(value);
+  const text = record?.["#text"];
+  return typeof text === "string" && text.length > 0 ? text : null;
+}
+
+function xmlAttribute(value: unknown, name: string): string {
+  const attribute = optionalXmlRecord(value)?.[`@_${name}`];
+  return typeof attribute === "string" ? attribute : "";
+}
+
+function xmlHref(value: unknown): string {
+  return xmlAttribute(value, "href");
+}
+
+function nestedRecord(parent: XmlRecord | null, name: string): XmlRecord | null {
+  return optionalXmlRecord(parent?.[name]);
+}
+
+function extractLeg(leg: XmlRecord, legKind: string, index: number): FpmlLegObservation {
+  const notional = nestedRecord(leg, "notionalQuantity");
+  const fixedPrice = nestedRecord(leg, "fixedPrice");
+  const commodity = nestedRecord(leg, "commodity");
+  const calculation = nestedRecord(leg, "calculation");
+  const pricingDates = nestedRecord(calculation, "pricingDates");
   return {
-    leg_id: attr(openTag, "id") || `${legKind.toLowerCase()}_${String(index).padStart(2, "0")}`,
+    leg_id: xmlAttribute(leg, "id") || `${legKind.toLowerCase()}_${String(index).padStart(2, "0")}`,
     leg_kind: legKind,
-    payer_party_ref: firstHref(body, "payerPartyReference"),
-    receiver_party_ref: firstHref(body, "receiverPartyReference"),
-    quantity: firstText(firstBlock(body, "notionalQuantity"), "quantity"),
-    quantity_unit: firstText(firstBlock(body, "notionalQuantity"), "quantityUnit"),
-    quantity_frequency: firstText(firstBlock(body, "notionalQuantity"), "quantityFrequency"),
-    total_notional_quantity: firstText(body, "totalNotionalQuantity"),
-    fixed_price: firstText(firstBlock(body, "fixedPrice"), "price"),
-    price_currency: firstText(firstBlock(body, "fixedPrice"), "priceCurrency"),
-    price_unit: firstText(firstBlock(body, "fixedPrice"), "priceUnit"),
-    commodity_instrument_id: firstText(firstBlock(body, "commodity"), "instrumentId"),
-    calculation_schedule_ref: firstHref(body, "calculationPeriodsScheduleReference") || firstHref(pricingDates, "calculationPeriodsScheduleReference")
+    payer_party_ref: xmlHref(leg.payerPartyReference),
+    receiver_party_ref: xmlHref(leg.receiverPartyReference),
+    quantity: xmlText(notional?.quantity),
+    quantity_unit: xmlText(notional?.quantityUnit),
+    quantity_frequency: xmlText(notional?.quantityFrequency),
+    total_notional_quantity: xmlText(leg.totalNotionalQuantity),
+    fixed_price: xmlText(fixedPrice?.price),
+    price_currency: xmlText(fixedPrice?.priceCurrency),
+    price_unit: xmlText(fixedPrice?.priceUnit),
+    commodity_instrument_id: xmlText(commodity?.instrumentId),
+    calculation_schedule_ref: xmlHref(leg.calculationPeriodsScheduleReference) ||
+      xmlHref(pricingDates?.calculationPeriodsScheduleReference)
   };
 }
 
@@ -122,67 +172,75 @@ function unique(values: string[]): string[] {
 
 export async function parseFpmlTrade(filePath: string): Promise<FpmlTradeObservation> {
   const xml = await readFile(filePath, "utf8");
-  const rootOpenTag = firstOpenTag(xml, "dataDocument");
-  const tradeOpenTag = firstOpenTag(xml, "trade");
-  const trade = firstBlock(xml, "trade");
-  if (!trade) {
-    throw new Error(`${filePath}: missing trade element`);
+  let syntax: ReturnType<typeof SyntaxValidator.validate>;
+  try {
+    syntax = SyntaxValidator.validate(xml, {
+      docType: { maxEntityCount: 0, maxEntitySize: 0 }
+    });
+  } catch (error: unknown) {
+    throw new Error(`${filePath}: malformed XML: ${error instanceof Error ? error.message : String(error)}`);
   }
-  const tradeHeader = firstBlock(trade, "tradeHeader");
-  if (!tradeHeader) {
-    throw new Error(`${filePath}: missing tradeHeader`);
+  if (syntax !== true) {
+    throw new Error(
+      `${filePath}: malformed XML at ${syntax.err.line}:${syntax.err.col}: ${syntax.err.msg}`
+    );
   }
-  const tradeIdentifiers = allBlocks(tradeHeader, "partyTradeIdentifier")
-    .map((block) => firstText(block.body, "tradeId"))
+  const parsed = fpmlParser.parse(xml) as unknown;
+  const document = xmlRecord(xmlRecord(parsed, filePath).dataDocument, `${filePath}: dataDocument`);
+  const trade = xmlRecord(document.trade, `${filePath}: trade`);
+  const tradeHeader = xmlRecord(trade.tradeHeader, `${filePath}: tradeHeader`);
+  const tradeIdentifiers = xmlRecords(
+    tradeHeader.partyTradeIdentifier,
+    `${filePath}: partyTradeIdentifier`
+  )
+    .map((identifier) => xmlText(identifier.tradeId))
     .filter((value): value is string => typeof value === "string" && value.length > 0);
-  const commoditySwapOpenTag = firstOpenTag(trade, "commoditySwap");
-  const commoditySwap = firstBlock(trade, "commoditySwap");
-  if (!commoditySwap) {
-    throw new Error(`${filePath}: missing commoditySwap`);
-  }
+  const commoditySwap = xmlRecord(trade.commoditySwap, `${filePath}: commoditySwap`);
+  const fixedLegs = xmlRecords(commoditySwap.fixedLeg, `${filePath}: fixedLeg`);
+  const floatingLegs = xmlRecords(commoditySwap.floatingLeg, `${filePath}: floatingLeg`);
   const legs = [
-    ...allBlocks(commoditySwap, "fixedLeg").map((block, index) => extractLeg(block.body, "fixedLeg", index + 1)),
-    ...allBlocks(commoditySwap, "floatingLeg").map((block, index) => extractLeg(block.body, "floatingLeg", index + 1 + allBlocks(commoditySwap, "fixedLeg").length))
+    ...fixedLegs.map((leg, index) => extractLeg(leg, "fixedLeg", index + 1)),
+    ...floatingLegs.map((leg, index) => extractLeg(leg, "floatingLeg", index + 1 + fixedLegs.length))
   ];
-  const partyRefs = unique([
-    ...allOpenTags(commoditySwap, "payerPartyReference").map((tag) => attr(tag, "href")),
-    ...allOpenTags(commoditySwap, "receiverPartyReference").map((tag) => attr(tag, "href"))
-  ]);
-  const parties = allBlocks(xml, "party").map((block) => {
-    const xmlId = attr(block.openTag, "id");
-    const partyId = firstText(block.body, "partyId") || xmlId;
+  const partyRefs = unique(legs.flatMap((leg) => [leg.payer_party_ref, leg.receiver_party_ref]));
+  const parties = xmlRecords(document.party, `${filePath}: party`).map((party) => {
+    const xmlId = xmlAttribute(party, "id");
+    const partyId = xmlText(party.partyId) || xmlId;
     return {
       xml_id: xmlId,
       party_id: partyId,
-      party_name: firstText(block.body, "partyName") || partyId
+      party_name: xmlText(party.partyName) || partyId
     };
   });
-  const documentation = firstBlock(trade, "documentation");
-  const masterAgreement = firstBlock(documentation, "masterAgreement");
+  const masterAgreement = nestedRecord(nestedRecord(trade, "documentation"), "masterAgreement");
+  const effectiveDate = nestedRecord(commoditySwap, "effectiveDate");
+  const terminationDate = nestedRecord(commoditySwap, "terminationDate");
   return {
     source_standard: "FpML",
     source_view: "confirmation",
-    fpml_version: attr(rootOpenTag, "fpmlVersion"),
-    trade_xml_id: attr(tradeOpenTag, "id"),
+    fpml_version: xmlAttribute(document, "fpmlVersion"),
+    trade_xml_id: xmlAttribute(trade, "id"),
     trade_id: tradeIdentifiers[0] ?? "",
     trade_identifiers: tradeIdentifiers,
-    trade_date: firstText(tradeHeader, "tradeDate") ?? "",
+    trade_date: xmlText(tradeHeader.tradeDate) ?? "",
     product: {
-      product_xml_id: attr(commoditySwapOpenTag, "id"),
-      product_type: firstText(commoditySwap, "productType") ?? "",
-      product_id: firstText(commoditySwap, "productId") ?? "",
-      asset_class: firstText(commoditySwap, "primaryAssetClass") ?? firstText(commoditySwap, "assetClass") ?? "",
-      effective_date: firstText(firstBlock(commoditySwap, "effectiveDate"), "unadjustedDate") ?? firstText(commoditySwap, "effectiveDate") ?? "",
-      termination_date: firstText(firstBlock(commoditySwap, "terminationDate"), "unadjustedDate") ?? firstText(commoditySwap, "terminationDate") ?? "",
+      product_xml_id: xmlAttribute(commoditySwap, "id"),
+      product_type: xmlText(commoditySwap.productType) ?? "",
+      product_id: xmlText(commoditySwap.productId) ?? "",
+      asset_class: xmlText(commoditySwap.primaryAssetClass) ?? xmlText(commoditySwap.assetClass) ?? "",
+      effective_date: xmlText(nestedRecord(effectiveDate, "adjustableDate")?.unadjustedDate) ??
+        xmlText(effectiveDate?.unadjustedDate) ?? xmlText(commoditySwap.effectiveDate) ?? "",
+      termination_date: xmlText(nestedRecord(terminationDate, "adjustableDate")?.unadjustedDate) ??
+        xmlText(terminationDate?.unadjustedDate) ?? xmlText(commoditySwap.terminationDate) ?? "",
       legs,
       leg_count: legs.length
     },
     party_refs: partyRefs,
     parties,
     agreement: {
-      type: firstText(masterAgreement, "masterAgreementType"),
-      date: firstText(masterAgreement, "masterAgreementDate"),
-      version: firstText(masterAgreement, "masterAgreementVersion")
+      type: xmlText(masterAgreement?.masterAgreementType),
+      date: xmlText(masterAgreement?.masterAgreementDate),
+      version: xmlText(masterAgreement?.masterAgreementVersion)
     }
   };
 }

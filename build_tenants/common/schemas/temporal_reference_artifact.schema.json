@@ -45,7 +45,7 @@
       "type": "string"
     },
     "identity": {
-      "$ref": "world_model_object.schema.json#/$defs/identity"
+      "$ref": "odd_world_model.world_model_object.schema.json#/$defs/identity"
     },
     "effective_period": {
       "type": "object",
@@ -89,7 +89,7 @@
             "minLength": 1
           },
           "aliases": {
-            "$ref": "world_model_object.schema.json#/$defs/string_array"
+            "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
           },
           "effective_from": {
             "type": "string",
@@ -123,25 +123,25 @@
       }
     },
     "evidence": {
-      "$ref": "world_model_object.schema.json#/$defs/evidence"
+      "$ref": "odd_world_model.world_model_object.schema.json#/$defs/evidence"
     },
     "usage": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "object_refs": {
-          "$ref": "world_model_object.schema.json#/$defs/string_array"
+          "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
         },
         "attribute_refs": {
-          "$ref": "world_model_object.schema.json#/$defs/string_array"
+          "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
         },
         "treatment_refs": {
-          "$ref": "world_model_object.schema.json#/$defs/string_array"
+          "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
         }
       }
     },
     "composition": {
-      "$ref": "world_model_object.schema.json#/$defs/composition"
+      "$ref": "odd_world_model.world_model_object.schema.json#/$defs/composition"
     }
   }
 }

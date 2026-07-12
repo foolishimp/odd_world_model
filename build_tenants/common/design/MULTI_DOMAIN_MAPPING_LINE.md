@@ -1,6 +1,6 @@
 # Multi-Domain Mapping Line
 
-**Status**: Draft
+**Status**: Retained downstream design input; outside the first context-memory slice
 **Scope**: Shared realization design for governed mapping over published
 world-model domains
 

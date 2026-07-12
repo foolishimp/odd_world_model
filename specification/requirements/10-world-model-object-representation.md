@@ -11,12 +11,20 @@ identity, boundary, state, transition, evidence, and adjacency context for a
 reasoning agent to distinguish that object from nearby objects and reason over
 it without relying on detached raw records alone.
 
-### REQ-ODD-WORLD-MODEL-WORLD-OBJECT-002 — Markov Blanket Explicitness
+### REQ-ODD-WORLD-MODEL-WORLD-OBJECT-002 — Identity Projection And Effective Boundary
 
-For every published Markov object, `odd_world_model` SHALL make the object's
-effective boundary explicit by recording the ingress surfaces, egress surfaces,
-observable surfaces, adjacent objects or domains, and the local claim of what
-is treated as internal versus external to the object.
+**Carries**:
+- `WORLD_MODEL_METHOD.md` — `Theoretical Underpinnings Of The Markov Object`, `Representation Law`
+- `PRODUCT.md` — `Markov Objects As The Semantic Kernel`
+
+For every published candidate or established Markov-object cut,
+`odd_world_model` SHALL make the effective boundary explicit as the projection
+along which object identity is preserved under held-out treatment. The cut
+SHALL expose the identity direction or equivalent geometric description, its
+projection support, the distributed attribute evidence supporting it, the
+verification record, and the adjacent contexts or domains in which the
+boundary applies. Ingress, egress, observable, and attribute surfaces MAY
+support that claim, but they SHALL NOT define the blanket by set membership.
 
 ### REQ-ODD-WORLD-MODEL-WORLD-OBJECT-003 — Cross-Domain Alignment Sufficiency
 
@@ -84,8 +92,28 @@ append-only attribute ledger that records the qualified semantic basis for
 later object projection rather than mutating object state in place as the
 primary truth surface.
 
-### REQ-ODD-WORLD-MODEL-WORLD-OBJECT-012 — Immutable Object-Cut Projection
+### REQ-ODD-WORLD-MODEL-WORLD-OBJECT-012 — Immutable Classified Object-Cut Projection
 
-`odd_world_model` SHALL materialize each published Markov object as an immutable
-object cut projected from the attribute ledger over a stable object identity,
-with explicit supersession rather than silent in-place mutation.
+**Carries**:
+- `WORLD_MODEL_METHOD.md` — `Materialization Law`, `Epistemic Status Of The Construct`
+- `PRODUCT.md` — `Markov Objects As The Semantic Kernel`
+
+`odd_world_model` SHALL materialize each published Markov-object cut as an
+immutable projection from the attribute ledger over a stable identity
+direction, with explicit supersession rather than silent in-place mutation.
+Every cut SHALL declare whether it is `candidate` or `established`; publication
+SHALL default to `candidate` unless REQ-ODD-WORLD-MODEL-WORLD-OBJECT-013 is
+satisfied.
+
+### REQ-ODD-WORLD-MODEL-WORLD-OBJECT-013 — Established Markov-Object Promotion Gate
+
+**Carries**:
+- `WORLD_MODEL_METHOD.md` — `Epistemic Status Of The Construct`, `Markov Object Construction Law`
+- `PRODUCT.md` — `Markov Objects As The Semantic Kernel`, `Product Terms`
+
+A candidate Markov-object cut SHALL be classified as `established` only when a
+direction-native conditional-independence test shows, at a declared meaningful
+threshold and under plausible treatments, that residual variation outside the
+identity projection is independent of the target. Schema fit, attribute
+membership, structural plausibility, treatment preservation, or semantic
+review alone SHALL NOT satisfy this promotion gate.

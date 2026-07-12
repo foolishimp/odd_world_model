@@ -4,18 +4,22 @@
 **Status**: Active
 **Category**: Constraint / Guarantee
 
-### REQ-ODD-WORLD-MODEL-BUILD-CONSTRAINT-001 — GTL And F_D Responsibility Split
+### REQ-ODD-WORLD-MODEL-BUILD-CONSTRAINT-001 — Proposal, Checking, Admission, And Acceptance Split
 
 **Carries**:
-- `WORLD_MODEL_METHOD.md` — `Method Flow`, `Materialization Law`
+- `WORLD_MODEL_METHOD.md` — `Method Flow`, `Materialization Law`, `Probability Belongs In The Epistemic Overlay`
 - `INTENT.md` — `Purpose`, `Constraints`
-- `PRODUCT.md` — `Product Position`, `Current Delivery Pillars`
+- `PRODUCT.md` — `Semantic Construction And Admission Boundary`
 
-`odd_world_model` SHALL keep semantic derivation and deterministic materialization as
-explicit separate responsibilities. GTL / graph functions SHALL carry the
-world-model derivation and traversal logic. Deterministic `F_D` primitives
-SHALL be limited to record, provenance/event, and other deterministic artifact
-materialization.
+`odd_world_model` SHALL keep semantic proposal, deterministic checking, runtime
+admission, and semantic acceptance as explicit responsibilities. GTL graph
+functions SHALL declare the constructive contracts and traversal boundaries.
+Calibrated `F_P` workers MAY propose object, treatment, correspondence,
+projection, and mapping candidates. `F_D` machinery SHALL check only closed
+structural or deterministic laws and materialize deterministic artifacts; it
+SHALL NOT author semantic meaning. ABG admission SHALL determine runtime fact,
+and attributed WM authority SHALL determine which admitted candidates become
+accepted published semantic truth.
 
 ### REQ-ODD-WORLD-MODEL-BUILD-CONSTRAINT-002 — Attribute Ledger As Immediate Semantic Source
 

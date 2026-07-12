@@ -2,7 +2,10 @@
 
 Project-specific requirement families live in this folder.
 
-Use `.genesis/docs/standards/` as the governing method reference when writing or revising these files.
+Use `/Users/jim/src/apps/specification_methodology/specification/standards/` as
+the upstream governing method source when writing or revising these files. A
+repo-local installed standards tree is an operative install or mirror, not a
+second source authority.
 
 ## Rules
 
@@ -22,7 +25,9 @@ Use `.genesis/docs/standards/` as the governing method reference when writing or
 - `05-product-definition-authority.md`
 - `10-world-model-object-representation.md`
 - `20-domain-build-and-composition-capability.md`
+- `25-governed-context-memory-capability.md`
 - `30-domain-build-and-composition-constraints.md`
+- `35-governed-context-memory-constraints.md`
 - `40-domain-build-verification.md`
 - `50-odd-method-gtl-carrier.md`
 - `60-multi-domain-mapping-capability.md`

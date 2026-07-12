@@ -1,9 +1,12 @@
 # ADR-002 odd_sdlc Build Component Inheritance
 
-**Status**: Accepted
+**Status**: Historical odd_sdlc governance input; superseded by current STDO/GLC rebase
 **Date**: 2026-05-15
 **Scope**: Installed `odd_sdlc` build-component inheritance for the `odd_world_model` TypeScript tenant
 **Ticket**: `T-026`
+
+This ADR records the prior installed odd_sdlc phase. It does not authorize the
+current carrier, function namespace, runtime binding, or proof path.
 
 ## Context
 

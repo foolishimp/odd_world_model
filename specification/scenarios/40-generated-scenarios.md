@@ -2,7 +2,7 @@
 
 **Project**: `odd_world_model`
 **Status**: Active
-**Date**: 2026-05-15
+**Date**: 2026-07-12
 **Derived from**: `specification/GOALS.md`, `specification/INTENT.md`, `specification/PRODUCT.md`, `specification/requirements/`
 **Requirement surface**: active `REQ-ODD-WORLD-MODEL-*` families under `specification/requirements/`
 
@@ -32,6 +32,14 @@ The product scenario chain is:
 - **Given** a retained example corpus or historical prototype
 - **When** the product line uses it to guide rebuild work
 - **Then** the example is read as evidence for requirements, scenarios, and design derivation rather than as implicit product architecture
+
+### SCN-PRODUCT-003: WM Specializes GLC Without Re-Owning The Runtime
+
+**Traces to**: REQ-ODD-WORLD-MODEL-PRODUCT-007, REQ-ODD-WORLD-MODEL-PRODUCT-008, REQ-ODD-WORLD-MODEL-PRODUCT-010, REQ-ODD-WORLD-MODEL-ODD-CARRIER-012
+
+- **Given** selected published GLC and GTL/ABG contracts
+- **When** WM publishes a downstream world-model domain module
+- **Then** WM contributes domain assets, policies, evidence expectations, and semantic interpretation while GLC retains generic lifecycle meaning, ABG retains runtime truth, and missing dependency contracts remain explicit gaps
 
 ---
 
@@ -73,9 +81,29 @@ The product scenario chain is:
 - **When** `odd_world_model` publishes a bounded domain artifact
 - **Then** the artifact becomes a durable semantic publication unit with fully qualified names, treatment semantics, temporal reference surfaces, and recoverable evidence
 
+### SCN-BUILD-005: Publish An Honestly Classified Markov-Object Cut
+
+**Traces to**: REQ-ODD-WORLD-MODEL-WORLD-OBJECT-002, REQ-ODD-WORLD-MODEL-WORLD-OBJECT-012, REQ-ODD-WORLD-MODEL-WORLD-OBJECT-013, REQ-ODD-WORLD-MODEL-BUILD-VERIFY-007, REQ-ODD-WORLD-MODEL-BUILD-VERIFY-008
+
+- **Given** distributed ledger evidence, a null peer, an identity direction, and held-out treatment results
+- **When** `odd_world_model` publishes an immutable Markov-object cut
+- **Then** the cut exposes the identity-preserving projection and evidence, defaults to `candidate`, and cannot claim `established` without a qualifying direction-native conditional-independence result
+
 ---
 
-## 4. Composition And Query Scenarios
+## 4. Carrier And Admission Scenarios
+
+### SCN-CARRIER-001: Admit A Semantic Proposal Through The Governed Carrier
+
+**Traces to**: REQ-ODD-WORLD-MODEL-BUILD-CONSTRAINT-001, REQ-ODD-WORLD-MODEL-BUILD-VERIFY-009, REQ-ODD-WORLD-MODEL-ODD-CARRIER-007, REQ-ODD-WORLD-MODEL-ODD-CARRIER-008, REQ-ODD-WORLD-MODEL-ODD-CARRIER-009, REQ-ODD-WORLD-MODEL-ODD-CARRIER-010, REQ-ODD-WORLD-MODEL-ODD-CARRIER-011
+
+- **Given** a published WM graph function, calibrated probabilistic worker, and exact selected substrate contracts
+- **When** the graph function is conformance-checked and invoked to construct semantic content
+- **Then** the worker proposes through governed plugin seams, deterministic machinery checks closed laws, ABG admits runtime truth under the canonical event contract, WM authority accepts semantic truth, and selected published contracts govern wire shape
+
+---
+
+## 5. Composition And Query Scenarios
 
 ### SCN-COMP-001: Compose Published Artifacts Into A World Model
 
@@ -95,7 +123,39 @@ The product scenario chain is:
 
 ---
 
-## 5. Proof And Repricing Scenarios
+## 6. Mesh Complexity Scenarios
+
+### SCN-MESH-001: Resolve A Finite Working Cut Over Typed Mesh Truth
+
+**Traces to**: REQ-ODD-WORLD-MODEL-MESH-CAP-001, REQ-ODD-WORLD-MODEL-MESH-CAP-002, REQ-ODD-WORLD-MODEL-MESH-CAP-003, REQ-ODD-WORLD-MODEL-MESH-CAP-004, REQ-ODD-WORLD-MODEL-MESH-CAP-005, REQ-ODD-WORLD-MODEL-MESH-CAP-007, REQ-ODD-WORLD-MODEL-MESH-CAP-008, REQ-ODD-WORLD-MODEL-MESH-CAP-009, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-001, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-002, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-003, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-005, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-006, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-007, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-008, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-009, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-011
+
+- **Given** locally authoritative published cuts connected by typed semantic links and one declared interaction goal
+- **When** `odd_world_model` resolves and traverses the goal's bounded mesh cut
+- **Then** the cut contains exact node and link refs, preserves authority and relation meaning, adopts common models explicitly, excludes unrelated context, and remains a downstream projection rather than copied truth
+
+### SCN-MESH-002: Propagate Local Supersession Through Its Dependency Closure
+
+**Traces to**: REQ-ODD-WORLD-MODEL-MESH-CAP-006, REQ-ODD-WORLD-MODEL-MESH-CAP-010, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-004, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-010
+
+- **Given** a federated mesh with independent branches and one superseded node or link
+- **When** the superseding cut is admitted and affected cuts are resolved again
+- **Then** only the declared dependency closure is pressured, unrelated truth remains addressable, and unresolved refs, incompatibility, authority conflict, or semantic loss remain typed gaps
+
+---
+
+## 7. Governed Context Memory Scenarios
+
+### SCN-CONTEXT-001: Project And Pin LLM Context To Exact World-State
+
+**Traces to**: REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-001, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-002, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-003, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-004, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-005, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-006, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-001, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-002, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-003, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-004, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-005, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-006
+
+- **Given** governed application, data, processing, and documentary evidence plus a bounded mesh cut for one interaction goal
+- **When** WM projects an exact context basis, invokes an LLM, records output lineage, and a referenced source later changes
+- **Then** context declares basis, freshness, fidelity, loss, exclusions, and gaps; output remains an attributed proposal; the old basis becomes visibly stale; and neither hidden context nor a basisless output can become governed truth
+
+---
+
+## 8. Proof And Repricing Scenarios
 
 ### SCN-PROOF-001: Prove Product Claims Through Specification Trace
 
@@ -120,6 +180,14 @@ The product scenario chain is:
 - **Given** a released `odd_world_model` builder product and a target builder project
 - **When** the product is installed into that builder project and used for a bounded source-to-publication proof
 - **Then** the install preserves product identity, release provenance, installed assets, method guidance, project-local source configuration, and proof evidence without depending on mutable source-project realization structure
+
+### SCN-RELEASE-002: Resolve Floating Dependencies Into Exact Evidence
+
+**Traces to**: REQ-ODD-WORLD-MODEL-PRODUCT-009, REQ-ODD-WORLD-MODEL-RELEASE-005, REQ-ODD-WORLD-MODEL-RELEASE-006, REQ-ODD-WORLD-MODEL-RELEASE-007, REQ-ODD-WORLD-MODEL-RELEASE-008
+
+- **Given** version-floating WM product law and a concrete build, proof, release, or install
+- **When** dependency products are resolved and the artifact is stamped
+- **Then** the artifact records exact compatible identities and recoverable contracts, immutable replay uses those locks rather than ambient moving labels, and development evidence is not presented as released-product evidence
 
 ## Coverage Notes
 

@@ -1,6 +1,6 @@
 # TypeScript Feature Decomposition
 
-**Status**: Active target design
+**Status**: Retained decomposition input; superseded as current target
 **Date**: 2026-05-15
 **Derived from**:
 - `specification/`

@@ -1,0 +1,171 @@
+[
+  {
+    "target_handle": "odd_world_model.publish_domain_model",
+    "first_outcome": "converged",
+    "replay_outcome": "converged",
+    "event_count": 165,
+    "replay_event_count": 165,
+    "event_kind_digest": "sha256:c6b11b2d5957ddfe0bec7c1dd15154f0ea763eca0e739ff1319c6a74617b15a5",
+    "replay_event_kind_digest": "sha256:c6b11b2d5957ddfe0bec7c1dd15154f0ea763eca0e739ff1319c6a74617b15a5",
+    "event_kind_replay_equal": true,
+    "registry_entry_count": 7,
+    "readiness": "graph_function_selected",
+    "selected_graph_function_refs": [
+      "graph-function://odd_world_model/publish-domain-model/v1"
+    ],
+    "graph_call_count": 1,
+    "vector_closed_count": 5,
+    "planned_regimes": [
+      "F_D",
+      "F_P",
+      "F_D",
+      "F_D",
+      "F_D"
+    ],
+    "fp_dispatch_requested_count": 1,
+    "selected_composition_refs": [
+      "abg.fn_composition://odd_world_model/internal/construct-domain-semantics"
+    ],
+    "deterministic_attached_result_count": 1
+  },
+  {
+    "target_handle": "odd_world_model.publish_semantic_links",
+    "first_outcome": "converged",
+    "replay_outcome": "converged",
+    "event_count": 36,
+    "replay_event_count": 36,
+    "event_kind_digest": "sha256:61dc9d7f3d08d3ff3e7fcd0dca6eeb301bb54f11d77bc28c6cfc200626e925f9",
+    "replay_event_kind_digest": "sha256:61dc9d7f3d08d3ff3e7fcd0dca6eeb301bb54f11d77bc28c6cfc200626e925f9",
+    "event_kind_replay_equal": true,
+    "registry_entry_count": 7,
+    "readiness": "graph_function_selected",
+    "selected_graph_function_refs": [
+      "graph-function://odd_world_model/publish-semantic-links/v1"
+    ],
+    "graph_call_count": 1,
+    "vector_closed_count": 1,
+    "planned_regimes": [
+      "F_D"
+    ],
+    "fp_dispatch_requested_count": 0,
+    "selected_composition_refs": [],
+    "deterministic_attached_result_count": 0
+  },
+  {
+    "target_handle": "odd_world_model.compose_world_model",
+    "first_outcome": "converged",
+    "replay_outcome": "converged",
+    "event_count": 36,
+    "replay_event_count": 36,
+    "event_kind_digest": "sha256:61dc9d7f3d08d3ff3e7fcd0dca6eeb301bb54f11d77bc28c6cfc200626e925f9",
+    "replay_event_kind_digest": "sha256:61dc9d7f3d08d3ff3e7fcd0dca6eeb301bb54f11d77bc28c6cfc200626e925f9",
+    "event_kind_replay_equal": true,
+    "registry_entry_count": 7,
+    "readiness": "graph_function_selected",
+    "selected_graph_function_refs": [
+      "graph-function://odd_world_model/compose-world-model/v1"
+    ],
+    "graph_call_count": 1,
+    "vector_closed_count": 1,
+    "planned_regimes": [
+      "F_D"
+    ],
+    "fp_dispatch_requested_count": 0,
+    "selected_composition_refs": [],
+    "deterministic_attached_result_count": 0
+  },
+  {
+    "target_handle": "odd_world_model.resolve_mesh_cut",
+    "first_outcome": "converged",
+    "replay_outcome": "converged",
+    "event_count": 36,
+    "replay_event_count": 36,
+    "event_kind_digest": "sha256:61dc9d7f3d08d3ff3e7fcd0dca6eeb301bb54f11d77bc28c6cfc200626e925f9",
+    "replay_event_kind_digest": "sha256:61dc9d7f3d08d3ff3e7fcd0dca6eeb301bb54f11d77bc28c6cfc200626e925f9",
+    "event_kind_replay_equal": true,
+    "registry_entry_count": 7,
+    "readiness": "graph_function_selected",
+    "selected_graph_function_refs": [
+      "graph-function://odd_world_model/resolve-mesh-cut/v1"
+    ],
+    "graph_call_count": 1,
+    "vector_closed_count": 1,
+    "planned_regimes": [
+      "F_D"
+    ],
+    "fp_dispatch_requested_count": 0,
+    "selected_composition_refs": [],
+    "deterministic_attached_result_count": 0
+  },
+  {
+    "target_handle": "odd_world_model.project_context",
+    "first_outcome": "converged",
+    "replay_outcome": "converged",
+    "event_count": 36,
+    "replay_event_count": 36,
+    "event_kind_digest": "sha256:61dc9d7f3d08d3ff3e7fcd0dca6eeb301bb54f11d77bc28c6cfc200626e925f9",
+    "replay_event_kind_digest": "sha256:61dc9d7f3d08d3ff3e7fcd0dca6eeb301bb54f11d77bc28c6cfc200626e925f9",
+    "event_kind_replay_equal": true,
+    "registry_entry_count": 7,
+    "readiness": "graph_function_selected",
+    "selected_graph_function_refs": [
+      "graph-function://odd_world_model/project-context/v1"
+    ],
+    "graph_call_count": 1,
+    "vector_closed_count": 1,
+    "planned_regimes": [
+      "F_D"
+    ],
+    "fp_dispatch_requested_count": 0,
+    "selected_composition_refs": [],
+    "deterministic_attached_result_count": 0
+  },
+  {
+    "target_handle": "odd_world_model.interpret_context",
+    "first_outcome": "converged",
+    "replay_outcome": "converged",
+    "event_count": 57,
+    "replay_event_count": 57,
+    "event_kind_digest": "sha256:7f760a2018f7238288ff82f12ce8db0809fd677d2e3314c472b2fc3b56b1459a",
+    "replay_event_kind_digest": "sha256:7f760a2018f7238288ff82f12ce8db0809fd677d2e3314c472b2fc3b56b1459a",
+    "event_kind_replay_equal": true,
+    "registry_entry_count": 7,
+    "readiness": "graph_function_selected",
+    "selected_graph_function_refs": [
+      "graph-function://odd_world_model/interpret-context/v1"
+    ],
+    "graph_call_count": 1,
+    "vector_closed_count": 1,
+    "planned_regimes": [
+      "F_P"
+    ],
+    "fp_dispatch_requested_count": 1,
+    "selected_composition_refs": [
+      "abg.fn_composition://odd_world_model/interpret-context"
+    ],
+    "deterministic_attached_result_count": 1
+  },
+  {
+    "target_handle": "odd_world_model.query_world_model",
+    "first_outcome": "converged",
+    "replay_outcome": "converged",
+    "event_count": 36,
+    "replay_event_count": 36,
+    "event_kind_digest": "sha256:61dc9d7f3d08d3ff3e7fcd0dca6eeb301bb54f11d77bc28c6cfc200626e925f9",
+    "replay_event_kind_digest": "sha256:61dc9d7f3d08d3ff3e7fcd0dca6eeb301bb54f11d77bc28c6cfc200626e925f9",
+    "event_kind_replay_equal": true,
+    "registry_entry_count": 7,
+    "readiness": "graph_function_selected",
+    "selected_graph_function_refs": [
+      "graph-function://odd_world_model/query-world-model/v1"
+    ],
+    "graph_call_count": 1,
+    "vector_closed_count": 1,
+    "planned_regimes": [
+      "F_D"
+    ],
+    "fp_dispatch_requested_count": 0,
+    "selected_composition_refs": [],
+    "deterministic_attached_result_count": 0
+  }
+]

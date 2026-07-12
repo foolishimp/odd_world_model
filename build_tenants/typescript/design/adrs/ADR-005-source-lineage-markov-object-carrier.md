@@ -1,9 +1,13 @@
 # ADR-005 Source Lineage To Markov Object Carrier
 
-**Status**: Accepted
+**Status**: Retained semantic-lineage decision; refined by common architecture
 **Date**: 2026-05-15
 **Scope**: Source lineage, external information admission, and Markov-object construction semantics
 **Ticket**: `T-026`
+
+The lineage law remains accepted. Candidate versus established object status,
+semantic-cut publication, bounded mesh/context carriers, and physical
+attestation are refined by the current common design.
 
 ## Context
 

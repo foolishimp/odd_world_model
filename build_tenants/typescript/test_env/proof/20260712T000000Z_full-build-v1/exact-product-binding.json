@@ -1,0 +1,12 @@
+{
+  "kind": "odd_world_model.exact_product_binding_evidence",
+  "abiogenesis_package": "@abiogenesis/typescript-tenant",
+  "abiogenesis_version": "4.6.0-rc.3",
+  "abiogenesis_tarball_sha256": "9cffb372c0dfc00983a5d0e882efbc3d0c3ac937a56f313000f35a4473358113",
+  "odd_glc_package": "@odd-glc/route-one-typescript",
+  "odd_glc_version": "0.1.0",
+  "odd_glc_tarball_sha256": "7e548f92ecd6b4442f9c9f1feb46dd2edd7e9610a7dae8706482fc65d80fa578",
+  "odd_glc_startup_config_ref": "gtl-startup-config://odd_glc/abg-4.2/route-1",
+  "odd_glc_lifecycle_overlay_ref": "overlay://odd_glc/general-lifecycle",
+  "compatibility_status": "compatible"
+}

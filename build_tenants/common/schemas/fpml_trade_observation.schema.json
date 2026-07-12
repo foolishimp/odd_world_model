@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.fpml_trade_observation.schema.json",
+  "title": "FpmlTradeObservation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source_standard", "source_view", "fpml_version", "trade_xml_id", "trade_id", "trade_identifiers", "trade_date", "product", "party_refs", "parties", "agreement"],
+  "properties": {
+    "source_standard": { "const": "FpML" },
+    "source_view": { "const": "confirmation" },
+    "fpml_version": { "type": "string", "minLength": 1 },
+    "trade_xml_id": { "type": "string" },
+    "trade_id": { "type": "string", "minLength": 1 },
+    "trade_identifiers": { "$ref": "#/$defs/strings" },
+    "trade_date": { "type": "string", "minLength": 1 },
+    "product": {
+      "type": "object", "additionalProperties": false,
+      "required": ["product_xml_id", "product_type", "product_id", "asset_class", "effective_date", "termination_date", "legs", "leg_count"],
+      "properties": {
+        "product_xml_id": { "type": "string" },
+        "product_type": { "type": "string" },
+        "product_id": { "type": "string" },
+        "asset_class": { "type": "string" },
+        "effective_date": { "type": "string" },
+        "termination_date": { "type": "string" },
+        "legs": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/leg" } },
+        "leg_count": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "party_refs": { "$ref": "#/$defs/strings" },
+    "parties": { "type": "array", "items": { "$ref": "#/$defs/party" } },
+    "agreement": {
+      "type": "object", "additionalProperties": false,
+      "required": ["type", "date", "version"],
+      "properties": {
+        "type": { "type": ["string", "null"] },
+        "date": { "type": ["string", "null"] },
+        "version": { "type": ["string", "null"] }
+      }
+    }
+  },
+  "$defs": {
+    "strings": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "nullable_string": { "type": ["string", "null"] },
+    "leg": {
+      "type": "object", "additionalProperties": false,
+      "required": ["leg_id", "leg_kind", "payer_party_ref", "receiver_party_ref", "quantity", "quantity_unit", "quantity_frequency", "total_notional_quantity", "fixed_price", "price_currency", "price_unit", "commodity_instrument_id", "calculation_schedule_ref"],
+      "properties": {
+        "leg_id": { "type": "string", "minLength": 1 },
+        "leg_kind": { "type": "string", "minLength": 1 },
+        "payer_party_ref": { "type": "string" },
+        "receiver_party_ref": { "type": "string" },
+        "quantity": { "$ref": "#/$defs/nullable_string" },
+        "quantity_unit": { "$ref": "#/$defs/nullable_string" },
+        "quantity_frequency": { "$ref": "#/$defs/nullable_string" },
+        "total_notional_quantity": { "$ref": "#/$defs/nullable_string" },
+        "fixed_price": { "$ref": "#/$defs/nullable_string" },
+        "price_currency": { "$ref": "#/$defs/nullable_string" },
+        "price_unit": { "$ref": "#/$defs/nullable_string" },
+        "commodity_instrument_id": { "$ref": "#/$defs/nullable_string" },
+        "calculation_schedule_ref": { "type": "string" }
+      }
+    },
+    "party": {
+      "type": "object", "additionalProperties": false,
+      "required": ["xml_id", "party_id", "party_name"],
+      "properties": {
+        "xml_id": { "type": "string" },
+        "party_id": { "type": "string", "minLength": 1 },
+        "party_name": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

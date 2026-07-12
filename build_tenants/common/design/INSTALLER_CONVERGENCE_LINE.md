@@ -1,6 +1,6 @@
 # Installer Convergence Line
 
-**Status**: Draft
+**Status**: Retained downstream design input; release/install work remains T-026
 **Scope**: Shared installer-family responsibilities for `abiogenesis`,
 `odd_sdlc`, and `odd_world_model`
 

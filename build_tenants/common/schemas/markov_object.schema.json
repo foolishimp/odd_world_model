@@ -4,7 +4,7 @@
   "title": "MarkovObject",
   "allOf": [
     {
-      "$ref": "world_model_object.schema.json"
+      "$ref": "odd_world_model.world_model_object.schema.json"
     },
     {
       "type": "object",
@@ -29,22 +29,22 @@
           ],
           "properties": {
             "ingress_surfaces": {
-              "$ref": "world_model_object.schema.json#/$defs/string_array"
+              "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
             },
             "egress_surfaces": {
-              "$ref": "world_model_object.schema.json#/$defs/string_array"
+              "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
             },
             "observable_surfaces": {
-              "$ref": "world_model_object.schema.json#/$defs/string_array"
+              "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
             },
             "control_surfaces": {
-              "$ref": "world_model_object.schema.json#/$defs/string_array"
+              "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
             },
             "adjacent_objects": {
-              "$ref": "world_model_object.schema.json#/$defs/string_array"
+              "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
             },
             "adjacent_domains": {
-              "$ref": "world_model_object.schema.json#/$defs/string_array"
+              "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
             },
             "internal_claim": {
               "type": "string",

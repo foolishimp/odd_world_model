@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.semantic_publication_candidate.schema.json",
+  "title": "SemanticPublicationCandidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_kind", "schema_version", "publication_candidate_ref", "semantic_cut_ref", "cut_role", "cut_version", "publication_status", "epistemic_status", "source_observation", "accepted_semantic_cut", "semantic_cut_attestation", "physical_effect_observation", "physical_admission_witness", "snapshot_refs", "semantic_payload_digest", "governing_refs", "source_refs", "authority_refs", "dependency_identities", "temporal_coordinates", "fidelity", "losses", "exclusions", "gaps", "publication_candidate_digest"],
+  "properties": {
+    "schema_kind": { "const": "odd_world_model.semantic_publication_candidate" },
+    "schema_version": { "const": "v1" },
+    "publication_candidate_ref": { "type": "string", "minLength": 1 },
+    "semantic_cut_ref": { "type": "string", "minLength": 1 },
+    "cut_role": { "enum": ["source_domain", "domain_artifact", "common_model", "composed_world_model"] },
+    "cut_version": { "type": "string", "minLength": 1 },
+    "publication_status": { "const": "ready_for_publication" },
+    "epistemic_status": { "const": "candidate" },
+    "source_observation": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "accepted_semantic_cut": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "semantic_cut_attestation": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "physical_effect_observation": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "physical_admission_witness": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "snapshot_refs": { "type": "array", "minItems": 1, "items": { "$ref": "odd_world_model.exact_ref.schema.json" } },
+    "semantic_payload_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "governing_refs": { "$ref": "#/$defs/strings" },
+    "source_refs": { "$ref": "#/$defs/strings" },
+    "authority_refs": { "$ref": "#/$defs/nonempty_strings" },
+    "dependency_identities": { "$ref": "#/$defs/nonempty_strings" },
+    "temporal_coordinates": { "type": "object", "minProperties": 1, "additionalProperties": { "type": "string", "minLength": 1 } },
+    "fidelity": { "enum": ["exact_payload", "lossless_projection", "lossy_projection"] },
+    "losses": { "$ref": "#/$defs/strings" },
+    "exclusions": { "$ref": "#/$defs/strings" },
+    "gaps": { "type": "array", "items": { "$ref": "odd_world_model.typed_gap.schema.json" } },
+    "publication_candidate_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  },
+  "$defs": {
+    "strings": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "nonempty_strings": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } }
+  }
+}

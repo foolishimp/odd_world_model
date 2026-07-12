@@ -1,6 +1,6 @@
 # TypeScript Scenario Sandbox Proof Structure
 
-**Status**: Active target design
+**Status**: Historical odd_sdlc sandbox readback
 **Date**: 2026-05-15
 **Reference implementation**:
 - `/Users/jim/src/apps/odd_sdlc/build_tenants/typescript/test_env/sandbox/scenario_sandbox.mjs`

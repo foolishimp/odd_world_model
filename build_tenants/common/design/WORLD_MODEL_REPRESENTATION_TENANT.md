@@ -1,6 +1,7 @@
 # World Model Representation Tenant
 
-**Status**: Draft
+**Status**: Superseded current topology; retained JSON compatibility reference
+**Superseded by**: `WORLD_MODEL_COMMON_ARCHITECTURE.md`, ADR-WM-002, ADR-WM-003
 **Scope**: Shared realization design for the canonical file-native
 representation carrier used by `odd_world_model`
 
@@ -21,7 +22,7 @@ It does not redefine constitutional product truth. It chooses the structural
 how for realizing the requirement family in
 `specification/requirements/10-world-model-object-representation.md`.
 
-The tenant is file-first and Git-first.
+This historical tenant was file-first and Git-first.
 
 Published semantic cuts remain versioned files under project control.
 
@@ -47,7 +48,8 @@ Rationale:
 
 ### Publication Authority
 
-Git and the filesystem are the authority for published world-model cuts.
+Git and the filesystem were the first prototype publication carrier. They are
+not current publication authority.
 
 The tenant must preserve:
 

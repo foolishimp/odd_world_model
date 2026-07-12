@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.exact_ref.schema.json",
+  "title": "ExactRef",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ref",
+    "digest"
+  ],
+  "properties": {
+    "ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

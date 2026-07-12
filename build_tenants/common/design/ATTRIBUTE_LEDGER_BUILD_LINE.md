@@ -1,6 +1,6 @@
 # Attribute Ledger Build Line
 
-**Status**: Draft
+**Status**: Retained design input; current authority is `WORLD_MODEL_COMMON_ARCHITECTURE.md`
 **Scope**: Shared realization design for the `odd_world_model` build line from
 source evidence to composed world models
 
@@ -22,7 +22,7 @@ realizes the governing line carried by:
 - `specification/requirements/10-world-model-object-representation.md`
 - `specification/requirements/20-domain-build-and-composition-capability.md`
 - `specification/requirements/30-domain-build-and-composition-constraints.md`
-- `ADR-001-source-decomposition-and-build-boundaries.md`
+- `adrs/ADR-WM-001-source-decomposition-and-build-boundaries.md`
 
 Use `WORLD_MODEL_REPRESENTATION_TENANT.md` for the file-carrier and schema law.
 This document defines the build flow, asset boundaries, and responsibility
@@ -79,10 +79,11 @@ derivation are not part of the design.
 The current query/traversal pillar remains downstream of published domain
 artifacts and composed world models.
 
-The low-volume lane remains filesystem-first.
+The historical low-volume lane was filesystem-first.
 
-If a future database-backed query plane is introduced, it is regenerated from
-published artifacts and does not become the publication authority.
+The current target uses attested Iceberg materialization and exact-snapshot
+query under ADR-WM-003. Query remains regenerated from published truth and does
+not become publication authority.
 
 ## Build Line
 

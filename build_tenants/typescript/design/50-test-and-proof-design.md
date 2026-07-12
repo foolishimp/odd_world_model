@@ -1,6 +1,6 @@
 # TypeScript Test And Proof Design
 
-**Status**: Active target design
+**Status**: Retained proof input; old handle and runner claims superseded
 **Date**: 2026-05-15
 **Derived from**:
 - `build_tenants/python/design/40-generated-test-design.md`

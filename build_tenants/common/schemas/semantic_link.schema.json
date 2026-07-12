@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.semantic_link.schema.json",
+  "title": "SemanticLink",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_kind", "schema_version", "link_ref", "source_cut", "target_cut", "relation_role", "treatment_ref", "authority_ref", "provenance_refs", "dependency_direction", "fidelity", "losses", "validity", "supersession_status", "publication_status", "proposal", "publication_admission", "abg_event_refs", "published_at", "link_digest"],
+  "properties": {
+    "schema_kind": { "const": "odd_world_model.semantic_link" },
+    "schema_version": { "const": "v1" },
+    "link_ref": { "type": "string", "minLength": 1 },
+    "source_cut": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "target_cut": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "relation_role": { "enum": ["references", "composes", "treatment", "covariance", "adjoint", "supersedes"] },
+    "treatment_ref": { "type": "string", "minLength": 1 },
+    "authority_ref": { "type": "string", "minLength": 1 },
+    "provenance_refs": { "$ref": "#/$defs/nonempty_strings" },
+    "dependency_direction": { "enum": ["source_to_target", "target_to_source", "bidirectional"] },
+    "fidelity": { "enum": ["exact_payload", "lossless_projection", "lossy_projection"] },
+    "losses": { "$ref": "#/$defs/strings" },
+    "validity": {
+      "type": "object", "additionalProperties": false, "required": ["valid_from"],
+      "properties": {
+        "valid_from": { "type": "string", "format": "date-time" },
+        "valid_to": { "type": "string", "format": "date-time" }
+      }
+    },
+    "supersession_status": { "enum": ["active", "superseded"] },
+    "superseded_by_link_ref": { "type": "string", "minLength": 1 },
+    "publication_status": { "const": "published" },
+    "proposal": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "publication_admission": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "abg_event_refs": { "$ref": "#/$defs/nonempty_strings" },
+    "published_at": { "type": "string", "format": "date-time" },
+    "link_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  },
+  "$defs": {
+    "strings": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "nonempty_strings": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "supersession_status": { "const": "superseded" } } },
+      "then": {
+        "properties": { "superseded_by_link_ref": { "type": "string", "minLength": 1 } },
+        "required": ["superseded_by_link_ref"],
+        "allOf": [
+          {
+            "properties": {
+              "validity": {
+                "type": "object",
+                "properties": {
+                  "valid_from": { "type": "string", "format": "date-time" },
+                  "valid_to": { "type": "string", "format": "date-time" }
+                },
+                "required": ["valid_from", "valid_to"]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "if": { "properties": { "supersession_status": { "const": "active" } } },
+      "then": { "properties": { "superseded_by_link_ref": false } }
+    }
+  ]
+}

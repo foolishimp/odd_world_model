@@ -41,13 +41,13 @@
     },
     "accepted_value": {},
     "trace_record_refs": {
-      "$ref": "world_model_object.schema.json#/$defs/string_array"
+      "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
     },
     "authority_basis": {
-      "$ref": "world_model_object.schema.json#/$defs/string_array"
+      "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
     },
     "ambiguity_notes": {
-      "$ref": "world_model_object.schema.json#/$defs/string_array"
+      "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
     },
     "accepted_at": {
       "type": "string",

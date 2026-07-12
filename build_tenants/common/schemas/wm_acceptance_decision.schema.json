@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.wm_acceptance_decision.schema.json",
+  "title": "WmAcceptanceDecision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_kind", "schema_version", "decision_ref", "proposal", "deterministic_check", "proposal_admission", "authority_ref", "disposition", "rationale", "gaps", "decided_at", "decision_digest"],
+  "properties": {
+    "schema_kind": { "const": "odd_world_model.wm_acceptance_decision" },
+    "schema_version": { "const": "v1" },
+    "decision_ref": { "type": "string", "minLength": 1 },
+    "proposal": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "deterministic_check": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "proposal_admission": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "authority_ref": { "type": "string", "minLength": 1 },
+    "disposition": { "enum": ["accepted", "rejected", "human_gate_required"] },
+    "rationale": { "type": "string", "minLength": 1 },
+    "gaps": { "type": "array", "items": { "$ref": "odd_world_model.typed_gap.schema.json" } },
+    "decided_at": { "type": "string", "format": "date-time" },
+    "decision_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  }
+}

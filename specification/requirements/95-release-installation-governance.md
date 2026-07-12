@@ -53,3 +53,48 @@ products, but shared installer mechanics SHALL NOT collapse product identity.
 `odd_world_model` installs SHALL preserve product-local semantics, product
 assets, provenance, and publication obligations even when installation logic is
 factored through a shared installer line.
+
+### REQ-ODD-WORLD-MODEL-RELEASE-005 — Exact Dependency Resolution Evidence
+
+**Carries**:
+- `SPEC_METHOD.md` — `Recursive Product Taxonomy`
+- `PRODUCT.md` — `Lifecycle And Runtime Boundary`, `Release And Install Boundary`
+
+Every concrete build, proof, release, and install SHALL record the exact
+GTL/ABG and GLC package, version, source or tag, manifest, and digest identities
+it resolved, together with the compatibility declaration used to admit that
+combination. A governed development resolution SHALL be labelled as such and
+SHALL NOT be presented as released-product evidence.
+
+### REQ-ODD-WORLD-MODEL-RELEASE-006 — Immutable Release And Install Locks
+
+**Carries**:
+- `SPEC_METHOD.md` — `Recursive Product Taxonomy`
+- `PRODUCT.md` — `Release And Install Boundary`
+
+An immutable WM release cut or install SHALL resolve dependencies only from its
+recorded lock and manifest. It SHALL NOT resolve from an ambient moving label,
+mutable sibling source workspace, unversioned local link, or whichever package
+happens to be available when proof is replayed.
+
+### REQ-ODD-WORLD-MODEL-RELEASE-007 — Dependency Contract Availability
+
+**Carries**:
+- `PRODUCT.md` — `Consumed Contract Boundary`, `Release And Install Boundary`
+
+A release or installed proof SHALL be able to recover the authoritative
+published contracts for its exact dependency resolution. When a required
+contract is not installed as an addressable asset, the manifest SHALL preserve
+its immutable source or tag locator and digest, and the limitation SHALL remain
+an explicit gap. Mutable source-path inference SHALL NOT substitute for the
+contract.
+
+### REQ-ODD-WORLD-MODEL-RELEASE-008 — Dependency Compatibility Proof
+
+**Carries**:
+- `PRODUCT.md` — `Lifecycle And Runtime Boundary`, `Release And Install Boundary`
+
+Release qualification SHALL prove that the exact GTL/ABG and GLC identities
+used by WM satisfy their declared compatibility constraints and preserve the
+GTL/ABG runtime, GLC lifecycle, and WM domain-meaning ownership boundary. A
+floating product dependency reference SHALL NOT be accepted as release proof.

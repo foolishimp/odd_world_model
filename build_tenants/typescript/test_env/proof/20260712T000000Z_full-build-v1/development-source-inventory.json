@@ -1,0 +1,1177 @@
+{
+  "schema_kind": "odd_world_model.development_source_inventory",
+  "schema_version": "v1",
+  "head_commit": "f84fb2354bd50f4eedf973bd7e04c9ed637af5d9",
+  "dirty": true,
+  "all_dirty_path_count": 206,
+  "source_path_count": 194,
+  "excluded_proof_path_count": 12,
+  "proof_path_exclusion": "build_tenants/typescript/test_env/proof/20260712T000000Z_full-build-v1/",
+  "entries": [
+    {
+      "status": "??",
+      "path": ".ai-workspace/comments/claude/20260711T174348Z_STRATEGY_wm-storage-and-tech-stack-recommendation.md",
+      "original_path": null,
+      "content_identity": "sha256:79829382dd12cb7b72061acd078cb219f3ef5a5f18e61887cf03482a2beae975"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/comments/codex/20260711T170153Z_COORDINATION_t027-product-uplift-contract-corrections.md",
+      "original_path": null,
+      "content_identity": "sha256:9cd90986a04a28c831d5b8699c96ac59014707b490f51680a805f32bdf907bbd"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/comments/codex/20260711T172810Z_REVIEW_legacy-building-blocks-and-mesh-reprice.md",
+      "original_path": null,
+      "content_identity": "sha256:8a211229e96599465d87aac1aafd64717d2dca9c35e33a4a9a9cd5492cdec79e"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/comments/codex/20260711T174420Z_HANDOFF_t027-t023-specification-uplift-for-claude-review.md",
+      "original_path": null,
+      "content_identity": "sha256:0b957fe8cde5c44b8fc3057c02d8a5cf36b3d136a4aca8100aa950cfc0bb3cea"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/comments/codex/20260711T174718Z_REVIEW_claude-wm-storage-stack-boundary.md",
+      "original_path": null,
+      "content_identity": "sha256:5bf952d96fb9ef684459d62b138d02e114ca028922f3f0f03209f2f5ee2a3d78"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/comments/codex/20260711T181643Z_REVIEW_t027-closure-and-queue-triage.md",
+      "original_path": null,
+      "content_identity": "sha256:1ab342eae8135489eac7dff7592f403d822604a5d1d5889ca1d7ab879fe00f76"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/comments/codex/20260711T191335Z_HANDOFF_t028-t030-non-gtl-mvp-review-surface.md",
+      "original_path": null,
+      "content_identity": "sha256:0c13a6e2580c7256ba5774b3528e60afbe974142cc6bd732fee77af0552b3cb7"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/comments/codex/20260711T203017Z_HANDOFF_t026-full-build-review-surface.md",
+      "original_path": null,
+      "content_identity": "sha256:b8e3bc20a5f595fd58e9d8f5856c69d007174981afb84a9a2496555971d607ec"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/comments/codex/20260712T024200Z_REVIEW_partial-adversarial-repair-disposition.md",
+      "original_path": null,
+      "content_identity": "sha256:67a0f6b6baa76e5ac961d1592774a9222e221392caad1208b7c1f894dbfc2d2f"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/comments/codex/20260712T030000Z_REVIEW_full-build-adversarial-assurance-correction.md",
+      "original_path": null,
+      "content_identity": "sha256:bd5a1b49b286851fcae450a0a123f03ac7c652c02a258eaf76e8532d93cb6973"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/comments/codex/20260712T034212Z_REVIEW_full-product-ratification-and-design-axiom-backfill.md",
+      "original_path": null,
+      "content_identity": "sha256:1829b7f1e937a6801f5428c8d819077e7fc5a3ef740a7dfd57ab6f9278cd5c10"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/comments/codex/20260712T054500Z_REVIEW_full-product-axiom-and-evidence-disposition.md",
+      "original_path": null,
+      "content_identity": "sha256:8cd13927a49672fd775f241b19218a3afa6ac2d502ccdf8f08e646746f1fbe0f"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/comments/codex/20260712T082508Z_REVIEW_t023-t028-t029-t030-closure.md",
+      "original_path": null,
+      "content_identity": "sha256:dfc2051168dba76b4781957b47072eedeed6960dacc199036e810037b68cfee3"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/comments/codex/20260712T094236Z_DECISION_pause-t026-pending-stable-abg5.md",
+      "original_path": null,
+      "content_identity": "sha256:1a13bb6c62c4dca65f89210842096125644ab1d1851e8a2c6c2333e3c83bcf7e"
+    },
+    {
+      "status": " M",
+      "path": ".ai-workspace/context/project_bootstrap.md",
+      "original_path": null,
+      "content_identity": "sha256:89c6d93aeae376bf15dfc5c045ba3da5a53f739ae3c4c99cb969554fa0ea0330"
+    },
+    {
+      "status": " D",
+      "path": ".ai-workspace/tickets/active/T-023-build-world-model-mesh.md",
+      "original_path": null,
+      "content_identity": "absent"
+    },
+    {
+      "status": " D",
+      "path": ".ai-workspace/tickets/active/T-024-add-operational-semantics-enrichment-for-domain-matching.md",
+      "original_path": null,
+      "content_identity": "absent"
+    },
+    {
+      "status": " D",
+      "path": ".ai-workspace/tickets/active/T-026-rebuild-world-model-in-typescript-tenant.md",
+      "original_path": null,
+      "content_identity": "absent"
+    },
+    {
+      "status": " D",
+      "path": ".ai-workspace/tickets/active/T-027-uplift-product-and-specification-to-current-gtl-abg-glc-line.md",
+      "original_path": null,
+      "content_identity": "absent"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/tickets/backlog/T-024-add-operational-semantics-enrichment-for-domain-matching.md",
+      "original_path": null,
+      "content_identity": "sha256:73570e9a64433007071901381d3beb4e4b241960056dfb5f1498d94c600b4cee"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/tickets/backlog/T-026-rebuild-world-model-in-typescript-tenant.md",
+      "original_path": null,
+      "content_identity": "sha256:d8bddf4f61eacb281c934b269203c1bc0440f5aa420842341a8cc26896defd7d"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/tickets/completed/T-023-build-world-model-mesh.md",
+      "original_path": null,
+      "content_identity": "sha256:f39f747b3814358bf5741f969e072815833b7b8269b2cd1256d8f0ad9064272f"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/tickets/completed/T-027-uplift-product-and-specification-to-current-gtl-abg-glc-line.md",
+      "original_path": null,
+      "content_identity": "sha256:96165fb93efe549bb84bab843c71102aec667b2bf5bd80ef846dc6810df1e188"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/tickets/completed/T-028-establish-common-world-model-architecture.md",
+      "original_path": null,
+      "content_identity": "sha256:d159e1ff461d002364e55c4b2c30ac24b01fa0e5689efd42c12ca5350d54f8c5"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/tickets/completed/T-029-decide-world-model-gtl-graph-function-catalog.md",
+      "original_path": null,
+      "content_identity": "sha256:bd523d3497027ee4cf5e13c33c8bf22b834881556b8b21dcefb60ee9a6012974"
+    },
+    {
+      "status": "??",
+      "path": ".ai-workspace/tickets/completed/T-030-implement-pyiceberg-storage-effect-adapter.md",
+      "original_path": null,
+      "content_identity": "sha256:a08b0c212f4c1a422edc0807f011c42f0e10a3970b8b70ba02f32903f8630aaa"
+    },
+    {
+      "status": " M",
+      "path": ".gitignore",
+      "original_path": null,
+      "content_identity": "sha256:e06260b7ed19513b1e107c4342ca6c278a59969d43cf06f7527c07ad5f3be722"
+    },
+    {
+      "status": " M",
+      "path": "AGENTS.md",
+      "original_path": null,
+      "content_identity": "sha256:cb8aa84875c1c6a173bd1de4c418bd8ce89b1d57c0f2141f7d8d7a68a9b9fc89"
+    },
+    {
+      "status": " D",
+      "path": "build_tenants/common/design/ADR-001-source-decomposition-and-build-boundaries.md",
+      "original_path": null,
+      "content_identity": "absent"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/design/adrs/ADR-WM-001-source-decomposition-and-build-boundaries.md",
+      "original_path": null,
+      "content_identity": "sha256:4851759d9bd917d370e8bbb5517fa5037a9b0dd72cdb87922cf6fa492bc475b9"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/design/adrs/ADR-WM-002-semantic-memory-and-authority-boundaries.md",
+      "original_path": null,
+      "content_identity": "sha256:3eec11d0927f75b45c67c98c58c33c275660602cc5747d2d5a9b98e30c898c25"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/design/adrs/ADR-WM-003-iceberg-storage-and-cut-attestation.md",
+      "original_path": null,
+      "content_identity": "sha256:6450f71e9ecccff00ffecdc4e0debc4d7a779286ed76c225b415b98f4bed0970"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+      "original_path": null,
+      "content_identity": "sha256:6c8150041a95b2634d061d0cbe73e3147e68c682d6b4b57abf7b8e2e1efd2cc0"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/design/adrs/ADR-WM-005-storage-effect-protocol.md",
+      "original_path": null,
+      "content_identity": "sha256:f668512e0260e789364768742269cac13f8188db71924322fbd5a353f2e8cb7b"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/design/adrs/REGISTRY.md",
+      "original_path": null,
+      "content_identity": "sha256:7aee75991a3667de57fd4f9860d93e39e50f62bd5164a6c4801b4317977dfeef"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/design/ATTRIBUTE_LEDGER_BUILD_LINE.md",
+      "original_path": null,
+      "content_identity": "sha256:ec31386a9fafcdee67a0ba61cbfe719883a442165b966f3eb1011a4e40773787"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/design/CURRENT_QUERY_TRAVERSAL_SLICE.md",
+      "original_path": null,
+      "content_identity": "sha256:578c00673d0c2434c33c6f6bc0cf603cacb6948ae3f068d5426dd71cb1b2aa4d"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/design/GTL_GRAPH_FUNCTION_CONTRACTS.md",
+      "original_path": null,
+      "content_identity": "sha256:086c78699d8274c6208374e234566e75c0a81dc9d7d9dd817ae1f27c03a2dfad"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/design/INSTALLER_CONVERGENCE_LINE.md",
+      "original_path": null,
+      "content_identity": "sha256:d2c51826aff4ab94cf35d79e9857644101daaeef68eb0ea3f686a1e120fb7155"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md",
+      "original_path": null,
+      "content_identity": "sha256:29a337eac4c231e62bb7e98a71f1764b24d5ccfaf8c95f74d3ce12e107ce9e8e"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/design/ODD_GTL_ATTRIBUTE_LEDGER_CARRIER.md",
+      "original_path": null,
+      "content_identity": "sha256:e79480b5384829f85580f37e654a79d0914c6dbcad36eb63d0d8674371f94c8b"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/design/ODD_SDLC_DOGFOOD_LINE.md",
+      "original_path": null,
+      "content_identity": "sha256:05a4835c587c5f671521b09cf3be9b8fae50501b07a410085c966faa4c6c7944"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/design/README.md",
+      "original_path": null,
+      "content_identity": "sha256:7925ae756e1a50c32ad0f1f7748b68a0a785bf560891b98051b530e10b74719d"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/design/REQUIREMENT_DESIGN_TRACE.md",
+      "original_path": null,
+      "content_identity": "sha256:d58d2db4ec754e0e66a7d0c20b135b510c9e5b0620e013e3f5e89c1292695544"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/design/WORLD_MODEL_COMMON_ARCHITECTURE.md",
+      "original_path": null,
+      "content_identity": "sha256:14ff7b2f45bf7c9450ca3a257716c702eba30d61087e4cbb6fd28b93d1b35ea2"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/design/WORLD_MODEL_REPRESENTATION_TENANT.md",
+      "original_path": null,
+      "content_identity": "sha256:84f6cde5c8ebaf9a98a68f64b2bbaa3d793038f96e5525e116dd292e93d455fe"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/abg_admission_witness.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:c9874e1ebf0a5e783c606ee5dca07166ef846e61d473814bdbf12e77e94e7df6"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/accepted_semantic_cut.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:027fef3d8c832f40de48532fb6d3a9db859e88674c3f5bb4f95143d823852b77"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/schemas/adjoint_mapping.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:9da8f335cba2551e3f3a094304c444378d491bc8f7f74863eda69956216f87a6"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/schemas/assurance_record.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:3fd54223359706cfcfcb4ca7c36e040c368400d105d830ddf5e083dc8a6de02c"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/schemas/attribute_ledger_entry.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:7c426fde045fd32d37af48583e884054f2d7e747078510f44335a2237cc3d6bd"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/bounded_mesh_cut.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:63091ce0acbdc61f3cf10c011ab5862087e2c754072711445f174c200297c9a8"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/candidate_markov_object_cut.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:c7341b13ff9123f93f27e0a79a332856c0ee60cdff7cb0136869c6eafdf07c4e"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/composed_world_model.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:c48ef088cb0b605b1f078e54277ecec24452792d5dbffbe62a9d93e1330ea732"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/context_basis.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:c707d8a5112f80a61dfddf73cd092309fce35499e886c8da4ed16c90fe3a1923"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/context_invocation_record.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:c420fce52d0514ed4bdfa1e5e3b5bf01b0a4b11340c0a3eecd85a2df24884e5d"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/context_projection.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:dbf1c4f3ccd439972d19a8aec818a88ee058d344f004180e6cfc52fa3639ccda"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/schemas/covariance_edge.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:c53596180c442faff648223a9de598c5769c9e24670a858da5f6864b19c863ce"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/deterministic_check_report.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:17c68cb15b357648d3af9c17f193921b42f65c965deb11bf87f953b4069d9f9f"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/schemas/evidence_manifest.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:717a15fbf2c060ebab873a5016a2d20c036ee6d1553d45f53cf1cabeec237c8d"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/exact_ref.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:975abb346a66bb77356255ed47cc83682f8e6fef6ba131debd54779348363a80"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/fpml_trade_observation.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:c1d3a107d86ce300baa1eba9172f9a964e385bd539bc1d8f32e81bedd28bc273"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/graph_function_contracts.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:a2fee25be20d28a8c673974bca2f60cc0443dcae0e6b3341d6b740de74d17b8d"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/graph_function_outcomes.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:a503c0a39c9c88ab11f76c3818688bc80de060ef55836491d2f53ce9d98353ff"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/schemas/markov_object.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:cd67619767450e952dfdf90562b94d09b6e0bc3cf0d1dc44377c5011233495e3"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/physical_cut_protocol_error.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:13f81e052eb6d02004cd11810e8dd6e1003792365f70ca4072fa301af3f9449f"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/physical_cut_verify_request.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:7c93562b0bbe79d574ace4094ec65d8f800a71d9cbda2a8f503b2d213f286d6b"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/physical_cut_verify_result.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:d451bc026df9fe85ddfec126f3f28fbd888836f465d3944c0d3dbceee9d65409"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/physical_cut_write_request.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:72de38d46466d1728e3b26f711eee5076ce31c0feb4c422ccfbc680ba69f1ea0"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/physical_cut_write_result.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:f48d65ef36c2f0644d10621543830fd43a91241ca965b0c29c771423277bd20a"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/physical_effect_observation.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:f25b2c6b99c1fa835ea3d4a2967ced0b37c19e49410898b12af30223ca2fcdef"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/schemas/projection_spec.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:b9b2910a3af2dbc53eda5d6a7e6ed9f18ebe7d4f4b60d831f42efa2ad364ebae"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/published_semantic_cut.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:605b5ac43b67a17fe4f9169b519ef8e6ddc5f4cd422ee62175d9ed4fa8b0c856"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/query_projection.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:896a5cfcf39d4ee0954b5263bda0c8ef93e23e26fa6fd0ac4767bd7f9ea3688f"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/schemas/README.md",
+      "original_path": null,
+      "content_identity": "sha256:3681dcd5db2daf85681c7f89e604d54ad8c74c93584d5ed35778f4176ad81390"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/semantic_cut_attestation.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:d65294a1ca1591416a5d0fe31275d3670301d2e81bf3e99925d992d85f9b278c"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/semantic_link_proposal.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:661bbc62c097360eea3c666effa08a511c63a0ba37575227f6fecaba699d6f14"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/semantic_link.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:dbc89f1369b1e24083d6bbb20845008b017e35ee9cbe917223e415bd56966be8"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/semantic_proposal.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:71d02b87cb4a29832650203b0c7a8389eb6851163bfedaa5d731870acc16d4f2"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/semantic_publication_candidate.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:29761cd143e5beef671b5078dc14207d366efda4399ce610d50aa52c6a77176d"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/source_observation.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:b2d2c534104fdca9930450133799295954caf36298d82861a647ed1a0fc27ca6"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/schemas/temporal_reference_artifact.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:51a6512f940ae73c71509a2a8c40ccda69b75b4e46dfdd6ad877f85b3a4ca47d"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/common/schemas/treatment_surface.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:9691bfcbd0b419aba286cb54f8e9b137b720f88c1376e118d98a3696edecf7be"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/typed_gap.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:00d802a65e7767b4225c756cd3c39e8311f24754dd74a5dab6d55285563eb20b"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/common/schemas/wm_acceptance_decision.schema.json",
+      "original_path": null,
+      "content_identity": "sha256:7ab91f15979b574d5031b6b0704c6ccfe54634194738cd7590c1eea6f618a942"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/code/odd_world_model_storage/__init__.py",
+      "original_path": null,
+      "content_identity": "sha256:576f0a05fb5f89595a98ead9b2a9b266a0993e311cfe0a024f3e6613bbe3ad45"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/code/odd_world_model_storage/__main__.py",
+      "original_path": null,
+      "content_identity": "sha256:935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/code/odd_world_model_storage/canonical.py",
+      "original_path": null,
+      "content_identity": "sha256:6162725e3b68aa4e7d053b7683f55af803b0862d1d3372339f3f3d9ea5a05eda"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/code/odd_world_model_storage/cli.py",
+      "original_path": null,
+      "content_identity": "sha256:6cfc3ddc60df8a7e14d0b3a19b5585973198e2a4c75ae9f26a22db63dcc10063"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/code/odd_world_model_storage/config.py",
+      "original_path": null,
+      "content_identity": "sha256:a7a067011ad2907cb75ad8557e0a5f7815d468f0d5eecdc4c980cee707a01548"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/code/odd_world_model_storage/duckdb_proof.py",
+      "original_path": null,
+      "content_identity": "sha256:61917defcac52426279d3da70e33cf69308f2146a23b4b5e5acf77e81aa5034c"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/code/odd_world_model_storage/models.py",
+      "original_path": null,
+      "content_identity": "sha256:5b348c42dd1e31c03073738fe25d06ea55f40cdfa44cd31138c4c2a8dc5ece78"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/code/odd_world_model_storage/physical_envelope.py",
+      "original_path": null,
+      "content_identity": "sha256:429bdefbaaab7ea1ec4487f5853537f679533bd95e1969cd93eeb762547abbd2"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/code/odd_world_model_storage/service.py",
+      "original_path": null,
+      "content_identity": "sha256:c2ba19fb26daa3b5004f8ad2e83be56316324b14bf2e2b731554119e87c54fe4"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/code/odd_world_model_storage/store.py",
+      "original_path": null,
+      "content_identity": "sha256:02b2b8a1a68a9a4051dc4d15dccdc0fbd6d75f44adc1bc7fefe0b9a33ee3d092"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/DEPENDENCY_RESOLUTION.md",
+      "original_path": null,
+      "content_identity": "sha256:31584a8e006560b05aea6ffc973e307d5807e6b868131d844e59c21e86adf897"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/design/IMPLEMENTATION_DESIGN.md",
+      "original_path": null,
+      "content_identity": "sha256:7391c4a2d9e55aeef593f6fd3f8ca16f80a779a491921b4b85af3bc0e7ca81e2"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/pyproject.toml",
+      "original_path": null,
+      "content_identity": "sha256:af987d1115970d4958c0580d520b37edd7e1d69900bdc75f57f2590679419e05"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/README.md",
+      "original_path": null,
+      "content_identity": "sha256:92c9d933fef84eaec8a8d5ed4494e4f2696818f68264aff2798a5b1f7e2df61d"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/requirements.lock.txt",
+      "original_path": null,
+      "content_identity": "sha256:21e1006b05f362343769fef4ba58819b24d4107c8d8d800fa492cc3900723a98"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/test_env/proof_runtime_identity.py",
+      "original_path": null,
+      "content_identity": "sha256:4d34efa8160d6d22b88c0657d38c55d14a178ea3a5b86fa2d9f404ee1b3fa56e"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/storage/python/test_env/tests/test_storage_effect.py",
+      "original_path": null,
+      "content_identity": "sha256:fb345845217b5f556f7118af29f9b67a6f10f0d15185ea2bf2c4c2ad55b20db9"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/TENANT_REGISTRY.md",
+      "original_path": null,
+      "content_identity": "sha256:370c21aebe8862a3392623d7d2a7dbc545e2b1667ba983ae8c77752c456232be"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/code/src/adapters/fpml_confirmation.ts",
+      "original_path": null,
+      "content_identity": "sha256:9240d035a467c455c3452cecf845735dbe5e1085ed27baba72437f9849403227"
+    },
+    {
+      "status": " D",
+      "path": "build_tenants/typescript/code/src/build_line/common.ts",
+      "original_path": null,
+      "content_identity": "absent"
+    },
+    {
+      "status": " D",
+      "path": "build_tenants/typescript/code/src/build_line/domain_input_seed.ts",
+      "original_path": null,
+      "content_identity": "absent"
+    },
+    {
+      "status": " D",
+      "path": "build_tenants/typescript/code/src/build_line/fpml_source_seed.ts",
+      "original_path": null,
+      "content_identity": "absent"
+    },
+    {
+      "status": " D",
+      "path": "build_tenants/typescript/code/src/cli/main.ts",
+      "original_path": null,
+      "content_identity": "absent"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/context/context_memory.ts",
+      "original_path": null,
+      "content_identity": "sha256:a41309c129cd57d88d008147dee486e12e65a1240ce6651ce62bdda1eb5b4747"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/domain/candidate_markov_object.ts",
+      "original_path": null,
+      "content_identity": "sha256:0fd9790bdd01980a7bce0c0e7190ca890ae27659ac1ceaca22d9ab0f87ecff89"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/domain/canonical.ts",
+      "original_path": null,
+      "content_identity": "sha256:2f091bb2a0c2e8898b6864f8401783994a5a25db30364a595f52af18bdca6a14"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/domain/exact_refs.ts",
+      "original_path": null,
+      "content_identity": "sha256:1ea7f9b010a2a5a8084c8f7ac5634d7cf79d55c00d4ffa214950b65fdecfd001"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/domain/semantic_link_resolution.ts",
+      "original_path": null,
+      "content_identity": "sha256:5371ce9a02a0ac2f322fb20e59fbd8c000fe26d48d2a4e7a9400315ef8c759e0"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/domain/semantic_memory.ts",
+      "original_path": null,
+      "content_identity": "sha256:7e4518669d77fc3ba501abe4e59a93c45927fd38f137512604b5d0ecc491fa38"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/domain/semantic_publication.ts",
+      "original_path": null,
+      "content_identity": "sha256:d1550e135a3c37552cd04ab4922f1e038c4e267ef8d9fa8d2e9ce02c28cb7c24"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/domain/world_model_composition.ts",
+      "original_path": null,
+      "content_identity": "sha256:ddfd6df49dbebb6ec7aa31146085a80f4e7b614509d16e57bb1acc6228f5cee1"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/gtl/assets.ts",
+      "original_path": null,
+      "content_identity": "sha256:6fece8dc5413f32f175c7fda789a9d383a23187ca08268e25717c4fcdd72cdb1"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/gtl/catalog.ts",
+      "original_path": null,
+      "content_identity": "sha256:de2dcea551bd2f40aa63c8f4a51725cb9f1abfe76bb26ef688a1640191a8274a"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/gtl/graph_functions.ts",
+      "original_path": null,
+      "content_identity": "sha256:0da6927b74ba1dcbfac3d4adeff529c59f16867aedbc181019cb4ac8178e7362"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/gtl/identifiers.ts",
+      "original_path": null,
+      "content_identity": "sha256:36139cd7e5f0ffedbb31da44c92d86ad26c667c6b140b3d5cbe1c0c6874d0f15"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/gtl/module.ts",
+      "original_path": null,
+      "content_identity": "sha256:0af522fd1a6d02b22834f349fea025f15d416178effb9a1cdbf63dd68a13f501"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/code/src/index.ts",
+      "original_path": null,
+      "content_identity": "sha256:5de0ca1851cf3ba7209f3a0f5082888371b8f555cc4ccbc94fe8c5e34a226a6b"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/mesh/semantic_mesh.ts",
+      "original_path": null,
+      "content_identity": "sha256:35bb17d4bb67cae372b9de3b3f537488890d1f3740946d6e0f74386778f9ca0f"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/proof/generate_full_build_proof.ts",
+      "original_path": null,
+      "content_identity": "sha256:da11f4790c9ca0f2c17de48cf46704b10601aeee8d9316809515dd2074434377"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/query/query_projection.ts",
+      "original_path": null,
+      "content_identity": "sha256:6a1a2285076ef8edf6324faa7dd98578fa1d91959f57b8cc0fc6eb9ffdb20feb"
+    },
+    {
+      "status": " D",
+      "path": "build_tenants/typescript/code/src/sandbox/run_examples.ts",
+      "original_path": null,
+      "content_identity": "absent"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/storage/physical_cut_store.ts",
+      "original_path": null,
+      "content_identity": "sha256:87cf5c2ebf1528bc793403860ce0f4b11529ad44409eaa5114245477bec205fb"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/storage/python_physical_cut_store.ts",
+      "original_path": null,
+      "content_identity": "sha256:bbe6a368ff0fd559788dc2905071c722cf6924896a61045553c5bf743220e580"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/substrate_binding/conformance.ts",
+      "original_path": null,
+      "content_identity": "sha256:18227b01bab4f8c7064508dd5a1d1f25a3ce9f8e2d4dd8b2e21567a250f796a4"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/substrate_binding/exact_products.ts",
+      "original_path": null,
+      "content_identity": "sha256:ad8beb2b46c7b618c759629b36b1f538a20ced81ba9feab6036e1b90db13bc78"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+      "original_path": null,
+      "content_identity": "sha256:f2726c114e217c72113411ae55ba3446b21fae0f1d05dca5fe7661a32e0995d8"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/code/src/substrate_binding/rc3_api.ts",
+      "original_path": null,
+      "content_identity": "sha256:37ad03109912fcc23a033ba8aba6f360c932a7e966b9ffbda6c0784236248d74"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/DEPENDENCY_RESOLUTION.md",
+      "original_path": null,
+      "content_identity": "sha256:7c4d909a424475d12db8b987ae62fde84bb2316f50c2a5925b8291c81b97aea4"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/20-feature-decomposition.md",
+      "original_path": null,
+      "content_identity": "sha256:74d83bd42b518659f8f92f98b87883af80d2aa6fd5496d58886fb369b14b05f7"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/30-world-model-odd-design.md",
+      "original_path": null,
+      "content_identity": "sha256:5ce607c2d3a0d1e135a7922656f6c527d96aa7166a2bc6ef5ce8ddff28426c3f"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/40-module-boundaries.md",
+      "original_path": null,
+      "content_identity": "sha256:39178c61ab4bfe4444756067a0618650e731e3cc488e0264657c3c16e39771dd"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/50-test-and-proof-design.md",
+      "original_path": null,
+      "content_identity": "sha256:95f7e1197a2fdcec979c0895e6588d14561b1862d9e863bddf09b4761a1ccdb8"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/55-scenario-sandbox-proof-structure.md",
+      "original_path": null,
+      "content_identity": "sha256:42d41da1966033df316f43428fb9fbfdb75c5d4d0a8ea73861a5907b2c896cc9"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/design/60-current-rc3-design-rebase.md",
+      "original_path": null,
+      "content_identity": "sha256:fb4cd79c93c622e8f71845bb70328f1dbfd4abcf75ea3b98629f1701892bed47"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/design/70-non-gtl-implementation-design.md",
+      "original_path": null,
+      "content_identity": "sha256:2fbf658f0ae25c9a9a279f8aca944a50ea90434b15e7ce2fbe74ec00a311b1af"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/design/80-current-full-build-design.md",
+      "original_path": null,
+      "content_identity": "sha256:d13fb30a72ffbb2e95454d84c3b92c6348f15dc7b4cb1b977260ac52f3d08e1a"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+      "original_path": null,
+      "content_identity": "sha256:70eb5c4191740f63738e4bfb7b2f74b92181584739928260bd8333eb5eb8c54b"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+      "original_path": null,
+      "content_identity": "sha256:103fdd807be101633435be5fa18e5d69e365fd2e9356dfb457a719c9410ade3c"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/adrs/ADR-001-design-surface.md",
+      "original_path": null,
+      "content_identity": "sha256:3cb18e197230bb59d67983cf7a8e954205f20506f94a770f19058d1a2a9dae4a"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/adrs/ADR-001-typescript-gtl-abg-tech-stack.md",
+      "original_path": null,
+      "content_identity": "sha256:5d6bce646562e3a5ee0802246283e5d120139ee1b66425a829c646846ea7a72c"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/adrs/ADR-002-implementation-design-surface.md",
+      "original_path": null,
+      "content_identity": "sha256:5b275f52824f11d261e6dadcf7970cbaf4f473e91c238ba7dbaf4964c02e9eb4"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/adrs/ADR-002-odd-sdlc-build-component-inheritance.md",
+      "original_path": null,
+      "content_identity": "sha256:17323fe1b3af9177197bd73f0f9981c883a42c283e9ad5cb27ca59bac3bb8b9a"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/adrs/ADR-003-reference-derived-design-carry-forward.md",
+      "original_path": null,
+      "content_identity": "sha256:6979611590554ce0c02be150ab6a34ab1e3f20c3ffcaab8e1705cc216bcd7c29"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/adrs/ADR-004-reuse-odd-sdlc-gap-tracking.md",
+      "original_path": null,
+      "content_identity": "sha256:2cd0b0ab0abef2dbeb9c1fec07570ff8ebaf0fb51ec81678c1310c95d890628c"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/adrs/ADR-005-source-lineage-markov-object-carrier.md",
+      "original_path": null,
+      "content_identity": "sha256:ba642271994e889fdaadeb1df94747583deddb300543cd90f7a5e0d69f08465c"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/design/adrs/ADR-006-exact-rc3-proving-substrate-and-migration-seam.md",
+      "original_path": null,
+      "content_identity": "sha256:82f8d53f9c16247bb5bc9cf2b65f4d2dc7cb9863b25d7aea779fdc561c9d3d61"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/feature_decomp_surface.md",
+      "original_path": null,
+      "content_identity": "sha256:94c23c18c1e3b86efb7cd9fae9f889cb42797afa3701a02f642eba3839afd45c"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/README.md",
+      "original_path": null,
+      "content_identity": "sha256:002c650788ac6f791fa363032a74d1de6b70bea150942d03a87dbe4642006dea"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/design/scenario_surface.md",
+      "original_path": null,
+      "content_identity": "sha256:55fb2123adc74d6863e14f6dd60e7d64463f9e399f4e9d42ae8d36c90666794b"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/historical/filesystem_runner/common.ts",
+      "original_path": null,
+      "content_identity": "sha256:b105f960e3acd6da3108ce7d3fa978fc4e754421d7cc59db50b2fa5ed1bdf913"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/historical/filesystem_runner/domain_input_seed.ts",
+      "original_path": null,
+      "content_identity": "sha256:452842153a993386c17e043e80deae2fac1f4524c1a5c9732130ab6d40d106f3"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/historical/filesystem_runner/example_runner.reference.ts",
+      "original_path": null,
+      "content_identity": "sha256:564fd47d08a5161e46d2e66c21c44a373094531202c824d3a9a36974ade16875"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/historical/filesystem_runner/fpml_source_seed.ts",
+      "original_path": null,
+      "content_identity": "sha256:5fa8fb1013dabc38924d34fce450a6d4205a1bddc59304af505bf96f2c0b4015"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/historical/filesystem_runner/legacy_cli.ts",
+      "original_path": null,
+      "content_identity": "sha256:f04899754ba5630b1654820ed71f0a9563b17dc1cfcc759708bc95ddc4de2b0e"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/historical/filesystem_runner/README.md",
+      "original_path": null,
+      "content_identity": "sha256:563fa405f83267adf8a0f5a82d593720cf39497308aca9e03104387ea3187864"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/historical/filesystem_runner/run_examples.ts",
+      "original_path": null,
+      "content_identity": "sha256:64b724d363cf12c1637704b2aaca25e9058113a8d7ff651fa8c57de9fd119841"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/package-lock.json",
+      "original_path": null,
+      "content_identity": "sha256:d9da1dd83f0e004989aa69fb5216498ec59dc2d0a2b06637afe62e06e97b349f"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/package.json",
+      "original_path": null,
+      "content_identity": "sha256:dc8d93eb47ffa52027ba0546de3da8250ee8992828f0e07407273dc086b58eec"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/README.md",
+      "original_path": null,
+      "content_identity": "sha256:38f71aeaeaec2e9a3b7f8d7ebb08a3c0c0d59b579091bf4e6e4804c7f5bbe264"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/test_env/tests/common_schemas.test.ts",
+      "original_path": null,
+      "content_identity": "sha256:534e44693aa0a09be6f4c11271e11c9d945c513718fd1a801bc83065843680fd"
+    },
+    {
+      "status": " D",
+      "path": "build_tenants/typescript/test_env/tests/example_runner.test.ts",
+      "original_path": null,
+      "content_identity": "absent"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/test_env/tests/fpml_adapter.test.ts",
+      "original_path": null,
+      "content_identity": "sha256:722ebb14ef1d413f7860f4e875281651fd90ddfe886100ae158e7efe987ddd36"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+      "original_path": null,
+      "content_identity": "sha256:19421d3d55a8590997834722d8fbdf4d73b4a48ba8f774b9cc1e8fc8c9102e1d"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/test_env/tests/gtl_substrate.test.ts",
+      "original_path": null,
+      "content_identity": "sha256:483afed0ea6d9ff478f7d755a2b6ac8461705f14fb7214a3cd3241a987a2eef8"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/test_env/tests/public_surface.test.ts",
+      "original_path": null,
+      "content_identity": "sha256:1c1a6368024cfddb980e1810f46485718ac12ceab42e7874d675f681d5e48053"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+      "original_path": null,
+      "content_identity": "sha256:193713b8b0a9e3200ef2602a384d36229d584209d0d97221f03be47ab47b4648"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/test_env/tests/storage_contract.test.ts",
+      "original_path": null,
+      "content_identity": "sha256:fa2112410c77b9d3a2dd7bc5cb6120b190561d61c0606a81ed80adfd9e0d8b9c"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/test_env/tests/support/common_schema_validator.ts",
+      "original_path": null,
+      "content_identity": "sha256:7557eddb4861a0c53e896970d5277c5ec9a22d33b350eb477e140fffe95e7396"
+    },
+    {
+      "status": "??",
+      "path": "build_tenants/typescript/test_env/tests/support/semantic_fixtures.ts",
+      "original_path": null,
+      "content_identity": "sha256:181ee5a3569479daacece35030d0744e47bad8ea059ed460144ebb1d5cbfccaf"
+    },
+    {
+      "status": " M",
+      "path": "build_tenants/typescript/tsconfig.semantic-strict.json",
+      "original_path": null,
+      "content_identity": "sha256:698481774ecd03b90fdda1780ce2fd4177535a2973b31f0b64db37e7458c62a1"
+    },
+    {
+      "status": " M",
+      "path": "CLAUDE.md",
+      "original_path": null,
+      "content_identity": "sha256:0883bd506040a9398e5c0be31832ce696b1ced0f398ece636f7c40e446555c15"
+    },
+    {
+      "status": " M",
+      "path": "README.md",
+      "original_path": null,
+      "content_identity": "sha256:9108fcf67c64bb2cfb3a5aa4aa55aaf0a5d7963d5b5d220d6ae4699c05265567"
+    },
+    {
+      "status": " M",
+      "path": "specification/GOALS.md",
+      "original_path": null,
+      "content_identity": "sha256:f0424cc50523cb7bfc96c79520c5d0e0f2685f73832a8a753b986d8e8b7cfde4"
+    },
+    {
+      "status": " M",
+      "path": "specification/INTENT.md",
+      "original_path": null,
+      "content_identity": "sha256:028bbe93324d48811bc4e509b66a7c7587c099a9f0a4141a8e35efcbc7edf1fb"
+    },
+    {
+      "status": " M",
+      "path": "specification/PRODUCT.md",
+      "original_path": null,
+      "content_identity": "sha256:ed86564959ef032e93eeff71666ace5903bbb9b88bc2eefa8310bc680ba79241"
+    },
+    {
+      "status": " M",
+      "path": "specification/requirements/05-product-definition-authority.md",
+      "original_path": null,
+      "content_identity": "sha256:9e3961ee80f0c7179c5dd8ea0aaa78495b1cc0cba3b3103e213a595929e27e43"
+    },
+    {
+      "status": " M",
+      "path": "specification/requirements/10-world-model-object-representation.md",
+      "original_path": null,
+      "content_identity": "sha256:69226ef4292d55e49c4a785727429321693093e46a877026907b53dd3a483679"
+    },
+    {
+      "status": "??",
+      "path": "specification/requirements/25-governed-context-memory-capability.md",
+      "original_path": null,
+      "content_identity": "sha256:919cdb45ca1aa4d4eacc6d9ac955086af39de9d7c9987411a08cb7c82a078a4c"
+    },
+    {
+      "status": " M",
+      "path": "specification/requirements/30-domain-build-and-composition-constraints.md",
+      "original_path": null,
+      "content_identity": "sha256:29905a2b67d1aa6085d89be471951d5733733a113c20901ad5b8752fffa1ce04"
+    },
+    {
+      "status": "??",
+      "path": "specification/requirements/35-governed-context-memory-constraints.md",
+      "original_path": null,
+      "content_identity": "sha256:dfa236b0dd0b0e7234bfa86aec30a44c849a99737770d25894e3e291c538e3c0"
+    },
+    {
+      "status": " M",
+      "path": "specification/requirements/40-domain-build-verification.md",
+      "original_path": null,
+      "content_identity": "sha256:35ec409afdfa61f92ddfdd4e9ff90892f2dadcb6842fcf1a99b179155553696b"
+    },
+    {
+      "status": " M",
+      "path": "specification/requirements/50-odd-method-gtl-carrier.md",
+      "original_path": null,
+      "content_identity": "sha256:e11a2620a1b90a1c4683ed50c6a1fcd93aa9151685b3474a851b3dbb29a2bbe1"
+    },
+    {
+      "status": " M",
+      "path": "specification/requirements/80-world-model-mesh-capability.md",
+      "original_path": null,
+      "content_identity": "sha256:3134289ed9b468a87467eac7694d0d073a7f1db4d4babf816c9c8f90ddc6a865"
+    },
+    {
+      "status": " M",
+      "path": "specification/requirements/90-world-model-mesh-constraints.md",
+      "original_path": null,
+      "content_identity": "sha256:ba7373e48068b55576768fcffaa27f503528d33be2b902ab18a198deca434971"
+    },
+    {
+      "status": " M",
+      "path": "specification/requirements/95-release-installation-governance.md",
+      "original_path": null,
+      "content_identity": "sha256:b3a7b4094fb3a11bc6d20f7519352e29a273f029af8973e2c76996a5b4eec079"
+    },
+    {
+      "status": " M",
+      "path": "specification/requirements/README.md",
+      "original_path": null,
+      "content_identity": "sha256:dff36e385d9f65f6f65c29bfcf70fdf2bd3697da6a19779bc104d398440089bd"
+    },
+    {
+      "status": " M",
+      "path": "specification/scenarios/20-generated-uat-testcases.md",
+      "original_path": null,
+      "content_identity": "sha256:f35f0d4e259f2512a0d81f2283584d021c91f1c4ef227f55c9b69ed9137074ea"
+    },
+    {
+      "status": " M",
+      "path": "specification/scenarios/30-generated-testcase-authority.md",
+      "original_path": null,
+      "content_identity": "sha256:c2f3de75a869a4c1c0c08c0085e0b43ab9e35b3255e6abd2e64b82afc48b85f3"
+    },
+    {
+      "status": " M",
+      "path": "specification/scenarios/40-generated-scenarios.md",
+      "original_path": null,
+      "content_identity": "sha256:0fc66dc61cb5409fc3cebdff585eaea7d54cf10090f72f17426bf27e7752fe51"
+    }
+  ],
+  "source_inventory_digest": "sha256:4f4314ab52ce9d7ed350ea5c416bf2ea38de208d5f881ee4dc8cad1240b34e99"
+}

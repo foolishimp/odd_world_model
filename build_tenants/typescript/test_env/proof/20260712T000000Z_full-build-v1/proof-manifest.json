@@ -1,0 +1,95 @@
+{
+  "schema_kind": "odd_world_model.full_build_proof_manifest",
+  "schema_version": "v1",
+  "proof_id": "proof://odd_world_model/full-build/20260712T000000Z/v1",
+  "generated_at": "2026-07-12T09:43:57.570Z",
+  "claim_scope": "development_exact_substrate_reference_bridge_and_integrated_semantic_contract_slice",
+  "release_authority": "not_claimed",
+  "source_state": {
+    "head_commit": "f84fb2354bd50f4eedf973bd7e04c9ed637af5d9",
+    "dirty": true,
+    "dirty_path_count": 206,
+    "source_path_count": 194,
+    "excluded_proof_path_count": 12,
+    "source_inventory_digest": "sha256:4f4314ab52ce9d7ed350ea5c416bf2ea38de208d5f881ee4dc8cad1240b34e99"
+  },
+  "exact_product_binding": {
+    "kind": "odd_world_model.exact_product_binding_evidence",
+    "abiogenesis_package": "@abiogenesis/typescript-tenant",
+    "abiogenesis_version": "4.6.0-rc.3",
+    "abiogenesis_tarball_sha256": "9cffb372c0dfc00983a5d0e882efbc3d0c3ac937a56f313000f35a4473358113",
+    "odd_glc_package": "@odd-glc/route-one-typescript",
+    "odd_glc_version": "0.1.0",
+    "odd_glc_tarball_sha256": "7e548f92ecd6b4442f9c9f1feb46dd2edd7e9610a7dae8706482fc65d80fa578",
+    "odd_glc_startup_config_ref": "gtl-startup-config://odd_glc/abg-4.2/route-1",
+    "odd_glc_lifecycle_overlay_ref": "overlay://odd_glc/general-lifecycle",
+    "compatibility_status": "compatible"
+  },
+  "catalog_digest": "sha256:741520d329d640e0f8ae8ad2da6b0d81a13ceceaec569db5a7fb92acc6d21fda",
+  "conformance_report_ref": "abg://gtl-program-conformance-report/sha256:79f59744469f43ea77a4b3a528783fe3b83b79bd78c7708f60418fa53d7f924c",
+  "conformance_inventory_digest": "sha256:f51f08e470e198144b3743f70391b0d694a098296f93e8aa0a6fba1f2039c9e3",
+  "conformance_issue_count": 0,
+  "requirement_count": 116,
+  "requirement_status_counts": {
+    "candidate_evidence": 53,
+    "deferred": 18,
+    "not_applicable": 1,
+    "open": 44
+  },
+  "public_target_count": 7,
+  "event_count": 402,
+  "replay_event_count": 402,
+  "event_log_sha256": "sha256:6a99b083ed3130361ce6eb894129d72a32607980401708a6e01b148a58f03cec",
+  "replay_event_log_sha256": "sha256:e1dcee21d45b759269a4781e03b1892ca143a240c55698e4beffd7d2936890f7",
+  "replay_projection": "event-kind sequence and exact target selection equal for every public handle",
+  "duckdb_exact_snapshot_proof": {
+    "engine_version": "1.4.5",
+    "extension_sha256": "fefbc8dbf9c58c1ec6e1c443bd4fdd99f0958a84a62e795629b12b9508691f1e",
+    "extension_version": "2f229463",
+    "installed_from": "core"
+  },
+  "source_adapter_dependencies": {
+    "fast_xml_parser": "5.10.0",
+    "fast_xml_validator": "1.2.0"
+  },
+  "fp_dispatch_proof": {
+    "target_handle": "odd_world_model.interpret_context",
+    "mode": "deterministic_reference_and_digest_bridge",
+    "production_model_provider_claimed": false,
+    "fp_dispatch_requested_count": 1
+  },
+  "semantic_execution_status": "WM contracts execute in the local deterministic kernel; selected rc.3 GraphFunctions carry exact refs and admission evidence but do not execute those payload transforms",
+  "integrated_storage_proof": "verification.json runs the reference-bound semantic contract thread plus PyIceberg and DuckDB exact-snapshot observations",
+  "reference_semantic_slice": {
+    "evidence_ref": "proof://odd_world_model/reference-semantic-slice/20260712/v1",
+    "evidence_digest": "sha256:39d163b33015fa6101d49e392523a8745c00d5f7aaa28a45b5efad01db00812a",
+    "execution_mode": "local_semantic_kernel_with_rc3_reference_digest_bridge",
+    "admission_witness_count": 26,
+    "persisted_runtime_event_ref_count": 284,
+    "unresolved_witness_event_count": 0
+  },
+  "files": {
+    "verification.json": "sha256:dc9b1d88fadc00c19627c4dba7d7040bffa47f2dd755fa0305b7df49f76458a8",
+    "duckdb-runtime-identity.json": "sha256:da6fd138c469c78664c3c6d8fe0a2785f2266025f8d0d0dc27da9ae32bd50e73",
+    "exact-product-binding.json": "sha256:c764f530115ee2fd8200131f203a78d2c9a93f56639f842244cfcb92fdef56eb",
+    "gtl-catalog.json": "sha256:b398b9ed737459f4d3e56e3b03c40ee20061750d4552b600bc5fdf9c4b2881ab",
+    "gtl-conformance-report.json": "sha256:f81d73d9b74162b2c83b244fa43525b6facea87de3e8d8ca900eb9ffd727b243",
+    "requirement-proof-candidates.json": "sha256:b73ca1051f7d9c242de1b9832f524895be7a21e7035d07cdaaad04e54ed63fff",
+    "events.jsonl": "sha256:6a99b083ed3130361ce6eb894129d72a32607980401708a6e01b148a58f03cec",
+    "replay-events.jsonl": "sha256:e1dcee21d45b759269a4781e03b1892ca143a240c55698e4beffd7d2936890f7",
+    "public-start-summary.json": "sha256:6b5bf8ad7372acba1a7deccd5a13c106dd94452ab8a1a6338c6c8a7b34cd6884",
+    "reference-semantic-slice.json": "sha256:c6be265bcde2db556509bbaac803651483f314b699c2ab237d474367f7b40089",
+    "development-source-inventory.json": "sha256:67bcb48ff02052775401158d4e37cd702d74d011aeed3f0bc2f30a5c1a48f35a"
+  },
+  "exclusions": [
+    "immutable release cut",
+    "committed clean-source proof",
+    "production catalog or object-store topology",
+    "production LLM or model-provider integration",
+    "native execution of WM payload transforms by the selected GraphFunctions",
+    "calibrated F_P authorship of the semantic proposal",
+    "deferred odd_world_model.map_domains executable publication",
+    "claim that generic rc.3 target-carrier payload is the inline WM semantic payload",
+    "final requirement ratification or release closure"
+  ]
+}

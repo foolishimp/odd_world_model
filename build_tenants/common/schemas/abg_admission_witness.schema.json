@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.abg_admission_witness.schema.json",
+  "title": "AbgAdmissionWitness",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_kind", "schema_version", "witness_ref", "admission_kind", "status", "subjects", "target_handle", "selected_graph_function_ref", "graph_call_refs", "evidence_refs", "evidence_event_refs", "vector_closed_event_refs", "terminal_event_ref", "runtime_event_refs", "admitted_at", "witness_digest"],
+  "properties": {
+    "schema_kind": { "const": "odd_world_model.abg_admission_witness" },
+    "schema_version": { "const": "v1" },
+    "witness_ref": { "type": "string", "minLength": 1 },
+    "admission_kind": { "enum": ["proposal_evidence", "acceptance_evidence", "physical_effect", "context_projection", "model_invocation", "published_cut"] },
+    "status": { "const": "admitted" },
+    "subjects": { "type": "array", "minItems": 1, "items": { "$ref": "odd_world_model.exact_ref.schema.json" } },
+    "target_handle": { "type": "string", "pattern": "^odd_world_model\\." },
+    "selected_graph_function_ref": { "type": "string", "minLength": 1 },
+    "graph_call_refs": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "evidence_refs": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "evidence_event_refs": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "vector_closed_event_refs": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "terminal_event_ref": { "type": "string", "minLength": 1 },
+    "runtime_event_refs": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "admitted_at": { "type": "string", "format": "date-time" },
+    "witness_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  }
+}

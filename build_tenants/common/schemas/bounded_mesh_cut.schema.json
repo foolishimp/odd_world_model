@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.bounded_mesh_cut.schema.json",
+  "title": "BoundedMeshCut",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_kind", "schema_version", "mesh_cut_ref", "interaction_goal", "scope_ref", "selection_policy_ref", "root_refs", "relation_selectors", "closure_rule", "node_refs", "link_refs", "common_model_refs", "excluded_refs", "unresolved_gaps", "resolved_at", "mesh_cut_digest"],
+  "properties": {
+    "schema_kind": { "const": "odd_world_model.bounded_mesh_cut" },
+    "schema_version": { "const": "v1" },
+    "mesh_cut_ref": { "type": "string", "minLength": 1 },
+    "interaction_goal": { "type": "string", "minLength": 1 },
+    "scope_ref": { "type": "string", "minLength": 1 },
+    "selection_policy_ref": { "type": "string", "minLength": 1 },
+    "root_refs": { "$ref": "#/$defs/exact_refs_nonempty" },
+    "relation_selectors": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["references", "composes", "treatment", "covariance", "adjoint", "supersedes"] } },
+    "closure_rule": { "enum": ["roots_only", "outbound_dependency_closure", "bidirectional_dependency_closure"] },
+    "node_refs": { "$ref": "#/$defs/exact_refs_nonempty" },
+    "link_refs": { "$ref": "#/$defs/exact_refs" },
+    "common_model_refs": { "$ref": "#/$defs/exact_refs" },
+    "excluded_refs": { "$ref": "#/$defs/exact_refs" },
+    "unresolved_gaps": { "type": "array", "items": { "$ref": "odd_world_model.typed_gap.schema.json" } },
+    "resolved_at": { "type": "string", "format": "date-time" },
+    "mesh_cut_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  },
+  "$defs": {
+    "exact_refs": { "type": "array", "uniqueItems": true, "items": { "$ref": "odd_world_model.exact_ref.schema.json" } },
+    "exact_refs_nonempty": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "odd_world_model.exact_ref.schema.json" } }
+  }
+}

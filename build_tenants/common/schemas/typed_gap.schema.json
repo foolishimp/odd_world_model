@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.typed_gap.schema.json",
+  "title": "TypedGap",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "gap_type",
+    "message",
+    "retryable",
+    "evidence_refs"
+  ],
+  "properties": {
+    "gap_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "message": {
+      "type": "string",
+      "minLength": 1
+    },
+    "retryable": {
+      "type": "boolean"
+    },
+    "evidence_refs": {
+      "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
+    },
+    "details": {
+      "type": "object"
+    }
+  }
+}

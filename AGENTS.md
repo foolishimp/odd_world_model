@@ -1,73 +1,63 @@
-<!-- ODD_SDLC_BOOTLOADER_START -->
-# odd_sdlc TypeScript Workspace Governance Surface
+# odd_world_model Agent Bootstrap
 
-This workspace contains a target project governed by `odd_sdlc.TS`.
-GTL/ABG are substrate. `odd_sdlc` is the governance and domain package.
-Imported project authority defines what the project is.
+This repository builds governed semantic memory for exact, bounded,
+loss-declared LLM context.
 
-## Workspace Identity
-- workspace: `odd_world_model`
-- project slug: `odd_world_model`
-- product: `odd_sdlc`
-- build tenant: `typescript`
-- installed product root: `workspace://.abiogenesis/odd_sdlc/typescript`
-- install manifest: `workspace://.abiogenesis/odd_sdlc/typescript/install-manifest.json`
-- ABG install manifest: `workspace://.abiogenesis/install-manifest.json`
-- normalization projection: `workspace://.ai-workspace/runtime/odd_sdlc-typescript-installation.json`
-- bootstrap guide: `workspace://.ai-workspace/context/odd_sdlc_typescript_bootstrap.md`
+## Authority
 
-## Agent Operating Rule
-- start from project truth, not substrate ontology
-- treat `odd_sdlc` as governance over the target project
-- do not describe the project itself as a GTL/ABG app unless project authority says so
-- `specification/` is project-owned `WHAT`
-- `build_tenants/` is project-owned realization `HOW`
-- `.ai-workspace/runtime/odd_sdlc/assets` is the default transform-asset archive root
-- product files materialize under the conformed `selected_output_root`, normally `build_tenants/<tenant>`
-- `.abiogenesis/*` is installed substrate or installed product payload, not mutable project source
-- ABG owns traversal, continuation, events, runtime facts, and projection mechanics
+Read current authority in this order:
 
-## STDO Bootstrap Provenance
-- `STDO law`, `STDO governance`, `STDO Constitution`, and `STDO Method` are aliases for the same governance stack
-- `STDO-UX` is the UI/operator-surface application of that same governance stack
-- STDO expands to:
-  - `workspace://.abiogenesis/docs/standards/SPEC_METHOD.md`
-  - `workspace://.abiogenesis/docs/standards/TICKET_METHOD.md`
-  - `workspace://.abiogenesis/docs/standards/DESIGN_MODULE_METHOD.md`
-  - `workspace://.abiogenesis/docs/standards/ODD_METHOD.md`
-- before substantive ticket execution, triage the first missing layer:
-  - `Goals -> Intent -> Product -> Requirements -> Design -> Code -> Tests/Proof -> Release`
-- the symptom layer is not the re-entry authority
-- if triage finds a higher missing layer, fix the ticket execution contract before implementation
-- for UI/operator tickets under `STDO-UX`, preserve the Agentic Coder CLI as the user interface over installed product truth, not as a rival runtime or hidden worker controller
+1. `specification/GOALS.md`
+2. `specification/INTENT.md`
+3. `specification/PRODUCT.md`
+4. `specification/requirements/`
+5. `build_tenants/common/design/WORLD_MODEL_COMMON_ARCHITECTURE.md`
+6. `build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md`
+7. active tickets under `.ai-workspace/tickets/active/`
 
-## Read First
-- `workspace://.ai-workspace/context/odd_sdlc_typescript_bootstrap.md`
-- `workspace://.ai-workspace/runtime/odd_sdlc-typescript-installation.json`
-- `workspace://.abiogenesis/odd_sdlc/typescript/install-manifest.json`
-- `workspace://.abiogenesis/install-manifest.json`
-- `workspace://specification/INTENT.md` when present
-- `workspace://specification/PRODUCT.md` when present
-- `workspace://specification/requirements/` when present
+Specification defines `WHAT`. Design and build tenants define `HOW`.
 
-## Start Here
-- when the operator says `gaps`, run `node_modules/.bin/odd-sdlc-ts gaps --workspace .`
-- `start` is an operator shell over ABG-owned graph execution; do not treat odd_sdlc as a second traversal runtime
-- when the operator says `start` for live completion on Claude, run the ABG-backed start path with `node_modules/.bin/odd-sdlc-ts start --workspace . --target next --until converged --worker process://claude`
-- when the operator says `start` for live completion on Codex, run the ABG-backed start path with `node_modules/.bin/odd-sdlc-ts start --workspace . --target next --until converged --worker process://codex`
-- use `node_modules/.bin/odd-sdlc-ts start --workspace . --target next --until blocked` only when you intentionally want a bounded frontier inspection rather than full ABG-owned graph execution
-- inspect the RC surface with `node_modules/.bin/odd-sdlc-ts rc-report`
-- ABG command binding: `node_modules/.bin/genesis-ts`
-- ABIogenesis command binding: `node_modules/.bin/abiogenesis-ts`
-- if `start` returns `fp_worker_unattached`, the traversal stopped lawfully because no live worker transport was attached; that is not completion
-- do not add ad hoc traversal loops or scripts when answering operator `start` requests
+## Product Boundary
 
-## Interpretation Rule
-- substrate truth explains how work is executed
-- governance truth explains how this project is operated
-- imported project sources explain what the project is
-- copied template history is provenance unless imported authority makes it project-defining
+- TypeScript is the forward WM realization tenant.
+- GTL GraphFunctions are the constructive carrier.
+- ABIogenesis/ABG owns traversal, runtime facts, admission, events, replay,
+  continuation, and closure.
+- odd_glc owns generic lifecycle vocabulary and downstream interpretation.
+- WM owns semantic meaning, mesh, context, treatments, projection, and domain
+  proof interpretation.
+- `storage/python` is a bounded PyIceberg physical effect, not a second product
+  or runtime.
+- the repository-root npm manifest is validation coordination only; it has no
+  exports or runtime dependency authority.
+- `build_tenants/python`, `.genesis`, and installed odd_sdlc surfaces are
+  historical/reference evidence.
 
-If those layers disagree, imported project authority wins for project identity,
-and GTL/ABG plus `odd_sdlc` govern how work proceeds over that authority.
-<!-- ODD_SDLC_BOOTLOADER_END -->
+The Product dependency boundary remains version-floating. The current proving
+tenant uses immutable ABIogenesis `4.6.0-rc.3` and odd_glc `0.1.0` artifacts
+through `build_tenants/typescript/code/src/substrate_binding/`.
+
+## Operating Rules
+
+- Follow STDO intake and the smallest lawful re-entry point.
+- Do not add a product-local traversal loop or revive the filesystem executive.
+- Do not expose private publication refinements as public jobs.
+- Do not read implicit latest physical state; use exact attested snapshots.
+- Do not accept F_P output as semantic truth without deterministic checks,
+  ABG evidence, and WM authority.
+- Keep legacy example generation as comparison tooling only.
+
+## Validation
+
+```text
+cd build_tenants/typescript
+npm run typecheck
+npm test
+npm run proof:generate
+
+cd ../storage/python
+.venv/bin/python -m unittest discover -s test_env/tests -v
+```
+
+The persisted bundle is development proof while source is dirty. It does not
+claim an immutable release cut.

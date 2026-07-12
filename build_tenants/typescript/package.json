@@ -2,11 +2,22 @@
   "name": "@odd-world-model/typescript-tenant",
   "private": true,
   "type": "module",
-  "bin": {
-    "odd-world-model-ts": "./code/src/cli/main.ts"
-  },
   "scripts": {
-    "examples": "node ./code/src/cli/main.ts run-examples --workspace ../..",
-    "test": "node --test ./test_env/tests/*.test.ts"
+    "proof:generate": "node ./code/src/proof/generate_full_build_proof.ts",
+    "test": "node --test ./test_env/tests/*.test.ts",
+    "typecheck": "tsc -p ./tsconfig.semantic-strict.json"
+  },
+  "dependencies": {
+    "@abiogenesis/typescript-tenant": "file:../../../abiogenesis/release_snapshots/abiogenesis-typescript-tenant/4.6.0-rc.3/abiogenesis-typescript-tenant-4.6.0-rc.3.tgz",
+    "@odd-glc/route-one-typescript": "file:../../../odd_glc/release_snapshots/odd-glc-route-one-typescript/0.1.0/odd-glc-route-one-typescript-0.1.0.tgz",
+    "fast-xml-parser": "5.10.0",
+    "fast-xml-validator": "1.2.0",
+    "json-canonicalize": "2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "typescript": "5.9.3"
   }
 }

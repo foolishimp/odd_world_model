@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.graph_function_outcomes.schema.json",
+  "title": "WorldModelGraphFunctionOutcomes",
+  "$defs": {
+    "typed_gaps": {
+      "type": "array",
+      "items": { "$ref": "odd_world_model.typed_gap.schema.json" }
+    },
+    "domain_publication_outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["published_domain_artifact", "semantic_cut_attestation", "domain_publication_evidence", "typed_gaps"],
+      "properties": {
+        "published_domain_artifact": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "semantic_cut_attestation": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "domain_publication_evidence": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "typed_gaps": { "$ref": "#/$defs/typed_gaps" }
+      }
+    },
+    "semantic_link_publication_outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["published_semantic_link_set", "semantic_cut_attestation", "link_publication_evidence", "typed_gaps"],
+      "properties": {
+        "published_semantic_link_set": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "semantic_cut_attestation": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "link_publication_evidence": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "typed_gaps": { "$ref": "#/$defs/typed_gaps" }
+      }
+    },
+    "world_model_composition_outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["composed_world_model", "semantic_cut_attestation", "composition_evidence", "typed_gaps"],
+      "properties": {
+        "composed_world_model": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "semantic_cut_attestation": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "composition_evidence": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "typed_gaps": { "$ref": "#/$defs/typed_gaps" }
+      }
+    },
+    "mesh_resolution_outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bounded_mesh_cut", "dependency_closure_projection", "mesh_resolution_evidence", "typed_gaps"],
+      "properties": {
+        "bounded_mesh_cut": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "dependency_closure_projection": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "mesh_resolution_evidence": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "typed_gaps": { "$ref": "#/$defs/typed_gaps" }
+      }
+    },
+    "context_projection_outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["context_basis", "context_projection", "context_freshness_witness", "typed_gaps"],
+      "properties": {
+        "context_basis": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "context_projection": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "context_freshness_witness": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "typed_gaps": { "$ref": "#/$defs/typed_gaps" }
+      }
+    },
+    "context_interpretation_outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["context_invocation_record", "proposed_semantic_result", "output_admission_report", "typed_gaps"],
+      "properties": {
+        "context_invocation_record": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "proposed_semantic_result": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "output_admission_report": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "typed_gaps": { "$ref": "#/$defs/typed_gaps" }
+      }
+    },
+    "world_model_query_outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["query_projection", "query_proof_evidence", "typed_gaps"],
+      "properties": {
+        "query_projection": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "query_proof_evidence": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "typed_gaps": { "$ref": "#/$defs/typed_gaps" }
+      }
+    }
+  },
+  "type": "object"
+}

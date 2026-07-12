@@ -2,13 +2,20 @@
 
 **ID**: INT-ODD-WORLD-MODEL-001
 **Status**: Active
-**Date**: 2026-05-15
+**Date**: 2026-07-12
 **Profile**: product intent
 
 ## Purpose
 
 `odd_world_model` exists to externalize the world model that domain experts already
 carry in their heads.
+
+It deliberately blurs the traditional boundary between application, data, and
+data processing at the LLM context surface. An LLM consumes context rather than
+an application or database as such. `odd_world_model` therefore acts as a
+governed memory bank that turns code, records, events, documents,
+transformations, and published semantic cuts into versioned, attributable, and
+provable context without erasing their distinct source authority.
 
 This source project observes existing source systems of record and reconstructs the
 bounded contexts, functional surfaces, treatment semantics, and cross-domain
@@ -45,6 +52,15 @@ the live specification explicitly promotes a boundary into product law.
 - Compose published domain artifacts into higher-order world models without
   erasing local authority, boundary meaning, or declared loss at stitch
   points.
+- Manage semantic complexity through a federated mesh of local published cuts
+  and typed links, allowing each interaction goal to resolve a finite sufficient
+  context instead of requiring one global model.
+- Project bounded mesh cuts into LLM context with a declared basis, freshness,
+  fidelity, loss, omissions, and unresolved gaps so every governed model output
+  is judgeable against the exact world-state it saw.
+- Use candidate Markov-object cuts and their supporting semantic surfaces as a
+  recoverable compression layer over source evidence rather than repeatedly
+  assembling raw code, data, and documents into ad hoc prompts.
 - Support query and traversal over published domain artifacts and composed
   world models as a current delivery pillar, so AI or human operators can
   answer mapping, lineage, treatment, and explainability questions at any node
@@ -58,8 +74,9 @@ the live specification explicitly promotes a boundary into product law.
 - Make every material datum interpretable through recoverable context:
   originating function, authority boundary, lifecycle position, transformation
   history, and remaining ambiguity.
-- Identify stable Markov objects and establish lawful co-variance between them
-  across adjacent domains.
+- Publish candidate Markov-object cuts, promote them only under the governed
+  evidence gate, and establish lawful covariance between them across adjacent
+  domains.
 - Provide the world-model substrate that `data_mapper` can use to emit
   covariant streams with explicit adjoint interpretation and declared loss.
 
@@ -70,15 +87,31 @@ the live specification explicitly promotes a boundary into product law.
 - `odd_world_model` is the product domain itself. The project is not only describing
   domain comprehension in the abstract; it is realizing that capability as a
   specific GTL/ABG domain.
-- The build line should declare semantic derivation through published graph
-  functions and use deterministic materializers for record and
-  provenance/event materialization rather than allowing one-off loader sprawl.
+- The build line should declare semantic construction through published graph
+  functions, use calibrated probabilistic workers for semantic proposals, and
+  use deterministic machinery for closed checks and artifact materialization
+  rather than allowing one-off loader sprawl.
 - This source project defines the next `odd_world_model` product. Installed
   workspaces consume released `odd_world_model` products to build project-owned
   domain artifacts.
 - Published domain artifacts are the durable semantic publication units. They
   can be referenced, versioned, composed into higher-order world models, and
   traversed for query and mapping work.
+- Mesh composition must preserve local publication authority through typed,
+  versioned links. A common model is adopted by explicit reference and does not
+  become ambient global doctrine.
+- A bounded mesh cut is a purpose-specific projection over exact published node
+  and link refs. It must not become copied semantic truth or require the full
+  mesh to be loaded as ambient context.
+- Every governed LLM invocation must identify its exact context basis and
+  projection contract. Context expansion, truncation, fidelity, semantic loss,
+  excluded surfaces, and staleness must remain explicit.
+- Context projections and LLM outputs remain downstream of published semantic
+  truth. An LLM output is an F_P proposal until deterministic checks, ABG
+  admission, and attributed WM authority accept any resulting semantic claim.
+- Immutable context identity and digest evidence are product obligations;
+  storage engine, table format, version-control system, and prompt-rendering
+  technology remain downstream design choices.
 - Query and traversal are currently part of the delivery line, but the serving
   mechanism for that work may later be offloaded into a dedicated query plane
   without changing the constitutional identity of the product.

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "odd-world-model-storage"
+version = "0.1.0"
+description = "Bounded PyIceberg physical-cut effect adapter for odd_world_model"
+requires-python = ">=3.11"
+dependencies = [
+  "duckdb==1.4.5",
+  "pyiceberg[pyarrow,sql-sqlite]==0.11.1",
+  "rfc8785==0.1.4"
+]
+
+[project.scripts]
+odd-world-model-storage = "odd_world_model_storage.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "code"}
+
+[tool.setuptools.packages.find]
+where = ["code"]

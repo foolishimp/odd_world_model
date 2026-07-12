@@ -2,7 +2,7 @@
 
 **Project**: `odd_world_model`
 **Status**: Active
-**Date**: 2026-05-15
+**Date**: 2026-07-12
 **Derived from**:
 - `specification/scenarios/20-generated-uat-testcases.md`
 - `specification/scenarios/40-generated-scenarios.md`
@@ -223,6 +223,182 @@ Evidence required:
 - installed product asset inventory
 - project-local source configuration
 - bounded source-to-publication proof from the installed product
+
+### AUTH-009: WM specializes GLC without duplicating lifecycle or runtime law
+
+**UAT**: `UAT-010`
+**Scenarios**: `SCN-PRODUCT-003`
+**Requirements**:
+- `REQ-ODD-WORLD-MODEL-PRODUCT-007`
+- `REQ-ODD-WORLD-MODEL-PRODUCT-008`
+- `REQ-ODD-WORLD-MODEL-PRODUCT-010`
+- `REQ-ODD-WORLD-MODEL-ODD-CARRIER-012`
+
+Authority statement:
+
+- GLC owns generic lifecycle meaning
+- ABG owns runtime and admitted fact
+- WM owns world-model domain meaning and contributes it through the downstream contract
+- missing dependency law remains a gap, not locally invented authority
+
+Evidence required:
+
+- selected GLC and GTL/ABG contract references
+- WM downstream-module declaration
+- ownership-boundary check
+- explicit gap or block for any missing contract
+
+### AUTH-010: Markov-object publication preserves epistemic status
+
+**UAT**: `UAT-011`
+**Scenarios**: `SCN-BUILD-005`
+**Requirements**:
+- `REQ-ODD-WORLD-MODEL-WORLD-OBJECT-002`
+- `REQ-ODD-WORLD-MODEL-WORLD-OBJECT-012`
+- `REQ-ODD-WORLD-MODEL-WORLD-OBJECT-013`
+- `REQ-ODD-WORLD-MODEL-BUILD-VERIFY-007`
+- `REQ-ODD-WORLD-MODEL-BUILD-VERIFY-008`
+
+Authority statement:
+
+- a published cut carries an identity projection and distributed evidence, not a member-column blanket
+- publication defaults to `candidate`
+- `established` status requires a qualifying conditional-independence result
+
+Evidence required:
+
+- identity direction and projection support
+- candidate/null-peer evidence and held-out treatment results
+- boundary characterization and publication status
+- promotion method, threshold, result, and provenance for any `established` claim
+
+### AUTH-011: Semantic proposals enter through governed carrier and admission
+
+**UAT**: `UAT-012`
+**Scenarios**: `SCN-CARRIER-001`
+**Requirements**:
+- `REQ-ODD-WORLD-MODEL-BUILD-CONSTRAINT-001`
+- `REQ-ODD-WORLD-MODEL-BUILD-VERIFY-009`
+- `REQ-ODD-WORLD-MODEL-ODD-CARRIER-007`
+- `REQ-ODD-WORLD-MODEL-ODD-CARRIER-008`
+- `REQ-ODD-WORLD-MODEL-ODD-CARRIER-009`
+- `REQ-ODD-WORLD-MODEL-ODD-CARRIER-010`
+- `REQ-ODD-WORLD-MODEL-ODD-CARRIER-011`
+
+Authority statement:
+
+- public constructive work enters through a published graph function
+- probabilistic workers propose, deterministic machinery checks, ABG admits, and WM authority accepts
+- the selected substrate owns event, conformance, plugin, and wire-shape contracts
+
+Evidence required:
+
+- selected graph-function and conformance result
+- probabilistic proposal and deterministic check trace
+- ABG admission and WM acceptance lineage
+- exact event-census, envelope, plugin, and schema-contract evidence
+
+### AUTH-012: Floating product dependencies resolve into exact artifact evidence
+
+**UAT**: `UAT-013`
+**Scenarios**: `SCN-RELEASE-002`
+**Requirements**:
+- `REQ-ODD-WORLD-MODEL-PRODUCT-009`
+- `REQ-ODD-WORLD-MODEL-RELEASE-005`
+- `REQ-ODD-WORLD-MODEL-RELEASE-006`
+- `REQ-ODD-WORLD-MODEL-RELEASE-007`
+- `REQ-ODD-WORLD-MODEL-RELEASE-008`
+
+Authority statement:
+
+- WM product law does not pin dependency versions
+- concrete artifacts identify and lock the exact compatible dependency resolution they use
+- development evidence and released-product evidence remain distinguishable
+
+Evidence required:
+
+- exact package, version, source or tag, manifest, and digest identities
+- compatibility declaration and authoritative contract locators
+- replay from immutable dependency locks without ambient moving labels
+- explicit development or released-product status
+
+### AUTH-013: Mesh bounds semantic complexity without centralizing truth
+
+**UAT**: `UAT-014`, `UAT-015`
+**Scenarios**: `SCN-MESH-001`, `SCN-MESH-002`
+**Requirements**:
+- `REQ-ODD-WORLD-MODEL-MESH-CAP-001`
+- `REQ-ODD-WORLD-MODEL-MESH-CAP-002`
+- `REQ-ODD-WORLD-MODEL-MESH-CAP-003`
+- `REQ-ODD-WORLD-MODEL-MESH-CAP-004`
+- `REQ-ODD-WORLD-MODEL-MESH-CAP-005`
+- `REQ-ODD-WORLD-MODEL-MESH-CAP-006`
+- `REQ-ODD-WORLD-MODEL-MESH-CAP-007`
+- `REQ-ODD-WORLD-MODEL-MESH-CAP-008`
+- `REQ-ODD-WORLD-MODEL-MESH-CAP-009`
+- `REQ-ODD-WORLD-MODEL-MESH-CAP-010`
+- `REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-001`
+- `REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-002`
+- `REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-003`
+- `REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-004`
+- `REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-005`
+- `REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-006`
+- `REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-007`
+- `REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-008`
+- `REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-009`
+- `REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-010`
+- `REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-011`
+
+Authority statement:
+
+- local published cuts remain the semantic truth units
+- typed links preserve exact cross-node relation meaning and authority
+- each interaction resolves finite purpose-bound context rather than ambient global state
+- local supersession pressures only its declared dependency closure
+- unresolved reconciliation remains typed gap truth
+
+Evidence required:
+
+- exact published node and link inventory for the bounded slice
+- common-model adoption refs
+- bounded-cut root, purpose, scope, selectors, and closure
+- traversal proof that excludes unrelated mesh branches
+- supersession and dependency-impact result
+- typed unresolved-reference, compatibility, authority, or semantic-loss gaps
+
+### AUTH-014: LLM context and output are pinned to governed semantic memory
+
+**UAT**: `UAT-016`
+**Scenarios**: `SCN-CONTEXT-001`
+**Requirements**:
+- `REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-001`
+- `REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-002`
+- `REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-003`
+- `REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-004`
+- `REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-005`
+- `REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-006`
+- `REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-001`
+- `REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-002`
+- `REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-003`
+- `REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-004`
+- `REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-005`
+- `REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-006`
+
+Authority statement:
+
+- WM unifies application, data, processing, and documentary evidence as governed semantic memory while preserving source authority
+- each governed invocation sees one exact, loss-declared, freshness-aware basis
+- candidate Markov-object cuts provide recoverable semantic compression without epistemic promotion
+- model output remains an attributed proposal and cannot become truth without admission
+
+Evidence required:
+
+- exact context basis and projection-contract identity
+- mesh refs, digests, temporal coordinates, scope, freshness, fidelity, loss, exclusions, and gaps
+- recoverability from compressed context to published cuts and source evidence
+- model/invocation identity, output digest, basis ref, and admission status
+- staleness result after a referenced source or cut changes
+- rejection proof for hidden context expansion and basisless output
 
 ---
 

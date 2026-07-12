@@ -1,3 +1,5 @@
+> **Classification**: Superseded generated implementation read model; no current code authority.
+
 ## Execution Plan
 
 Read authority for this transform:

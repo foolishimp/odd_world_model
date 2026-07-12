@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.physical_effect_observation.schema.json",
+  "title": "PhysicalEffectObservation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_kind",
+    "schema_version",
+    "observation_status",
+    "observed_at",
+    "observer_identity",
+    "snapshot_observations"
+  ],
+  "properties": {
+    "schema_kind": {
+      "const": "odd_world_model.physical_effect_observation"
+    },
+    "schema_version": {
+      "const": "v1"
+    },
+    "observation_status": {
+      "enum": [
+        "reproduced",
+        "failed"
+      ]
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "observer_identity": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_attestation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_attestation_digest": {
+      "$ref": "odd_world_model.semantic_cut_attestation.schema.json#/$defs/digest"
+    },
+    "snapshot_observations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/snapshot_observation"
+      }
+    }
+  },
+  "$defs": {
+    "snapshot_observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "table_identifier",
+        "snapshot_id",
+        "status"
+      ],
+      "properties": {
+        "table_identifier": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*\\.[a-z][a-z0-9_]*$"
+        },
+        "snapshot_id": {
+          "type": "string",
+          "pattern": "^[0-9]+$"
+        },
+        "status": {
+          "enum": [
+            "reproduced",
+            "failed"
+          ]
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

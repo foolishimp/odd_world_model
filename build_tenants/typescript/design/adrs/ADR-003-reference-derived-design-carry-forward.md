@@ -1,9 +1,12 @@
 # ADR-003 Reference-Derived Design Carry-Forward
 
-**Status**: Accepted
+**Status**: Retained derivation decision; current target is the 2026-07-12 rebase
 **Date**: 2026-05-15
 **Scope**: Carry forward relevant design structure from the stale Python tenant into the TypeScript tenant
 **Ticket**: `T-026`
+
+Reference derivation remains accepted. The target files named below are now
+inputs to `60-current-rc3-design-rebase.md`, not independent current authority.
 
 ## Context
 

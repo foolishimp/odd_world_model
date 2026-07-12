@@ -1,6 +1,7 @@
 # Current Query And Traversal Slice
 
-**Status**: Draft
+**Status**: Superseded topology; retained query-subordination reference
+**Superseded by**: `WORLD_MODEL_COMMON_ARCHITECTURE.md`, ADR-WM-003
 **Scope**: Low-volume query and traversal over published domain artifacts and
 composed world models
 
@@ -18,7 +19,7 @@ artifacts and composed world models.
 
 ## Current Lane
 
-The current lane is filesystem-first.
+The historical lane is filesystem-first.
 
 It operates over:
 
@@ -30,7 +31,7 @@ It operates over:
 
 ## Query Responsibility
 
-The current query/traversal slice SHALL:
+The retained historical query/traversal slice SHALL:
 
 - load published artifacts directly from the filesystem
 - resolve logical refs such as `ledger://`, `review://`, and `input://`

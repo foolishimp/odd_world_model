@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.context_basis.schema.json",
+  "title": "ContextBasis",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_kind", "schema_version", "basis_ref", "interaction_goal", "mesh_cut", "semantic_cut_refs", "semantic_link_refs", "source_observation_refs", "physical_snapshot_refs", "projection_contract_ref", "projection_contract_version", "selection_policy_ref", "temporal_coordinates", "source_authority_refs", "semantic_authority_refs", "freshness", "fidelity", "losses", "exclusions", "truncation", "unresolved_gaps", "resolved_at", "basis_digest"],
+  "properties": {
+    "schema_kind": { "const": "odd_world_model.context_basis" },
+    "schema_version": { "const": "v1" },
+    "basis_ref": { "type": "string", "minLength": 1 },
+    "interaction_goal": { "type": "string", "minLength": 1 },
+    "mesh_cut": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "semantic_cut_refs": { "$ref": "#/$defs/exact_refs_nonempty" },
+    "semantic_link_refs": { "$ref": "#/$defs/exact_refs" },
+    "source_observation_refs": { "$ref": "#/$defs/exact_refs_nonempty" },
+    "physical_snapshot_refs": { "$ref": "#/$defs/exact_refs_nonempty" },
+    "projection_contract_ref": { "type": "string", "minLength": 1 },
+    "projection_contract_version": { "type": "string", "minLength": 1 },
+    "selection_policy_ref": { "type": "string", "minLength": 1 },
+    "temporal_coordinates": { "type": "object", "minProperties": 1, "additionalProperties": { "type": "string", "minLength": 1 } },
+    "source_authority_refs": { "$ref": "#/$defs/nonempty_strings" },
+    "semantic_authority_refs": { "$ref": "#/$defs/nonempty_strings" },
+    "freshness": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "policy_ref", "evaluated_at", "dependency_digest"],
+      "properties": {
+        "status": { "const": "fresh" },
+        "policy_ref": { "type": "string", "minLength": 1 },
+        "evaluated_at": { "type": "string", "format": "date-time" },
+        "dependency_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+      }
+    },
+    "fidelity": { "enum": ["lossless_projection", "lossy_projection"] },
+    "losses": { "$ref": "#/$defs/strings" },
+    "exclusions": { "type": "array", "items": { "$ref": "#/$defs/omission" } },
+    "truncation": { "$ref": "#/$defs/truncation" },
+    "unresolved_gaps": { "type": "array", "items": { "$ref": "odd_world_model.typed_gap.schema.json" } },
+    "resolved_at": { "type": "string", "format": "date-time" },
+    "basis_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "fidelity": { "type": "string", "const": "lossless_projection" } }, "required": ["fidelity"] },
+      "then": {
+        "properties": {
+          "losses": { "type": "array", "maxItems": 0 },
+          "exclusions": { "type": "array", "maxItems": 0 },
+          "unresolved_gaps": { "type": "array", "maxItems": 0 },
+          "truncation": { "type": "object", "properties": { "applied": { "type": "boolean", "const": false }, "omitted_count": { "type": "integer", "const": 0 } } }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "fidelity": { "type": "string", "const": "lossy_projection" } }, "required": ["fidelity"] },
+      "then": {
+        "anyOf": [
+          { "properties": { "losses": { "type": "array", "minItems": 1 } } },
+          { "properties": { "exclusions": { "type": "array", "minItems": 1 } } },
+          { "properties": { "unresolved_gaps": { "type": "array", "minItems": 1 } } },
+          { "properties": { "truncation": { "type": "object", "properties": { "applied": { "type": "boolean", "const": true } }, "required": ["applied"] } } }
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": { "truncation": { "type": "object", "properties": { "applied": { "type": "boolean", "const": true } }, "required": ["applied"] } }
+      },
+      "then": {
+        "properties": {
+          "fidelity": { "type": "string", "const": "lossy_projection" },
+          "losses": { "type": "array", "contains": { "type": "string", "const": "context_window_truncation" } }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "exact_refs": { "type": "array", "uniqueItems": true, "items": { "$ref": "odd_world_model.exact_ref.schema.json" } },
+    "exact_refs_nonempty": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "odd_world_model.exact_ref.schema.json" } },
+    "strings": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "nonempty_strings": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "omission": { "type": "object", "additionalProperties": false, "required": ["exact_ref", "reason"], "properties": { "exact_ref": { "$ref": "odd_world_model.exact_ref.schema.json" }, "reason": { "type": "string", "minLength": 1 } } },
+    "truncation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["applied", "limit_ref", "omitted_count"],
+      "properties": {
+        "applied": { "type": "boolean" },
+        "limit_ref": { "type": "string", "minLength": 1 },
+        "omitted_count": { "type": "integer", "minimum": 0 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "applied": { "type": "boolean", "const": true } }, "required": ["applied"] },
+          "then": { "properties": { "omitted_count": { "type": "integer", "minimum": 1 } } },
+          "else": { "properties": { "omitted_count": { "type": "integer", "const": 0 } } }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.deterministic_check_report.schema.json",
+  "title": "DeterministicCheckReport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_kind", "schema_version", "check_ref", "proposal", "check_contract_refs", "status", "issues", "checked_at", "check_digest"],
+  "properties": {
+    "schema_kind": { "const": "odd_world_model.deterministic_check_report" },
+    "schema_version": { "const": "v1" },
+    "check_ref": { "type": "string", "minLength": 1 },
+    "proposal": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "check_contract_refs": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "status": { "enum": ["passed", "failed"] },
+    "issues": { "type": "array", "items": { "$ref": "odd_world_model.typed_gap.schema.json" } },
+    "checked_at": { "type": "string", "format": "date-time" },
+    "check_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "passed" } }, "required": ["status"] },
+      "then": { "properties": { "issues": { "type": "array", "maxItems": 0 } } }
+    },
+    {
+      "if": { "properties": { "status": { "const": "failed" } }, "required": ["status"] },
+      "then": { "properties": { "issues": { "type": "array", "minItems": 1 } } }
+    }
+  ]
+}

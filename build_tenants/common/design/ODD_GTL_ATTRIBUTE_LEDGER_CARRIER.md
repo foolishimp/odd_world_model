@@ -1,6 +1,7 @@
 # ODD GTL Attribute-Ledger Carrier
 
-**Status**: Implemented
+**Status**: Historical Python implementation evidence; not current catalog authority
+**Superseded by**: accepted ADR-WM-004 and the T-026 TypeScript catalog for the forward public surface
 **Scope**: Shared design for the first live ODD-method carrier slice in
 `odd_world_model`
 

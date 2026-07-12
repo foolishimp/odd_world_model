@@ -1,9 +1,12 @@
 # ADR-004 Reuse odd_sdlc Gap Tracking
 
-**Status**: Accepted
+**Status**: Historical odd_sdlc tracking decision; retained as governance lineage
 **Date**: 2026-05-15
 **Scope**: Build pressure, feature gap tracking, and solution-architecture overlay reuse
 **Ticket**: `T-026`
+
+Current work tracking follows the repo STDO ticket/commentary surfaces. This
+ADR does not authorize an odd_sdlc runtime, overlay, or constructive carrier.
 
 ## Context
 

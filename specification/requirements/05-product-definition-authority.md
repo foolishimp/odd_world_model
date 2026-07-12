@@ -37,7 +37,8 @@ but they SHALL NOT define the product `WHAT`.
 The live product definition SHALL be sufficient for downstream design to derive
 the product chain from source observation through traced evidence, assured
 claims, attribute ledger, immutable object cuts, published domain artifacts,
-composed world models, and query or proof projections.
+typed mesh links, bounded mesh cuts, context basis/projection or query/proof
+projections, and attributed outputs.
 
 ### REQ-ODD-WORLD-MODEL-PRODUCT-004 — Published Semantic Layer As Single Truth Surface
 
@@ -73,3 +74,50 @@ Retained examples and historical prototypes SHALL be used as proof corpora,
 readback surfaces, and comparison evidence. They SHALL NOT define product
 scope, product vocabulary, or product architecture unless their claims are
 re-derived into the live specification.
+
+### REQ-ODD-WORLD-MODEL-PRODUCT-007 — GLC Downstream Specialization
+
+**Carries**:
+- `odd_glc specification/PRODUCT.md` — `Downstream Program Contract`
+- `PRODUCT.md` — `Lifecycle And Runtime Boundary`
+
+`odd_world_model` SHALL be defined as a world-model domain specialization of
+the generic lifecycle meaning published by `odd_glc`. WM SHALL contribute
+domain assets, schemas, policies, evidence expectations, and semantic proof
+interpretation without treating GLC as the source of world-model meaning.
+
+### REQ-ODD-WORLD-MODEL-PRODUCT-008 — Three-Layer Ownership Boundary
+
+**Carries**:
+- `odd_glc specification/PRODUCT.md` — `Constitutional Position`
+- `PRODUCT.md` — `Lifecycle And Runtime Boundary`
+
+The product definition SHALL preserve one ownership boundary: GTL owns
+graph-native declaration law, ABG owns runtime and admitted truth, GLC owns
+domain-agnostic lifecycle meaning, and WM owns world-model domain meaning. WM
+SHALL NOT publish a rival runtime, event envelope, traversal or retry controller,
+requirement ledger, closure store, or copy of generic lifecycle law.
+
+### REQ-ODD-WORLD-MODEL-PRODUCT-009 — Floating Product Dependency Law
+
+**Carries**:
+- `PRODUCT.md` — `Lifecycle And Runtime Boundary`
+- `SPEC_METHOD.md` — `Recursive Product Taxonomy`
+
+WM product law SHALL NOT pin an exact ABIogenesis or odd_glc version. Mutable
+development MAY resolve governed development or released dependency products
+through the published contracts and SHALL honor the compatibility declared by
+that resolution. Every build, proof, release, and install SHALL record its exact
+resolved identities; those evidence identities SHALL NOT become timeless
+product-definition authority.
+
+### REQ-ODD-WORLD-MODEL-PRODUCT-010 — Missing Upstream Contract Honesty
+
+**Carries**:
+- `odd_glc specification/PRODUCT.md` — `GTL/ABG Consumption Rule`
+- `PRODUCT.md` — `Consumed Contract Boundary`
+
+When a required substrate or GLC capability is missing, partial, test-only,
+unpublished, or unavailable through the selected dependency products, WM SHALL
+defer, block, or open a triaged owner ticket. It SHALL NOT compensate by
+inventing local ABIogenesis or GLC authority.

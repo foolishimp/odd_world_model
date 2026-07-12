@@ -44,10 +44,10 @@
       "type": "object"
     },
     "trace_record_refs": {
-      "$ref": "world_model_object.schema.json#/$defs/string_array"
+      "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
     },
     "assurance_record_refs": {
-      "$ref": "world_model_object.schema.json#/$defs/string_array"
+      "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
     },
     "effective_time": {
       "type": "string",

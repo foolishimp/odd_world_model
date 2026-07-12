@@ -1,6 +1,6 @@
 # odd_sdlc Dogfood Line
 
-**Status**: Converged
+**Status**: Historical governance proof; not current realization authority
 **Scope**: Source-project governance line for building `odd_world_model` through a
 released installed `odd_sdlc` product
 

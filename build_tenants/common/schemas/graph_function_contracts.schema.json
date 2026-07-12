@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.graph_function_contracts.schema.json",
+  "title": "WorldModelGraphFunctionContracts",
+  "$defs": {
+    "string_refs": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "exact_refs": { "type": "array", "uniqueItems": true, "items": { "$ref": "odd_world_model.exact_ref.schema.json" } },
+    "exact_product_binding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["binding_ref", "abiogenesis", "odd_glc"],
+      "properties": {
+        "binding_ref": { "type": "string", "minLength": 1 },
+        "abiogenesis": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "odd_glc": { "$ref": "odd_world_model.exact_ref.schema.json" }
+      }
+    },
+    "authority_context": {
+      "type": "object", "additionalProperties": false,
+      "required": ["authority_ref", "authority_kind", "policy_ref"],
+      "properties": {
+        "authority_ref": { "type": "string", "minLength": 1 },
+        "authority_kind": { "enum": ["source", "wm_semantic", "human", "runtime", "physical_effect"] },
+        "policy_ref": { "type": "string", "minLength": 1 }
+      }
+    },
+    "temporal_context": {
+      "type": "object", "minProperties": 1, "additionalProperties": { "type": "string", "minLength": 1 }
+    },
+    "lineage_context": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_refs", "governing_refs"],
+      "properties": {
+        "source_refs": { "$ref": "#/$defs/string_refs" },
+        "governing_refs": { "$ref": "#/$defs/string_refs" }
+      }
+    },
+    "policy_context": {
+      "type": "object", "additionalProperties": false,
+      "required": ["policy_refs"],
+      "properties": { "policy_refs": { "$ref": "#/$defs/string_refs" } }
+    },
+    "replay_evidence_refs": {
+      "type": "object", "additionalProperties": false,
+      "required": ["event_refs"],
+      "properties": { "event_refs": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } } }
+    },
+    "exact_refs": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": { "$ref": "odd_world_model.exact_ref.schema.json" }
+    },
+    "domain_publication_request": {
+      "type": "object", "additionalProperties": false,
+      "required": ["request_ref", "source_scope", "source_evidence_set", "source_kind", "source_authority_policy_ref", "semantic_construction_policy_ref", "publication_policy_ref"],
+      "properties": {
+        "request_ref": { "type": "string", "minLength": 1 },
+        "source_scope": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "source_evidence_set": { "$ref": "#/$defs/exact_refs" },
+        "source_kind": { "type": "string", "minLength": 1 },
+        "source_authority_policy_ref": { "type": "string", "minLength": 1 },
+        "semantic_construction_policy_ref": { "type": "string", "minLength": 1 },
+        "publication_policy_ref": { "type": "string", "minLength": 1 }
+      }
+    },
+    "semantic_link_publication_request": {
+      "type": "object", "additionalProperties": false,
+      "required": ["request_ref", "endpoint_cuts", "semantic_link_proposal_set", "relation_contract_ref", "treatment_contract_ref", "link_authority_policy_ref"],
+      "properties": {
+        "request_ref": { "type": "string", "minLength": 1 },
+        "endpoint_cuts": { "type": "array", "minItems": 2, "uniqueItems": true, "items": { "$ref": "odd_world_model.exact_ref.schema.json" } },
+        "semantic_link_proposal_set": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "relation_contract_ref": { "type": "string", "minLength": 1 },
+        "treatment_contract_ref": { "type": "string", "minLength": 1 },
+        "link_authority_policy_ref": { "type": "string", "minLength": 1 }
+      }
+    },
+    "world_model_composition_request": {
+      "type": "object", "additionalProperties": false,
+      "required": ["request_ref", "component_cuts", "admitted_semantic_links", "composition_intent", "composition_policy_ref"],
+      "properties": {
+        "request_ref": { "type": "string", "minLength": 1 },
+        "component_cuts": { "type": "array", "minItems": 2, "uniqueItems": true, "items": { "$ref": "odd_world_model.exact_ref.schema.json" } },
+        "admitted_semantic_links": { "$ref": "#/$defs/exact_refs" },
+        "composition_intent": { "type": "string", "minLength": 1 },
+        "composition_policy_ref": { "type": "string", "minLength": 1 }
+      }
+    },
+    "mesh_resolution_request": {
+      "type": "object", "additionalProperties": false,
+      "required": ["request_ref", "interaction_goal", "root_refs", "scope_ref", "relation_selectors", "closure_rule", "selection_policy_ref", "admitted_semantic_links"],
+      "properties": {
+        "request_ref": { "type": "string", "minLength": 1 },
+        "interaction_goal": { "type": "string", "minLength": 1 },
+        "root_refs": { "type": "array", "minItems": 1, "items": { "$ref": "odd_world_model.exact_ref.schema.json" } },
+        "scope_ref": { "type": "string", "minLength": 1 },
+        "relation_selectors": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["references", "composes", "treatment", "covariance", "adjoint", "supersedes"] } },
+        "closure_rule": { "enum": ["roots_only", "outbound_dependency_closure", "bidirectional_dependency_closure"] },
+        "selection_policy_ref": { "type": "string", "minLength": 1 },
+        "admitted_semantic_links": { "$ref": "#/$defs/exact_refs" }
+      }
+    },
+    "context_projection_request": {
+      "type": "object", "additionalProperties": false,
+      "required": ["request_ref", "mesh_cut", "projection_contract", "context_window_policy_ref", "freshness_policy_ref", "exact_dependency_refs"],
+      "properties": {
+        "request_ref": { "type": "string", "minLength": 1 },
+        "mesh_cut": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "projection_contract": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "context_window_policy_ref": { "type": "string", "minLength": 1 },
+        "freshness_policy_ref": { "type": "string", "minLength": 1 },
+        "exact_dependency_refs": { "$ref": "#/$defs/exact_refs" }
+      }
+    },
+    "context_interpretation_request": {
+      "type": "object", "additionalProperties": false,
+      "required": ["request_ref", "context_basis", "context_projection", "model_capability_binding", "invocation_policy_ref", "expected_output_contract_ref"],
+      "properties": {
+        "request_ref": { "type": "string", "minLength": 1 },
+        "context_basis": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "context_projection": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "model_capability_binding": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "invocation_policy_ref": { "type": "string", "minLength": 1 },
+        "expected_output_contract_ref": { "type": "string", "minLength": 1 }
+      }
+    },
+    "world_model_query_request": {
+      "type": "object", "additionalProperties": false,
+      "required": ["request_ref", "query_contract_ref", "query_contract_version", "projection_policy_ref"],
+      "properties": {
+        "request_ref": { "type": "string", "minLength": 1 },
+        "semantic_cut_attestation": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "context_basis": { "$ref": "odd_world_model.exact_ref.schema.json" },
+        "query_contract_ref": { "type": "string", "minLength": 1 },
+        "query_contract_version": { "type": "string", "minLength": 1 },
+        "projection_policy_ref": { "type": "string", "minLength": 1 }
+      },
+      "oneOf": [
+        {
+          "required": ["semantic_cut_attestation"],
+          "properties": {
+            "semantic_cut_attestation": { "$ref": "odd_world_model.exact_ref.schema.json" },
+            "context_basis": false
+          }
+        },
+        {
+          "required": ["context_basis"],
+          "properties": {
+            "context_basis": { "$ref": "odd_world_model.exact_ref.schema.json" },
+            "semantic_cut_attestation": false
+          }
+        }
+      ]
+    }
+  },
+  "type": "object"
+}

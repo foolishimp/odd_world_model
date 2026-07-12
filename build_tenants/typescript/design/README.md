@@ -1,108 +1,57 @@
 # odd_world_model TypeScript Tenant Design
 
-Tenant-local design for the `odd_world_model` TypeScript realization lives here.
+This directory defines TypeScript realization `HOW` for the singleton Product
+authority under `specification/`.
 
-The TypeScript line realizes the singleton `specification/` authority. It does
-not define a rival product constitution.
+## Current Entry Point
 
-## Governing Surfaces
+Read in this order:
 
-- `specification/GOALS.md`
-- `specification/INTENT.md`
-- `specification/PRODUCT.md`
-- `specification/requirements/`
-- `.ai-workspace/tickets/active/T-026-rebuild-world-model-in-typescript-tenant.md`
-- `/Users/jim/src/apps/specification_methodology/specification/standards/DESIGN_MODULE_METHOD.md`
-- `/Users/jim/src/apps/specification_methodology/specification/standards/ODD_METHOD.md`
-- `/Users/jim/src/apps/specification_methodology/specification/standards/WORLD_MODEL_METHOD.md`
-- `/Users/jim/src/apps/abiogenesis/docs/LLM_GTL_APP_BUILDER_GUIDE.md`
-- `/Users/jim/src/apps/odd_sdlc/build_tenants/typescript/test_env/sandbox/`
-- `.abiogenesis/odd_sdlc/typescript/install-manifest.json`
-- `build_tenants/python/design/`
+1. `build_tenants/common/design/WORLD_MODEL_COMMON_ARCHITECTURE.md`
+2. `build_tenants/common/design/adrs/ADR-WM-001-source-decomposition-and-build-boundaries.md`
+3. `build_tenants/common/design/adrs/ADR-WM-002-semantic-memory-and-authority-boundaries.md`
+4. `build_tenants/common/design/adrs/ADR-WM-003-iceberg-storage-and-cut-attestation.md`
+5. `adrs/ADR-006-exact-rc3-proving-substrate-and-migration-seam.md`
+6. `90-admitted-semantic-steel-thread-design.md` for the target migration design
+7. `95-rc3-reference-bridge-as-built-review.md` for the current axiom backfill
+8. `80-current-full-build-design.md` for the superseded component-qualified
+   as-built record
 
-## Reference And Proof Corpus
+Accepted ADR-WM-004 and
+`build_tenants/common/design/GTL_GRAPH_FUNCTION_CONTRACTS.md` define the
+implemented GTL catalog and closure contracts.
 
-- `examples/*/sources/`
-- `examples/*/sandbox/20260419T000000Z_v1/`
-- `build_tenants/typescript/test_env/test_runs/`
-- optional `examples/*/sandbox/<datetime>_<version>.TS/` comparison cuts
+## Current Position
 
-The source directories are retained example authority. The existing unsuffixed
-sandbox cuts are Python-built references. TypeScript proof runs should use the
-generic `odd_sdlc` scenario sandbox shape under `test_env/`: scenario
-descriptors, fixture roots, installed ABG/odd_sdlc workspaces, and archived
-`gaps -> start` evidence. Optional sibling `.TS` cuts under `examples/` are
-comparison projections from those generic runs, not a separate runner.
+TypeScript is the forward WM domain realization tenant. It owns local semantic
+carrier types, deterministic validation, publication meaning, mesh/context
+meaning, and technology-neutral effect ports.
 
-## Active Design Pack
+The first physical writer is a bounded Python PyIceberg adapter. It receives
+already-admitted write requests and returns exact physical snapshot evidence.
+It has no semantic, traversal, or closure authority.
 
-- `adrs/ADR-001-typescript-gtl-abg-tech-stack.md`
-- `adrs/ADR-002-odd-sdlc-build-component-inheritance.md`
-- `adrs/ADR-003-reference-derived-design-carry-forward.md`
-- `adrs/ADR-004-reuse-odd-sdlc-gap-tracking.md`
-- `adrs/ADR-005-source-lineage-markov-object-carrier.md`
-- `20-feature-decomposition.md`
-- `30-world-model-odd-design.md`
-- `40-module-boundaries.md`
-- `50-test-and-proof-design.md`
-- `55-scenario-sandbox-proof-structure.md`
+The current runnable graph proof uses exact ABIogenesis `4.6.0-rc.3` with
+`odd_glc 0.1.0` behind `substrate_binding/`. This is an incremental proving
+resolution with a migration seam, not Product tethering.
 
-## Overlay Read Models
+## Implementation State
 
-The installed `odd_sdlc` solution-architecture overlay may generate tenant-local
-read models such as:
+The current correction binds a preconstructed semantic payload by exact ref and
+digest, derives admission from canonical ABG events, separates WM acceptance
+from ABG closure, and permits query only over a published cut with admitted
+physical evidence. ABG remains the only runtime traversal owner; there is no
+product-local iteration loop. Native WM payload execution by the selected
+GraphFunction and calibrated F_P authorship remain migration gaps.
 
-- `feature_decomp_surface.md`
-- `adrs/ADR-001-design-surface.md`
-- `scenario_surface.md`
-- `adrs/ADR-002-implementation-design-surface.md`
+## Retained Inputs
 
-These surfaces are build-planning projections over `odd_sdlc` pressure. They
-may use framework-selected edge output names and do not participate in the
-accepted ADR numbering sequence above. They do not create a new world-model
-feature-gap registry and do not outrank the accepted ADRs above.
-
-## Design Position
-
-The TypeScript tenant target is:
-
-```text
-odd_world_model product requirements
--> TypeScript typed assets and GTL module
--> public world-model graph functions
--> ABG graph calls, traversal, runtime facts, projection, proof, and closure
-```
-
-GTL publishes the graph-function programs.
-
-ABG owns traversal, frames, continuations, events, replay, projection,
-correction, proof, and closure.
-
-`odd_world_model.TS` owns world-model domain assets, function catalog, module
-publication, deterministic materializers, proof readers, and app wrapper
-commands that delegate to ABG.
-
-Installed `odd_sdlc` is a build component and development product used by this
-source project. It contributes SDLC governance, ticket/execution-contract
-interpretation, operator surfaces, proof/release patterns, lineage ledgers, and
-tracking registers. It does not own the `odd_world_model` product identity,
-world-model domain semantics, or public graph-function namespace.
-
-This lets the TypeScript tenant build custom world-model domain graphs while
-reusing robust SDLC feature-gap, lineage, and tracking evidence. Those
-registers prove and project the governed build; they do not replace the
-world-model semantic layer.
-
-The world-model semantic layer owns source lineage into coherent Markov
-objects. Every external information piece admitted into the product must be
-recoverable through source observation, traced evidence, assurance claim,
-attribute ledger entry, immutable object cut, and published domain artifact.
-
-The retained Python tenant remains historical reference and comparison
-evidence. Its module layout and imperative runner shape are not target
+The earlier feature, architecture, module, proof, sandbox, and ADR files remain
+lineage evidence. Their active-target, old-handle, odd_sdlc-runner, and
+filesystem-first claims are superseded by
+`60-current-rc3-design-rebase.md`. ADR-003 and ADR-005 retain useful
+reference-derivation and semantic-lineage decisions as refined by common
 architecture.
 
-The retained Python design files are consumed through the reference-derived
-mapping in ADR-003. The TypeScript design pack preserves the useful semantic
-build-line, component, module, and proof structure while replacing Python-first
-runtime, package, command, and test-runner choices.
+Generated overlay files are planning read models. They are not design
+authority and do not participate in the accepted ADR sequence.

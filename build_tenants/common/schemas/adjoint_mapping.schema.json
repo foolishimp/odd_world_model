@@ -41,13 +41,13 @@
       "minLength": 1
     },
     "preserved_structure": {
-      "$ref": "world_model_object.schema.json#/$defs/string_array"
+      "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
     },
     "loss_notes": {
-      "$ref": "world_model_object.schema.json#/$defs/string_array"
+      "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
     },
     "surplus_notes": {
-      "$ref": "world_model_object.schema.json#/$defs/string_array"
+      "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
     }
   }
 }

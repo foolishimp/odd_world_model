@@ -1,6 +1,6 @@
 # TypeScript Module Boundaries
 
-**Status**: Active target design
+**Status**: Retained module input; superseded as current target
 **Date**: 2026-05-15
 **Method**: `DESIGN_MODULE_METHOD.md`
 **Derived from**:

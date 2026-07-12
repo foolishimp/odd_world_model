@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.composed_world_model.schema.json",
+  "title": "ComposedWorldModel",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_kind",
+    "schema_version",
+    "world_model_ref",
+    "composition_intent",
+    "component_cut_refs",
+    "semantic_link_refs",
+    "common_model_refs",
+    "authority_boundary_refs",
+    "fidelity",
+    "losses",
+    "unresolved_gaps",
+    "composed_at",
+    "world_model_digest"
+  ],
+  "properties": {
+    "schema_kind": { "const": "odd_world_model.composed_world_model" },
+    "schema_version": { "const": "v1" },
+    "world_model_ref": { "type": "string", "minLength": 1 },
+    "composition_intent": { "type": "string", "minLength": 1 },
+    "component_cut_refs": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": { "$ref": "odd_world_model.exact_ref.schema.json" }
+    },
+    "semantic_link_refs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "odd_world_model.exact_ref.schema.json" }
+    },
+    "common_model_refs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "$ref": "odd_world_model.exact_ref.schema.json" }
+    },
+    "authority_boundary_refs": { "$ref": "#/$defs/nonempty_strings" },
+    "fidelity": { "enum": ["exact_payload", "lossless_projection", "lossy_projection"] },
+    "losses": { "$ref": "#/$defs/strings" },
+    "unresolved_gaps": {
+      "type": "array",
+      "items": { "$ref": "odd_world_model.typed_gap.schema.json" }
+    },
+    "composed_at": { "type": "string", "format": "date-time" },
+    "world_model_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  },
+  "$defs": {
+    "strings": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "nonempty_strings": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "fidelity": { "not": { "const": "lossy_projection" } } } },
+      "then": { "properties": { "losses": { "type": "array", "maxItems": 0 } } }
+    }
+  ]
+}

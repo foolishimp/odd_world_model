@@ -25,7 +25,7 @@
       "type": "string"
     },
     "refs": {
-      "$ref": "world_model_object.schema.json#/$defs/string_array"
+      "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
     }
   }
 }

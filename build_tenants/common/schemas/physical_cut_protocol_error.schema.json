@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.physical_cut_protocol_error.schema.json",
+  "title": "PhysicalCutProtocolError",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_kind",
+    "schema_version",
+    "operation",
+    "effect_status",
+    "completed_at",
+    "gap"
+  ],
+  "properties": {
+    "schema_kind": {
+      "const": "odd_world_model.physical_cut_protocol_error"
+    },
+    "schema_version": {
+      "const": "v1"
+    },
+    "operation": {
+      "const": "protocol"
+    },
+    "effect_status": {
+      "const": "failed"
+    },
+    "correlation_id": {
+      "type": "string"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "gap": {
+      "$ref": "odd_world_model.typed_gap.schema.json"
+    }
+  }
+}

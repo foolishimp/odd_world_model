@@ -1,9 +1,13 @@
 # ADR-001 TypeScript GTL/ABG Tech Stack
 
-**Status**: Accepted
+**Status**: Superseded by ADR-006 and accepted ADR-WM-004; retained technology provenance
 **Date**: 2026-05-15
 **Scope**: TypeScript tenant technology stack, GTL/ABG binding, and first graph-build trigger boundary
 **Ticket**: `T-026`
+
+The TypeScript/ESM and ABG traversal decisions remain useful provenance. The
+named executive handle, trigger contract, source layout, and broad substrate
+claims are not current authority.
 
 ## Context
 

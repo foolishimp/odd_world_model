@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.physical_cut_verify_result.schema.json",
+  "title": "PhysicalCutVerifyResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_kind",
+    "schema_version",
+    "operation",
+    "verification_request_id",
+    "effect_observation"
+  ],
+  "properties": {
+    "schema_kind": {
+      "const": "odd_world_model.physical_cut_verify_result"
+    },
+    "schema_version": {
+      "const": "v1"
+    },
+    "operation": {
+      "const": "verify_cut"
+    },
+    "verification_request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "effect_observation": {
+      "$ref": "odd_world_model.physical_effect_observation.schema.json"
+    },
+    "gap": {
+      "$ref": "odd_world_model.typed_gap.schema.json"
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.physical_cut_write_request.schema.json",
+  "title": "PhysicalCutWriteRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_kind",
+    "schema_version",
+    "operation",
+    "write_request_id",
+    "request_digest",
+    "admission_ref",
+    "storage_profile_ref",
+    "semantic_cut",
+    "tables",
+    "admitted_at"
+  ],
+  "properties": {
+    "schema_kind": {
+      "const": "odd_world_model.physical_cut_write_request"
+    },
+    "schema_version": {
+      "const": "v1"
+    },
+    "operation": {
+      "const": "write_cut"
+    },
+    "write_request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request_digest": {
+      "$ref": "odd_world_model.semantic_cut_attestation.schema.json#/$defs/digest"
+    },
+    "admission_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "storage_profile_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "semantic_cut": {
+      "$ref": "#/$defs/semantic_cut"
+    },
+    "tables": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/table"
+      }
+    },
+    "admitted_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "$defs": {
+    "semantic_cut": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "semantic_cut_ref",
+        "semantic_cut_digest",
+        "cut_role",
+        "cut_version",
+        "governing_refs",
+        "source_refs",
+        "authority_refs",
+        "abg_event_refs",
+        "dependency_identities",
+        "fidelity",
+        "losses",
+        "exclusions",
+        "gap_refs"
+      ],
+      "properties": {
+        "semantic_cut_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "semantic_cut_digest": {
+          "$ref": "odd_world_model.semantic_cut_attestation.schema.json#/$defs/digest"
+        },
+        "cut_role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cut_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "governing_refs": {
+          "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
+        },
+        "source_refs": {
+          "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
+        },
+        "authority_refs": {
+          "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
+        },
+        "graph_invocation_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "abg_event_refs": {
+          "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
+        },
+        "dependency_identities": {
+          "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
+        },
+        "temporal_coordinates": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "fidelity": {
+          "type": "string",
+          "enum": [
+            "exact_payload",
+            "lossless_projection",
+            "lossy_projection"
+          ]
+        },
+        "losses": {
+          "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
+        },
+        "exclusions": {
+          "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
+        },
+        "gap_refs": {
+          "$ref": "odd_world_model.world_model_object.schema.json#/$defs/string_array"
+        }
+      }
+    },
+    "table": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "table_identifier",
+        "records"
+      ],
+      "properties": {
+        "table_identifier": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*\\.[a-z][a-z0-9_]*$"
+        },
+        "records": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/record"
+          }
+        }
+      }
+    },
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_id",
+        "record_kind",
+        "payload"
+      ],
+      "properties": {
+        "record_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

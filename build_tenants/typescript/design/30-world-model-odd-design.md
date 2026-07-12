@@ -1,6 +1,6 @@
 # TypeScript World-Model ODD Design
 
-**Status**: Active target design
+**Status**: Retained topology input; superseded as current target
 **Date**: 2026-05-15
 **Derived from**:
 - `build_tenants/python/design/30-generated-odd-design.md`

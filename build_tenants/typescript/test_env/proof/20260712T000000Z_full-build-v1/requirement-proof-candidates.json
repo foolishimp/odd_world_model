@@ -1,0 +1,1359 @@
+{
+  "schema_kind": "odd_world_model.requirement_proof_candidate_ledger",
+  "schema_version": "v1",
+  "closure_authority": "not_claimed",
+  "requirement_count": 116,
+  "status_counts": {
+    "candidate_evidence": 53,
+    "deferred": 18,
+    "not_applicable": 1,
+    "open": 44
+  },
+  "rows": [
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-CAP-001",
+      "source_ref": "specification/requirements/20-domain-build-and-composition-capability.md",
+      "status": "open",
+      "review_disposition": "the_current_slice_has_source_check_acceptance_and_publication_but_not_the_required_assurance_and_attribute_ledger_chain",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-CAP-002",
+      "source_ref": "specification/requirements/20-domain-build-and-composition-capability.md",
+      "status": "open",
+      "review_disposition": "traced_observation_exists_but_the_separate_assurance_surface_is_not_realized",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-CAP-003",
+      "source_ref": "specification/requirements/20-domain-build-and-composition-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-CAP-004",
+      "source_ref": "specification/requirements/20-domain-build-and-composition-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "connected_composition_over_exact_published_cuts_and_admitted_semantic_links_is_witnessed",
+      "evidence_refs": [
+        "build_tenants/typescript/code/src/domain/world_model_composition.ts",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-CAP-005",
+      "source_ref": "specification/requirements/20-domain-build-and-composition-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "bounded_query_contract_traverses_exact_admitted_nodes_and_links_and_returns_the_traversed_vectors",
+      "evidence_refs": [
+        "build_tenants/typescript/code/src/query/query_projection.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-CAP-006",
+      "source_ref": "specification/requirements/20-domain-build-and-composition-capability.md",
+      "status": "open",
+      "review_disposition": "bounded_iterative_saturation_and_its_gap_carrying_termination_contract_are_not_realized",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-CAP-007",
+      "source_ref": "specification/requirements/20-domain-build-and-composition-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-CONSTRAINT-001",
+      "source_ref": "specification/requirements/30-domain-build-and-composition-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json",
+        "build_tenants/storage/python/design/IMPLEMENTATION_DESIGN.md",
+        "build_tenants/typescript/test_env/tests/storage_contract.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-CONSTRAINT-002",
+      "source_ref": "specification/requirements/30-domain-build-and-composition-constraints.md",
+      "status": "open",
+      "review_disposition": "no_append_only_attribute_ledger_is_the_immediate_source_of_the_candidate_object_cut",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-CONSTRAINT-003",
+      "source_ref": "specification/requirements/30-domain-build-and-composition-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "immutable_v1_and_v2_publications_are_joined_by_an_admitted_cut_supersession_link_without_editing_v1",
+      "evidence_refs": [
+        "build_tenants/typescript/code/src/domain/semantic_link_resolution.ts",
+        "build_tenants/typescript/code/src/mesh/semantic_mesh.ts",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "reference-semantic-slice.json",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-CONSTRAINT-004",
+      "source_ref": "specification/requirements/30-domain-build-and-composition-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json",
+        "build_tenants/storage/python/design/IMPLEMENTATION_DESIGN.md",
+        "build_tenants/typescript/test_env/tests/storage_contract.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-CONSTRAINT-005",
+      "source_ref": "specification/requirements/30-domain-build-and-composition-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json",
+        "build_tenants/storage/python/design/IMPLEMENTATION_DESIGN.md",
+        "build_tenants/typescript/test_env/tests/storage_contract.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-CONSTRAINT-006",
+      "source_ref": "specification/requirements/30-domain-build-and-composition-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json",
+        "build_tenants/storage/python/design/IMPLEMENTATION_DESIGN.md",
+        "build_tenants/typescript/test_env/tests/storage_contract.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-VERIFY-001",
+      "source_ref": "specification/requirements/40-domain-build-verification.md",
+      "status": "open",
+      "review_disposition": "source_check_and_cut_surfaces_exist_but_assurance_and_attribute_ledger_review_surfaces_are_missing",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-VERIFY-002",
+      "source_ref": "specification/requirements/40-domain-build-verification.md",
+      "status": "open",
+      "review_disposition": "reverse_recoverability_stops_before_resolved_attribute_ledger_and_assurance_evidence",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-VERIFY-003",
+      "source_ref": "specification/requirements/40-domain-build-verification.md",
+      "status": "open",
+      "review_disposition": "the_integrated_slice_is_semantic_plumbing_not_the_full_source_to_attribute_ledger_to_object_chain",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-VERIFY-004",
+      "source_ref": "specification/requirements/40-domain-build-verification.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-VERIFY-005",
+      "source_ref": "specification/requirements/40-domain-build-verification.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-VERIFY-006",
+      "source_ref": "specification/requirements/40-domain-build-verification.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-VERIFY-007",
+      "source_ref": "specification/requirements/40-domain-build-verification.md",
+      "status": "open",
+      "review_disposition": "candidate_Markov_object_shape_is_exercised_but_supporting_ledger_and_held_out_treatment_evidence_are_not_resolved",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-VERIFY-008",
+      "source_ref": "specification/requirements/40-domain-build-verification.md",
+      "status": "not_applicable",
+      "review_disposition": "no_established_markov_object_claimed",
+      "evidence_refs": [
+        "build_tenants/common/schemas/candidate_markov_object_cut.schema.json",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-BUILD-VERIFY-009",
+      "source_ref": "specification/requirements/40-domain-build-verification.md",
+      "status": "open",
+      "review_disposition": "the_rc3_bridge_re_carries_a_preconstructed_candidate_and_does_not_prove_calibrated_F_P_semantic_authorship",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-001",
+      "source_ref": "specification/requirements/25-governed-context-memory-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-002",
+      "source_ref": "specification/requirements/25-governed-context-memory-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-003",
+      "source_ref": "specification/requirements/25-governed-context-memory-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-004",
+      "source_ref": "specification/requirements/25-governed-context-memory-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-005",
+      "source_ref": "specification/requirements/25-governed-context-memory-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-006",
+      "source_ref": "specification/requirements/25-governed-context-memory-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "freshness_is_derived_from_a_validated_current_dependency_catalog_and_bound_into_the_invocation_record",
+      "evidence_refs": [
+        "build_tenants/typescript/code/src/context/context_memory.ts",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-001",
+      "source_ref": "specification/requirements/35-governed-context-memory-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-002",
+      "source_ref": "specification/requirements/35-governed-context-memory-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-003",
+      "source_ref": "specification/requirements/35-governed-context-memory-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-004",
+      "source_ref": "specification/requirements/35-governed-context-memory-constraints.md",
+      "status": "open",
+      "review_disposition": "known_loss_truncation_exclusion_and_gap_disclosure_is_proven_but_unknown_or_unmeasured_fidelity_has_no_declared_contract_value",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-005",
+      "source_ref": "specification/requirements/35-governed-context-memory-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-006",
+      "source_ref": "specification/requirements/35-governed-context-memory-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CAP-001",
+      "source_ref": "specification/requirements/60-multi-domain-mapping-capability.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CAP-002",
+      "source_ref": "specification/requirements/60-multi-domain-mapping-capability.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CAP-003",
+      "source_ref": "specification/requirements/60-multi-domain-mapping-capability.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CAP-004",
+      "source_ref": "specification/requirements/60-multi-domain-mapping-capability.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CAP-005",
+      "source_ref": "specification/requirements/60-multi-domain-mapping-capability.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CAP-006",
+      "source_ref": "specification/requirements/60-multi-domain-mapping-capability.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CAP-007",
+      "source_ref": "specification/requirements/60-multi-domain-mapping-capability.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CAP-008",
+      "source_ref": "specification/requirements/60-multi-domain-mapping-capability.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CAP-009",
+      "source_ref": "specification/requirements/60-multi-domain-mapping-capability.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CAP-010",
+      "source_ref": "specification/requirements/60-multi-domain-mapping-capability.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-001",
+      "source_ref": "specification/requirements/70-multi-domain-mapping-constraints.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-002",
+      "source_ref": "specification/requirements/70-multi-domain-mapping-constraints.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-003",
+      "source_ref": "specification/requirements/70-multi-domain-mapping-constraints.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-004",
+      "source_ref": "specification/requirements/70-multi-domain-mapping-constraints.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-005",
+      "source_ref": "specification/requirements/70-multi-domain-mapping-constraints.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-006",
+      "source_ref": "specification/requirements/70-multi-domain-mapping-constraints.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-007",
+      "source_ref": "specification/requirements/70-multi-domain-mapping-constraints.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MAPPING-CONSTRAINT-008",
+      "source_ref": "specification/requirements/70-multi-domain-mapping-constraints.md",
+      "status": "deferred",
+      "review_disposition": "deferred_by_accepted_ADR_WM_004",
+      "evidence_refs": [
+        "build_tenants/common/design/adrs/ADR-WM-004-gtl-graph-function-catalog.md",
+        "build_tenants/common/design/MULTI_DOMAIN_MAPPING_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CAP-001",
+      "source_ref": "specification/requirements/80-world-model-mesh-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CAP-002",
+      "source_ref": "specification/requirements/80-world-model-mesh-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CAP-003",
+      "source_ref": "specification/requirements/80-world-model-mesh-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CAP-004",
+      "source_ref": "specification/requirements/80-world-model-mesh-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CAP-005",
+      "source_ref": "specification/requirements/80-world-model-mesh-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "source_and_interpreted_domains_adopt_one_exact_published_common_model_through_admitted_links",
+      "evidence_refs": [
+        "build_tenants/typescript/code/src/domain/semantic_link_resolution.ts",
+        "build_tenants/typescript/code/src/mesh/semantic_mesh.ts",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "reference-semantic-slice.json",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CAP-006",
+      "source_ref": "specification/requirements/80-world-model-mesh-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "retained_v1_and_v2_meshes_prove_incremental_supersession_and_dependency_local_affected_closure",
+      "evidence_refs": [
+        "build_tenants/typescript/code/src/domain/semantic_link_resolution.ts",
+        "build_tenants/typescript/code/src/mesh/semantic_mesh.ts",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "reference-semantic-slice.json",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CAP-007",
+      "source_ref": "specification/requirements/80-world-model-mesh-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CAP-008",
+      "source_ref": "specification/requirements/80-world-model-mesh-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "semantic_link_proposal_requires_replay_admission_before_the_durable_published_link_can_enter_mesh_or_composition",
+      "evidence_refs": [
+        "build_tenants/typescript/code/src/domain/semantic_link_resolution.ts",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CAP-009",
+      "source_ref": "specification/requirements/80-world-model-mesh-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CAP-010",
+      "source_ref": "specification/requirements/80-world-model-mesh-capability.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-001",
+      "source_ref": "specification/requirements/90-world-model-mesh-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-002",
+      "source_ref": "specification/requirements/90-world-model-mesh-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-003",
+      "source_ref": "specification/requirements/90-world-model-mesh-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-004",
+      "source_ref": "specification/requirements/90-world-model-mesh-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "published_cut_and_link_supersession_are_explicit_admitted_relations_with_closed_validity_and_resolvable_successors",
+      "evidence_refs": [
+        "build_tenants/typescript/code/src/domain/semantic_link_resolution.ts",
+        "build_tenants/typescript/code/src/mesh/semantic_mesh.ts",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "reference-semantic-slice.json",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-005",
+      "source_ref": "specification/requirements/90-world-model-mesh-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-006",
+      "source_ref": "specification/requirements/90-world-model-mesh-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "the_common_model_is_an_exact_published_common_model_role_and_not_an_ambient_default",
+      "evidence_refs": [
+        "build_tenants/typescript/code/src/domain/semantic_link_resolution.ts",
+        "build_tenants/typescript/code/src/mesh/semantic_mesh.ts",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "reference-semantic-slice.json",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-007",
+      "source_ref": "specification/requirements/90-world-model-mesh-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-008",
+      "source_ref": "specification/requirements/90-world-model-mesh-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-009",
+      "source_ref": "specification/requirements/90-world-model-mesh-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-010",
+      "source_ref": "specification/requirements/90-world-model-mesh-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-011",
+      "source_ref": "specification/requirements/90-world-model-mesh-constraints.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-ODD-CARRIER-001",
+      "source_ref": "specification/requirements/50-odd-method-gtl-carrier.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/common/design/GTL_GRAPH_FUNCTION_CONTRACTS.md",
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/gtl_substrate.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "gtl-conformance-report.json",
+        "events.jsonl",
+        "replay-events.jsonl"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-ODD-CARRIER-002",
+      "source_ref": "specification/requirements/50-odd-method-gtl-carrier.md",
+      "status": "open",
+      "review_disposition": "native_WM_payload_execution_by_the_selected_GraphFunction_is_not_yet_realized",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-ODD-CARRIER-003",
+      "source_ref": "specification/requirements/50-odd-method-gtl-carrier.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/common/design/GTL_GRAPH_FUNCTION_CONTRACTS.md",
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/gtl_substrate.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "gtl-conformance-report.json",
+        "events.jsonl",
+        "replay-events.jsonl"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-ODD-CARRIER-004",
+      "source_ref": "specification/requirements/50-odd-method-gtl-carrier.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/common/design/GTL_GRAPH_FUNCTION_CONTRACTS.md",
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/gtl_substrate.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "gtl-conformance-report.json",
+        "events.jsonl",
+        "replay-events.jsonl"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-ODD-CARRIER-005",
+      "source_ref": "specification/requirements/50-odd-method-gtl-carrier.md",
+      "status": "open",
+      "review_disposition": "live_carrier_transports_exact_refs_but_does_not_yet_execute_the_WM_semantic_kernel",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-ODD-CARRIER-006",
+      "source_ref": "specification/requirements/50-odd-method-gtl-carrier.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/common/design/GTL_GRAPH_FUNCTION_CONTRACTS.md",
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/gtl_substrate.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "gtl-conformance-report.json",
+        "events.jsonl",
+        "replay-events.jsonl"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-ODD-CARRIER-007",
+      "source_ref": "specification/requirements/50-odd-method-gtl-carrier.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/common/design/GTL_GRAPH_FUNCTION_CONTRACTS.md",
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/gtl_substrate.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "gtl-conformance-report.json",
+        "events.jsonl",
+        "replay-events.jsonl"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-ODD-CARRIER-008",
+      "source_ref": "specification/requirements/50-odd-method-gtl-carrier.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/common/design/GTL_GRAPH_FUNCTION_CONTRACTS.md",
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/gtl_substrate.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "gtl-conformance-report.json",
+        "events.jsonl",
+        "replay-events.jsonl"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-ODD-CARRIER-009",
+      "source_ref": "specification/requirements/50-odd-method-gtl-carrier.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/common/design/GTL_GRAPH_FUNCTION_CONTRACTS.md",
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/gtl_substrate.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "gtl-conformance-report.json",
+        "events.jsonl",
+        "replay-events.jsonl"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-ODD-CARRIER-010",
+      "source_ref": "specification/requirements/50-odd-method-gtl-carrier.md",
+      "status": "open",
+      "review_disposition": "reference_plugins_are_injected_by_the_proving_adapter_not_resolved_as_production_WM_capabilities",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-ODD-CARRIER-011",
+      "source_ref": "specification/requirements/50-odd-method-gtl-carrier.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/common/design/GTL_GRAPH_FUNCTION_CONTRACTS.md",
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/gtl_substrate.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "gtl-conformance-report.json",
+        "events.jsonl",
+        "replay-events.jsonl"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-ODD-CARRIER-012",
+      "source_ref": "specification/requirements/50-odd-method-gtl-carrier.md",
+      "status": "open",
+      "review_disposition": "the_pinned_GLC_line_supplies_startup_and_lifecycle_overlay_evidence_not_the_successor_downstream_program_carrier",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-PRODUCT-001",
+      "source_ref": "specification/requirements/05-product-definition-authority.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-PRODUCT-002",
+      "source_ref": "specification/requirements/05-product-definition-authority.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-PRODUCT-003",
+      "source_ref": "specification/requirements/05-product-definition-authority.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-PRODUCT-004",
+      "source_ref": "specification/requirements/05-product-definition-authority.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-PRODUCT-005",
+      "source_ref": "specification/requirements/05-product-definition-authority.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-PRODUCT-006",
+      "source_ref": "specification/requirements/05-product-definition-authority.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-PRODUCT-007",
+      "source_ref": "specification/requirements/05-product-definition-authority.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-PRODUCT-008",
+      "source_ref": "specification/requirements/05-product-definition-authority.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-PRODUCT-009",
+      "source_ref": "specification/requirements/05-product-definition-authority.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-PRODUCT-010",
+      "source_ref": "specification/requirements/05-product-definition-authority.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-RELEASE-001",
+      "source_ref": "specification/requirements/95-release-installation-governance.md",
+      "status": "open",
+      "review_disposition": "immutable_release_and_install_proof_required",
+      "evidence_refs": [
+        "specification/requirements/95-release-installation-governance.md",
+        "build_tenants/common/design/INSTALLER_CONVERGENCE_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-RELEASE-002",
+      "source_ref": "specification/requirements/95-release-installation-governance.md",
+      "status": "open",
+      "review_disposition": "immutable_release_and_install_proof_required",
+      "evidence_refs": [
+        "specification/requirements/95-release-installation-governance.md",
+        "build_tenants/common/design/INSTALLER_CONVERGENCE_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-RELEASE-003",
+      "source_ref": "specification/requirements/95-release-installation-governance.md",
+      "status": "open",
+      "review_disposition": "immutable_release_and_install_proof_required",
+      "evidence_refs": [
+        "specification/requirements/95-release-installation-governance.md",
+        "build_tenants/common/design/INSTALLER_CONVERGENCE_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-RELEASE-004",
+      "source_ref": "specification/requirements/95-release-installation-governance.md",
+      "status": "open",
+      "review_disposition": "immutable_release_and_install_proof_required",
+      "evidence_refs": [
+        "specification/requirements/95-release-installation-governance.md",
+        "build_tenants/common/design/INSTALLER_CONVERGENCE_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-RELEASE-005",
+      "source_ref": "specification/requirements/95-release-installation-governance.md",
+      "status": "open",
+      "review_disposition": "immutable_release_and_install_proof_required",
+      "evidence_refs": [
+        "specification/requirements/95-release-installation-governance.md",
+        "build_tenants/common/design/INSTALLER_CONVERGENCE_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-RELEASE-006",
+      "source_ref": "specification/requirements/95-release-installation-governance.md",
+      "status": "open",
+      "review_disposition": "immutable_release_and_install_proof_required",
+      "evidence_refs": [
+        "specification/requirements/95-release-installation-governance.md",
+        "build_tenants/common/design/INSTALLER_CONVERGENCE_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-RELEASE-007",
+      "source_ref": "specification/requirements/95-release-installation-governance.md",
+      "status": "open",
+      "review_disposition": "immutable_release_and_install_proof_required",
+      "evidence_refs": [
+        "specification/requirements/95-release-installation-governance.md",
+        "build_tenants/common/design/INSTALLER_CONVERGENCE_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-RELEASE-008",
+      "source_ref": "specification/requirements/95-release-installation-governance.md",
+      "status": "open",
+      "review_disposition": "immutable_release_and_install_proof_required",
+      "evidence_refs": [
+        "specification/requirements/95-release-installation-governance.md",
+        "build_tenants/common/design/INSTALLER_CONVERGENCE_LINE.md"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-WORLD-OBJECT-001",
+      "source_ref": "specification/requirements/10-world-model-object-representation.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-WORLD-OBJECT-002",
+      "source_ref": "specification/requirements/10-world-model-object-representation.md",
+      "status": "open",
+      "review_disposition": "identity_direction_shape_exists_but_held_out_treatment_and_distributed_evidence_are_unresolved_refs",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-WORLD-OBJECT-003",
+      "source_ref": "specification/requirements/10-world-model-object-representation.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-WORLD-OBJECT-004",
+      "source_ref": "specification/requirements/10-world-model-object-representation.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-WORLD-OBJECT-005",
+      "source_ref": "specification/requirements/10-world-model-object-representation.md",
+      "status": "open",
+      "review_disposition": "the_slice_has_one_treatment_link_but_no_covariance_and_adjoint_trace_chain",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-WORLD-OBJECT-006",
+      "source_ref": "specification/requirements/10-world-model-object-representation.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-WORLD-OBJECT-007",
+      "source_ref": "specification/requirements/10-world-model-object-representation.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-WORLD-OBJECT-008",
+      "source_ref": "specification/requirements/10-world-model-object-representation.md",
+      "status": "open",
+      "review_disposition": "reviewed_no_specific_current_slice_witness_present",
+      "evidence_refs": []
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-WORLD-OBJECT-009",
+      "source_ref": "specification/requirements/10-world-model-object-representation.md",
+      "status": "open",
+      "review_disposition": "attribute_level_sourceability_cannot_close_without_attribute_ledger_and_assurance_records",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-WORLD-OBJECT-010",
+      "source_ref": "specification/requirements/10-world-model-object-representation.md",
+      "status": "open",
+      "review_disposition": "qualified_multi_surface_attribute_authority_is_not_exercised",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-WORLD-OBJECT-011",
+      "source_ref": "specification/requirements/10-world-model-object-representation.md",
+      "status": "open",
+      "review_disposition": "append_only_attribute_ledger_materialization_is_not_realized",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-WORLD-OBJECT-012",
+      "source_ref": "specification/requirements/10-world-model-object-representation.md",
+      "status": "open",
+      "review_disposition": "candidate_cut_shape_is_immutable_but_ledger_projection_and_explicit_supersession_are_not_realized",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/code/src/substrate_binding/public_start.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts"
+      ]
+    },
+    {
+      "requirement_id": "REQ-ODD-WORLD-MODEL-WORLD-OBJECT-013",
+      "source_ref": "specification/requirements/10-world-model-object-representation.md",
+      "status": "candidate_evidence",
+      "review_disposition": "specific_witness_present_no_requirement_closure_claimed",
+      "evidence_refs": [
+        "build_tenants/typescript/design/90-admitted-semantic-steel-thread-design.md",
+        "build_tenants/typescript/design/95-rc3-reference-bridge-as-built-review.md",
+        "build_tenants/typescript/test_env/tests/semantic_memory.test.ts",
+        "build_tenants/typescript/test_env/tests/full_steel_thread.test.ts",
+        "verification.json"
+      ]
+    }
+  ]
+}

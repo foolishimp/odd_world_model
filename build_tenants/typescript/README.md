@@ -3,7 +3,9 @@
 `build_tenants/typescript/` is the selected forward realization tenant for the
 `odd_world_model` rebuild.
 
-Current status: first implementation slice active.
+Current status: executable semantic-contract reference slice implemented;
+native GraphFunction payload execution, final product review, and immutable
+release proof remain open.
 
 This tenant records the source-side landing zone for a TypeScript realization
 of `odd_world_model`. Product `WHAT` remains under `specification/`. This tenant
@@ -18,6 +20,10 @@ The installed governance/runtime payload for `odd_sdlc.TS` lives under
 - `design/adrs/ADR-001-typescript-gtl-abg-tech-stack.md`
 - `design/adrs/ADR-002-odd-sdlc-build-component-inheritance.md`
 - `design/adrs/ADR-003-reference-derived-design-carry-forward.md`
+- `design/adrs/ADR-006-exact-rc3-proving-substrate-and-migration-seam.md`
+- `design/90-admitted-semantic-steel-thread-design.md`
+- `design/95-rc3-reference-bridge-as-built-review.md`
+- `design/80-current-full-build-design.md`
 - `design/20-feature-decomposition.md`
 - `design/30-world-model-odd-design.md`
 - `design/40-module-boundaries.md`
@@ -25,51 +31,41 @@ The installed governance/runtime payload for `odd_sdlc.TS` lives under
 
 ## Runnable Slice
 
-The first TypeScript materialization slice is a deterministic filesystem
-runner for retained example sources. It is not the final ABG-backed graph
-execution path, but it proves the source-observation to published-artifact to
-query projection carrier for all retained example corpora.
+The current slice publishes seven accepted GTL GraphFunctions, seven jobs, one
+module, one exact runtime catalog startup binding, pure WM semantic kernels,
+and a bounded PyIceberg effect with DuckDB exact-snapshot proof. Public starts
+delegate to ABIogenesis and odd_glc projects the emitted registry/traversal
+truth.
 
-Run the retained examples from the repo root:
+The reference-bound steel thread binds exact source and candidate refs through all
+five domain-publication vectors, derives ABG admission from canonical events,
+applies attributed WM acceptance, admits physical effects, and projects mesh,
+context, invocation, staleness, and query over final published cuts. The rc.3
+F_P bridge re-carries a preconstructed proposal; it neither executes the WM
+semantic kernel nor proves calibrated authorship. It remains a deterministic
+reference-and-digest adapter, not a production model provider.
 
-```bash
-npm --prefix build_tenants/typescript run examples -- --run-id 20260515T000000Z_v1.TS
-```
-
-Compare generated `.TS` cuts against the Python-built reference cuts:
-
-```bash
-node build_tenants/typescript/code/src/cli/main.ts compare-examples --workspace . --run-id 20260515T000000Z_v1.TS --reference-run-id 20260419T000000Z_v1
-```
-
-Run the TypeScript tenant tests:
+Run current validation and persist development proof:
 
 ```bash
-npm --prefix build_tenants/typescript test
+npm run typecheck
+npm test
+npm run proof:generate
 ```
 
-The generated comparison cuts are under:
-
-```text
-examples/<domain>/sandbox/20260515T000000Z_v1.TS/
-```
-
-They omit Python runtime payloads and write a TypeScript install manifest under
-`.genesis/odd_world_model/typescript/release/install_manifest.json`.
+The old filesystem constructor is preserved only under
+`historical/filesystem_runner/`. It is outside current source, package scripts,
+exports, tests, and proof. Its generated files are historical read models, not
+ABG events or WM publication truth.
 
 ## Stack Position
 
 The TypeScript tenant uses GTL/ABG through the ABIogenesis TypeScript substrate.
 
-Installed `odd_sdlc` under `.abiogenesis/odd_sdlc/typescript/` is used as a
-build component for SDLC governance, ticket/execution-contract interpretation,
-operator control surfaces, proof/release patterns, lineage ledgers, and
-tracking registers. It is not the authored world-model product and does not own
-world-model domain semantics.
-
-The tenant may build custom world-model domain graphs over that governance
-substrate. The SDLC registers track build lineage and closure; the published
-world-model layer remains the semantic truth surface.
+Installed `odd_sdlc` under `.abiogenesis/odd_sdlc/typescript/` is historical
+builder/readback evidence. Current method authority comes from the workspace
+STDO source, current GTL/ABG execution comes from the exact ABIogenesis package,
+and lifecycle interpretation comes from odd_glc. None owns WM domain meaning.
 
 The stale Python design line is retained as reference evidence only. Relevant
 feature layering, component boundaries, module groups, and proof lanes have
@@ -80,8 +76,8 @@ been carried forward into the TypeScript design pack through ADR-003.
 Retained example sources live under `examples/*/sources/`. Existing unsuffixed
 example sandboxes are Python-built reference cuts.
 
-The TypeScript tenant should reuse the generic `odd_sdlc` scenario sandbox
-shape under:
+Historical comparison runs used the generic odd_sdlc scenario sandbox shape
+under:
 
 ```text
 build_tenants/typescript/test_env/
@@ -90,10 +86,10 @@ build_tenants/typescript/test_env/
 └── test_runs/
 ```
 
-The canonical TypeScript proof archive should be:
+The current development proof archive is:
 
 ```text
-build_tenants/typescript/test_env/test_runs/<scenarioId>/<timestamp>_pid<pid>/
+build_tenants/typescript/test_env/proof/20260712T000000Z_full-build-v1/
 ```
 
 When side-by-side comparison is useful, a run may also emit a projected
@@ -110,12 +106,7 @@ slice preserves source, review, published, composed-world-model, query, event,
 manifest, and result evidence. Rich historical APRA/trade mapping and proof
 surfaces remain parity pressure for the next implementation slice.
 
-The first graph-build trigger is designed around:
-
-```text
-graph_function:odd_world_model.rebuild_world_model_core
-```
-
-The implementation wave must publish that public `GraphFunction`, bind a
-semantic `Job`, publish the GTL `Module`, and delegate traversal to ABG before
-claiming a runnable graph build.
+The retired `odd_world_model.rebuild_world_model_core` handle is historical
+readback. Current public handles are defined once in
+`code/src/gtl/graph_functions.ts` and projected through
+`code/src/gtl/catalog.ts`.

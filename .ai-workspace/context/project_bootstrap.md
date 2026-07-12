@@ -6,11 +6,11 @@ It is not a replacement for project-owned specification truth.
 ## Workspace Identity
 - workspace: `odd_world_model`
 - project slug: `odd_world_model`
-- platform: `python`
+- platform: `typescript`
 
 ## Project Identity
-- authoritative project title: not confidently determined from imported authority
-- identity source: no explicit imported identity surface detected
+- authoritative project title: odd_world_model
+- identity source: `specification/PRODUCT.md`
 - workspace/template/bootstrap provenance does not change project identity
 
 ## Source Titles
@@ -22,21 +22,20 @@ It is not a replacement for project-owned specification truth.
 
 ## Read Order
 - `specification/INTENT.md` when present
-- `specification/requirements/00-imported-sources.md`
-- imported requirement-like sources listed there
-- `.ai-workspace/runtime/odd_sdlc-ambiguity-register.json` for current major ambiguity state
-- `.ai-workspace/runtime/odd_sdlc-requirement-closure.json` for live requirement carry-forward and code/test closure state
-- `README.md` only as provenance/context after the imported authority
-- `specification/PRODUCT.md` and `specification/GOALS.md` only after the imported authority
+- `specification/GOALS.md`
+- `specification/PRODUCT.md`
+- `specification/requirements/`
+- `build_tenants/common/design/WORLD_MODEL_COMMON_ARCHITECTURE.md`
+- `build_tenants/typescript/design/80-current-full-build-design.md`
+- `README.md` as operator context after constitutional and design authority
 
-## Installed Runtime Start Surface
-- inspect current gaps with `PYTHONPATH=.genesis python -m genesis gaps --workspace .`
-- trigger bounded odd_sdlc traversal with `PYTHONPATH=.genesis python -m genesis start --auto --workspace .`
-- add `--human-proxy` only when you expect an explicit F_H approval lane; it does not proxy F_P transport failures
-- deployment, runtime-return, and similar side-effect stages only traverse when the active build tenant declares the required technology capability contracts in `project_constraints.yml`
-- major ambiguity is always recorded; `project_constraints.yml` declares `ambiguity_risk_appetite`, which governs whether unresolved major ambiguity is carried by `F_P` or escalated to `F_H` unless it is a hard-stop prerequisite
-- when release/deployment/runtime remain at `pending_evidence` with no returned execution data, treat the converged boundary as `construction_complete_pending_execution`
-- treat legacy bootstrap instructions or older scaffold references in imported project docs as provenance only, not active runtime guidance for this installed workspace
+## Current Build And Proof Surface
+- `npm --prefix build_tenants/typescript run typecheck`
+- `npm --prefix build_tenants/typescript test`
+- `npm --prefix build_tenants/typescript run proof:generate`
+- `.venv/bin/python -m unittest discover -s test_env/tests -v` from `build_tenants/storage/python`
+- treat `.abiogenesis/odd_sdlc`, `.genesis`, and the Python product tenant as historical installed/reference surfaces
+- ABG owns runtime traversal and events; odd_glc supplies downstream lifecycle interpretation; WM owns domain semantics
 
 ## Interpretation Rule
 - use this surface to orient quickly

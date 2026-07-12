@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.physical_cut_write_result.schema.json",
+  "title": "PhysicalCutWriteResult",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/success"
+    },
+    {
+      "$ref": "#/$defs/failure"
+    }
+  ],
+  "$defs": {
+    "base_properties": {
+      "type": "object"
+    },
+    "success": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_kind",
+        "schema_version",
+        "operation",
+        "effect_status",
+        "write_request_id",
+        "request_digest",
+        "completed_at",
+        "attestation",
+        "effect_observation"
+      ],
+      "properties": {
+        "schema_kind": {
+          "const": "odd_world_model.physical_cut_write_result"
+        },
+        "schema_version": {
+          "const": "v1"
+        },
+        "operation": {
+          "const": "write_cut"
+        },
+        "effect_status": {
+          "enum": [
+            "written",
+            "idempotent"
+          ]
+        },
+        "write_request_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "request_digest": {
+          "$ref": "odd_world_model.semantic_cut_attestation.schema.json#/$defs/digest"
+        },
+        "completed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "attestation": {
+          "$ref": "odd_world_model.semantic_cut_attestation.schema.json"
+        },
+        "effect_observation": {
+          "$ref": "odd_world_model.physical_effect_observation.schema.json"
+        }
+      }
+    },
+    "failure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_kind",
+        "schema_version",
+        "operation",
+        "effect_status",
+        "write_request_id",
+        "completed_at",
+        "gap",
+        "completed_snapshots"
+      ],
+      "properties": {
+        "schema_kind": {
+          "const": "odd_world_model.physical_cut_write_result"
+        },
+        "schema_version": {
+          "const": "v1"
+        },
+        "operation": {
+          "const": "write_cut"
+        },
+        "effect_status": {
+          "const": "failed"
+        },
+        "write_request_id": {
+          "type": "string"
+        },
+        "request_digest": {
+          "$ref": "odd_world_model.semantic_cut_attestation.schema.json#/$defs/digest"
+        },
+        "completed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "gap": {
+          "$ref": "odd_world_model.typed_gap.schema.json"
+        },
+        "completed_snapshots": {
+          "type": "array",
+          "items": {
+            "$ref": "odd_world_model.semantic_cut_attestation.schema.json#/$defs/snapshot"
+          }
+        },
+        "effect_observation": {
+          "$ref": "odd_world_model.physical_effect_observation.schema.json"
+        }
+      }
+    }
+  }
+}

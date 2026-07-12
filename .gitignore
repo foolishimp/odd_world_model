@@ -10,12 +10,18 @@ node_modules/
 package.json
 package-lock.json
 !build_tenants/typescript/package.json
+!build_tenants/typescript/package-lock.json
 
 # Python cache and local test noise.
 .pytest_cache/
 **/__pycache__/
+*.egg-info/
 *.pyc
 build_tenants/python/test_env/reports/
+build_tenants/storage/python/.venv/
+build_tenants/storage/python/test_env/reports/
+build_tenants/storage/python/test_env/runtime/
+build_tenants/storage/python/.pytest_cache/
 
 # Runtime/event exhaust is regenerated from the source line.
 .ai-workspace/events/

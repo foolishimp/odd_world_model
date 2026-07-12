@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.source_observation.schema.json",
+  "title": "SourceObservation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_kind", "schema_version", "observation_ref", "source", "source_kind", "authority_ref", "evidence_refs", "observed_at", "observation_digest"],
+  "properties": {
+    "schema_kind": { "const": "odd_world_model.source_observation" },
+    "schema_version": { "const": "v1" },
+    "observation_ref": { "type": "string", "minLength": 1 },
+    "source": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "source_kind": { "type": "string", "minLength": 1 },
+    "authority_ref": { "type": "string", "minLength": 1 },
+    "evidence_refs": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "observed_at": { "type": "string", "format": "date-time" },
+    "observation_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  }
+}

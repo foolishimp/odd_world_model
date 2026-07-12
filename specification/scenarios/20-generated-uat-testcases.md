@@ -2,7 +2,7 @@
 
 **Project**: `odd_world_model`
 **Status**: Active
-**Date**: 2026-05-15
+**Date**: 2026-07-12
 **Requirement Surface**: `specification/requirements/`
 
 These UAT cases validate the technology-independent `odd_world_model` product
@@ -211,3 +211,178 @@ when they trace back to these cases and the live requirement surface.
 - The installed builder project is distinct from the mutable source project.
 - The install carries enough provenance and product assets to operate lawfully.
 - Product proof does not rely on uninstalled source-workspace realization structure.
+
+---
+
+## UAT-010: Specialize GLC Without Duplicating Lifecycle Or Runtime Authority
+
+**Validates**: REQ-ODD-WORLD-MODEL-PRODUCT-007, REQ-ODD-WORLD-MODEL-PRODUCT-008, REQ-ODD-WORLD-MODEL-PRODUCT-010, REQ-ODD-WORLD-MODEL-ODD-CARRIER-012
+
+### Preconditions
+
+- Published GLC and GTL/ABG contracts are selected for a WM build.
+- A WM downstream module declares domain assets and lifecycle interpretation.
+
+### Steps
+
+1. Inspect the module's domain, lifecycle, and runtime responsibilities.
+2. Trace lifecycle declarations and reads to GLC and runtime facts to ABG.
+3. Inspect how a missing or non-addressable dependency contract is handled.
+
+### Expected Outcome
+
+- WM contributes world-model domain meaning through the GLC downstream boundary.
+- GLC remains domain-agnostic and ABG remains the sole runtime-truth owner.
+- WM publishes no rival traversal, event, retry, closure, or lifecycle ledger.
+- Missing dependency law remains an explicit gap or block rather than local law.
+
+---
+
+## UAT-011: Publish Markov-Object Cuts With Honest Epistemic Status
+
+**Validates**: REQ-ODD-WORLD-MODEL-WORLD-OBJECT-002, REQ-ODD-WORLD-MODEL-WORLD-OBJECT-012, REQ-ODD-WORLD-MODEL-WORLD-OBJECT-013, REQ-ODD-WORLD-MODEL-BUILD-VERIFY-007, REQ-ODD-WORLD-MODEL-BUILD-VERIFY-008
+
+### Preconditions
+
+- Attribute-ledger evidence exists across multiple contexts with a null peer.
+- A candidate identity direction has held-out treatment evidence.
+
+### Steps
+
+1. Publish the immutable cut with identity projection, evidence, treatment verification, boundary characterization, and status.
+2. Verify that attribute membership and ingress or egress lists are supporting evidence rather than the blanket definition.
+3. Attempt to classify the cut as `established` without a qualifying direction-native conditional-independence result.
+
+### Expected Outcome
+
+- The publication exposes the identity-preserving projection and its evidence.
+- The cut defaults to `candidate` and is superseded rather than mutated.
+- `established` status is rejected until the formal promotion gate is evidenced.
+
+---
+
+## UAT-012: Admit Semantic Proposals Through The Governed Carrier
+
+**Validates**: REQ-ODD-WORLD-MODEL-BUILD-CONSTRAINT-001, REQ-ODD-WORLD-MODEL-BUILD-VERIFY-009, REQ-ODD-WORLD-MODEL-ODD-CARRIER-007, REQ-ODD-WORLD-MODEL-ODD-CARRIER-008, REQ-ODD-WORLD-MODEL-ODD-CARRIER-009, REQ-ODD-WORLD-MODEL-ODD-CARRIER-010, REQ-ODD-WORLD-MODEL-ODD-CARRIER-011
+
+### Preconditions
+
+- A published WM graph function and calibrated probabilistic worker are available.
+- Exact GTL/ABG conformance, event, plugin, and shape contracts are resolved.
+
+### Steps
+
+1. Select the graph function through the public catalog and conformance-check its GTL program.
+2. Produce a semantic candidate through a governed plugin seam.
+3. Apply deterministic checks, admit the result through ABG, and inspect semantic acceptance and publication lineage.
+4. Validate emitted events and wire shapes against the exact selected contracts.
+
+### Expected Outcome
+
+- Public work enters only through a published graph function.
+- The probabilistic worker proposes but does not directly write runtime or semantic truth.
+- Events use the canonical envelope and published census with no rival kinds.
+- Shape authority comes from the selected published contract, not inferred source or tests.
+
+---
+
+## UAT-013: Resolve Floating Product Dependencies Into Exact Artifact Evidence
+
+**Validates**: REQ-ODD-WORLD-MODEL-PRODUCT-009, REQ-ODD-WORLD-MODEL-RELEASE-005, REQ-ODD-WORLD-MODEL-RELEASE-006, REQ-ODD-WORLD-MODEL-RELEASE-007, REQ-ODD-WORLD-MODEL-RELEASE-008
+
+### Preconditions
+
+- WM product law names GTL/ABG and GLC contracts without exact versions.
+- A concrete build, proof, release, or install selects dependency products.
+
+### Steps
+
+1. Resolve the selected dependencies under their declared compatibility constraints.
+2. Record package, version, source or tag, manifest, digest, and contract locators.
+3. Replay release or install proof from the recorded lock with ambient moving labels and mutable sibling workspaces unavailable.
+
+### Expected Outcome
+
+- Product law remains version-floating.
+- The concrete artifact carries exact, compatible, recoverable dependency evidence.
+- Release and install replay do not drift with the surrounding workspace.
+- A development resolution is not misrepresented as released-product evidence.
+
+---
+
+## UAT-014: Resolve A Bounded Mesh Cut For One Interaction Goal
+
+**Validates**: REQ-ODD-WORLD-MODEL-MESH-CAP-001, REQ-ODD-WORLD-MODEL-MESH-CAP-002, REQ-ODD-WORLD-MODEL-MESH-CAP-003, REQ-ODD-WORLD-MODEL-MESH-CAP-004, REQ-ODD-WORLD-MODEL-MESH-CAP-005, REQ-ODD-WORLD-MODEL-MESH-CAP-007, REQ-ODD-WORLD-MODEL-MESH-CAP-008, REQ-ODD-WORLD-MODEL-MESH-CAP-009, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-001, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-002, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-003, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-005, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-006, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-007, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-008, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-009, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-011
+
+### Preconditions
+
+- Several locally owned domain artifacts and one composed model are published.
+- Typed semantic links connect exact publication cuts.
+- One interaction goal declares roots, scope, relation selectors, and closure.
+
+### Steps
+
+1. Admit the published cuts and typed links into the federated mesh.
+2. Adopt one reusable published artifact explicitly as a common-model role.
+3. Resolve the finite mesh cut required by the interaction goal.
+4. Traverse the cut through query or mapping without loading unrelated mesh truth.
+
+### Expected Outcome
+
+- Local node identity, authority, version, and boundary remain visible.
+- Link relation, provenance, treatment or loss, and supersession state remain visible.
+- The common model has authority only through explicit adoption.
+- The bounded cut contains exact refs and is not a copied truth surface.
+- Query or mapping remains a downstream projection over the cut.
+
+---
+
+## UAT-015: Propagate A Local Mesh Change Without Global Reconstruction
+
+**Validates**: REQ-ODD-WORLD-MODEL-MESH-CAP-006, REQ-ODD-WORLD-MODEL-MESH-CAP-010, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-004, REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-010
+
+### Preconditions
+
+- A published mesh contains several independent branches and one composed branch.
+- One node or semantic link has a newer superseding cut.
+
+### Steps
+
+1. Admit the superseding cut and its explicit supersession relation.
+2. Calculate the declared dependency closure affected by the change.
+3. Re-resolve an affected bounded cut and an unrelated bounded cut.
+4. Introduce one unresolved ref or incompatible relation in the affected branch.
+
+### Expected Outcome
+
+- Only the declared dependent branch is pressured for recomputation or review.
+- Unrelated published truth remains addressable without reconstruction.
+- The unresolved or incompatible relation is emitted as a typed gap.
+- No flattening, fallback name match, or silent omission hides the conflict.
+
+---
+
+## UAT-016: Serve And Judge An LLM Output Against Exact Context Memory
+
+**Validates**: REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-001, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-002, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-003, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-004, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-005, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-006, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-001, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-002, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-003, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-004, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-005, REQ-ODD-WORLD-MODEL-CONTEXT-MEMORY-CONSTRAINT-006
+
+### Preconditions
+
+- Application, data, processing, and documentary evidence has been admitted into published semantic cuts.
+- A bounded mesh cut and context-projection contract exist for one LLM interaction goal.
+
+### Steps
+
+1. Resolve an immutable context basis with exact mesh refs, digests, temporal coordinates, scope, freshness, fidelity, loss, exclusions, and gaps.
+2. Project the basis into bounded LLM context using candidate Markov-object and treatment surfaces as recoverable compression.
+3. Invoke the model and record model identity, invocation identity, output digest, basis ref, and admission status.
+4. Change one referenced source digest or semantic cut and evaluate the prior basis for staleness.
+5. Attempt to read undeclared ambient context or accept a basisless output as governed truth.
+
+### Expected Outcome
+
+- The context projection is reproducible from its exact basis and declares what it omitted or compressed.
+- The model output is judgeable against the world-state it saw and remains an F_P proposal.
+- The prior basis becomes visibly stale without silently retargeting the invocation.
+- Hidden context expansion and basisless governed output are rejected.
+- The proof does not depend on any particular storage engine or version-control technology.

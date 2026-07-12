@@ -43,9 +43,9 @@ materialized, its upstream mesh refs SHALL remain explicit.
 - `INTENT.md` — `Constraints`
 - `PRODUCT.md` — `Product End State`
 
-Every durable mesh node and link SHALL disclose the publication cut or version
-it relies on, together with explicit supersession where a newer semantic cut
-replaces an older one.
+Every durable mesh node and link SHALL disclose the exact publication cut or
+version it relies on, together with explicit supersession where newer semantic
+truth replaces an older cut or relation.
 
 ### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-005 — Query And Mapping Stay Downstream
 
@@ -65,8 +65,9 @@ nodes or links.
 - `INTENT.md` — `Constraints`
 - `PRODUCT.md` — `Common Model`
 
-A common model admitted into the mesh SHALL be treated as a reusable published
-node, not as hidden ambient doctrine or an undeclared central default model.
+A common model admitted into the mesh SHALL be treated as an explicitly adopted
+role of a reusable published node, not as hidden ambient doctrine, a privileged
+node type, or an undeclared central default model.
 
 ### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-007 — Mesh Line Must Be Generic
 
@@ -75,6 +76,50 @@ node, not as hidden ambient doctrine or an undeclared central default model.
 - `INTENT.md` — `Constraints`
 - `PRODUCT.md` — `Current Product Definition`
 
-The first retained mesh slice may prove itself on the current trade and APRA
-domains, but the mesh asset and graph-function boundaries SHALL be generic to
-federated published domains rather than hardcoded to one retained example pair.
+A retained mesh slice MAY use named domain corpora for proof, but the mesh asset
+and graph-function boundaries SHALL be generic to federated published domains
+rather than hardcoded to any example pair.
+
+### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-008 — No Ambient Whole-Mesh Context
+
+**Carries**:
+- `INTENT.md` — `Outcomes`, `Constraints`
+- `PRODUCT.md` — `Mesh As Complexity Management`, `Bounded Mesh Cut`
+
+No query, mapping, proof, agent task, or application projection SHALL require
+the whole mesh as implicit context. It SHALL declare a finite root and scope,
+and any expansion beyond the resolved bounded cut SHALL be explicit and
+traceable.
+
+### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-009 — Exact Link Integrity
+
+**Carries**:
+- `WORLD_MODEL_METHOD.md` — `Composition Law`
+- `PRODUCT.md` — `Mesh As Complexity Management`, `Semantic Mesh Link`
+
+A durable semantic link SHALL resolve exact published source and target cuts
+and SHALL carry a declared lawful relation role and authority. Local-name
+similarity, inferred adjacency, or an unversioned target SHALL NOT be sufficient
+to admit link truth.
+
+### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-010 — No Silent Mesh Reconciliation
+
+**Carries**:
+- `INTENT.md` — `Constraints`
+- `PRODUCT.md` — `Mesh As Complexity Management`
+
+An unresolved ref, incompatible publication cut, authority conflict, invalid
+relation, or unreconciled treatment, fidelity, or loss SHALL remain a typed
+gap. Mesh construction and traversal SHALL NOT hide it through fallback name
+matching, flattening, silent omission, or substitution from mutable local state.
+
+### REQ-ODD-WORLD-MODEL-MESH-CONSTRAINT-011 — One Link Truth, Many Projections
+
+**Carries**:
+- `WORLD_MODEL_METHOD.md` — `Single Truth Surface`, `Projection Law`
+- `PRODUCT.md` — `Single Truth Surface`, `Mesh As Complexity Management`
+
+An admitted semantic relation SHALL have one durable mesh-link truth surface.
+Indexes, reports, mapping views, query responses, caches, and bounded mesh cuts
+MAY project that relation many times, but SHALL retain its exact link ref and
+SHALL NOT publish a rival copy as semantic authority.

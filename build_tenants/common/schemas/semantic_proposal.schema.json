@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "odd_world_model.semantic_proposal.schema.json",
+  "title": "SemanticProposal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_kind", "schema_version", "proposal_ref", "source_observation", "proposed_by", "payload_schema_ref", "payload", "payload_digest", "epistemic_status", "created_at", "proposal_digest"],
+  "properties": {
+    "schema_kind": { "const": "odd_world_model.semantic_proposal" },
+    "schema_version": { "const": "v1" },
+    "proposal_ref": { "type": "string", "minLength": 1 },
+    "source_observation": { "$ref": "odd_world_model.exact_ref.schema.json" },
+    "proposed_by": { "type": "string", "minLength": 1 },
+    "payload_schema_ref": { "type": "string", "minLength": 1 },
+    "payload": { "type": "object" },
+    "payload_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "epistemic_status": { "const": "candidate" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "proposal_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  }
+}
