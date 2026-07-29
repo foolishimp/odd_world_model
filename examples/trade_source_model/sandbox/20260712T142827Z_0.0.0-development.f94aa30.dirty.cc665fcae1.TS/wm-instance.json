@@ -1,0 +1,63 @@
+{
+  "schema_kind": "odd_world_model.instance_cut",
+  "schema_version": "v1",
+  "instance_ref": "wm-instance://odd_world_model/trade_source_model/20260712T142827Z_0.0.0-development.f94aa30.dirty.cc665fcae1.TS",
+  "example_name": "trade_source_model",
+  "interaction_goal": "build and inspect trade_source_model with exact odd_world_model deployment 0.0.0-development.f94aa30.dirty.cc665fcae1",
+  "product_binding": {
+    "ref": "deployment://odd_world_model/0.0.0-development.f94aa30.dirty.cc665fcae1/53270bf8bc9e02b2",
+    "digest": "sha256:fc35bc1672e0ccc02e8dabd2bab7c92adaa2cdf5978b4546758b4041e0fa9d46",
+    "product_version": "0.0.0-development.f94aa30.dirty.cc665fcae1",
+    "deployment_class": "development_cut"
+  },
+  "source_inventory": {
+    "ref": "source-inventory://odd_world_model/trade_source_model/v1",
+    "digest": "sha256:1d04fc371ca3401726848ca53a04b0a4347b8eac8a50cbe408890e5d2a724bde"
+  },
+  "artifact_manifest": {
+    "path": "proof/artifact-manifest.json",
+    "digest": "sha256:706384990db5b1feac5bc9f60fb83baa97df3f70985f80da1afb2f1161ade9d9"
+  },
+  "execution_mode": "installed_rc3_reference_kernel",
+  "artifact_index": {
+    "source_observation": {
+      "path": "semantic/source-observation.json",
+      "semantic_digest": "sha256:1a540407a5d6cf33fb16bddeeea54e98e9af2a3ca1cbe1fbd9fabcebcf159200"
+    },
+    "candidate_markov_objects": {
+      "path": "semantic/candidate-markov-objects.json",
+      "semantic_digest": "sha256:6e4d963dab10f3688703b41877631e6851efa420705e8c6d1b57fff843190849"
+    },
+    "published_semantic_cut": {
+      "path": "semantic/published-semantic-cut.json",
+      "semantic_digest": "sha256:391bb48a8ed5630a4a1462c1ac8d735375c6d35015889cb26dadbfb0f131224c"
+    },
+    "bounded_mesh_cut": {
+      "path": "mesh/bounded-mesh-cut.json",
+      "semantic_digest": "sha256:3175c667dd6c1fb11c1006dcd99e772cfa38767a50a31047247d38dd5fafeee9"
+    },
+    "context_basis": {
+      "path": "context/context-basis.json",
+      "semantic_digest": "sha256:c6e1bfb22f42c58cc3439d9950d76528b26ae86c478cea948972da1b7cd07bc7"
+    },
+    "context_projection": {
+      "path": "context/context-projection.json",
+      "semantic_digest": "sha256:6c3caf916210f8468ff88863f9782ef4b31170b85645e22361be1f899e9f04ac"
+    },
+    "world_model_query": {
+      "path": "query/world-model-query.json",
+      "semantic_digest": "sha256:9f5e7ff8d7dd0a0361a813fc19290b79d92cdde8f7d1cc16047ace572f99b87c"
+    },
+    "runtime_events": {
+      "path": "evidence/runtime-events.jsonl.gz",
+      "semantic_digest": "sha256:dad36dbb3753472d677d52d2c25f5408e94993309d6d5ddc464166630c400e08"
+    }
+  },
+  "gap_types": [
+    "native_graph_payload_execution_not_realized",
+    "calibrated_fp_authorship_not_proven",
+    "semantic_state_projection_not_replay_native"
+  ],
+  "created_at": "2026-07-12T14:28:27.645Z",
+  "instance_digest": "sha256:94d696d0c743e53da7cc4f4988cebb52aefc3f2a68322c8929c51df0c1190477"
+}

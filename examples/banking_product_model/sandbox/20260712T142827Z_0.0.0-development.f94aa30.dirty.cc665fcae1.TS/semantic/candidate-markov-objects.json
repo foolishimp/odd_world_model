@@ -1,0 +1,319 @@
+[
+  {
+    "schema_kind": "odd_world_model.candidate_markov_object_cut",
+    "schema_version": "v1",
+    "object_ref": "markov-object://odd_world_model/banking_product_model/banking_product_catalog_001/v1",
+    "object_identity": "banking_product_catalog_001",
+    "identity_direction": {
+      "source_state_refs": [
+        "source-state://banking_product_model/banking_product_catalog_001/observed"
+      ],
+      "target_state_refs": [
+        "world-object://banking_product_model/banking_product_catalog_001/candidate"
+      ],
+      "projection_ref": "projection://odd_world_model/banking_product_model/banking_product_catalog/v1"
+    },
+    "projection_support_refs": [
+      "source-field://banking_product_model/banking_product_catalog_001/catalog_id",
+      "source-field://banking_product_model/banking_product_catalog_001/issuer_name",
+      "source-field://banking_product_model/banking_product_catalog_001/products"
+    ],
+    "distributed_ledger_evidence_refs": [
+      "ledger-entry:source-field://banking_product_model/banking_product_catalog_001/catalog_id",
+      "ledger-entry:source-field://banking_product_model/banking_product_catalog_001/issuer_name",
+      "ledger-entry:source-field://banking_product_model/banking_product_catalog_001/products"
+    ],
+    "candidate_basis": {
+      "ref": "candidate-basis://odd_world_model/banking_product_model/banking_product_catalog_001/v1",
+      "digest": "sha256:7ead94ed66ce18484afa3dbbf782edd13aedfbdd6dba0d86a8335b899b0f6399"
+    },
+    "null_peer_basis": {
+      "ref": "null-peer-basis://odd_world_model/banking_product_model/banking_product_catalog_001/v1",
+      "digest": "sha256:350d7d0e847efcc3de672fdf44d4e8f41df33c53acfa8cfba6a563688f4512fc"
+    },
+    "held_out_treatment_verification": {
+      "treatment_ref": "treatment://odd_world_model/banking_product_model/banking_product_catalog/v1",
+      "corpus_ref": "source-inventory://odd_world_model/banking_product_model/v1",
+      "result": "inconclusive",
+      "evidence_refs": [
+        "source-corpus://odd_world_model/banking_product_model/v1",
+        "banking_product_catalog_001"
+      ]
+    },
+    "boundary": {
+      "included_refs": [
+        "source-field://banking_product_model/banking_product_catalog_001/catalog_id",
+        "source-field://banking_product_model/banking_product_catalog_001/issuer_name",
+        "source-field://banking_product_model/banking_product_catalog_001/products"
+      ],
+      "excluded_refs": [
+        "source-evidence://banking_product_model/uninterpreted-html"
+      ],
+      "rationale": "the retained banking_product_model descriptor selects the explicit banking_product_catalog fields and declares unprocessed source evidence as loss"
+    },
+    "publication_classification": "candidate",
+    "source_observation": {
+      "ref": "source-observation://odd_world_model/sandbox/banking_product_model/v1",
+      "digest": "sha256:9190f0f4bc01eff90f3e97a81411495778fd0e458eabba3909d21745eccb95e6"
+    },
+    "authority_ref": "authority://odd_world_model/banking-product-example/v1",
+    "created_at": "2026-07-12T14:28:27.645Z",
+    "cut_digest": "sha256:ba8948239a67d1822145769cc47e8c5dfb3d7484cdb762a6c71b9fba1df1713d"
+  },
+  {
+    "schema_kind": "odd_world_model.candidate_markov_object_cut",
+    "schema_version": "v1",
+    "object_ref": "markov-object://odd_world_model/banking_product_model/loan_001/v1",
+    "object_identity": "loan_001",
+    "identity_direction": {
+      "source_state_refs": [
+        "source-state://banking_product_model/loan_001/observed"
+      ],
+      "target_state_refs": [
+        "world-object://banking_product_model/loan_001/candidate"
+      ],
+      "projection_ref": "projection://odd_world_model/banking_product_model/banking_product/v1"
+    },
+    "projection_support_refs": [
+      "source-field://banking_product_model/loan_001/market_segment",
+      "source-field://banking_product_model/loan_001/product_id",
+      "source-field://banking_product_model/loan_001/product_kind",
+      "source-field://banking_product_model/loan_001/product_name"
+    ],
+    "distributed_ledger_evidence_refs": [
+      "ledger-entry:source-field://banking_product_model/loan_001/market_segment",
+      "ledger-entry:source-field://banking_product_model/loan_001/product_id",
+      "ledger-entry:source-field://banking_product_model/loan_001/product_kind",
+      "ledger-entry:source-field://banking_product_model/loan_001/product_name"
+    ],
+    "candidate_basis": {
+      "ref": "candidate-basis://odd_world_model/banking_product_model/loan_001/v1",
+      "digest": "sha256:9ef9382c149a4874b7875b658ffb2dcdee5e741398c6d9d278c0152392b0ffc3"
+    },
+    "null_peer_basis": {
+      "ref": "null-peer-basis://odd_world_model/banking_product_model/loan_001/v1",
+      "digest": "sha256:e905e276dcaabc0f22a12fc985117b9410a1a0d8072075c911c83a399708cfbb"
+    },
+    "held_out_treatment_verification": {
+      "treatment_ref": "treatment://odd_world_model/banking_product_model/banking_product/v1",
+      "corpus_ref": "source-inventory://odd_world_model/banking_product_model/v1",
+      "result": "inconclusive",
+      "evidence_refs": [
+        "source-corpus://odd_world_model/banking_product_model/v1",
+        "loan_001"
+      ]
+    },
+    "boundary": {
+      "included_refs": [
+        "source-field://banking_product_model/loan_001/market_segment",
+        "source-field://banking_product_model/loan_001/product_id",
+        "source-field://banking_product_model/loan_001/product_kind",
+        "source-field://banking_product_model/loan_001/product_name"
+      ],
+      "excluded_refs": [
+        "source-evidence://banking_product_model/uninterpreted-html"
+      ],
+      "rationale": "the retained banking_product_model descriptor selects the explicit banking_product fields and declares unprocessed source evidence as loss"
+    },
+    "publication_classification": "candidate",
+    "source_observation": {
+      "ref": "source-observation://odd_world_model/sandbox/banking_product_model/v1",
+      "digest": "sha256:9190f0f4bc01eff90f3e97a81411495778fd0e458eabba3909d21745eccb95e6"
+    },
+    "authority_ref": "authority://odd_world_model/banking-product-example/v1",
+    "created_at": "2026-07-12T14:28:27.645Z",
+    "cut_digest": "sha256:54985f371d3db8f9e445bc675bd96677aa76b8a7b53fb05902a5ed3ac070f8b7"
+  },
+  {
+    "schema_kind": "odd_world_model.candidate_markov_object_cut",
+    "schema_version": "v1",
+    "object_ref": "markov-object://odd_world_model/banking_product_model/mortgage_001/v1",
+    "object_identity": "mortgage_001",
+    "identity_direction": {
+      "source_state_refs": [
+        "source-state://banking_product_model/mortgage_001/observed"
+      ],
+      "target_state_refs": [
+        "world-object://banking_product_model/mortgage_001/candidate"
+      ],
+      "projection_ref": "projection://odd_world_model/banking_product_model/banking_product/v1"
+    },
+    "projection_support_refs": [
+      "source-field://banking_product_model/mortgage_001/market_segment",
+      "source-field://banking_product_model/mortgage_001/product_id",
+      "source-field://banking_product_model/mortgage_001/product_kind",
+      "source-field://banking_product_model/mortgage_001/product_name"
+    ],
+    "distributed_ledger_evidence_refs": [
+      "ledger-entry:source-field://banking_product_model/mortgage_001/market_segment",
+      "ledger-entry:source-field://banking_product_model/mortgage_001/product_id",
+      "ledger-entry:source-field://banking_product_model/mortgage_001/product_kind",
+      "ledger-entry:source-field://banking_product_model/mortgage_001/product_name"
+    ],
+    "candidate_basis": {
+      "ref": "candidate-basis://odd_world_model/banking_product_model/mortgage_001/v1",
+      "digest": "sha256:d1334ae671f79b45be77e39be7cf40fe71fb8c56a9fbec886e06a68e9efc6477"
+    },
+    "null_peer_basis": {
+      "ref": "null-peer-basis://odd_world_model/banking_product_model/mortgage_001/v1",
+      "digest": "sha256:911a735737075b7efd20e441431f3cdd90c4d4ec8eb6fb60a4ebdab1816b8cd2"
+    },
+    "held_out_treatment_verification": {
+      "treatment_ref": "treatment://odd_world_model/banking_product_model/banking_product/v1",
+      "corpus_ref": "source-inventory://odd_world_model/banking_product_model/v1",
+      "result": "inconclusive",
+      "evidence_refs": [
+        "source-corpus://odd_world_model/banking_product_model/v1",
+        "mortgage_001"
+      ]
+    },
+    "boundary": {
+      "included_refs": [
+        "source-field://banking_product_model/mortgage_001/market_segment",
+        "source-field://banking_product_model/mortgage_001/product_id",
+        "source-field://banking_product_model/mortgage_001/product_kind",
+        "source-field://banking_product_model/mortgage_001/product_name"
+      ],
+      "excluded_refs": [
+        "source-evidence://banking_product_model/uninterpreted-html"
+      ],
+      "rationale": "the retained banking_product_model descriptor selects the explicit banking_product fields and declares unprocessed source evidence as loss"
+    },
+    "publication_classification": "candidate",
+    "source_observation": {
+      "ref": "source-observation://odd_world_model/sandbox/banking_product_model/v1",
+      "digest": "sha256:9190f0f4bc01eff90f3e97a81411495778fd0e458eabba3909d21745eccb95e6"
+    },
+    "authority_ref": "authority://odd_world_model/banking-product-example/v1",
+    "created_at": "2026-07-12T14:28:27.645Z",
+    "cut_digest": "sha256:ee92f3c71bf21c2b80a3603a9b6f36979eefb6082bd8b43e65b7e0a4aa805954"
+  },
+  {
+    "schema_kind": "odd_world_model.candidate_markov_object_cut",
+    "schema_version": "v1",
+    "object_ref": "markov-object://odd_world_model/banking_product_model/deposit_001/v1",
+    "object_identity": "deposit_001",
+    "identity_direction": {
+      "source_state_refs": [
+        "source-state://banking_product_model/deposit_001/observed"
+      ],
+      "target_state_refs": [
+        "world-object://banking_product_model/deposit_001/candidate"
+      ],
+      "projection_ref": "projection://odd_world_model/banking_product_model/banking_product/v1"
+    },
+    "projection_support_refs": [
+      "source-field://banking_product_model/deposit_001/market_segment",
+      "source-field://banking_product_model/deposit_001/product_id",
+      "source-field://banking_product_model/deposit_001/product_kind",
+      "source-field://banking_product_model/deposit_001/product_name"
+    ],
+    "distributed_ledger_evidence_refs": [
+      "ledger-entry:source-field://banking_product_model/deposit_001/market_segment",
+      "ledger-entry:source-field://banking_product_model/deposit_001/product_id",
+      "ledger-entry:source-field://banking_product_model/deposit_001/product_kind",
+      "ledger-entry:source-field://banking_product_model/deposit_001/product_name"
+    ],
+    "candidate_basis": {
+      "ref": "candidate-basis://odd_world_model/banking_product_model/deposit_001/v1",
+      "digest": "sha256:25e10f71d07d89cf435620d8e1ca815929f3dad4f92d901960f9c0588f76b08b"
+    },
+    "null_peer_basis": {
+      "ref": "null-peer-basis://odd_world_model/banking_product_model/deposit_001/v1",
+      "digest": "sha256:2ae277a1ec8c2dd81d0d265a6261711694935e9437dcef9211c17b598dfa40b7"
+    },
+    "held_out_treatment_verification": {
+      "treatment_ref": "treatment://odd_world_model/banking_product_model/banking_product/v1",
+      "corpus_ref": "source-inventory://odd_world_model/banking_product_model/v1",
+      "result": "inconclusive",
+      "evidence_refs": [
+        "source-corpus://odd_world_model/banking_product_model/v1",
+        "deposit_001"
+      ]
+    },
+    "boundary": {
+      "included_refs": [
+        "source-field://banking_product_model/deposit_001/market_segment",
+        "source-field://banking_product_model/deposit_001/product_id",
+        "source-field://banking_product_model/deposit_001/product_kind",
+        "source-field://banking_product_model/deposit_001/product_name"
+      ],
+      "excluded_refs": [
+        "source-evidence://banking_product_model/uninterpreted-html"
+      ],
+      "rationale": "the retained banking_product_model descriptor selects the explicit banking_product fields and declares unprocessed source evidence as loss"
+    },
+    "publication_classification": "candidate",
+    "source_observation": {
+      "ref": "source-observation://odd_world_model/sandbox/banking_product_model/v1",
+      "digest": "sha256:9190f0f4bc01eff90f3e97a81411495778fd0e458eabba3909d21745eccb95e6"
+    },
+    "authority_ref": "authority://odd_world_model/banking-product-example/v1",
+    "created_at": "2026-07-12T14:28:27.645Z",
+    "cut_digest": "sha256:c7a2a6704eeef0ea8513cfedeb361347e5488009bd406f367a2a5c3ceef714ca"
+  },
+  {
+    "schema_kind": "odd_world_model.candidate_markov_object_cut",
+    "schema_version": "v1",
+    "object_ref": "markov-object://odd_world_model/banking_product_model/card_001/v1",
+    "object_identity": "card_001",
+    "identity_direction": {
+      "source_state_refs": [
+        "source-state://banking_product_model/card_001/observed"
+      ],
+      "target_state_refs": [
+        "world-object://banking_product_model/card_001/candidate"
+      ],
+      "projection_ref": "projection://odd_world_model/banking_product_model/banking_product/v1"
+    },
+    "projection_support_refs": [
+      "source-field://banking_product_model/card_001/market_segment",
+      "source-field://banking_product_model/card_001/product_id",
+      "source-field://banking_product_model/card_001/product_kind",
+      "source-field://banking_product_model/card_001/product_name"
+    ],
+    "distributed_ledger_evidence_refs": [
+      "ledger-entry:source-field://banking_product_model/card_001/market_segment",
+      "ledger-entry:source-field://banking_product_model/card_001/product_id",
+      "ledger-entry:source-field://banking_product_model/card_001/product_kind",
+      "ledger-entry:source-field://banking_product_model/card_001/product_name"
+    ],
+    "candidate_basis": {
+      "ref": "candidate-basis://odd_world_model/banking_product_model/card_001/v1",
+      "digest": "sha256:4b5e952884cd818611ff49c70db8dbd294017361a3321f85a303b62fc3fc2113"
+    },
+    "null_peer_basis": {
+      "ref": "null-peer-basis://odd_world_model/banking_product_model/card_001/v1",
+      "digest": "sha256:e380df91aa9871059a232c70ceea1271384edc51e0a8b2010ea195ec834caa97"
+    },
+    "held_out_treatment_verification": {
+      "treatment_ref": "treatment://odd_world_model/banking_product_model/banking_product/v1",
+      "corpus_ref": "source-inventory://odd_world_model/banking_product_model/v1",
+      "result": "inconclusive",
+      "evidence_refs": [
+        "source-corpus://odd_world_model/banking_product_model/v1",
+        "card_001"
+      ]
+    },
+    "boundary": {
+      "included_refs": [
+        "source-field://banking_product_model/card_001/market_segment",
+        "source-field://banking_product_model/card_001/product_id",
+        "source-field://banking_product_model/card_001/product_kind",
+        "source-field://banking_product_model/card_001/product_name"
+      ],
+      "excluded_refs": [
+        "source-evidence://banking_product_model/uninterpreted-html"
+      ],
+      "rationale": "the retained banking_product_model descriptor selects the explicit banking_product fields and declares unprocessed source evidence as loss"
+    },
+    "publication_classification": "candidate",
+    "source_observation": {
+      "ref": "source-observation://odd_world_model/sandbox/banking_product_model/v1",
+      "digest": "sha256:9190f0f4bc01eff90f3e97a81411495778fd0e458eabba3909d21745eccb95e6"
+    },
+    "authority_ref": "authority://odd_world_model/banking-product-example/v1",
+    "created_at": "2026-07-12T14:28:27.645Z",
+    "cut_digest": "sha256:47488df6e82025439ebc1279b840b8ab3f94aeaee8e79e685ff762587710dd19"
+  }
+]

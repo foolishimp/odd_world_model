@@ -1,0 +1,69 @@
+{
+  "schema_kind": "odd_world_model.accepted_semantic_cut",
+  "schema_version": "v1",
+  "semantic_cut_ref": "semantic-cut://odd_world_model/sandbox/banking_product_model/v1",
+  "cut_role": "domain_artifact",
+  "cut_version": "v1",
+  "epistemic_status": "candidate",
+  "proposal": {
+    "ref": "semantic-proposal://odd_world_model/sandbox/banking_product_model/v1",
+    "digest": "sha256:4bcaf0f2920c76c5e0491e2b594bc8ead399b2cba405a39c8875a34659f2ee32"
+  },
+  "source_observation": {
+    "ref": "source-observation://odd_world_model/sandbox/banking_product_model/v1",
+    "digest": "sha256:9190f0f4bc01eff90f3e97a81411495778fd0e458eabba3909d21745eccb95e6"
+  },
+  "deterministic_check": {
+    "ref": "deterministic-check://odd_world_model/sandbox/banking_product_model/v1",
+    "digest": "sha256:a16106357ae4543b0209325c6653caea9a61916f6b7cd26c3bbe2b7afa1aaac2"
+  },
+  "proposal_admission": {
+    "ref": "admission-witness://odd_world_model/sandbox/banking_product_model-proposal-v1",
+    "digest": "sha256:71c09f140f9b0317428e61ef17e97d0a8d02787272c3695c5ca3ee8ec4c3154c"
+  },
+  "acceptance_decision": {
+    "ref": "wm-acceptance://odd_world_model/sandbox/banking_product_model/v1",
+    "digest": "sha256:87cafcf349aa7b42e2cc5d3c354e93536b586a6034c2dd4d2d846a2c769b1d76"
+  },
+  "acceptance_admission": {
+    "ref": "admission-witness://odd_world_model/sandbox/banking_product_model-acceptance-v1",
+    "digest": "sha256:2ed4b0cbf5e04dfe9c20476de8703253cab944842326abb5dac034e34d36b331"
+  },
+  "semantic_payload_digest": "sha256:47d356c8affc84029af609ea22ca8e22c6fe2744a087f9beb81a9dd435ddc312",
+  "governing_refs": [
+    "specification/PRODUCT.md",
+    "specification/requirements/40-domain-build-verification.md",
+    "build_tenants/common/design/adrs/ADR-WM-006-versioned-installed-product-example-sandboxes.md"
+  ],
+  "source_refs": [
+    "source-corpus://odd_world_model/banking_product_model/v1"
+  ],
+  "authority_refs": [
+    "authority://odd_world_model/banking-product-example/v1"
+  ],
+  "dependency_identities": [
+    "@abiogenesis/typescript-tenant@4.6.0-rc.3#sha256:9cffb372c0dfc00983a5d0e882efbc3d0c3ac937a56f313000f35a4473358113",
+    "@odd-glc/route-one-typescript@0.1.0#sha256:7e548f92ecd6b4442f9c9f1feb46dd2edd7e9610a7dae8706482fc65d80fa578",
+    "fast-xml-parser@5.10.0#digest-not-published",
+    "fast-xml-validator@1.2.0#digest-not-published",
+    "json-canonicalize@2.0.0#digest-not-published",
+    "odd-world-model-storage@0.1.0#sha256:8a0b494395099062a87094f02beec86f911d95725b9283105fe2729e56a5fa41",
+    "duckdb@1.4.5#digest-not-published",
+    "pyiceberg@0.11.1#digest-not-published",
+    "rfc8785@0.1.4#digest-not-published"
+  ],
+  "temporal_coordinates": {
+    "observed_at": "2026-07-12T14:28:27.645Z",
+    "accepted_at": "2026-07-12T14:28:27.645Z"
+  },
+  "fidelity": "lossy_projection",
+  "losses": [
+    "retained FIBO HTML pages and authority notes are inventoried but not fully interpreted into the candidate object cuts"
+  ],
+  "exclusions": [
+    "source-evidence://banking_product_model/uninterpreted-html"
+  ],
+  "gaps": [],
+  "accepted_at": "2026-07-12T14:28:27.645Z",
+  "accepted_cut_digest": "sha256:3bc436ce74322bab39d56b7a3e50c31fe37870047535bd255b3ecb4e1eabf0d4"
+}

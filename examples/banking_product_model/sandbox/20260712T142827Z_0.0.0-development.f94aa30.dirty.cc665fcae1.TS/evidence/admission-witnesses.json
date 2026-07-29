@@ -1,0 +1,408 @@
+[
+  {
+    "schema_kind": "odd_world_model.abg_admission_witness",
+    "schema_version": "v1",
+    "witness_ref": "admission-witness://odd_world_model/sandbox/banking_product_model-proposal-v1",
+    "admission_kind": "proposal_evidence",
+    "status": "admitted",
+    "subjects": [
+      {
+        "ref": "source-observation://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:9190f0f4bc01eff90f3e97a81411495778fd0e458eabba3909d21745eccb95e6"
+      },
+      {
+        "ref": "semantic-proposal://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:4bcaf0f2920c76c5e0491e2b594bc8ead399b2cba405a39c8875a34659f2ee32"
+      }
+    ],
+    "target_handle": "odd_world_model.publish_domain_model",
+    "selected_graph_function_ref": "graph-function://odd_world_model/publish-domain-model/v1",
+    "graph_call_refs": [
+      "graph-call:execution_basis:{\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\",\"startIntent\":{\"scope\":{\"kind\":\"workspace\",\"workspaceRoot\":\"/workspace/odd_world_model/rc3-probe\",\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\"},\"target\":{\"kind\":\"graph_function\",\"handle\":\"odd_world_model.publish_domain_model\"},\"until\":\"converged\",\"inputBindings\":[{\"assetRef\":\"source-observation://odd_world_model/sandbox/banking_product_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=source-observation%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A9190f0f4bc01eff90f3e97a81411495778fd0e458eabba3909d21745eccb95e6\"},{\"assetRef\":\"semantic-proposal://odd_world_model/sandbox/banking_product_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=semantic-proposal%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A4bcaf0f2920c76c5e0491e2b594bc8ead399b2cba405a39c8875a34659f2ee32\"}]},\"runtimeIdentity\":{\"workerId\":\"worker://odd_world_model/rc3-probe/v1\",\"backendId\":\"backend://abiogenesis/typescript/v4.6.0-rc.3\",\"buildId\":\"build://odd_world_model/typescript/0.1.0-proving.1\",\"resolvedRuntimeRef\":\"runtime://abiogenesis/4.6.0-rc.3\"},\"resolvedPolicy\":{\"resolvedPolicyBundleRef\":\"policy-bundle://odd_world_model/rc3-probe/v1\",\"defaultRegime\":\"F_D\",\"dispatchRef\":\"dispatch://odd_world_model/rc3-probe/v1\",\"approvalSubjectRef\":null},\"runId\":\"run://odd_world_model/odd_world_model.publish_domain_model/rc3-probe/banking_product_model-proposal-v1\",\"workKey\":\"work://odd_world_model/odd_world_model.publish_domain_model/rc3-probe/banking_product_model-proposal-v1\",\"frameId\":null,\"frameLineageId\":null}"
+    ],
+    "evidence_refs": [
+      "evidence://odd_world_model/exact/v1?ref=source-observation%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A9190f0f4bc01eff90f3e97a81411495778fd0e458eabba3909d21745eccb95e6",
+      "evidence://odd_world_model/exact/v1?ref=semantic-proposal%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A4bcaf0f2920c76c5e0491e2b594bc8ead399b2cba405a39c8875a34659f2ee32"
+    ],
+    "evidence_event_refs": [
+      "runtime-event:2026-07-12T14:28:29.935Z:21:b01f19b8-dd14-4394-906d-ea720d35a647",
+      "runtime-event:2026-07-12T14:28:29.945Z:52:0861c67d-5f7d-48a6-b4f7-f823924ea199",
+      "runtime-event:2026-07-12T14:28:29.945Z:55:a00f80a6-c763-491a-ab15-36eecbde78e4",
+      "runtime-event:2026-07-12T14:28:29.963Z:99:777d66da-592f-4793-a41f-82bac51934cd",
+      "runtime-event:2026-07-12T14:28:29.973Z:126:d01a083c-0277-4bcc-9d29-e54f4b3c7f29",
+      "runtime-event:2026-07-12T14:28:29.986Z:153:3bed47fa-8092-4e5b-9a9f-d8e704089e38"
+    ],
+    "vector_closed_event_refs": [
+      "runtime-event:2026-07-12T14:28:29.938Z:33:8ddabccb-211c-4ede-9de3-6725a5ce384a",
+      "runtime-event:2026-07-12T14:28:29.958Z:85:5d2d0323-8a5a-41fb-b514-77f7217e7797",
+      "runtime-event:2026-07-12T14:28:29.967Z:111:aba1d96e-b47b-4614-9eda-e50ee0afb0da",
+      "runtime-event:2026-07-12T14:28:29.978Z:138:49c9370b-855a-4be7-a89d-312d9f609a06",
+      "runtime-event:2026-07-12T14:28:29.991Z:165:2de73ad4-6399-4d8a-8438-468867efe4f6"
+    ],
+    "terminal_event_ref": "runtime-event:2026-07-12T14:28:29.994Z:167:1ddf4c71-7d14-4342-a05a-01fef94354b5",
+    "runtime_event_refs": [
+      "runtime-event:2026-07-12T14:28:29.930Z:8:be2057f2-5edf-4a9e-9a83-31169003840a",
+      "runtime-event:2026-07-12T14:28:29.930Z:9:af76a538-ef65-40d8-9a60-1f5d54cbfaad",
+      "runtime-event:2026-07-12T14:28:29.939Z:36:c2b0ca67-c275-4589-a7da-7eb5138e30e5",
+      "runtime-event:2026-07-12T14:28:29.960Z:87:2eced711-23df-4941-8534-a093c6f50c16",
+      "runtime-event:2026-07-12T14:28:29.970Z:114:f6ff889c-daae-4e02-9ac1-1c99640c13ce",
+      "runtime-event:2026-07-12T14:28:29.981Z:141:de53fae3-1751-4d1c-b063-c872cace9c1a",
+      "runtime-event:2026-07-12T14:28:29.935Z:21:b01f19b8-dd14-4394-906d-ea720d35a647",
+      "runtime-event:2026-07-12T14:28:29.945Z:52:0861c67d-5f7d-48a6-b4f7-f823924ea199",
+      "runtime-event:2026-07-12T14:28:29.945Z:55:a00f80a6-c763-491a-ab15-36eecbde78e4",
+      "runtime-event:2026-07-12T14:28:29.963Z:99:777d66da-592f-4793-a41f-82bac51934cd",
+      "runtime-event:2026-07-12T14:28:29.973Z:126:d01a083c-0277-4bcc-9d29-e54f4b3c7f29",
+      "runtime-event:2026-07-12T14:28:29.986Z:153:3bed47fa-8092-4e5b-9a9f-d8e704089e38",
+      "runtime-event:2026-07-12T14:28:29.938Z:33:8ddabccb-211c-4ede-9de3-6725a5ce384a",
+      "runtime-event:2026-07-12T14:28:29.958Z:85:5d2d0323-8a5a-41fb-b514-77f7217e7797",
+      "runtime-event:2026-07-12T14:28:29.967Z:111:aba1d96e-b47b-4614-9eda-e50ee0afb0da",
+      "runtime-event:2026-07-12T14:28:29.978Z:138:49c9370b-855a-4be7-a89d-312d9f609a06",
+      "runtime-event:2026-07-12T14:28:29.991Z:165:2de73ad4-6399-4d8a-8438-468867efe4f6",
+      "runtime-event:2026-07-12T14:28:29.994Z:167:1ddf4c71-7d14-4342-a05a-01fef94354b5"
+    ],
+    "admitted_at": "2026-07-12T14:28:29.994Z",
+    "witness_digest": "sha256:71c09f140f9b0317428e61ef17e97d0a8d02787272c3695c5ca3ee8ec4c3154c"
+  },
+  {
+    "schema_kind": "odd_world_model.abg_admission_witness",
+    "schema_version": "v1",
+    "witness_ref": "admission-witness://odd_world_model/sandbox/banking_product_model-acceptance-v1",
+    "admission_kind": "acceptance_evidence",
+    "status": "admitted",
+    "subjects": [
+      {
+        "ref": "deterministic-check://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:a16106357ae4543b0209325c6653caea9a61916f6b7cd26c3bbe2b7afa1aaac2"
+      },
+      {
+        "ref": "wm-acceptance://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:87cafcf349aa7b42e2cc5d3c354e93536b586a6034c2dd4d2d846a2c769b1d76"
+      }
+    ],
+    "target_handle": "odd_world_model.publish_domain_model",
+    "selected_graph_function_ref": "graph-function://odd_world_model/publish-domain-model/v1",
+    "graph_call_refs": [
+      "graph-call:execution_basis:{\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\",\"startIntent\":{\"scope\":{\"kind\":\"workspace\",\"workspaceRoot\":\"/workspace/odd_world_model/rc3-probe\",\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\"},\"target\":{\"kind\":\"graph_function\",\"handle\":\"odd_world_model.publish_domain_model\"},\"until\":\"converged\",\"inputBindings\":[{\"assetRef\":\"deterministic-check://odd_world_model/sandbox/banking_product_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=deterministic-check%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3Aa16106357ae4543b0209325c6653caea9a61916f6b7cd26c3bbe2b7afa1aaac2\"},{\"assetRef\":\"wm-acceptance://odd_world_model/sandbox/banking_product_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=wm-acceptance%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A87cafcf349aa7b42e2cc5d3c354e93536b586a6034c2dd4d2d846a2c769b1d76\"}]},\"runtimeIdentity\":{\"workerId\":\"worker://odd_world_model/rc3-probe/v1\",\"backendId\":\"backend://abiogenesis/typescript/v4.6.0-rc.3\",\"buildId\":\"build://odd_world_model/typescript/0.1.0-proving.1\",\"resolvedRuntimeRef\":\"runtime://abiogenesis/4.6.0-rc.3\"},\"resolvedPolicy\":{\"resolvedPolicyBundleRef\":\"policy-bundle://odd_world_model/rc3-probe/v1\",\"defaultRegime\":\"F_D\",\"dispatchRef\":\"dispatch://odd_world_model/rc3-probe/v1\",\"approvalSubjectRef\":null},\"runId\":\"run://odd_world_model/odd_world_model.publish_domain_model/rc3-probe/banking_product_model-acceptance-v1\",\"workKey\":\"work://odd_world_model/odd_world_model.publish_domain_model/rc3-probe/banking_product_model-acceptance-v1\",\"frameId\":null,\"frameLineageId\":null}"
+    ],
+    "evidence_refs": [
+      "evidence://odd_world_model/exact/v1?ref=deterministic-check%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3Aa16106357ae4543b0209325c6653caea9a61916f6b7cd26c3bbe2b7afa1aaac2",
+      "evidence://odd_world_model/exact/v1?ref=wm-acceptance%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A87cafcf349aa7b42e2cc5d3c354e93536b586a6034c2dd4d2d846a2c769b1d76"
+    ],
+    "evidence_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.002Z:189:07e56cf1-ded3-4388-8d52-9283833017c1",
+      "runtime-event:2026-07-12T14:28:30.007Z:220:56a2c9e6-8fc4-4f53-b495-05fd43aaa0bd",
+      "runtime-event:2026-07-12T14:28:30.007Z:223:72dfb8aa-9ecf-48c7-8b43-02aa5421ee22",
+      "runtime-event:2026-07-12T14:28:30.019Z:267:138c2603-0e50-4062-b518-d4da7a114087",
+      "runtime-event:2026-07-12T14:28:30.028Z:294:eaf6a2aa-c1ce-46f0-9b3b-8a8c64be2dcd",
+      "runtime-event:2026-07-12T14:28:30.039Z:321:900bc5fa-f4fe-421a-8b8c-ba2bf70809e7"
+    ],
+    "vector_closed_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.003Z:201:7d451a6e-f1bb-4f85-ae53-c4f11f9a2783",
+      "runtime-event:2026-07-12T14:28:30.015Z:253:c77a7273-c23a-432c-9a81-5424a0e06fb6",
+      "runtime-event:2026-07-12T14:28:30.023Z:279:33d16ad1-076b-4787-9eb6-c0da3f6f1575",
+      "runtime-event:2026-07-12T14:28:30.033Z:306:35fcfecc-39b4-4baf-bc77-f18a371800d6",
+      "runtime-event:2026-07-12T14:28:30.045Z:333:bb958bd4-376e-4ee2-890b-4fb9343f454b"
+    ],
+    "terminal_event_ref": "runtime-event:2026-07-12T14:28:30.048Z:335:1fa7837d-ef5b-4e90-8bac-a44a56410ca4",
+    "runtime_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.001Z:176:b2fc6ac1-a10c-4a39-a4b1-4256126702f0",
+      "runtime-event:2026-07-12T14:28:30.001Z:177:aad5a7e5-3c0d-4eb2-9e26-4e0501c46dc9",
+      "runtime-event:2026-07-12T14:28:30.004Z:204:ed70762f-83bc-4ed2-9e06-50a9030c85d0",
+      "runtime-event:2026-07-12T14:28:30.017Z:255:8c359b8a-adf8-4e4e-96cd-5eeeda3d7ec2",
+      "runtime-event:2026-07-12T14:28:30.025Z:282:908a15cc-92fc-4e61-9d39-091df274295e",
+      "runtime-event:2026-07-12T14:28:30.035Z:309:98a2f8ee-d404-4705-a38b-2397904247e0",
+      "runtime-event:2026-07-12T14:28:30.002Z:189:07e56cf1-ded3-4388-8d52-9283833017c1",
+      "runtime-event:2026-07-12T14:28:30.007Z:220:56a2c9e6-8fc4-4f53-b495-05fd43aaa0bd",
+      "runtime-event:2026-07-12T14:28:30.007Z:223:72dfb8aa-9ecf-48c7-8b43-02aa5421ee22",
+      "runtime-event:2026-07-12T14:28:30.019Z:267:138c2603-0e50-4062-b518-d4da7a114087",
+      "runtime-event:2026-07-12T14:28:30.028Z:294:eaf6a2aa-c1ce-46f0-9b3b-8a8c64be2dcd",
+      "runtime-event:2026-07-12T14:28:30.039Z:321:900bc5fa-f4fe-421a-8b8c-ba2bf70809e7",
+      "runtime-event:2026-07-12T14:28:30.003Z:201:7d451a6e-f1bb-4f85-ae53-c4f11f9a2783",
+      "runtime-event:2026-07-12T14:28:30.015Z:253:c77a7273-c23a-432c-9a81-5424a0e06fb6",
+      "runtime-event:2026-07-12T14:28:30.023Z:279:33d16ad1-076b-4787-9eb6-c0da3f6f1575",
+      "runtime-event:2026-07-12T14:28:30.033Z:306:35fcfecc-39b4-4baf-bc77-f18a371800d6",
+      "runtime-event:2026-07-12T14:28:30.045Z:333:bb958bd4-376e-4ee2-890b-4fb9343f454b",
+      "runtime-event:2026-07-12T14:28:30.048Z:335:1fa7837d-ef5b-4e90-8bac-a44a56410ca4"
+    ],
+    "admitted_at": "2026-07-12T14:28:30.048Z",
+    "witness_digest": "sha256:2ed4b0cbf5e04dfe9c20476de8703253cab944842326abb5dac034e34d36b331"
+  },
+  {
+    "schema_kind": "odd_world_model.abg_admission_witness",
+    "schema_version": "v1",
+    "witness_ref": "admission-witness://odd_world_model/sandbox/banking_product_model-physical-v1",
+    "admission_kind": "physical_effect",
+    "status": "admitted",
+    "subjects": [
+      {
+        "ref": "attestation:write://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:8a79392a97007a3c25a5ac1a7d850440a1064368076d12a1b65107d5399f9895"
+      },
+      {
+        "ref": "physical-effect-observation:attestation:write://odd_world_model/sandbox/banking_product_model/v1:2026-07-12T14:28:30.442Z",
+        "digest": "sha256:01924274d099de60c8b541973b786aac6424b3f04a7fb32a65a6a5301dc18359"
+      }
+    ],
+    "target_handle": "odd_world_model.query_world_model",
+    "selected_graph_function_ref": "graph-function://odd_world_model/query-world-model/v1",
+    "graph_call_refs": [
+      "graph-call:execution_basis:{\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\",\"startIntent\":{\"scope\":{\"kind\":\"workspace\",\"workspaceRoot\":\"/workspace/odd_world_model/rc3-probe\",\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\"},\"target\":{\"kind\":\"graph_function\",\"handle\":\"odd_world_model.query_world_model\"},\"until\":\"converged\",\"inputBindings\":[{\"assetRef\":\"attestation:write://odd_world_model/sandbox/banking_product_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=attestation%3Awrite%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A8a79392a97007a3c25a5ac1a7d850440a1064368076d12a1b65107d5399f9895\"},{\"assetRef\":\"physical-effect-observation:attestation:write://odd_world_model/sandbox/banking_product_model/v1:2026-07-12T14:28:30.442Z\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=physical-effect-observation%3Aattestation%3Awrite%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1%3A2026-07-12T14%3A28%3A30.442Z&digest=sha256%3A01924274d099de60c8b541973b786aac6424b3f04a7fb32a65a6a5301dc18359\"}]},\"runtimeIdentity\":{\"workerId\":\"worker://odd_world_model/rc3-probe/v1\",\"backendId\":\"backend://abiogenesis/typescript/v4.6.0-rc.3\",\"buildId\":\"build://odd_world_model/typescript/0.1.0-proving.1\",\"resolvedRuntimeRef\":\"runtime://abiogenesis/4.6.0-rc.3\"},\"resolvedPolicy\":{\"resolvedPolicyBundleRef\":\"policy-bundle://odd_world_model/rc3-probe/v1\",\"defaultRegime\":\"F_D\",\"dispatchRef\":\"dispatch://odd_world_model/rc3-probe/v1\",\"approvalSubjectRef\":null},\"runId\":\"run://odd_world_model/odd_world_model.query_world_model/rc3-probe/banking_product_model-physical-v1\",\"workKey\":\"work://odd_world_model/odd_world_model.query_world_model/rc3-probe/banking_product_model-physical-v1\",\"frameId\":null,\"frameLineageId\":null}"
+    ],
+    "evidence_refs": [
+      "evidence://odd_world_model/exact/v1?ref=attestation%3Awrite%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A8a79392a97007a3c25a5ac1a7d850440a1064368076d12a1b65107d5399f9895",
+      "evidence://odd_world_model/exact/v1?ref=physical-effect-observation%3Aattestation%3Awrite%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1%3A2026-07-12T14%3A28%3A30.442Z&digest=sha256%3A01924274d099de60c8b541973b786aac6424b3f04a7fb32a65a6a5301dc18359"
+    ],
+    "evidence_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.494Z:357:1dad34eb-3bb8-475c-84cf-963baaca0f09"
+    ],
+    "vector_closed_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.496Z:369:ebd90082-c897-4c99-b327-5d38c6e071fd"
+    ],
+    "terminal_event_ref": "runtime-event:2026-07-12T14:28:30.496Z:371:fc594dde-7d62-4f70-be2f-34226b9d35d0",
+    "runtime_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.493Z:344:b5648595-b9fe-4994-a4ec-45a50876abbd",
+      "runtime-event:2026-07-12T14:28:30.493Z:345:1fb193ed-2aa9-4ea7-935b-2058fa3a51a3",
+      "runtime-event:2026-07-12T14:28:30.494Z:357:1dad34eb-3bb8-475c-84cf-963baaca0f09",
+      "runtime-event:2026-07-12T14:28:30.496Z:369:ebd90082-c897-4c99-b327-5d38c6e071fd",
+      "runtime-event:2026-07-12T14:28:30.496Z:371:fc594dde-7d62-4f70-be2f-34226b9d35d0"
+    ],
+    "admitted_at": "2026-07-12T14:28:30.496Z",
+    "witness_digest": "sha256:a402898e0a46f9ded56ad5147713714670e6ce6b3aaba831f39e741af4da805e"
+  },
+  {
+    "schema_kind": "odd_world_model.abg_admission_witness",
+    "schema_version": "v1",
+    "witness_ref": "admission-witness://odd_world_model/sandbox/banking_product_model-publication-v1",
+    "admission_kind": "published_cut",
+    "status": "admitted",
+    "subjects": [
+      {
+        "ref": "publication-candidate:semantic-cut://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:2bf78457ec18949a32cc83ef96c609b54dc011fb7482a43df52ebc6e9a386ed6",
+        "version": "v1"
+      }
+    ],
+    "target_handle": "odd_world_model.publish_domain_model",
+    "selected_graph_function_ref": "graph-function://odd_world_model/publish-domain-model/v1",
+    "graph_call_refs": [
+      "graph-call:execution_basis:{\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\",\"startIntent\":{\"scope\":{\"kind\":\"workspace\",\"workspaceRoot\":\"/workspace/odd_world_model/rc3-probe\",\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\"},\"target\":{\"kind\":\"graph_function\",\"handle\":\"odd_world_model.publish_domain_model\"},\"until\":\"converged\",\"inputBindings\":[{\"assetRef\":\"publication-candidate:semantic-cut://odd_world_model/sandbox/banking_product_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=publication-candidate%3Asemantic-cut%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A2bf78457ec18949a32cc83ef96c609b54dc011fb7482a43df52ebc6e9a386ed6&version=v1\"}]},\"runtimeIdentity\":{\"workerId\":\"worker://odd_world_model/rc3-probe/v1\",\"backendId\":\"backend://abiogenesis/typescript/v4.6.0-rc.3\",\"buildId\":\"build://odd_world_model/typescript/0.1.0-proving.1\",\"resolvedRuntimeRef\":\"runtime://abiogenesis/4.6.0-rc.3\"},\"resolvedPolicy\":{\"resolvedPolicyBundleRef\":\"policy-bundle://odd_world_model/rc3-probe/v1\",\"defaultRegime\":\"F_D\",\"dispatchRef\":\"dispatch://odd_world_model/rc3-probe/v1\",\"approvalSubjectRef\":null},\"runId\":\"run://odd_world_model/odd_world_model.publish_domain_model/rc3-probe/banking_product_model-publication-v1\",\"workKey\":\"work://odd_world_model/odd_world_model.publish_domain_model/rc3-probe/banking_product_model-publication-v1\",\"frameId\":null,\"frameLineageId\":null}"
+    ],
+    "evidence_refs": [
+      "evidence://odd_world_model/exact/v1?ref=publication-candidate%3Asemantic-cut%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A2bf78457ec18949a32cc83ef96c609b54dc011fb7482a43df52ebc6e9a386ed6&version=v1"
+    ],
+    "evidence_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.500Z:393:adce8cb5-f2fa-4011-a7cc-8299dd22f2fc",
+      "runtime-event:2026-07-12T14:28:30.504Z:424:c8752b46-d22d-4772-a16e-be8f2a098542",
+      "runtime-event:2026-07-12T14:28:30.515Z:468:4987d512-5243-4189-8cf9-2a0d324ef203",
+      "runtime-event:2026-07-12T14:28:30.523Z:495:ca3c6aa0-e5b1-4e4b-a704-edf0eb543f84",
+      "runtime-event:2026-07-12T14:28:30.533Z:522:f66ce619-8766-44d5-9db2-8a4a5d46c8fe"
+    ],
+    "vector_closed_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.501Z:405:4db45a1f-ade4-4c69-9184-bf393b6a00da",
+      "runtime-event:2026-07-12T14:28:30.511Z:454:3eceff7c-39db-4b12-88a2-92bc42812677",
+      "runtime-event:2026-07-12T14:28:30.518Z:480:e51fb71d-09e5-473e-9016-b8f7ab6075e2",
+      "runtime-event:2026-07-12T14:28:30.527Z:507:999dbe12-f620-4d91-9f62-905679c05615",
+      "runtime-event:2026-07-12T14:28:30.539Z:534:dfc77b01-ce63-4d95-81c9-09575cc33dbf"
+    ],
+    "terminal_event_ref": "runtime-event:2026-07-12T14:28:30.541Z:536:e1ab5edd-9cd9-4f37-a5e1-d60f3a9d4dd1",
+    "runtime_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.499Z:380:2959dfbe-9844-452d-b9ec-94b37fffc370",
+      "runtime-event:2026-07-12T14:28:30.499Z:381:7daf1a4f-620b-4894-b0b6-be77f8cb5778",
+      "runtime-event:2026-07-12T14:28:30.502Z:408:2fbce57d-a96a-4885-99ee-63c17d939dfd",
+      "runtime-event:2026-07-12T14:28:30.513Z:456:209ff512-da1d-424a-b3db-649eb553d287",
+      "runtime-event:2026-07-12T14:28:30.520Z:483:41e04ded-5e4f-49fe-ab53-34cb5b4fcf54",
+      "runtime-event:2026-07-12T14:28:30.529Z:510:0e827b6d-aca2-4c9c-aca2-a3192aed7b67",
+      "runtime-event:2026-07-12T14:28:30.500Z:393:adce8cb5-f2fa-4011-a7cc-8299dd22f2fc",
+      "runtime-event:2026-07-12T14:28:30.504Z:424:c8752b46-d22d-4772-a16e-be8f2a098542",
+      "runtime-event:2026-07-12T14:28:30.515Z:468:4987d512-5243-4189-8cf9-2a0d324ef203",
+      "runtime-event:2026-07-12T14:28:30.523Z:495:ca3c6aa0-e5b1-4e4b-a704-edf0eb543f84",
+      "runtime-event:2026-07-12T14:28:30.533Z:522:f66ce619-8766-44d5-9db2-8a4a5d46c8fe",
+      "runtime-event:2026-07-12T14:28:30.501Z:405:4db45a1f-ade4-4c69-9184-bf393b6a00da",
+      "runtime-event:2026-07-12T14:28:30.511Z:454:3eceff7c-39db-4b12-88a2-92bc42812677",
+      "runtime-event:2026-07-12T14:28:30.518Z:480:e51fb71d-09e5-473e-9016-b8f7ab6075e2",
+      "runtime-event:2026-07-12T14:28:30.527Z:507:999dbe12-f620-4d91-9f62-905679c05615",
+      "runtime-event:2026-07-12T14:28:30.539Z:534:dfc77b01-ce63-4d95-81c9-09575cc33dbf",
+      "runtime-event:2026-07-12T14:28:30.541Z:536:e1ab5edd-9cd9-4f37-a5e1-d60f3a9d4dd1"
+    ],
+    "admitted_at": "2026-07-12T14:28:30.541Z",
+    "witness_digest": "sha256:d32c9a2d0232b22ead1105787622170d7921056081852d58741cd641e81cbed1"
+  },
+  {
+    "schema_kind": "odd_world_model.abg_admission_witness",
+    "schema_version": "v1",
+    "witness_ref": "admission-witness://odd_world_model/sandbox/banking_product_model-mesh-v1",
+    "admission_kind": "published_cut",
+    "status": "admitted",
+    "subjects": [
+      {
+        "ref": "mesh-cut://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:66bcc075efe4b1518444005d9befaeeaf9e4ed2b6e2b06602ce663caadbce68a"
+      }
+    ],
+    "target_handle": "odd_world_model.resolve_mesh_cut",
+    "selected_graph_function_ref": "graph-function://odd_world_model/resolve-mesh-cut/v1",
+    "graph_call_refs": [
+      "graph-call:execution_basis:{\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\",\"startIntent\":{\"scope\":{\"kind\":\"workspace\",\"workspaceRoot\":\"/workspace/odd_world_model/rc3-probe\",\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\"},\"target\":{\"kind\":\"graph_function\",\"handle\":\"odd_world_model.resolve_mesh_cut\"},\"until\":\"converged\",\"inputBindings\":[{\"assetRef\":\"mesh-cut://odd_world_model/sandbox/banking_product_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=mesh-cut%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A66bcc075efe4b1518444005d9befaeeaf9e4ed2b6e2b06602ce663caadbce68a\"}]},\"runtimeIdentity\":{\"workerId\":\"worker://odd_world_model/rc3-probe/v1\",\"backendId\":\"backend://abiogenesis/typescript/v4.6.0-rc.3\",\"buildId\":\"build://odd_world_model/typescript/0.1.0-proving.1\",\"resolvedRuntimeRef\":\"runtime://abiogenesis/4.6.0-rc.3\"},\"resolvedPolicy\":{\"resolvedPolicyBundleRef\":\"policy-bundle://odd_world_model/rc3-probe/v1\",\"defaultRegime\":\"F_D\",\"dispatchRef\":\"dispatch://odd_world_model/rc3-probe/v1\",\"approvalSubjectRef\":null},\"runId\":\"run://odd_world_model/odd_world_model.resolve_mesh_cut/rc3-probe/banking_product_model-mesh-v1\",\"workKey\":\"work://odd_world_model/odd_world_model.resolve_mesh_cut/rc3-probe/banking_product_model-mesh-v1\",\"frameId\":null,\"frameLineageId\":null}"
+    ],
+    "evidence_refs": [
+      "evidence://odd_world_model/exact/v1?ref=mesh-cut%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A66bcc075efe4b1518444005d9befaeeaf9e4ed2b6e2b06602ce663caadbce68a"
+    ],
+    "evidence_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.546Z:558:b6ab6107-f900-46ca-9492-0206877cb945"
+    ],
+    "vector_closed_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.547Z:570:cf97b3ae-bacc-45aa-8f0b-26856b1ca888"
+    ],
+    "terminal_event_ref": "runtime-event:2026-07-12T14:28:30.547Z:572:05080125-954c-4301-adda-6e2cec34f213",
+    "runtime_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.545Z:545:90b73d52-226d-48fe-be8a-cfad54fa4dc1",
+      "runtime-event:2026-07-12T14:28:30.545Z:546:15fbc82d-b558-446e-9a41-e65754307191",
+      "runtime-event:2026-07-12T14:28:30.546Z:558:b6ab6107-f900-46ca-9492-0206877cb945",
+      "runtime-event:2026-07-12T14:28:30.547Z:570:cf97b3ae-bacc-45aa-8f0b-26856b1ca888",
+      "runtime-event:2026-07-12T14:28:30.547Z:572:05080125-954c-4301-adda-6e2cec34f213"
+    ],
+    "admitted_at": "2026-07-12T14:28:30.547Z",
+    "witness_digest": "sha256:af943c9d163b6796d7e873f107cf9c0dbba2416d82334c8ec85ca3e423231f35"
+  },
+  {
+    "schema_kind": "odd_world_model.abg_admission_witness",
+    "schema_version": "v1",
+    "witness_ref": "admission-witness://odd_world_model/sandbox/banking_product_model-context-v1",
+    "admission_kind": "context_projection",
+    "status": "admitted",
+    "subjects": [
+      {
+        "ref": "context-basis://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:8bf557f42903e23237371a3e2d32567047be5587d119b333acc50eeb5e95d87e"
+      },
+      {
+        "ref": "context-projection://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:c8e0f86c076dcdf8a3929018376374e9f1e8dd913a0189bd9ecb2aa7c171f11c"
+      }
+    ],
+    "target_handle": "odd_world_model.project_context",
+    "selected_graph_function_ref": "graph-function://odd_world_model/project-context/v1",
+    "graph_call_refs": [
+      "graph-call:execution_basis:{\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\",\"startIntent\":{\"scope\":{\"kind\":\"workspace\",\"workspaceRoot\":\"/workspace/odd_world_model/rc3-probe\",\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\"},\"target\":{\"kind\":\"graph_function\",\"handle\":\"odd_world_model.project_context\"},\"until\":\"converged\",\"inputBindings\":[{\"assetRef\":\"context-basis://odd_world_model/sandbox/banking_product_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=context-basis%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A8bf557f42903e23237371a3e2d32567047be5587d119b333acc50eeb5e95d87e\"},{\"assetRef\":\"context-projection://odd_world_model/sandbox/banking_product_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=context-projection%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3Ac8e0f86c076dcdf8a3929018376374e9f1e8dd913a0189bd9ecb2aa7c171f11c\"}]},\"runtimeIdentity\":{\"workerId\":\"worker://odd_world_model/rc3-probe/v1\",\"backendId\":\"backend://abiogenesis/typescript/v4.6.0-rc.3\",\"buildId\":\"build://odd_world_model/typescript/0.1.0-proving.1\",\"resolvedRuntimeRef\":\"runtime://abiogenesis/4.6.0-rc.3\"},\"resolvedPolicy\":{\"resolvedPolicyBundleRef\":\"policy-bundle://odd_world_model/rc3-probe/v1\",\"defaultRegime\":\"F_D\",\"dispatchRef\":\"dispatch://odd_world_model/rc3-probe/v1\",\"approvalSubjectRef\":null},\"runId\":\"run://odd_world_model/odd_world_model.project_context/rc3-probe/banking_product_model-context-v1\",\"workKey\":\"work://odd_world_model/odd_world_model.project_context/rc3-probe/banking_product_model-context-v1\",\"frameId\":null,\"frameLineageId\":null}"
+    ],
+    "evidence_refs": [
+      "evidence://odd_world_model/exact/v1?ref=context-basis%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A8bf557f42903e23237371a3e2d32567047be5587d119b333acc50eeb5e95d87e",
+      "evidence://odd_world_model/exact/v1?ref=context-projection%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3Ac8e0f86c076dcdf8a3929018376374e9f1e8dd913a0189bd9ecb2aa7c171f11c"
+    ],
+    "evidence_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.551Z:594:7d04a16e-f778-4db7-9740-63086353ffc7"
+    ],
+    "vector_closed_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.552Z:606:39044f34-fcdd-476a-96aa-64191b1ab7a6"
+    ],
+    "terminal_event_ref": "runtime-event:2026-07-12T14:28:30.553Z:608:b270fec2-86cb-4496-941d-4d2b962c27e9",
+    "runtime_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.550Z:581:473f10a7-8119-4054-a372-8c71b8b30ab2",
+      "runtime-event:2026-07-12T14:28:30.550Z:582:e8bd9f91-61a7-4976-bac4-bed0f3274b06",
+      "runtime-event:2026-07-12T14:28:30.551Z:594:7d04a16e-f778-4db7-9740-63086353ffc7",
+      "runtime-event:2026-07-12T14:28:30.552Z:606:39044f34-fcdd-476a-96aa-64191b1ab7a6",
+      "runtime-event:2026-07-12T14:28:30.553Z:608:b270fec2-86cb-4496-941d-4d2b962c27e9"
+    ],
+    "admitted_at": "2026-07-12T14:28:30.553Z",
+    "witness_digest": "sha256:3e034a4840503d118b823f96299f3f92f0e5e417ebd35ae0a9572d38dfc6bba3"
+  },
+  {
+    "schema_kind": "odd_world_model.abg_admission_witness",
+    "schema_version": "v1",
+    "witness_ref": "admission-witness://odd_world_model/sandbox/banking_product_model-interpretation-v1",
+    "admission_kind": "model_invocation",
+    "status": "admitted",
+    "subjects": [
+      {
+        "ref": "context-basis://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:8bf557f42903e23237371a3e2d32567047be5587d119b333acc50eeb5e95d87e"
+      },
+      {
+        "ref": "context-projection://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:c8e0f86c076dcdf8a3929018376374e9f1e8dd913a0189bd9ecb2aa7c171f11c"
+      },
+      {
+        "ref": "proposal://odd_world_model/sandbox/banking_product_model/interpretation/v1",
+        "digest": "sha256:a78ce495506b4cbcfd59f8e69f12933148298735be12ba94f597bff9a7f126a2"
+      }
+    ],
+    "target_handle": "odd_world_model.interpret_context",
+    "selected_graph_function_ref": "graph-function://odd_world_model/interpret-context/v1",
+    "graph_call_refs": [
+      "graph-call:execution_basis:{\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\",\"startIntent\":{\"scope\":{\"kind\":\"workspace\",\"workspaceRoot\":\"/workspace/odd_world_model/rc3-probe\",\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\"},\"target\":{\"kind\":\"graph_function\",\"handle\":\"odd_world_model.interpret_context\"},\"until\":\"converged\",\"inputBindings\":[{\"assetRef\":\"context-basis://odd_world_model/sandbox/banking_product_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=context-basis%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A8bf557f42903e23237371a3e2d32567047be5587d119b333acc50eeb5e95d87e\"},{\"assetRef\":\"context-projection://odd_world_model/sandbox/banking_product_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=context-projection%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3Ac8e0f86c076dcdf8a3929018376374e9f1e8dd913a0189bd9ecb2aa7c171f11c\"},{\"assetRef\":\"proposal://odd_world_model/sandbox/banking_product_model/interpretation/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=proposal%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Finterpretation%2Fv1&digest=sha256%3Aa78ce495506b4cbcfd59f8e69f12933148298735be12ba94f597bff9a7f126a2\"}]},\"runtimeIdentity\":{\"workerId\":\"worker://odd_world_model/rc3-probe/v1\",\"backendId\":\"backend://abiogenesis/typescript/v4.6.0-rc.3\",\"buildId\":\"build://odd_world_model/typescript/0.1.0-proving.1\",\"resolvedRuntimeRef\":\"runtime://abiogenesis/4.6.0-rc.3\"},\"resolvedPolicy\":{\"resolvedPolicyBundleRef\":\"policy-bundle://odd_world_model/rc3-probe/v1\",\"defaultRegime\":\"F_D\",\"dispatchRef\":\"dispatch://odd_world_model/rc3-probe/v1\",\"approvalSubjectRef\":null},\"runId\":\"run://odd_world_model/odd_world_model.interpret_context/rc3-probe/banking_product_model-interpretation-v1\",\"workKey\":\"work://odd_world_model/odd_world_model.interpret_context/rc3-probe/banking_product_model-interpretation-v1\",\"frameId\":null,\"frameLineageId\":null}"
+    ],
+    "evidence_refs": [
+      "evidence://odd_world_model/exact/v1?ref=context-basis%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A8bf557f42903e23237371a3e2d32567047be5587d119b333acc50eeb5e95d87e",
+      "evidence://odd_world_model/exact/v1?ref=context-projection%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3Ac8e0f86c076dcdf8a3929018376374e9f1e8dd913a0189bd9ecb2aa7c171f11c",
+      "evidence://odd_world_model/exact/v1?ref=proposal%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Finterpretation%2Fv1&digest=sha256%3Aa78ce495506b4cbcfd59f8e69f12933148298735be12ba94f597bff9a7f126a2"
+    ],
+    "evidence_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.556Z:634:d68bf66c-96e3-4894-ad52-2c6115f4693f",
+      "runtime-event:2026-07-12T14:28:30.556Z:637:3d4159ad-f269-42f4-9073-c1fdb0c76cb7",
+      "runtime-event:2026-07-12T14:28:30.556Z:640:60f32a33-6321-4f01-9bd7-4cae9a6f7380"
+    ],
+    "vector_closed_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.561Z:670:d2c92ecb-29dd-45f7-9d41-e07ea740ed4b"
+    ],
+    "terminal_event_ref": "runtime-event:2026-07-12T14:28:30.562Z:671:d6fb00e6-b011-4ffd-8f64-1582c70445ca",
+    "runtime_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.555Z:617:6e29e77c-3612-4531-beb4-6d00ad428a49",
+      "runtime-event:2026-07-12T14:28:30.555Z:618:a213f15b-d814-469f-a0a1-361d119216f2",
+      "runtime-event:2026-07-12T14:28:30.556Z:634:d68bf66c-96e3-4894-ad52-2c6115f4693f",
+      "runtime-event:2026-07-12T14:28:30.556Z:637:3d4159ad-f269-42f4-9073-c1fdb0c76cb7",
+      "runtime-event:2026-07-12T14:28:30.556Z:640:60f32a33-6321-4f01-9bd7-4cae9a6f7380",
+      "runtime-event:2026-07-12T14:28:30.561Z:670:d2c92ecb-29dd-45f7-9d41-e07ea740ed4b",
+      "runtime-event:2026-07-12T14:28:30.562Z:671:d6fb00e6-b011-4ffd-8f64-1582c70445ca"
+    ],
+    "admitted_at": "2026-07-12T14:28:30.562Z",
+    "witness_digest": "sha256:0bbe6e7fb2b34c01512677b40914da6847125b22637082fb4fa7b053586094fb"
+  },
+  {
+    "schema_kind": "odd_world_model.abg_admission_witness",
+    "schema_version": "v1",
+    "witness_ref": "admission-witness://odd_world_model/sandbox/banking_product_model-query-v1",
+    "admission_kind": "published_cut",
+    "status": "admitted",
+    "subjects": [
+      {
+        "ref": "semantic-cut://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:bb1352e3869cfbfeab7fe906a34350c7fcd903a7d8325520cd8068e2a8e311f6",
+        "version": "v1"
+      },
+      {
+        "ref": "context-basis://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:8bf557f42903e23237371a3e2d32567047be5587d119b333acc50eeb5e95d87e"
+      },
+      {
+        "ref": "context-projection://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:c8e0f86c076dcdf8a3929018376374e9f1e8dd913a0189bd9ecb2aa7c171f11c"
+      }
+    ],
+    "target_handle": "odd_world_model.query_world_model",
+    "selected_graph_function_ref": "graph-function://odd_world_model/query-world-model/v1",
+    "graph_call_refs": [
+      "graph-call:execution_basis:{\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\",\"startIntent\":{\"scope\":{\"kind\":\"workspace\",\"workspaceRoot\":\"/workspace/odd_world_model/rc3-probe\",\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\"},\"target\":{\"kind\":\"graph_function\",\"handle\":\"odd_world_model.query_world_model\"},\"until\":\"converged\",\"inputBindings\":[{\"assetRef\":\"semantic-cut://odd_world_model/sandbox/banking_product_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=semantic-cut%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3Abb1352e3869cfbfeab7fe906a34350c7fcd903a7d8325520cd8068e2a8e311f6&version=v1\"},{\"assetRef\":\"context-basis://odd_world_model/sandbox/banking_product_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=context-basis%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A8bf557f42903e23237371a3e2d32567047be5587d119b333acc50eeb5e95d87e\"},{\"assetRef\":\"context-projection://odd_world_model/sandbox/banking_product_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=context-projection%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3Ac8e0f86c076dcdf8a3929018376374e9f1e8dd913a0189bd9ecb2aa7c171f11c\"}]},\"runtimeIdentity\":{\"workerId\":\"worker://odd_world_model/rc3-probe/v1\",\"backendId\":\"backend://abiogenesis/typescript/v4.6.0-rc.3\",\"buildId\":\"build://odd_world_model/typescript/0.1.0-proving.1\",\"resolvedRuntimeRef\":\"runtime://abiogenesis/4.6.0-rc.3\"},\"resolvedPolicy\":{\"resolvedPolicyBundleRef\":\"policy-bundle://odd_world_model/rc3-probe/v1\",\"defaultRegime\":\"F_D\",\"dispatchRef\":\"dispatch://odd_world_model/rc3-probe/v1\",\"approvalSubjectRef\":null},\"runId\":\"run://odd_world_model/odd_world_model.query_world_model/rc3-probe/banking_product_model-query-v1\",\"workKey\":\"work://odd_world_model/odd_world_model.query_world_model/rc3-probe/banking_product_model-query-v1\",\"frameId\":null,\"frameLineageId\":null}"
+    ],
+    "evidence_refs": [
+      "evidence://odd_world_model/exact/v1?ref=semantic-cut%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3Abb1352e3869cfbfeab7fe906a34350c7fcd903a7d8325520cd8068e2a8e311f6&version=v1",
+      "evidence://odd_world_model/exact/v1?ref=context-basis%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3A8bf557f42903e23237371a3e2d32567047be5587d119b333acc50eeb5e95d87e",
+      "evidence://odd_world_model/exact/v1?ref=context-projection%3A%2F%2Fodd_world_model%2Fsandbox%2Fbanking_product_model%2Fv1&digest=sha256%3Ac8e0f86c076dcdf8a3929018376374e9f1e8dd913a0189bd9ecb2aa7c171f11c"
+    ],
+    "evidence_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.566Z:693:bc0bed76-7ff1-4d72-89a2-bc4df7ac5239"
+    ],
+    "vector_closed_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.567Z:705:eee13585-e177-46ad-9202-1b8a1256aae5"
+    ],
+    "terminal_event_ref": "runtime-event:2026-07-12T14:28:30.567Z:707:a4ab20bc-b996-433b-ac8e-85cee745bd82",
+    "runtime_event_refs": [
+      "runtime-event:2026-07-12T14:28:30.565Z:680:b26878a8-1bba-4bfb-9747-f9e934bdab11",
+      "runtime-event:2026-07-12T14:28:30.565Z:681:52c7f486-5280-4717-b1b3-dc5b0aff68ce",
+      "runtime-event:2026-07-12T14:28:30.566Z:693:bc0bed76-7ff1-4d72-89a2-bc4df7ac5239",
+      "runtime-event:2026-07-12T14:28:30.567Z:705:eee13585-e177-46ad-9202-1b8a1256aae5",
+      "runtime-event:2026-07-12T14:28:30.567Z:707:a4ab20bc-b996-433b-ac8e-85cee745bd82"
+    ],
+    "admitted_at": "2026-07-12T14:28:30.567Z",
+    "witness_digest": "sha256:03fedb77146fb57da59282411fc842e89c8346fe7c989701eff3f391aa524973"
+  }
+]

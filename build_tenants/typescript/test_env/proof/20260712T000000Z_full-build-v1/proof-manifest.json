@@ -2,16 +2,16 @@
   "schema_kind": "odd_world_model.full_build_proof_manifest",
   "schema_version": "v1",
   "proof_id": "proof://odd_world_model/full-build/20260712T000000Z/v1",
-  "generated_at": "2026-07-12T09:43:57.570Z",
+  "generated_at": "2026-07-29T15:04:39.853Z",
   "claim_scope": "development_exact_substrate_reference_bridge_and_integrated_semantic_contract_slice",
   "release_authority": "not_claimed",
   "source_state": {
-    "head_commit": "f84fb2354bd50f4eedf973bd7e04c9ed637af5d9",
+    "head_commit": "f94aa30fb2518a342655bf6d53cbb66fb3321277",
     "dirty": true,
-    "dirty_path_count": 206,
-    "source_path_count": 194,
-    "excluded_proof_path_count": 12,
-    "source_inventory_digest": "sha256:4f4314ab52ce9d7ed350ea5c416bf2ea38de208d5f881ee4dc8cad1240b34e99"
+    "dirty_path_count": 163,
+    "source_path_count": 159,
+    "excluded_proof_path_count": 4,
+    "source_inventory_digest": "sha256:711f8cfd7f20ce34ec85c15efc893ae73c0b8922f161dc61557abf8dce25b348"
   },
   "exact_product_binding": {
     "kind": "odd_world_model.exact_product_binding_evidence",
@@ -39,8 +39,8 @@
   "public_target_count": 7,
   "event_count": 402,
   "replay_event_count": 402,
-  "event_log_sha256": "sha256:6a99b083ed3130361ce6eb894129d72a32607980401708a6e01b148a58f03cec",
-  "replay_event_log_sha256": "sha256:e1dcee21d45b759269a4781e03b1892ca143a240c55698e4beffd7d2936890f7",
+  "event_log_sha256": "sha256:78f7fdb5fafb9ea93014011117236e49130c9064170944d4170c2e47b1e47df9",
+  "replay_event_log_sha256": "sha256:32812327da31f655870714fb73fb79cc7b9025fca57dcaa6f64172f44f58a8af",
   "replay_projection": "event-kind sequence and exact target selection equal for every public handle",
   "duckdb_exact_snapshot_proof": {
     "engine_version": "1.4.5",
@@ -62,24 +62,24 @@
   "integrated_storage_proof": "verification.json runs the reference-bound semantic contract thread plus PyIceberg and DuckDB exact-snapshot observations",
   "reference_semantic_slice": {
     "evidence_ref": "proof://odd_world_model/reference-semantic-slice/20260712/v1",
-    "evidence_digest": "sha256:39d163b33015fa6101d49e392523a8745c00d5f7aaa28a45b5efad01db00812a",
+    "evidence_digest": "sha256:ee0cfeb0b391083b9874e888b52ba0a70133e567f17a83eeec9518f13cbc08fb",
     "execution_mode": "local_semantic_kernel_with_rc3_reference_digest_bridge",
     "admission_witness_count": 26,
     "persisted_runtime_event_ref_count": 284,
     "unresolved_witness_event_count": 0
   },
   "files": {
-    "verification.json": "sha256:dc9b1d88fadc00c19627c4dba7d7040bffa47f2dd755fa0305b7df49f76458a8",
+    "verification.json": "sha256:72425206818f93b7507c611a28bf77f4e1b721c246f18dc2c039ea7dd84a6d76",
     "duckdb-runtime-identity.json": "sha256:da6fd138c469c78664c3c6d8fe0a2785f2266025f8d0d0dc27da9ae32bd50e73",
     "exact-product-binding.json": "sha256:c764f530115ee2fd8200131f203a78d2c9a93f56639f842244cfcb92fdef56eb",
     "gtl-catalog.json": "sha256:b398b9ed737459f4d3e56e3b03c40ee20061750d4552b600bc5fdf9c4b2881ab",
     "gtl-conformance-report.json": "sha256:f81d73d9b74162b2c83b244fa43525b6facea87de3e8d8ca900eb9ffd727b243",
     "requirement-proof-candidates.json": "sha256:b73ca1051f7d9c242de1b9832f524895be7a21e7035d07cdaaad04e54ed63fff",
-    "events.jsonl": "sha256:6a99b083ed3130361ce6eb894129d72a32607980401708a6e01b148a58f03cec",
-    "replay-events.jsonl": "sha256:e1dcee21d45b759269a4781e03b1892ca143a240c55698e4beffd7d2936890f7",
+    "events.jsonl": "sha256:78f7fdb5fafb9ea93014011117236e49130c9064170944d4170c2e47b1e47df9",
+    "replay-events.jsonl": "sha256:32812327da31f655870714fb73fb79cc7b9025fca57dcaa6f64172f44f58a8af",
     "public-start-summary.json": "sha256:6b5bf8ad7372acba1a7deccd5a13c106dd94452ab8a1a6338c6c8a7b34cd6884",
-    "reference-semantic-slice.json": "sha256:c6be265bcde2db556509bbaac803651483f314b699c2ab237d474367f7b40089",
-    "development-source-inventory.json": "sha256:67bcb48ff02052775401158d4e37cd702d74d011aeed3f0bc2f30a5c1a48f35a"
+    "reference-semantic-slice.json": "sha256:0db1f1ee43329dcafb12da0c2a4e20ee35e0674195f8c94847562cc271b8a978",
+    "development-source-inventory.json": "sha256:b2f986f40187c24c8b752d4b252f8f25e0415707566b2db1f6cbcb3ee9c2d080"
   },
   "exclusions": [
     "immutable release cut",

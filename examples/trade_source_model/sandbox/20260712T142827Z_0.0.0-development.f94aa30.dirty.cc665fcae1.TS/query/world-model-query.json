@@ -1,0 +1,62 @@
+{
+  "schema_kind": "odd_world_model.query_projection",
+  "schema_version": "v1",
+  "query_ref": "query://odd_world_model/sandbox/trade_source_model/v1",
+  "query_contract_ref": "query-contract://odd_world_model/sandbox/instance-summary/v1",
+  "query_contract_version": "v1",
+  "semantic_cut": {
+    "ref": "semantic-cut://odd_world_model/sandbox/trade_source_model/v1",
+    "digest": "sha256:a3cdd284e67cf3c744195265b2dcd24c1b27d2ec7f709d244cca98c58b385bef",
+    "version": "v1"
+  },
+  "physical_admission_witness": {
+    "ref": "admission-witness://odd_world_model/sandbox/trade_source_model-physical-v1",
+    "digest": "sha256:e42891f716331340673dbe284c02aeeddc7a86402efd4afbc6f65bd93c5b20db"
+  },
+  "context_basis": {
+    "ref": "context-basis://odd_world_model/sandbox/trade_source_model/v1",
+    "digest": "sha256:62559681c949f3ad6642778725e36196e742d3c94fab175205b4db3fc4e28460"
+  },
+  "context_projection": {
+    "ref": "context-projection://odd_world_model/sandbox/trade_source_model/v1",
+    "digest": "sha256:a605f30d6947a8d240827bf909c5871e2127ce1400d007ad4a561d9f75789acf"
+  },
+  "exact_snapshots": [
+    {
+      "metadata_location": "file:///Users/jim/src/apps/odd_world_model/examples/trade_source_model/sandbox/20260712T142827Z_0.0.0-development.f94aa30.dirty.cc665fcae1.TS/physical/runtime/warehouse/wm/semantic_publications/metadata/00001-98d097e5-6c9a-45dd-a027-7a2b39d9ce14.metadata.json",
+      "payload_digest": "sha256:e242490f9d7db0138565f6ac7346718534d5ef6ff97e6e29ed82bc0ab3f998d9",
+      "record_count": 2,
+      "schema_fingerprint": "sha256:4a7c65c5d35bd4bbe35532f8fccf51246ea08078aac7b35f9b06b1115066b834",
+      "snapshot_id": "803815983928620142",
+      "table_identifier": "wm.semantic_publications"
+    }
+  ],
+  "result": {
+    "interaction_goal": "inspect the trade_source_model world-model instance built by 0.0.0-development.f94aa30.dirty.cc665fcae1",
+    "root_refs": [
+      {
+        "ref": "semantic-cut://odd_world_model/sandbox/trade_source_model/v1",
+        "digest": "sha256:a3cdd284e67cf3c744195265b2dcd24c1b27d2ec7f709d244cca98c58b385bef",
+        "version": "v1"
+      }
+    ],
+    "traversed_semantic_cut_refs": [
+      {
+        "ref": "semantic-cut://odd_world_model/sandbox/trade_source_model/v1",
+        "digest": "sha256:a3cdd284e67cf3c744195265b2dcd24c1b27d2ec7f709d244cca98c58b385bef",
+        "version": "v1"
+      }
+    ],
+    "traversed_semantic_link_refs": [],
+    "semantic_cut_count": 1,
+    "semantic_link_count": 0,
+    "included_ref_count": 1,
+    "omitted_ref_count": 0,
+    "fidelity": "lossy_projection",
+    "declared_losses": [
+      "FpML syntax, example-index content, and non-economic documentation are inventoried but not copied into the interpreted trade payload"
+    ]
+  },
+  "projected_at": "2026-07-12T14:28:27.645Z",
+  "query_digest": "sha256:de5301263a0aaa4604838db012c2fae7ee3b1e2169c341ec24d7382b5b435c0c"
+}

@@ -4,6 +4,10 @@
   "type": "module",
   "scripts": {
     "proof:generate": "node ./code/src/proof/generate_full_build_proof.ts",
+    "sandbox:deploy": "node ./sandbox/orchestrator/deploy.ts",
+    "sandbox:examples": "node ./sandbox/orchestrator/run.ts",
+    "sandbox:inspect": "node ./sandbox/orchestrator/verify.ts",
+    "test:sandbox": "node --test ./sandbox/tests/*.test.ts",
     "test": "node --test ./test_env/tests/*.test.ts",
     "typecheck": "tsc -p ./tsconfig.semantic-strict.json"
   },

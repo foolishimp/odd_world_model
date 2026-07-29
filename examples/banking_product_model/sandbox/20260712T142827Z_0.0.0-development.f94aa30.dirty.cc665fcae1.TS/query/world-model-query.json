@@ -1,0 +1,62 @@
+{
+  "schema_kind": "odd_world_model.query_projection",
+  "schema_version": "v1",
+  "query_ref": "query://odd_world_model/sandbox/banking_product_model/v1",
+  "query_contract_ref": "query-contract://odd_world_model/sandbox/instance-summary/v1",
+  "query_contract_version": "v1",
+  "semantic_cut": {
+    "ref": "semantic-cut://odd_world_model/sandbox/banking_product_model/v1",
+    "digest": "sha256:bb1352e3869cfbfeab7fe906a34350c7fcd903a7d8325520cd8068e2a8e311f6",
+    "version": "v1"
+  },
+  "physical_admission_witness": {
+    "ref": "admission-witness://odd_world_model/sandbox/banking_product_model-physical-v1",
+    "digest": "sha256:a402898e0a46f9ded56ad5147713714670e6ce6b3aaba831f39e741af4da805e"
+  },
+  "context_basis": {
+    "ref": "context-basis://odd_world_model/sandbox/banking_product_model/v1",
+    "digest": "sha256:8bf557f42903e23237371a3e2d32567047be5587d119b333acc50eeb5e95d87e"
+  },
+  "context_projection": {
+    "ref": "context-projection://odd_world_model/sandbox/banking_product_model/v1",
+    "digest": "sha256:c8e0f86c076dcdf8a3929018376374e9f1e8dd913a0189bd9ecb2aa7c171f11c"
+  },
+  "exact_snapshots": [
+    {
+      "metadata_location": "file:///Users/jim/src/apps/odd_world_model/examples/banking_product_model/sandbox/20260712T142827Z_0.0.0-development.f94aa30.dirty.cc665fcae1.TS/physical/runtime/warehouse/wm/semantic_publications/metadata/00001-058510c4-6084-4a32-bb87-bfbb55007226.metadata.json",
+      "payload_digest": "sha256:8a2313a2406177c96f5ef758ee51adf786ebd5d2d2adecf54910501e1e266fcb",
+      "record_count": 2,
+      "schema_fingerprint": "sha256:4a7c65c5d35bd4bbe35532f8fccf51246ea08078aac7b35f9b06b1115066b834",
+      "snapshot_id": "3970337619250031272",
+      "table_identifier": "wm.semantic_publications"
+    }
+  ],
+  "result": {
+    "interaction_goal": "inspect the banking_product_model world-model instance built by 0.0.0-development.f94aa30.dirty.cc665fcae1",
+    "root_refs": [
+      {
+        "ref": "semantic-cut://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:bb1352e3869cfbfeab7fe906a34350c7fcd903a7d8325520cd8068e2a8e311f6",
+        "version": "v1"
+      }
+    ],
+    "traversed_semantic_cut_refs": [
+      {
+        "ref": "semantic-cut://odd_world_model/sandbox/banking_product_model/v1",
+        "digest": "sha256:bb1352e3869cfbfeab7fe906a34350c7fcd903a7d8325520cd8068e2a8e311f6",
+        "version": "v1"
+      }
+    ],
+    "traversed_semantic_link_refs": [],
+    "semantic_cut_count": 1,
+    "semantic_link_count": 0,
+    "included_ref_count": 1,
+    "omitted_ref_count": 0,
+    "fidelity": "lossy_projection",
+    "declared_losses": [
+      "retained FIBO HTML pages and authority notes are inventoried but not fully interpreted into the candidate object cuts"
+    ]
+  },
+  "projected_at": "2026-07-12T14:28:27.645Z",
+  "query_digest": "sha256:835a0132efa18169a59965184ca19aefac1dfd4de6c886f82286415b35df0aeb"
+}

@@ -54,6 +54,17 @@ cd ../storage/python
 .venv/bin/python -m unittest discover -s test_env/tests -v
 ```
 
+Build versioned world-model instances from all retained example corpora:
+
+```text
+cd build_tenants/typescript
+npm run sandbox:examples
+```
+
+Pass `--deployment /path/to/deployment-manifest.json` to rebuild the same
+sources with another exact WM deployment. New cuts are written side by side
+under `examples/<domain>/sandbox/`; existing cuts are never overwritten.
+
 The proof bundle is development evidence and records the dirty source state; it
 is not an immutable release cut. Direct Python CLI invocation is an adapter
 contract test, not the product runtime. ABG remains the runtime, event,

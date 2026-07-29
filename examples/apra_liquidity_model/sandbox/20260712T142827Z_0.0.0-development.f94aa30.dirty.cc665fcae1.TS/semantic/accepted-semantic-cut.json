@@ -1,0 +1,69 @@
+{
+  "schema_kind": "odd_world_model.accepted_semantic_cut",
+  "schema_version": "v1",
+  "semantic_cut_ref": "semantic-cut://odd_world_model/sandbox/apra_liquidity_model/v1",
+  "cut_role": "domain_artifact",
+  "cut_version": "v1",
+  "epistemic_status": "candidate",
+  "proposal": {
+    "ref": "semantic-proposal://odd_world_model/sandbox/apra_liquidity_model/v1",
+    "digest": "sha256:5f22bf69923bf8273490f4f288ad7a01a5ea1bf42b151de28e5c6041c2800c1a"
+  },
+  "source_observation": {
+    "ref": "source-observation://odd_world_model/sandbox/apra_liquidity_model/v1",
+    "digest": "sha256:d633dfcec359ec5b8c886114548f118dd4de26280f09ee08adb86ad8a30a4caf"
+  },
+  "deterministic_check": {
+    "ref": "deterministic-check://odd_world_model/sandbox/apra_liquidity_model/v1",
+    "digest": "sha256:62ff895caa9a33a6c90d92f0a46eafb72af7872c29765b61edc0365611f448cd"
+  },
+  "proposal_admission": {
+    "ref": "admission-witness://odd_world_model/sandbox/apra_liquidity_model-proposal-v1",
+    "digest": "sha256:a616be0c4ad5fc33156e39045ab262d0174ccce1ff9f2e6d478c2b10916df906"
+  },
+  "acceptance_decision": {
+    "ref": "wm-acceptance://odd_world_model/sandbox/apra_liquidity_model/v1",
+    "digest": "sha256:51c2c6db020e1a1bb27266d1850a7f9f3df3c7b6857becc540b25231edfd704b"
+  },
+  "acceptance_admission": {
+    "ref": "admission-witness://odd_world_model/sandbox/apra_liquidity_model-acceptance-v1",
+    "digest": "sha256:4b3726541657db3eb85b396019df6c483a7e9e38b8d5ffee450da6d375f8e63f"
+  },
+  "semantic_payload_digest": "sha256:0f16c60342a23fdb42d10620ee0e7b7cd49abded775d37cf02b9fd5914f2eaee",
+  "governing_refs": [
+    "specification/PRODUCT.md",
+    "specification/requirements/40-domain-build-verification.md",
+    "build_tenants/common/design/adrs/ADR-WM-006-versioned-installed-product-example-sandboxes.md"
+  ],
+  "source_refs": [
+    "source-corpus://odd_world_model/apra_liquidity_model/v1"
+  ],
+  "authority_refs": [
+    "authority://odd_world_model/apra-liquidity-example/v1"
+  ],
+  "dependency_identities": [
+    "@abiogenesis/typescript-tenant@4.6.0-rc.3#sha256:9cffb372c0dfc00983a5d0e882efbc3d0c3ac937a56f313000f35a4473358113",
+    "@odd-glc/route-one-typescript@0.1.0#sha256:7e548f92ecd6b4442f9c9f1feb46dd2edd7e9610a7dae8706482fc65d80fa578",
+    "fast-xml-parser@5.10.0#digest-not-published",
+    "fast-xml-validator@1.2.0#digest-not-published",
+    "json-canonicalize@2.0.0#digest-not-published",
+    "odd-world-model-storage@0.1.0#sha256:8a0b494395099062a87094f02beec86f911d95725b9283105fe2729e56a5fa41",
+    "duckdb@1.4.5#digest-not-published",
+    "pyiceberg@0.11.1#digest-not-published",
+    "rfc8785@0.1.4#digest-not-published"
+  ],
+  "temporal_coordinates": {
+    "observed_at": "2026-07-12T14:28:27.645Z",
+    "accepted_at": "2026-07-12T14:28:27.645Z"
+  },
+  "fidelity": "lossy_projection",
+  "losses": [
+    "official APRA HTML and PDF sources are inventoried while this deterministic adapter consumes only the bounded retained claims and requirement snapshot"
+  ],
+  "exclusions": [
+    "source-evidence://apra_liquidity_model/uninterpreted-primary-documents"
+  ],
+  "gaps": [],
+  "accepted_at": "2026-07-12T14:28:27.645Z",
+  "accepted_cut_digest": "sha256:adf707f048f96da415298604c328320d33ae2ec10aa34b02f454e4e8c1705280"
+}

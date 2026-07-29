@@ -1,0 +1,83 @@
+{
+  "schema_kind": "odd_world_model.published_semantic_cut",
+  "schema_version": "v1",
+  "semantic_cut_ref": "semantic-cut://odd_world_model/sandbox/banking_product_model/v1",
+  "cut_role": "domain_artifact",
+  "cut_version": "v1",
+  "publication_status": "published",
+  "epistemic_status": "candidate",
+  "source_observation": {
+    "ref": "source-observation://odd_world_model/sandbox/banking_product_model/v1",
+    "digest": "sha256:9190f0f4bc01eff90f3e97a81411495778fd0e458eabba3909d21745eccb95e6"
+  },
+  "publication_candidate": {
+    "ref": "publication-candidate:semantic-cut://odd_world_model/sandbox/banking_product_model/v1",
+    "digest": "sha256:2bf78457ec18949a32cc83ef96c609b54dc011fb7482a43df52ebc6e9a386ed6",
+    "version": "v1"
+  },
+  "publication_admission_witness": {
+    "ref": "admission-witness://odd_world_model/sandbox/banking_product_model-publication-v1",
+    "digest": "sha256:d32c9a2d0232b22ead1105787622170d7921056081852d58741cd641e81cbed1"
+  },
+  "accepted_semantic_cut": {
+    "ref": "semantic-cut://odd_world_model/sandbox/banking_product_model/v1",
+    "digest": "sha256:3bc436ce74322bab39d56b7a3e50c31fe37870047535bd255b3ecb4e1eabf0d4",
+    "version": "v1"
+  },
+  "semantic_cut_attestation": {
+    "ref": "attestation:write://odd_world_model/sandbox/banking_product_model/v1",
+    "digest": "sha256:8a79392a97007a3c25a5ac1a7d850440a1064368076d12a1b65107d5399f9895"
+  },
+  "physical_effect_observation": {
+    "ref": "physical-effect-observation:attestation:write://odd_world_model/sandbox/banking_product_model/v1:2026-07-12T14:28:30.442Z",
+    "digest": "sha256:01924274d099de60c8b541973b786aac6424b3f04a7fb32a65a6a5301dc18359"
+  },
+  "physical_admission_witness": {
+    "ref": "admission-witness://odd_world_model/sandbox/banking_product_model-physical-v1",
+    "digest": "sha256:a402898e0a46f9ded56ad5147713714670e6ce6b3aaba831f39e741af4da805e"
+  },
+  "snapshot_refs": [
+    {
+      "ref": "iceberg-snapshot://wm.semantic_publications/3970337619250031272",
+      "digest": "sha256:8a2313a2406177c96f5ef758ee51adf786ebd5d2d2adecf54910501e1e266fcb",
+      "version": "file:///Users/jim/src/apps/odd_world_model/examples/banking_product_model/sandbox/20260712T142827Z_0.0.0-development.f94aa30.dirty.cc665fcae1.TS/physical/runtime/warehouse/wm/semantic_publications/metadata/00001-058510c4-6084-4a32-bb87-bfbb55007226.metadata.json"
+    }
+  ],
+  "semantic_payload_digest": "sha256:47d356c8affc84029af609ea22ca8e22c6fe2744a087f9beb81a9dd435ddc312",
+  "governing_refs": [
+    "specification/PRODUCT.md",
+    "specification/requirements/40-domain-build-verification.md",
+    "build_tenants/common/design/adrs/ADR-WM-006-versioned-installed-product-example-sandboxes.md"
+  ],
+  "source_refs": [
+    "source-corpus://odd_world_model/banking_product_model/v1"
+  ],
+  "authority_refs": [
+    "authority://odd_world_model/banking-product-example/v1"
+  ],
+  "dependency_identities": [
+    "@abiogenesis/typescript-tenant@4.6.0-rc.3#sha256:9cffb372c0dfc00983a5d0e882efbc3d0c3ac937a56f313000f35a4473358113",
+    "@odd-glc/route-one-typescript@0.1.0#sha256:7e548f92ecd6b4442f9c9f1feb46dd2edd7e9610a7dae8706482fc65d80fa578",
+    "fast-xml-parser@5.10.0#digest-not-published",
+    "fast-xml-validator@1.2.0#digest-not-published",
+    "json-canonicalize@2.0.0#digest-not-published",
+    "odd-world-model-storage@0.1.0#sha256:8a0b494395099062a87094f02beec86f911d95725b9283105fe2729e56a5fa41",
+    "duckdb@1.4.5#digest-not-published",
+    "pyiceberg@0.11.1#digest-not-published",
+    "rfc8785@0.1.4#digest-not-published"
+  ],
+  "temporal_coordinates": {
+    "observed_at": "2026-07-12T14:28:27.645Z",
+    "accepted_at": "2026-07-12T14:28:27.645Z"
+  },
+  "fidelity": "lossy_projection",
+  "losses": [
+    "retained FIBO HTML pages and authority notes are inventoried but not fully interpreted into the candidate object cuts"
+  ],
+  "exclusions": [
+    "source-evidence://banking_product_model/uninterpreted-html"
+  ],
+  "gaps": [],
+  "published_at": "2026-07-12T14:28:27.645Z",
+  "publication_digest": "sha256:bb1352e3869cfbfeab7fe906a34350c7fcd903a7d8325520cd8068e2a8e311f6"
+}

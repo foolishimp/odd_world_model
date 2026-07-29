@@ -1,0 +1,17 @@
+{
+  "observation_status": "reproduced",
+  "observed_at": "2026-07-12T14:28:31.421Z",
+  "observer_identity": "odd-world-model-storage/0.1.0:pyiceberg+duckdb",
+  "schema_kind": "odd_world_model.physical_effect_observation",
+  "schema_version": "v1",
+  "snapshot_observations": [
+    {
+      "message": "PyIceberg and DuckDB reproduced the exact snapshot (duckdb=1.4.5, iceberg_extension=2f229463)",
+      "snapshot_id": "1101020722820305058",
+      "status": "reproduced",
+      "table_identifier": "wm.semantic_publications"
+    }
+  ],
+  "subject_attestation_digest": "sha256:97226fce6f4a14400dc2ebd2e19c4c68661c4582dc876ebdd9ba873f334b682b",
+  "subject_attestation_id": "attestation:write://odd_world_model/sandbox/apra_liquidity_model/v1"
+}

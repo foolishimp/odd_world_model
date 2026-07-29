@@ -1,0 +1,78 @@
+{
+  "abg_event_refs": [
+    "runtime-event:2026-07-12T14:28:28.991Z:176:55e5ab64-5c2f-4a78-839f-da25da56c10c",
+    "runtime-event:2026-07-12T14:28:28.991Z:177:23fde0d9-4cc2-43af-a564-c09bcc74a2db",
+    "runtime-event:2026-07-12T14:28:28.994Z:204:5fc786ac-25cb-4e2f-8c0f-1c1e3d5493cf",
+    "runtime-event:2026-07-12T14:28:29.006Z:255:fe0afd73-451c-455a-83ab-a708f477172c",
+    "runtime-event:2026-07-12T14:28:29.015Z:282:d317e3bf-a68e-4381-aca6-26122bb92304",
+    "runtime-event:2026-07-12T14:28:29.025Z:309:2a049a56-a2e6-484c-a33c-f7fad094eb0a",
+    "runtime-event:2026-07-12T14:28:28.992Z:189:43bfbb07-cac3-4124-8596-c631563a2b1b",
+    "runtime-event:2026-07-12T14:28:28.997Z:220:ee878a69-2216-4845-8d0a-ecf43dea65df",
+    "runtime-event:2026-07-12T14:28:28.997Z:223:84eab22c-bd78-4432-a00d-c57e26ae8dc9",
+    "runtime-event:2026-07-12T14:28:29.009Z:267:d28e7cd1-98a6-46b2-ac21-c5c9beee4548",
+    "runtime-event:2026-07-12T14:28:29.018Z:294:f40524cc-f1a5-4390-80e0-4e97b0196e8e",
+    "runtime-event:2026-07-12T14:28:29.030Z:321:dcaa5fdf-9047-42b9-9569-331fd2891403",
+    "runtime-event:2026-07-12T14:28:28.993Z:201:4eae7986-7179-49c2-9a76-5e804f6ad9d3",
+    "runtime-event:2026-07-12T14:28:29.005Z:253:bff4d8ee-e5f3-43ac-9694-b9977a1bf2a0",
+    "runtime-event:2026-07-12T14:28:29.013Z:279:4f59f244-ebf3-4048-9e89-897fab15c35f",
+    "runtime-event:2026-07-12T14:28:29.023Z:306:00152a9d-d694-4f83-941c-8a8bb905218c",
+    "runtime-event:2026-07-12T14:28:29.035Z:333:80012792-5c9d-4ef9-9502-99269a012042",
+    "runtime-event:2026-07-12T14:28:29.037Z:335:d71cd4d3-0f13-49ac-8c6d-c6ef4d0541f8"
+  ],
+  "attestation_digest": "sha256:c393a1018359e0b65432d80c56c25f51a1130cfd7811e035a9854d0bfe734bba",
+  "attestation_id": "attestation:write://odd_world_model/sandbox/trade_representation_model/v1",
+  "authority_refs": [
+    "authority://odd_world_model/trade-representation-example/v1"
+  ],
+  "created_at": "2026-07-12T14:28:29.392Z",
+  "cut_role": "domain_artifact",
+  "cut_version": "v1",
+  "dependency_identities": [
+    "@abiogenesis/typescript-tenant@4.6.0-rc.3#sha256:9cffb372c0dfc00983a5d0e882efbc3d0c3ac937a56f313000f35a4473358113",
+    "@odd-glc/route-one-typescript@0.1.0#sha256:7e548f92ecd6b4442f9c9f1feb46dd2edd7e9610a7dae8706482fc65d80fa578",
+    "fast-xml-parser@5.10.0#digest-not-published",
+    "fast-xml-validator@1.2.0#digest-not-published",
+    "json-canonicalize@2.0.0#digest-not-published",
+    "odd-world-model-storage@0.1.0#sha256:8a0b494395099062a87094f02beec86f911d95725b9283105fe2729e56a5fa41",
+    "duckdb@1.4.5#digest-not-published",
+    "pyiceberg@0.11.1#digest-not-published",
+    "rfc8785@0.1.4#digest-not-published"
+  ],
+  "exclusions": [
+    "source-evidence://trade_representation_model/authority-notes"
+  ],
+  "fidelity": "lossy_projection",
+  "gap_refs": [],
+  "governing_refs": [
+    "specification/PRODUCT.md",
+    "specification/requirements/40-domain-build-verification.md",
+    "build_tenants/common/design/adrs/ADR-WM-006-versioned-installed-product-example-sandboxes.md"
+  ],
+  "graph_invocation_ref": "graph-call:execution_basis:{\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\",\"startIntent\":{\"scope\":{\"kind\":\"workspace\",\"workspaceRoot\":\"/workspace/odd_world_model/rc3-probe\",\"moduleName\":\"gtl://module/odd_world_model/context-memory/v1\"},\"target\":{\"kind\":\"graph_function\",\"handle\":\"odd_world_model.publish_domain_model\"},\"until\":\"converged\",\"inputBindings\":[{\"assetRef\":\"deterministic-check://odd_world_model/sandbox/trade_representation_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=deterministic-check%3A%2F%2Fodd_world_model%2Fsandbox%2Ftrade_representation_model%2Fv1&digest=sha256%3Ae0809c3844c2d4b3bb50dcc4c9ce57fa61a396d8aff85678bf04e78b3f945d51\"},{\"assetRef\":\"wm-acceptance://odd_world_model/sandbox/trade_representation_model/v1\",\"assetType\":\"sandbox_exact_carrier\",\"uri\":\"evidence://odd_world_model/exact/v1?ref=wm-acceptance%3A%2F%2Fodd_world_model%2Fsandbox%2Ftrade_representation_model%2Fv1&digest=sha256%3A6ff311f6a94e00ac7caa4eeaea0f8e62e8fe34f94513f4de0e41d420df9f02e5\"}]},\"runtimeIdentity\":{\"workerId\":\"worker://odd_world_model/rc3-probe/v1\",\"backendId\":\"backend://abiogenesis/typescript/v4.6.0-rc.3\",\"buildId\":\"build://odd_world_model/typescript/0.1.0-proving.1\",\"resolvedRuntimeRef\":\"runtime://abiogenesis/4.6.0-rc.3\"},\"resolvedPolicy\":{\"resolvedPolicyBundleRef\":\"policy-bundle://odd_world_model/rc3-probe/v1\",\"defaultRegime\":\"F_D\",\"dispatchRef\":\"dispatch://odd_world_model/rc3-probe/v1\",\"approvalSubjectRef\":null},\"runId\":\"run://odd_world_model/odd_world_model.publish_domain_model/rc3-probe/trade_representation_model-acceptance-v1\",\"workKey\":\"work://odd_world_model/odd_world_model.publish_domain_model/rc3-probe/trade_representation_model-acceptance-v1\",\"frameId\":null,\"frameLineageId\":null}",
+  "losses": [
+    "authority notes are inventoried but not semantically interpreted by the deterministic example adapter"
+  ],
+  "request_digest": "sha256:139d4398f2c1069bfca2df36d996f2b0047de7c9bdad944028d25117a425e06e",
+  "schema_kind": "odd_world_model.semantic_cut_attestation",
+  "schema_version": "v1",
+  "semantic_cut_digest": "sha256:57a94e2cbaf57214aca30fd6184f8c7217b8b879ca6914d4f30c6a46ed48cc6c",
+  "semantic_cut_ref": "semantic-cut://odd_world_model/sandbox/trade_representation_model/v1",
+  "snapshots": [
+    {
+      "metadata_location": "file:///Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260712T142827Z_0.0.0-development.f94aa30.dirty.cc665fcae1.TS/physical/runtime/warehouse/wm/semantic_publications/metadata/00001-71b41b83-4a27-42dc-8597-03f73e9401e8.metadata.json",
+      "payload_digest": "sha256:8f4d8dc84957cee4291c0feee64fb59367dcd63d4d7f11f470a69ae0357a69bb",
+      "record_count": 2,
+      "schema_fingerprint": "sha256:4a7c65c5d35bd4bbe35532f8fccf51246ea08078aac7b35f9b06b1115066b834",
+      "snapshot_id": "7124086183510039804",
+      "table_identifier": "wm.semantic_publications"
+    }
+  ],
+  "source_refs": [
+    "source-corpus://odd_world_model/trade_representation_model/v1"
+  ],
+  "temporal_coordinates": {
+    "accepted_at": "2026-07-12T14:28:27.645Z",
+    "observed_at": "2026-07-12T14:28:27.645Z"
+  },
+  "write_request_id": "write://odd_world_model/sandbox/trade_representation_model/v1"
+}

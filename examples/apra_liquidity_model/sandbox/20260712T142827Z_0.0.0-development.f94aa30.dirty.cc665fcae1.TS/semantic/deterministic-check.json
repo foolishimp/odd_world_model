@@ -1,0 +1,16 @@
+{
+  "schema_kind": "odd_world_model.deterministic_check_report",
+  "schema_version": "v1",
+  "check_ref": "deterministic-check://odd_world_model/sandbox/apra_liquidity_model/v1",
+  "proposal": {
+    "ref": "semantic-proposal://odd_world_model/sandbox/apra_liquidity_model/v1",
+    "digest": "sha256:5f22bf69923bf8273490f4f288ad7a01a5ea1bf42b151de28e5c6041c2800c1a"
+  },
+  "check_contract_refs": [
+    "sandbox-contract://odd_world_model/apra_liquidity_model/semantic-payload/v1"
+  ],
+  "status": "passed",
+  "issues": [],
+  "checked_at": "2026-07-12T14:28:27.645Z",
+  "check_digest": "sha256:62ff895caa9a33a6c90d92f0a46eafb72af7872c29765b61edc0365611f448cd"
+}

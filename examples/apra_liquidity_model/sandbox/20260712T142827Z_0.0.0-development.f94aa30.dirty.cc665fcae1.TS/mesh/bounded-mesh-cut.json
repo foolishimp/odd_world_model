@@ -1,0 +1,32 @@
+{
+  "schema_kind": "odd_world_model.bounded_mesh_cut",
+  "schema_version": "v1",
+  "mesh_cut_ref": "mesh-cut://odd_world_model/sandbox/apra_liquidity_model/v1",
+  "interaction_goal": "inspect the apra_liquidity_model world-model instance built by 0.0.0-development.f94aa30.dirty.cc665fcae1",
+  "scope_ref": "mesh-scope://odd_world_model/sandbox/apra_liquidity_model/v1",
+  "selection_policy_ref": "selection-policy://odd_world_model/sandbox/roots-only/v1",
+  "root_refs": [
+    {
+      "ref": "semantic-cut://odd_world_model/sandbox/apra_liquidity_model/v1",
+      "digest": "sha256:766db9924d5d473ebe9e943fc088314fe2a1a888dd222811ef9be28d0f8fc667",
+      "version": "v1"
+    }
+  ],
+  "relation_selectors": [
+    "references"
+  ],
+  "closure_rule": "roots_only",
+  "excluded_refs": [],
+  "resolved_at": "2026-07-12T14:28:27.645Z",
+  "unresolved_gaps": [],
+  "node_refs": [
+    {
+      "ref": "semantic-cut://odd_world_model/sandbox/apra_liquidity_model/v1",
+      "digest": "sha256:766db9924d5d473ebe9e943fc088314fe2a1a888dd222811ef9be28d0f8fc667",
+      "version": "v1"
+    }
+  ],
+  "link_refs": [],
+  "common_model_refs": [],
+  "mesh_cut_digest": "sha256:31740ae958da8a91d49f9929c39ca1d78422ec27b98557647284070b51d5746e"
+}

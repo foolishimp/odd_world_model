@@ -1,0 +1,20 @@
+{
+  "configuration_version": "v2",
+  "workspace_kind": "versioned_world_model_instance",
+  "product_binding": {
+    "ref": "deployment://odd_world_model/0.0.0-development.f94aa30.dirty.cc665fcae1/53270bf8bc9e02b2",
+    "digest": "sha256:fc35bc1672e0ccc02e8dabd2bab7c92adaa2cdf5978b4546758b4041e0fa9d46"
+  },
+  "domain": {
+    "example_name": "trade_representation_model",
+    "source_root": "../../sources",
+    "source_inventory": {
+      "ref": "source-inventory://odd_world_model/trade_representation_model/v1",
+      "digest": "sha256:8f06596edb4d1fc71c6f1f828be1ae97147ba27a1775cdfc850d5ae1aba7f99e"
+    }
+  },
+  "execution": {
+    "protocol_version": "v1",
+    "mode": "installed_rc3_reference_kernel"
+  }
+}

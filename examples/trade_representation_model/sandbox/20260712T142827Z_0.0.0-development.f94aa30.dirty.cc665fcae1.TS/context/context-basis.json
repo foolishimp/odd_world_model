@@ -1,0 +1,64 @@
+{
+  "schema_kind": "odd_world_model.context_basis",
+  "schema_version": "v1",
+  "basis_ref": "context-basis://odd_world_model/sandbox/trade_representation_model/v1",
+  "interaction_goal": "inspect the trade_representation_model world-model instance built by 0.0.0-development.f94aa30.dirty.cc665fcae1",
+  "mesh_cut": {
+    "ref": "mesh-cut://odd_world_model/sandbox/trade_representation_model/v1",
+    "digest": "sha256:6287c83bcfa9caedf46ced33b4271a90b7aee92752fb248d9edb9e7a8a3f53cb"
+  },
+  "semantic_cut_refs": [
+    {
+      "ref": "semantic-cut://odd_world_model/sandbox/trade_representation_model/v1",
+      "digest": "sha256:1f5154e9b0b572e1a0d05b1c02460ae8a85511522584182d29c227118ef9d466",
+      "version": "v1"
+    }
+  ],
+  "semantic_link_refs": [],
+  "source_observation_refs": [
+    {
+      "ref": "source-observation://odd_world_model/sandbox/trade_representation_model/v1",
+      "digest": "sha256:2cb7316fd3a6582d746e6cb5899d69d8543ef3e17b981a04f3b7520e2d63230f"
+    }
+  ],
+  "physical_snapshot_refs": [
+    {
+      "ref": "iceberg-snapshot://wm.semantic_publications/7124086183510039804",
+      "digest": "sha256:8f4d8dc84957cee4291c0feee64fb59367dcd63d4d7f11f470a69ae0357a69bb",
+      "version": "file:///Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260712T142827Z_0.0.0-development.f94aa30.dirty.cc665fcae1.TS/physical/runtime/warehouse/wm/semantic_publications/metadata/00001-71b41b83-4a27-42dc-8597-03f73e9401e8.metadata.json"
+    }
+  ],
+  "projection_contract_ref": "projection-contract://odd_world_model/sandbox/canonical-semantic-cut/v1",
+  "projection_contract_version": "v1",
+  "selection_policy_ref": "selection-policy://odd_world_model/sandbox/roots-only/v1",
+  "temporal_coordinates": {
+    "source_observed_at": "2026-07-12T14:28:27.645Z",
+    "context_as_of": "2026-07-12T14:28:27.645Z"
+  },
+  "source_authority_refs": [
+    "authority://odd_world_model/trade-representation-example/v1"
+  ],
+  "semantic_authority_refs": [
+    "authority://odd_world_model/trade-representation-example/v1",
+    "admission-witness://odd_world_model/sandbox/trade_representation_model-publication-v1"
+  ],
+  "freshness": {
+    "status": "fresh",
+    "policy_ref": "freshness-policy://odd_world_model/exact-dependency-digest/v1",
+    "evaluated_at": "2026-07-12T14:28:27.645Z",
+    "dependency_digest": "sha256:56c5a8746c7f7651a7fc5e95ec88218be346d2418987f3c8597f5bfa57a98716"
+  },
+  "fidelity": "lossy_projection",
+  "losses": [
+    "authority notes are inventoried but not semantically interpreted by the deterministic example adapter"
+  ],
+  "exclusions": [],
+  "truncation": {
+    "applied": false,
+    "limit_ref": "context-window://odd_world_model/sandbox/32-items",
+    "omitted_count": 0
+  },
+  "unresolved_gaps": [],
+  "resolved_at": "2026-07-12T14:28:27.645Z",
+  "basis_digest": "sha256:ed0315766ca0a9a540121cbd18e8464b4c952561eef59a7bc6c3e1ed0a24be23"
+}

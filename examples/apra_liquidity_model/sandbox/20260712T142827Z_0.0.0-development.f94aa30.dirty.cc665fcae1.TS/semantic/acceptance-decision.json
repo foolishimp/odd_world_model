@@ -1,0 +1,23 @@
+{
+  "schema_kind": "odd_world_model.wm_acceptance_decision",
+  "schema_version": "v1",
+  "decision_ref": "wm-acceptance://odd_world_model/sandbox/apra_liquidity_model/v1",
+  "proposal": {
+    "ref": "semantic-proposal://odd_world_model/sandbox/apra_liquidity_model/v1",
+    "digest": "sha256:5f22bf69923bf8273490f4f288ad7a01a5ea1bf42b151de28e5c6041c2800c1a"
+  },
+  "deterministic_check": {
+    "ref": "deterministic-check://odd_world_model/sandbox/apra_liquidity_model/v1",
+    "digest": "sha256:62ff895caa9a33a6c90d92f0a46eafb72af7872c29765b61edc0365611f448cd"
+  },
+  "proposal_admission": {
+    "ref": "admission-witness://odd_world_model/sandbox/apra_liquidity_model-proposal-v1",
+    "digest": "sha256:a616be0c4ad5fc33156e39045ab262d0174ccce1ff9f2e6d478c2b10916df906"
+  },
+  "authority_ref": "authority://odd_world_model/apra-liquidity-example/v1",
+  "disposition": "accepted",
+  "rationale": "the retained example descriptor, exact source inventory, candidate status, and deterministic payload contract passed",
+  "gaps": [],
+  "decided_at": "2026-07-12T14:28:27.645Z",
+  "decision_digest": "sha256:51c2c6db020e1a1bb27266d1850a7f9f3df3c7b6857becc540b25231edfd704b"
+}

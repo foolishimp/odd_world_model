@@ -1,0 +1,82 @@
+{
+  "schema_kind": "odd_world_model.deployment_manifest",
+  "schema_version": "v1",
+  "deployment_ref": "deployment://odd_world_model/0.0.0-development.f94aa30.dirty.cc665fcae1/53270bf8bc9e02b2",
+  "deployment_class": "development_cut",
+  "product_name": "odd_world_model",
+  "product_version": "0.0.0-development.f94aa30.dirty.cc665fcae1",
+  "source_ref": "git-commit://odd_world_model/f94aa30fb2518a342655bf6d53cbb66fb3321277#sha256:cc665fcae15ba9588e86954647f6365a63282ef5cb32ce5cde73a554a582d33f",
+  "source_state": "dirty",
+  "package_artifact": {
+    "relative_path": "artifacts/odd-world-model-typescript-tenant-0.0.0-development.f94aa30.dirty.cc665fcae1.tgz",
+    "sha256": "sha256:daaf8ae31d9f3d72e3277daba20c8313c69299772ba4fcbc53270bf8bc9e02b2",
+    "byte_length": 2172237
+  },
+  "storage_artifact": {
+    "relative_path": "artifacts/odd_world_model_storage-0.1.0-py3-none-any.whl",
+    "sha256": "sha256:8a0b494395099062a87094f02beec86f911d95725b9283105fe2729e56a5fa41",
+    "byte_length": 16633
+  },
+  "artifact_base_locator": "deployment-cache://odd_world_model/0.0.0-development.f94aa30.dirty.cc665fcae1/",
+  "installed_product_digest": "sha256:76406471aeeedc68d986aec3bd087a3649c9c19b2baf70688bec5bf2f15318a9",
+  "installed_storage_package_digest": "sha256:63b64372a229bc91c54dd625763162aff18becd5601f4b47ed7d519c01fe00d5",
+  "installed_entrypoint": "product/sandbox/installed/worker.ts",
+  "storage_python": "storage/venv/bin/python",
+  "installed_storage_package_path": "storage/venv/lib/python3.12/site-packages/odd_world_model_storage",
+  "protocol_version": "v1",
+  "dependencies": [
+    {
+      "package_name": "@abiogenesis/typescript-tenant",
+      "version": "4.6.0-rc.3",
+      "artifact_sha256": "sha256:9cffb372c0dfc00983a5d0e882efbc3d0c3ac937a56f313000f35a4473358113"
+    },
+    {
+      "package_name": "@odd-glc/route-one-typescript",
+      "version": "0.1.0",
+      "artifact_sha256": "sha256:7e548f92ecd6b4442f9c9f1feb46dd2edd7e9610a7dae8706482fc65d80fa578"
+    },
+    {
+      "package_name": "fast-xml-parser",
+      "version": "5.10.0",
+      "artifact_sha256": null
+    },
+    {
+      "package_name": "fast-xml-validator",
+      "version": "1.2.0",
+      "artifact_sha256": null
+    },
+    {
+      "package_name": "json-canonicalize",
+      "version": "2.0.0",
+      "artifact_sha256": null
+    },
+    {
+      "package_name": "odd-world-model-storage",
+      "version": "0.1.0",
+      "artifact_sha256": "sha256:8a0b494395099062a87094f02beec86f911d95725b9283105fe2729e56a5fa41"
+    },
+    {
+      "package_name": "duckdb",
+      "version": "1.4.5",
+      "artifact_sha256": null
+    },
+    {
+      "package_name": "pyiceberg",
+      "version": "0.11.1",
+      "artifact_sha256": null
+    },
+    {
+      "package_name": "rfc8785",
+      "version": "0.1.4",
+      "artifact_sha256": null
+    }
+  ],
+  "capabilities": {
+    "native_graph_payload_execution": false,
+    "calibrated_fp_authorship": false,
+    "replay_native_semantic_projection": false,
+    "reference_kernel": true
+  },
+  "created_at": "2026-07-12T14:24:18.366Z",
+  "manifest_digest": "sha256:fc35bc1672e0ccc02e8dabd2bab7c92adaa2cdf5978b4546758b4041e0fa9d46"
+}

@@ -1,0 +1,39 @@
+{
+  "schema_kind": "odd_world_model.context_invocation_record",
+  "schema_version": "v1",
+  "invocation_ref": "context-invocation://odd_world_model/sandbox/apra_liquidity_model/v1",
+  "context_basis": {
+    "ref": "context-basis://odd_world_model/sandbox/apra_liquidity_model/v1",
+    "digest": "sha256:d0d7251e5dca8289fc185791f820a0288285b665ed7100b2e4ef84840ac8d451"
+  },
+  "context_projection": {
+    "ref": "context-projection://odd_world_model/sandbox/apra_liquidity_model/v1",
+    "digest": "sha256:e791ad553e242218df7a19d95068e8c3216c1c5dbc7956bdb1956aa686ab75e4"
+  },
+  "model_identity": "model-capability://odd_world_model/reference-sandbox-interpreter/v1",
+  "model_role": "F_P",
+  "invoked_at": "2026-07-12T14:28:27.645Z",
+  "completed_at": "2026-07-12T14:28:27.645Z",
+  "output_digest": "sha256:b2ac3e75f4904a2de0627b01ada22c73ddb9f06e91e18c1ffc9ea3a98bfc20cb",
+  "output_proposal_ref": "proposal://odd_world_model/sandbox/apra_liquidity_model/interpretation/v1",
+  "abg_event_refs": [
+    "runtime-event:2026-07-12T14:28:31.537Z:617:fd3ff6de-7608-4bec-a7a7-35089b8a013f",
+    "runtime-event:2026-07-12T14:28:31.537Z:618:78f8e55f-20e4-4495-96d8-cb86981be092",
+    "runtime-event:2026-07-12T14:28:31.539Z:634:8d1d6501-b6b8-41c3-980e-5ffd5829503b",
+    "runtime-event:2026-07-12T14:28:31.539Z:637:9c169953-aaf1-4d9b-9ae6-9d78d37e3459",
+    "runtime-event:2026-07-12T14:28:31.539Z:640:7d78e54e-bd05-4b27-abbb-c90b40960ac9",
+    "runtime-event:2026-07-12T14:28:31.544Z:670:80887af6-1836-4c57-9143-e98188ac966b",
+    "runtime-event:2026-07-12T14:28:31.545Z:671:99239b30-e63e-48ca-94dd-13d7cc7f0c9a"
+  ],
+  "admission": {
+    "ref": "admission-witness://odd_world_model/sandbox/apra_liquidity_model-interpretation-v1",
+    "digest": "sha256:75a01fc06b0aa2fe20f6acfca2c503beafc98c7fd9344f3e7bd18c75079dbddc"
+  },
+  "freshness_catalog": {
+    "ref": "context-dependency-catalog://odd_world_model/sandbox/apra_liquidity_model/v1",
+    "digest": "sha256:41ce7929814cd6fefbad55be8372a44c031412e3987fda3acf4d0fff7421bca5"
+  },
+  "admission_status": "admitted",
+  "freshness_status": "fresh",
+  "invocation_digest": "sha256:52a9ad728c25aefc0e30712c722e07c893c0ca15d86e476a38a8e22315c2949c"
+}

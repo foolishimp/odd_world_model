@@ -1,0 +1,64 @@
+{
+  "schema_kind": "odd_world_model.context_basis",
+  "schema_version": "v1",
+  "basis_ref": "context-basis://odd_world_model/sandbox/banking_product_model/v1",
+  "interaction_goal": "inspect the banking_product_model world-model instance built by 0.0.0-development.f94aa30.dirty.cc665fcae1",
+  "mesh_cut": {
+    "ref": "mesh-cut://odd_world_model/sandbox/banking_product_model/v1",
+    "digest": "sha256:66bcc075efe4b1518444005d9befaeeaf9e4ed2b6e2b06602ce663caadbce68a"
+  },
+  "semantic_cut_refs": [
+    {
+      "ref": "semantic-cut://odd_world_model/sandbox/banking_product_model/v1",
+      "digest": "sha256:bb1352e3869cfbfeab7fe906a34350c7fcd903a7d8325520cd8068e2a8e311f6",
+      "version": "v1"
+    }
+  ],
+  "semantic_link_refs": [],
+  "source_observation_refs": [
+    {
+      "ref": "source-observation://odd_world_model/sandbox/banking_product_model/v1",
+      "digest": "sha256:9190f0f4bc01eff90f3e97a81411495778fd0e458eabba3909d21745eccb95e6"
+    }
+  ],
+  "physical_snapshot_refs": [
+    {
+      "ref": "iceberg-snapshot://wm.semantic_publications/3970337619250031272",
+      "digest": "sha256:8a2313a2406177c96f5ef758ee51adf786ebd5d2d2adecf54910501e1e266fcb",
+      "version": "file:///Users/jim/src/apps/odd_world_model/examples/banking_product_model/sandbox/20260712T142827Z_0.0.0-development.f94aa30.dirty.cc665fcae1.TS/physical/runtime/warehouse/wm/semantic_publications/metadata/00001-058510c4-6084-4a32-bb87-bfbb55007226.metadata.json"
+    }
+  ],
+  "projection_contract_ref": "projection-contract://odd_world_model/sandbox/canonical-semantic-cut/v1",
+  "projection_contract_version": "v1",
+  "selection_policy_ref": "selection-policy://odd_world_model/sandbox/roots-only/v1",
+  "temporal_coordinates": {
+    "source_observed_at": "2026-07-12T14:28:27.645Z",
+    "context_as_of": "2026-07-12T14:28:27.645Z"
+  },
+  "source_authority_refs": [
+    "authority://odd_world_model/banking-product-example/v1"
+  ],
+  "semantic_authority_refs": [
+    "authority://odd_world_model/banking-product-example/v1",
+    "admission-witness://odd_world_model/sandbox/banking_product_model-publication-v1"
+  ],
+  "freshness": {
+    "status": "fresh",
+    "policy_ref": "freshness-policy://odd_world_model/exact-dependency-digest/v1",
+    "evaluated_at": "2026-07-12T14:28:27.645Z",
+    "dependency_digest": "sha256:4fff91b92555970f1973ea648d32d4da0f0199d911518ae201f2cf4e3606b005"
+  },
+  "fidelity": "lossy_projection",
+  "losses": [
+    "retained FIBO HTML pages and authority notes are inventoried but not fully interpreted into the candidate object cuts"
+  ],
+  "exclusions": [],
+  "truncation": {
+    "applied": false,
+    "limit_ref": "context-window://odd_world_model/sandbox/32-items",
+    "omitted_count": 0
+  },
+  "unresolved_gaps": [],
+  "resolved_at": "2026-07-12T14:28:27.645Z",
+  "basis_digest": "sha256:8bf557f42903e23237371a3e2d32567047be5587d119b333acc50eeb5e95d87e"
+}

@@ -1,0 +1,172 @@
+{
+  "schema_kind": "odd_world_model.instance_artifact_manifest",
+  "schema_version": "v1",
+  "entries": [
+    {
+      "relative_path": ".ai-workspace/context/world_builder_config.json",
+      "byte_length": 704,
+      "sha256": "sha256:f54ed1f55a7880ee0e61fc388f01c3cad860e659339dfc70bd276a79c250f92a"
+    },
+    {
+      "relative_path": "AGENTS.md",
+      "byte_length": 839,
+      "sha256": "sha256:09f5e042c3dba4a7133c55a8d5ae052384217934f97dbc4d8d53082369ac2bd8"
+    },
+    {
+      "relative_path": "CLAUDE.md",
+      "byte_length": 839,
+      "sha256": "sha256:09f5e042c3dba4a7133c55a8d5ae052384217934f97dbc4d8d53082369ac2bd8"
+    },
+    {
+      "relative_path": "comparison/reference-comparison.json",
+      "byte_length": 1237,
+      "sha256": "sha256:972cb603892ee3a72c276f966e02e2eb7a6a7a66f779a9a71c777b66a2cd4f11"
+    },
+    {
+      "relative_path": "context/context-basis.json",
+      "byte_length": 2881,
+      "sha256": "sha256:a4d2f911a718b7c618a2bc24eb5f5018a2f5aac346b600645270237bb85c3028"
+    },
+    {
+      "relative_path": "context/context-invocation.json",
+      "byte_length": 2197,
+      "sha256": "sha256:0238ddbb733bc5f960739dd1920e42321f7e18e2219deff343f29aec0ea8ae38"
+    },
+    {
+      "relative_path": "context/context-projection.json",
+      "byte_length": 23604,
+      "sha256": "sha256:e756f194ab8c34f49e2f2ac9dafb5dca34bff087d804cff62ebe8b321bc580c9"
+    },
+    {
+      "relative_path": "evidence/admission-witnesses.json",
+      "byte_length": 39590,
+      "sha256": "sha256:bdbab7cf70c870884a50fa5288bd6da319b94ccec7909160f66795479b2a948c"
+    },
+    {
+      "relative_path": "evidence/runtime-event-summary.json",
+      "byte_length": 1371,
+      "sha256": "sha256:e0c2ad30fe856bdc67d4c1ad4b097b58485f4f4ebbc6f3f334c332cffc771250"
+    },
+    {
+      "relative_path": "evidence/runtime-events.jsonl.gz",
+      "byte_length": 151290,
+      "sha256": "sha256:489d43e5a2ed4b1e0f43b17e60df5b3e6017853f046e7ab1ae93c3e441e2be66"
+    },
+    {
+      "relative_path": "input/source-inventory.json",
+      "byte_length": 2356,
+      "sha256": "sha256:6873922bef0cf6d3fbb77f02adabb5c9a08652ba9cd23c4b9d2f2790501a9377"
+    },
+    {
+      "relative_path": "install/product-binding.json",
+      "byte_length": 3159,
+      "sha256": "sha256:0bd997df3c4ce3265134a1050ef13dd091a23343a21682ab71a058316458f186"
+    },
+    {
+      "relative_path": "mesh/bounded-mesh-cut.json",
+      "byte_length": 1230,
+      "sha256": "sha256:9bff49bf132c2c667e351121e38b9f3952475d382e584a6d84c53e0e1d29308d"
+    },
+    {
+      "relative_path": "physical/physical-effect-observation.json",
+      "byte_length": 743,
+      "sha256": "sha256:7e0afbc24e6d1a430e38ac28d37a53b23fa67369bef5e67f2427b1524f8e5885"
+    },
+    {
+      "relative_path": "physical/runtime/catalog.db",
+      "byte_length": 20480,
+      "sha256": "sha256:1a1530aefdf4700168d156494f883c410e4e945beb1e7a6042a33dd2539a9c6b"
+    },
+    {
+      "relative_path": "physical/runtime/receipts/ad4e9b6c56fbd96124d31c5d087d62c9fd058b0b6f886fb86e89bb9a97f10fa9.json",
+      "byte_length": 7023,
+      "sha256": "sha256:c76cd8e067f39b4e7e586c73385baeeddd94de7ad24ea9c964bf54c15253675a"
+    },
+    {
+      "relative_path": "physical/runtime/receipts/ad4e9b6c56fbd96124d31c5d087d62c9fd058b0b6f886fb86e89bb9a97f10fa9.lock",
+      "byte_length": 0,
+      "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "physical/runtime/warehouse/wm/semantic_publications/data/00000-0-3c81ff51-ba8d-4865-a7d8-cfe7083529f2.parquet",
+      "byte_length": 16776,
+      "sha256": "sha256:0e952fd9377465fc220baec3f69a41d822192fe2fc42d2a26f7e6d455452704f"
+    },
+    {
+      "relative_path": "physical/runtime/warehouse/wm/semantic_publications/metadata/00000-bef53a27-eb2c-456f-82cd-382769aed73d.metadata.json",
+      "byte_length": 1450,
+      "sha256": "sha256:0b9a62ffcafe80bc4c143aadde4d4fa8aba941ad7d84d38f4ed0edd892f22dc0"
+    },
+    {
+      "relative_path": "physical/runtime/warehouse/wm/semantic_publications/metadata/00001-058510c4-6084-4a32-bb87-bfbb55007226.metadata.json",
+      "byte_length": 2826,
+      "sha256": "sha256:19dba0959f1d1c05f8e071b69d70200daee27b24840ae9381e6f4a3acc7129a3"
+    },
+    {
+      "relative_path": "physical/runtime/warehouse/wm/semantic_publications/metadata/3c81ff51-ba8d-4865-a7d8-cfe7083529f2-m0.avro",
+      "byte_length": 5194,
+      "sha256": "sha256:3787b3ab89ddb21413f66941900729df971a75a955a7a46b07e5cde74cb61cdd"
+    },
+    {
+      "relative_path": "physical/runtime/warehouse/wm/semantic_publications/metadata/snap-3970337619250031272-0-3c81ff51-ba8d-4865-a7d8-cfe7083529f2.avro",
+      "byte_length": 1897,
+      "sha256": "sha256:8a7a8bc624bacb7df3f91242c30ed1df235b41d702fb5870c2f29f8a6aa78864"
+    },
+    {
+      "relative_path": "physical/semantic-cut-attestation.json",
+      "byte_length": 6340,
+      "sha256": "sha256:c7186f5ad27ad80c58644c51e12cecd423aa60cca128171c05ec599a849573e7"
+    },
+    {
+      "relative_path": "proof/verification.json",
+      "byte_length": 3128,
+      "sha256": "sha256:0acc79ba30192b3fe300ed241e2ce28c2d4cfd227e06b156942ac4ab15c67ca3"
+    },
+    {
+      "relative_path": "query/world-model-query.json",
+      "byte_length": 2904,
+      "sha256": "sha256:8d030fa046a22390eda6555a56dd710543140222271a20fad14b94839d45b3d8"
+    },
+    {
+      "relative_path": "semantic/acceptance-decision.json",
+      "byte_length": 1177,
+      "sha256": "sha256:f068261a316d22544e419232ae6b6aba77652d3ff6e4bfdcecdb4bd097d4d689"
+    },
+    {
+      "relative_path": "semantic/accepted-semantic-cut.json",
+      "byte_length": 3207,
+      "sha256": "sha256:85a256540fd8b23d52cbe971d379dcd361b331189e5a1823820aebab3fc51a13"
+    },
+    {
+      "relative_path": "semantic/candidate-markov-objects.json",
+      "byte_length": 15784,
+      "sha256": "sha256:ce07475eb33719e9dfb3d48f682a028feb5c5ec7feda0e29c912c10dce92cf16"
+    },
+    {
+      "relative_path": "semantic/deterministic-check.json",
+      "byte_length": 663,
+      "sha256": "sha256:d55c85e817351e2e3de68e2c98459333ea96759319ada37205bb313186908707"
+    },
+    {
+      "relative_path": "semantic/published-semantic-cut.json",
+      "byte_length": 4094,
+      "sha256": "sha256:37e7223e94bdddefb2905b580ad1bbef5ffdebbc49f94cb6f702364a7a8c8e70"
+    },
+    {
+      "relative_path": "semantic/semantic-proposal.json",
+      "byte_length": 24924,
+      "sha256": "sha256:e26e0b05880e2246919b10717219cda6ab338992054367a318a178aeb10ab16b"
+    },
+    {
+      "relative_path": "semantic/semantic-publication-candidate.json",
+      "byte_length": 3730,
+      "sha256": "sha256:b9b07b9e21e019bfa393c5df423592a52c67892945ff7bf127eebd7609fa9642"
+    },
+    {
+      "relative_path": "semantic/source-observation.json",
+      "byte_length": 1998,
+      "sha256": "sha256:637d9b0a2d980dcc2fec85d57ddc86e31331fa8ad9c2de0f6a91026d39af9f7c"
+    }
+  ],
+  "manifest_digest": "sha256:17753a4c6696e9384845a85b8b44dfdf7d3e2a2b32a35d6d61fb8952e2c0cbe7"
+}

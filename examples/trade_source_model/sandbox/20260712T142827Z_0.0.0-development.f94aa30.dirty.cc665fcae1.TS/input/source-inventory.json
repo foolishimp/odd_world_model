@@ -1,0 +1,33 @@
+{
+  "schema_kind": "odd_world_model.source_inventory",
+  "schema_version": "v1",
+  "inventory_ref": "source-inventory://odd_world_model/trade_source_model/v1",
+  "example_name": "trade_source_model",
+  "entries": [
+    {
+      "relative_path": "data/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml",
+      "media_type": "application/xml",
+      "byte_length": 6408,
+      "sha256": "sha256:466351bf22a216f08901b39a64ca29d6bf85adec7a61632f46ffac1a73c51c8f"
+    },
+    {
+      "relative_path": "data/authority/fpml-5-12-examples.html",
+      "media_type": "text/html",
+      "byte_length": 636656,
+      "sha256": "sha256:4b674b1937907e29e5d8bcc12ae634742691ee074bc476326664db0f03664c07"
+    },
+    {
+      "relative_path": "uri_ledger/source_authority.md",
+      "media_type": "text/markdown",
+      "byte_length": 1835,
+      "sha256": "sha256:7da3f9b05c90cbe8f9021d241bf9d2f7e653a93784add4ba2ec641d48e0fefec"
+    },
+    {
+      "relative_path": "uri_ledger/source_notes.md",
+      "media_type": "text/markdown",
+      "byte_length": 880,
+      "sha256": "sha256:6ec4529e606f7d24f2c1edec6d672c68247a5058377ae6c55c025337a116cdcc"
+    }
+  ],
+  "inventory_digest": "sha256:1d04fc371ca3401726848ca53a04b0a4347b8eac8a50cbe408890e5d2a724bde"
+}

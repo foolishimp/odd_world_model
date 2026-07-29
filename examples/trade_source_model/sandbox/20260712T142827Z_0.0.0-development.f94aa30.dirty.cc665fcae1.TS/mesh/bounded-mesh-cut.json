@@ -1,0 +1,32 @@
+{
+  "schema_kind": "odd_world_model.bounded_mesh_cut",
+  "schema_version": "v1",
+  "mesh_cut_ref": "mesh-cut://odd_world_model/sandbox/trade_source_model/v1",
+  "interaction_goal": "inspect the trade_source_model world-model instance built by 0.0.0-development.f94aa30.dirty.cc665fcae1",
+  "scope_ref": "mesh-scope://odd_world_model/sandbox/trade_source_model/v1",
+  "selection_policy_ref": "selection-policy://odd_world_model/sandbox/roots-only/v1",
+  "root_refs": [
+    {
+      "ref": "semantic-cut://odd_world_model/sandbox/trade_source_model/v1",
+      "digest": "sha256:a3cdd284e67cf3c744195265b2dcd24c1b27d2ec7f709d244cca98c58b385bef",
+      "version": "v1"
+    }
+  ],
+  "relation_selectors": [
+    "references"
+  ],
+  "closure_rule": "roots_only",
+  "excluded_refs": [],
+  "resolved_at": "2026-07-12T14:28:27.645Z",
+  "unresolved_gaps": [],
+  "node_refs": [
+    {
+      "ref": "semantic-cut://odd_world_model/sandbox/trade_source_model/v1",
+      "digest": "sha256:a3cdd284e67cf3c744195265b2dcd24c1b27d2ec7f709d244cca98c58b385bef",
+      "version": "v1"
+    }
+  ],
+  "link_refs": [],
+  "common_model_refs": [],
+  "mesh_cut_digest": "sha256:7906650fc792a0d66dcceb153cc22f73213a72c239dc295407d8982a432c6e82"
+}

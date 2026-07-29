@@ -1,0 +1,62 @@
+{
+  "schema_kind": "odd_world_model.query_projection",
+  "schema_version": "v1",
+  "query_ref": "query://odd_world_model/sandbox/trade_representation_model/v1",
+  "query_contract_ref": "query-contract://odd_world_model/sandbox/instance-summary/v1",
+  "query_contract_version": "v1",
+  "semantic_cut": {
+    "ref": "semantic-cut://odd_world_model/sandbox/trade_representation_model/v1",
+    "digest": "sha256:1f5154e9b0b572e1a0d05b1c02460ae8a85511522584182d29c227118ef9d466",
+    "version": "v1"
+  },
+  "physical_admission_witness": {
+    "ref": "admission-witness://odd_world_model/sandbox/trade_representation_model-physical-v1",
+    "digest": "sha256:39e51f1a0182e50af35d8024a03f7a5533a8d5f81553625b10a47bc419f248ef"
+  },
+  "context_basis": {
+    "ref": "context-basis://odd_world_model/sandbox/trade_representation_model/v1",
+    "digest": "sha256:ed0315766ca0a9a540121cbd18e8464b4c952561eef59a7bc6c3e1ed0a24be23"
+  },
+  "context_projection": {
+    "ref": "context-projection://odd_world_model/sandbox/trade_representation_model/v1",
+    "digest": "sha256:aa735eba2a4fbfdb9d3941ed945bb3487fe6361158aaf7cee5043afad96d692e"
+  },
+  "exact_snapshots": [
+    {
+      "metadata_location": "file:///Users/jim/src/apps/odd_world_model/examples/trade_representation_model/sandbox/20260712T142827Z_0.0.0-development.f94aa30.dirty.cc665fcae1.TS/physical/runtime/warehouse/wm/semantic_publications/metadata/00001-71b41b83-4a27-42dc-8597-03f73e9401e8.metadata.json",
+      "payload_digest": "sha256:8f4d8dc84957cee4291c0feee64fb59367dcd63d4d7f11f470a69ae0357a69bb",
+      "record_count": 2,
+      "schema_fingerprint": "sha256:4a7c65c5d35bd4bbe35532f8fccf51246ea08078aac7b35f9b06b1115066b834",
+      "snapshot_id": "7124086183510039804",
+      "table_identifier": "wm.semantic_publications"
+    }
+  ],
+  "result": {
+    "interaction_goal": "inspect the trade_representation_model world-model instance built by 0.0.0-development.f94aa30.dirty.cc665fcae1",
+    "root_refs": [
+      {
+        "ref": "semantic-cut://odd_world_model/sandbox/trade_representation_model/v1",
+        "digest": "sha256:1f5154e9b0b572e1a0d05b1c02460ae8a85511522584182d29c227118ef9d466",
+        "version": "v1"
+      }
+    ],
+    "traversed_semantic_cut_refs": [
+      {
+        "ref": "semantic-cut://odd_world_model/sandbox/trade_representation_model/v1",
+        "digest": "sha256:1f5154e9b0b572e1a0d05b1c02460ae8a85511522584182d29c227118ef9d466",
+        "version": "v1"
+      }
+    ],
+    "traversed_semantic_link_refs": [],
+    "semantic_cut_count": 1,
+    "semantic_link_count": 0,
+    "included_ref_count": 1,
+    "omitted_ref_count": 0,
+    "fidelity": "lossy_projection",
+    "declared_losses": [
+      "authority notes are inventoried but not semantically interpreted by the deterministic example adapter"
+    ]
+  },
+  "projected_at": "2026-07-12T14:28:27.645Z",
+  "query_digest": "sha256:525c6222afaed29ff835e2910f71e2f7b691f950185cd1070123910f92e1b9a3"
+}

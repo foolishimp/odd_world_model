@@ -1,14 +1,16 @@
 # TypeScript Scenario Sandbox Proof Structure
 
-**Status**: Historical odd_sdlc sandbox readback
+**Status**: Historical odd_sdlc sandbox readback; superseded by ADR-WM-006
 **Date**: 2026-05-15
 **Reference implementation**:
 - `/Users/jim/src/apps/odd_sdlc/build_tenants/typescript/test_env/sandbox/scenario_sandbox.mjs`
 - `/Users/jim/src/apps/odd_sdlc/build_tenants/typescript/test_env/sandbox/scenarios/README.md`
 
-The TypeScript world-model proof line should reuse the generic `odd_sdlc`
-scenario sandbox structure rather than create a separate world-model-specific
-runner.
+This document records the earlier `odd_sdlc` scenario-sandbox input. Current
+authority for versioned WM instance cuts is
+`build_tenants/common/design/adrs/ADR-WM-006-versioned-installed-product-example-sandboxes.md`.
+The retained source/cut separation survives; the odd_sdlc runner, mutable
+source-workspace install, and locally written pass events do not.
 
 ## Reused Sandbox Contract
 

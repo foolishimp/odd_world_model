@@ -1,0 +1,64 @@
+{
+  "schema_kind": "odd_world_model.context_basis",
+  "schema_version": "v1",
+  "basis_ref": "context-basis://odd_world_model/sandbox/trade_source_model/v1",
+  "interaction_goal": "inspect the trade_source_model world-model instance built by 0.0.0-development.f94aa30.dirty.cc665fcae1",
+  "mesh_cut": {
+    "ref": "mesh-cut://odd_world_model/sandbox/trade_source_model/v1",
+    "digest": "sha256:7906650fc792a0d66dcceb153cc22f73213a72c239dc295407d8982a432c6e82"
+  },
+  "semantic_cut_refs": [
+    {
+      "ref": "semantic-cut://odd_world_model/sandbox/trade_source_model/v1",
+      "digest": "sha256:a3cdd284e67cf3c744195265b2dcd24c1b27d2ec7f709d244cca98c58b385bef",
+      "version": "v1"
+    }
+  ],
+  "semantic_link_refs": [],
+  "source_observation_refs": [
+    {
+      "ref": "source-observation://odd_world_model/sandbox/trade_source_model/v1",
+      "digest": "sha256:9beb02f0eb66137b7cb55b8b0c46c316e62027fd1bb55c771c23e78493fb4234"
+    }
+  ],
+  "physical_snapshot_refs": [
+    {
+      "ref": "iceberg-snapshot://wm.semantic_publications/803815983928620142",
+      "digest": "sha256:e242490f9d7db0138565f6ac7346718534d5ef6ff97e6e29ed82bc0ab3f998d9",
+      "version": "file:///Users/jim/src/apps/odd_world_model/examples/trade_source_model/sandbox/20260712T142827Z_0.0.0-development.f94aa30.dirty.cc665fcae1.TS/physical/runtime/warehouse/wm/semantic_publications/metadata/00001-98d097e5-6c9a-45dd-a027-7a2b39d9ce14.metadata.json"
+    }
+  ],
+  "projection_contract_ref": "projection-contract://odd_world_model/sandbox/canonical-semantic-cut/v1",
+  "projection_contract_version": "v1",
+  "selection_policy_ref": "selection-policy://odd_world_model/sandbox/roots-only/v1",
+  "temporal_coordinates": {
+    "source_observed_at": "2026-07-12T14:28:27.645Z",
+    "context_as_of": "2026-07-12T14:28:27.645Z"
+  },
+  "source_authority_refs": [
+    "authority://fpml/official-example-corpus"
+  ],
+  "semantic_authority_refs": [
+    "authority://fpml/official-example-corpus",
+    "admission-witness://odd_world_model/sandbox/trade_source_model-publication-v1"
+  ],
+  "freshness": {
+    "status": "fresh",
+    "policy_ref": "freshness-policy://odd_world_model/exact-dependency-digest/v1",
+    "evaluated_at": "2026-07-12T14:28:27.645Z",
+    "dependency_digest": "sha256:b93ccc735e52af44aebef12775be6865f5dffd9b0a1921de626eccf55abffccd"
+  },
+  "fidelity": "lossy_projection",
+  "losses": [
+    "FpML syntax, example-index content, and non-economic documentation are inventoried but not copied into the interpreted trade payload"
+  ],
+  "exclusions": [],
+  "truncation": {
+    "applied": false,
+    "limit_ref": "context-window://odd_world_model/sandbox/32-items",
+    "omitted_count": 0
+  },
+  "unresolved_gaps": [],
+  "resolved_at": "2026-07-12T14:28:27.645Z",
+  "basis_digest": "sha256:62559681c949f3ad6642778725e36196e742d3c94fab175205b4db3fc4e28460"
+}

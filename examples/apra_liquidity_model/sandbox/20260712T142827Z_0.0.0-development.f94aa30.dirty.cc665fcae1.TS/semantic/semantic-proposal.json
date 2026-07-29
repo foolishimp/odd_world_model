@@ -1,0 +1,197 @@
+{
+  "schema_kind": "odd_world_model.semantic_proposal",
+  "schema_version": "v1",
+  "proposal_ref": "semantic-proposal://odd_world_model/sandbox/apra_liquidity_model/v1",
+  "source_observation": {
+    "ref": "source-observation://odd_world_model/sandbox/apra_liquidity_model/v1",
+    "digest": "sha256:d633dfcec359ec5b8c886114548f118dd4de26280f09ee08adb86ad8a30a4caf"
+  },
+  "proposed_by": "fixture-capability://odd_world_model/apra_liquidity_model/retained-example-descriptor/v1",
+  "payload_schema_ref": "sandbox-contract://odd_world_model/apra_liquidity_model/semantic-payload/v1",
+  "payload": {
+    "schema_kind": "odd_world_model.example_semantic_payload",
+    "schema_version": "v1",
+    "example_name": "apra_liquidity_model",
+    "source_inventory": {
+      "ref": "source-inventory://odd_world_model/apra_liquidity_model/v1",
+      "digest": "sha256:49d400eee2db46df6cdeff41f465e2487b8a1a4817b58ba128f7c40525bf83c1"
+    },
+    "domain_payload": {
+      "schema_kind": "odd_world_model.example_domain_payload",
+      "schema_version": "v1",
+      "example_name": "apra_liquidity_model",
+      "domain_input": {
+        "source_id": "sandbox.apra_liquidity",
+        "published_by": "team.sandbox.regulatory",
+        "bounded_context": "sandbox.apra_liquidity.reporting",
+        "summary": "Sandbox APRA liquidity input for the first odd_world_model MVP lane.",
+        "reporting_position": {
+          "position_id": "apra_liquidity_position_001",
+          "reporting_regime": "APRA liquidity",
+          "counterparty_bucket": "financial_institution",
+          "agreement_assessment": "master_agreement_reviewed",
+          "liquidity_bucket": "contractual_outflow_assessment",
+          "lifecycle_state": "draft_classified"
+        },
+        "evidence_refs": [
+          "input://examples/apra_liquidity_model/sources/data/domain_input.json",
+          "input://examples/apra_liquidity_model/sources/data/requirements_snapshot.json",
+          "input://examples/apra_liquidity_model/sources/uri_ledger/source_notes.md",
+          "input://examples/apra_liquidity_model/sources/uri_ledger/source_authority.md",
+          "input://examples/apra_liquidity_model/sources/data/authority_claims.json",
+          "input://examples/apra_liquidity_model/sources/data/authority/apra_liquidity_landing_page.html",
+          "input://examples/apra_liquidity_model/sources/data/authority/aps_210_liquidity_2025.html",
+          "input://examples/apra_liquidity_model/sources/pdfs/apg_210_liquidity_2025.pdf",
+          "input://examples/apra_liquidity_model/sources/data/authority/ars_210_0_liquidity_2023.html",
+          "input://examples/apra_liquidity_model/sources/data/authority/apra_liquidity_faq.html"
+        ]
+      },
+      "authority_claims": {
+        "source_id": "apra_liquidity.authority_claims",
+        "published_by": "odd_world_model.review.apra_liquidity",
+        "summary": "Bounded extracted authority claims from official APRA liquidity sources for the first real APRA-liquidity domain slice in odd_world_model.",
+        "claims": [
+          {
+            "claim_id": "counterparty_bucket_financial_institution",
+            "claim_key": "counterparty_bucket",
+            "value_code": "financial_institution",
+            "source_refs": [
+              "input://examples/apra_liquidity_model/sources/data/authority/ars_210_0_liquidity_2023.html",
+              "input://examples/apra_liquidity_model/sources/data/authority/apra_liquidity_faq.html"
+            ],
+            "locators": [
+              "definitions.financial_institution",
+              "faq.q25.reporting_classification_examples"
+            ],
+            "summary": "ARS 210.0 defines the financial institution counterparty category by reference to APS 210 paragraph 10(b), and APRA FAQ 25 illustrates how reporting classifications are applied across ARF 210 forms.",
+            "excerpts": [
+              "Financial institution has the meaning given in paragraph 10(b) of Prudential Standard APS 210 Liquidity. ADIs must exclude ADI/bank in this counterparty category if separately indicated in the reporting item.",
+              "Deposits from other entities of national, state, territory and local governments are expected to be reported as a financial institution under item 9.5 ... unless ..."
+            ]
+          },
+          {
+            "claim_id": "liquidity_bucket_contractual_outflow",
+            "claim_key": "liquidity_bucket",
+            "value_code": "contractual_outflow_assessment",
+            "source_refs": [
+              "input://examples/apra_liquidity_model/sources/data/authority/ars_210_0_liquidity_2023.html",
+              "input://examples/apra_liquidity_model/sources/data/authority/apra_liquidity_faq.html"
+            ],
+            "locators": [
+              "outflows.item_13_6_and_item_15",
+              "faq.q24.collateral_outflows_due_to_market_valuation_changes"
+            ],
+            "summary": "ARS 210.0 includes collateral outflows due to market valuation changes on derivative transactions and other contractual obligations to extend funds, and APRA FAQ 24 explains the derivative collateral outflow treatment under APS 210 paragraph 53.",
+            "excerpts": [
+              "Collateral outflows due to market valuation changes on derivative transactions and other transactions.",
+              "Paragraph 53 of Attachment A to APS 210 requires collateral outflows due to market valuation changes on derivative and other transactions to be calculated as 100 per cent of the largest absolute net 30-day collateral flow realised in the past 24 months."
+            ]
+          },
+          {
+            "claim_id": "agreement_treatment_basis_contractual_review",
+            "claim_key": "agreement_treatment_basis",
+            "value_code": "master_agreement_reviewed",
+            "source_refs": [
+              "input://examples/apra_liquidity_model/sources/data/authority/ars_210_0_liquidity_2023.html"
+            ],
+            "locators": [
+              "definitions.guarantees_and_committed_facilities"
+            ],
+            "summary": "ARS 210.0 definitions treat guarantees, contractual performance, and committed facilities as liquidity-relevant contractual semantics; combined with imported trade agreement evidence this supports a reviewed master-agreement treatment basis.",
+            "excerpts": [
+              "Guarantees refers to agreements to be liable for another party’s debt or contractual performance if that other party does not pay or perform.",
+              "Committed facilities refers to contractually irrevocable or only conditionally revocable agreements or other lending commitments."
+            ]
+          }
+        ]
+      },
+      "requirements_snapshot": {
+        "requirements_source": "bounded_apra_liquidity_summary_over_official_apra_sources",
+        "focus_surfaces": [
+          "counterparty bucket",
+          "agreement treatment basis",
+          "liquidity classification",
+          "reporting position"
+        ],
+        "source_authority_ref": "input://examples/apra_liquidity_model/sources/uri_ledger/source_authority.md",
+        "authority_claims_ref": "input://examples/apra_liquidity_model/sources/data/authority_claims.json"
+      }
+    },
+    "candidate_markov_objects": [
+      {
+        "schema_kind": "odd_world_model.candidate_markov_object_cut",
+        "schema_version": "v1",
+        "object_ref": "markov-object://odd_world_model/apra_liquidity_model/apra_liquidity_position_001/v1",
+        "object_identity": "apra_liquidity_position_001",
+        "identity_direction": {
+          "source_state_refs": [
+            "source-state://apra_liquidity_model/apra_liquidity_position_001/observed"
+          ],
+          "target_state_refs": [
+            "world-object://apra_liquidity_model/apra_liquidity_position_001/candidate"
+          ],
+          "projection_ref": "projection://odd_world_model/apra_liquidity_model/apra_liquidity_position/v1"
+        },
+        "projection_support_refs": [
+          "source-field://apra_liquidity_model/apra_liquidity_position_001/agreement_assessment",
+          "source-field://apra_liquidity_model/apra_liquidity_position_001/counterparty_bucket",
+          "source-field://apra_liquidity_model/apra_liquidity_position_001/lifecycle_state",
+          "source-field://apra_liquidity_model/apra_liquidity_position_001/liquidity_bucket",
+          "source-field://apra_liquidity_model/apra_liquidity_position_001/position_id",
+          "source-field://apra_liquidity_model/apra_liquidity_position_001/reporting_regime"
+        ],
+        "distributed_ledger_evidence_refs": [
+          "ledger-entry:source-field://apra_liquidity_model/apra_liquidity_position_001/agreement_assessment",
+          "ledger-entry:source-field://apra_liquidity_model/apra_liquidity_position_001/counterparty_bucket",
+          "ledger-entry:source-field://apra_liquidity_model/apra_liquidity_position_001/lifecycle_state",
+          "ledger-entry:source-field://apra_liquidity_model/apra_liquidity_position_001/liquidity_bucket",
+          "ledger-entry:source-field://apra_liquidity_model/apra_liquidity_position_001/position_id",
+          "ledger-entry:source-field://apra_liquidity_model/apra_liquidity_position_001/reporting_regime"
+        ],
+        "candidate_basis": {
+          "ref": "candidate-basis://odd_world_model/apra_liquidity_model/apra_liquidity_position_001/v1",
+          "digest": "sha256:9bb2fc579e430893ac115d4af9a47a36aa651c938f6e803f97fdcf344303860a"
+        },
+        "null_peer_basis": {
+          "ref": "null-peer-basis://odd_world_model/apra_liquidity_model/apra_liquidity_position_001/v1",
+          "digest": "sha256:c5be211625a07abca96fb8164c84fe4b186d6905db3b7303b5fb494917555786"
+        },
+        "held_out_treatment_verification": {
+          "treatment_ref": "treatment://odd_world_model/apra_liquidity_model/apra_liquidity_position/v1",
+          "corpus_ref": "source-inventory://odd_world_model/apra_liquidity_model/v1",
+          "result": "inconclusive",
+          "evidence_refs": [
+            "source-corpus://odd_world_model/apra_liquidity_model/v1",
+            "apra_liquidity_position_001"
+          ]
+        },
+        "boundary": {
+          "included_refs": [
+            "source-field://apra_liquidity_model/apra_liquidity_position_001/agreement_assessment",
+            "source-field://apra_liquidity_model/apra_liquidity_position_001/counterparty_bucket",
+            "source-field://apra_liquidity_model/apra_liquidity_position_001/lifecycle_state",
+            "source-field://apra_liquidity_model/apra_liquidity_position_001/liquidity_bucket",
+            "source-field://apra_liquidity_model/apra_liquidity_position_001/position_id",
+            "source-field://apra_liquidity_model/apra_liquidity_position_001/reporting_regime"
+          ],
+          "excluded_refs": [
+            "source-evidence://apra_liquidity_model/uninterpreted-primary-documents"
+          ],
+          "rationale": "the retained apra_liquidity_model descriptor selects the explicit apra_liquidity_position fields and declares unprocessed source evidence as loss"
+        },
+        "publication_classification": "candidate",
+        "source_observation": {
+          "ref": "source-observation://odd_world_model/sandbox/apra_liquidity_model/v1",
+          "digest": "sha256:d633dfcec359ec5b8c886114548f118dd4de26280f09ee08adb86ad8a30a4caf"
+        },
+        "authority_ref": "authority://odd_world_model/apra-liquidity-example/v1",
+        "created_at": "2026-07-12T14:28:27.645Z",
+        "cut_digest": "sha256:b396342925bbbce0b2f4e6caf5331d031cb7c56e014884580042f19016b71290"
+      }
+    ]
+  },
+  "epistemic_status": "candidate",
+  "created_at": "2026-07-12T14:28:27.645Z",
+  "payload_digest": "sha256:0f16c60342a23fdb42d10620ee0e7b7cd49abded775d37cf02b9fd5914f2eaee",
+  "proposal_digest": "sha256:5f22bf69923bf8273490f4f288ad7a01a5ea1bf42b151de28e5c6041c2800c1a"
+}

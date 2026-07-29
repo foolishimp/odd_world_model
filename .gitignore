@@ -22,9 +22,12 @@ build_tenants/storage/python/.venv/
 build_tenants/storage/python/test_env/reports/
 build_tenants/storage/python/test_env/runtime/
 build_tenants/storage/python/.pytest_cache/
+build_tenants/storage/python/build/
 
 # Runtime/event exhaust is regenerated from the source line.
 .ai-workspace/events/
 .ai-workspace/fp_manifests/
 .ai-workspace/fp_results/
 .ai-workspace/runtime/
+build_tenants/typescript/test_env/deployments/
+build_tenants/typescript/test_env/test_runs/

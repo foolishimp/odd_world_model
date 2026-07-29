@@ -1,0 +1,16 @@
+{
+  "schema_kind": "odd_world_model.deterministic_check_report",
+  "schema_version": "v1",
+  "check_ref": "deterministic-check://odd_world_model/sandbox/trade_source_model/v1",
+  "proposal": {
+    "ref": "semantic-proposal://odd_world_model/sandbox/trade_source_model/v1",
+    "digest": "sha256:a3729796b2985dd3f374896758c0ab603e787dac758da1c7f1454267333850b5"
+  },
+  "check_contract_refs": [
+    "sandbox-contract://odd_world_model/trade_source_model/semantic-payload/v1"
+  ],
+  "status": "passed",
+  "issues": [],
+  "checked_at": "2026-07-12T14:28:27.645Z",
+  "check_digest": "sha256:bc5d9e30d12ceea1101941da1cadf8af6a9b9f6533acc4ebe6546b738134b18e"
+}

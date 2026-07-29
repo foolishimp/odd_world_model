@@ -1,0 +1,20 @@
+{
+  "schema_kind": "odd_world_model.source_observation",
+  "schema_version": "v1",
+  "observation_ref": "source-observation://odd_world_model/sandbox/trade_source_model/v1",
+  "source": {
+    "ref": "source-corpus://odd_world_model/trade_source_model/v1",
+    "digest": "sha256:1d04fc371ca3401726848ca53a04b0a4347b8eac8a50cbe408890e5d2a724bde",
+    "version": "v1"
+  },
+  "source_kind": "fpml_confirmation_corpus",
+  "authority_ref": "authority://fpml/official-example-corpus",
+  "evidence_refs": [
+    "source-file://trade_source_model/data/authority/com-ex28-gas-swap-daily-delivery-prices-option-last.xml#sha256:466351bf22a216f08901b39a64ca29d6bf85adec7a61632f46ffac1a73c51c8f",
+    "source-file://trade_source_model/data/authority/fpml-5-12-examples.html#sha256:4b674b1937907e29e5d8bcc12ae634742691ee074bc476326664db0f03664c07",
+    "source-file://trade_source_model/uri_ledger/source_authority.md#sha256:7da3f9b05c90cbe8f9021d241bf9d2f7e653a93784add4ba2ec641d48e0fefec",
+    "source-file://trade_source_model/uri_ledger/source_notes.md#sha256:6ec4529e606f7d24f2c1edec6d672c68247a5058377ae6c55c025337a116cdcc"
+  ],
+  "observed_at": "2026-07-12T14:28:27.645Z",
+  "observation_digest": "sha256:9beb02f0eb66137b7cb55b8b0c46c316e62027fd1bb55c771c23e78493fb4234"
+}

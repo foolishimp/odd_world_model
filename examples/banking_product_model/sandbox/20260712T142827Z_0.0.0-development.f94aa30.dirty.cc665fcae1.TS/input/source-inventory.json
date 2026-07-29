@@ -1,0 +1,63 @@
+{
+  "schema_kind": "odd_world_model.source_inventory",
+  "schema_version": "v1",
+  "inventory_ref": "source-inventory://odd_world_model/banking_product_model/v1",
+  "example_name": "banking_product_model",
+  "entries": [
+    {
+      "relative_path": "code/fibo_credit_card_markup_example.jsonld",
+      "media_type": "application/ld+json",
+      "byte_length": 812,
+      "sha256": "sha256:e1b530424abd53976d4cf340ca9cf1e98d58016a8294886f831e255bc8f5fcab"
+    },
+    {
+      "relative_path": "data/authority/fibo_home.html",
+      "media_type": "text/html",
+      "byte_length": 694138,
+      "sha256": "sha256:311736b3395720a7020b939803ab1bef83187a9051676e8f6d4f87ccf1b65db5"
+    },
+    {
+      "relative_path": "data/authority/fibo_products.html",
+      "media_type": "text/html",
+      "byte_length": 687570,
+      "sha256": "sha256:8cc70261976b6d7d53c078ae2a0879fdde6fad1546e5e94412faa15bfdfd253e"
+    },
+    {
+      "relative_path": "data/authority/fibo_schema_financial.html",
+      "media_type": "text/html",
+      "byte_length": 695176,
+      "sha256": "sha256:914f0d8d96d11bacb446e7d29e8b1ccb32d0edace790ccd20cecb6aac304f388"
+    },
+    {
+      "relative_path": "data/domain_input.json",
+      "media_type": "application/json",
+      "byte_length": 1886,
+      "sha256": "sha256:ca32c2e31b1c6c1ecfce770a03ca395a7db6a03f539d07fbadf154483e4a69f0"
+    },
+    {
+      "relative_path": "data/fibo_category_snapshot.json",
+      "media_type": "application/json",
+      "byte_length": 2575,
+      "sha256": "sha256:3eb68e3129ba3df3b2023045c8befc3ed2addd981a709c66875ca904dbd722b8"
+    },
+    {
+      "relative_path": "data/schema_snapshot.json",
+      "media_type": "application/json",
+      "byte_length": 189,
+      "sha256": "sha256:3bc9ec3aeec1d14184ea8463641753f249a0ecaee599f2b3566ca737cdc0e234"
+    },
+    {
+      "relative_path": "uri_ledger/source_authority.md",
+      "media_type": "text/markdown",
+      "byte_length": 2497,
+      "sha256": "sha256:22860fc03abfacd001e67e0d7c9cb6a1fadeea2b94d12aa803783bbe1f756c0a"
+    },
+    {
+      "relative_path": "uri_ledger/source_notes.md",
+      "media_type": "text/markdown",
+      "byte_length": 697,
+      "sha256": "sha256:2e824858046b06aae442aa5b62bde98986d6e93179837bd2c9e1fbb96abe4355"
+    }
+  ],
+  "inventory_digest": "sha256:abb7f1a6fbeeb2d4cbd930efe75c65cd263f1f6b4faff33da71df98d678829db"
+}

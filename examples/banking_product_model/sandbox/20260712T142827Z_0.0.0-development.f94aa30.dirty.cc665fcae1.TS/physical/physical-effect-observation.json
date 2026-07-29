@@ -1,0 +1,17 @@
+{
+  "observation_status": "reproduced",
+  "observed_at": "2026-07-12T14:28:30.442Z",
+  "observer_identity": "odd-world-model-storage/0.1.0:pyiceberg+duckdb",
+  "schema_kind": "odd_world_model.physical_effect_observation",
+  "schema_version": "v1",
+  "snapshot_observations": [
+    {
+      "message": "PyIceberg and DuckDB reproduced the exact snapshot (duckdb=1.4.5, iceberg_extension=2f229463)",
+      "snapshot_id": "3970337619250031272",
+      "status": "reproduced",
+      "table_identifier": "wm.semantic_publications"
+    }
+  ],
+  "subject_attestation_digest": "sha256:8a79392a97007a3c25a5ac1a7d850440a1064368076d12a1b65107d5399f9895",
+  "subject_attestation_id": "attestation:write://odd_world_model/sandbox/banking_product_model/v1"
+}

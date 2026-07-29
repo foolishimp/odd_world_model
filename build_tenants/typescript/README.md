@@ -76,14 +76,25 @@ been carried forward into the TypeScript design pack through ADR-003.
 Retained example sources live under `examples/*/sources/`. Existing unsuffixed
 example sandboxes are Python-built reference cuts.
 
-Historical comparison runs used the generic odd_sdlc scenario sandbox shape
-under:
+Current versioned instance cuts are built through the exact installed-product
+protocol defined by ADR-WM-006. Build all four retained corpora with a
+self-contained development deployment:
 
 ```text
-build_tenants/typescript/test_env/
-├── fixtures/
-├── sandbox/
-└── test_runs/
+cd build_tenants/typescript
+npm run sandbox:examples
+```
+
+Use `--deployment /path/to/deployment-manifest.json` to build the same corpora
+with another deployed WM version. Use `--example <name>` to select one corpus.
+The deployment cache is under `test_env/deployments/`; immutable instance cuts
+are emitted under `examples/<domain>/sandbox/` and are never overwritten.
+
+Inspect a cut's prime digest, byte-level artifact manifest, exact source
+inventory, product binding, and compressed runtime-event archive with:
+
+```text
+npm run sandbox:inspect -- --instance /path/to/cut --source-root /path/to/example/sources
 ```
 
 The current development proof archive is:
@@ -92,19 +103,17 @@ The current development proof archive is:
 build_tenants/typescript/test_env/proof/20260712T000000Z_full-build-v1/
 ```
 
-When side-by-side comparison is useful, a run may also emit a projected
-comparison cut under:
+Each current cut is rooted by:
 
 ```text
-examples/<domain>/sandbox/<datetime>_<version>.TS/
+examples/<domain>/sandbox/<datetime>_<wm-product-version>.TS/wm-instance.json
 ```
 
-Those cuts should use the same source corpus and preserve comparable published,
-query, mapping, proof, and event evidence where the TypeScript slice implements
-the corresponding carrier while omitting old Python runtime payloads. The first
-slice preserves source, review, published, composed-world-model, query, event,
-manifest, and result evidence. Rich historical APRA/trade mapping and proof
-surfaces remain parity pressure for the next implementation slice.
+The prime manifest binds the exact source inventory, product deployment,
+dependencies, runtime evidence, semantic publication, physical snapshots,
+mesh, context, query, proof, and declared gaps. Historical Python and early
+TypeScript sandboxes remain comparison evidence and are not upgraded into exact
+deployed-product proof.
 
 The retired `odd_world_model.rebuild_world_model_core` handle is historical
 readback. Current public handles are defined once in

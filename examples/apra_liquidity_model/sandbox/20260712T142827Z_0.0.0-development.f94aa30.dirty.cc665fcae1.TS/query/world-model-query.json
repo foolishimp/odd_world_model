@@ -1,0 +1,62 @@
+{
+  "schema_kind": "odd_world_model.query_projection",
+  "schema_version": "v1",
+  "query_ref": "query://odd_world_model/sandbox/apra_liquidity_model/v1",
+  "query_contract_ref": "query-contract://odd_world_model/sandbox/instance-summary/v1",
+  "query_contract_version": "v1",
+  "semantic_cut": {
+    "ref": "semantic-cut://odd_world_model/sandbox/apra_liquidity_model/v1",
+    "digest": "sha256:766db9924d5d473ebe9e943fc088314fe2a1a888dd222811ef9be28d0f8fc667",
+    "version": "v1"
+  },
+  "physical_admission_witness": {
+    "ref": "admission-witness://odd_world_model/sandbox/apra_liquidity_model-physical-v1",
+    "digest": "sha256:3733c5eff76efa42c898282e1f68292f103a141e034e3154fc73b7c8ff000911"
+  },
+  "context_basis": {
+    "ref": "context-basis://odd_world_model/sandbox/apra_liquidity_model/v1",
+    "digest": "sha256:d0d7251e5dca8289fc185791f820a0288285b665ed7100b2e4ef84840ac8d451"
+  },
+  "context_projection": {
+    "ref": "context-projection://odd_world_model/sandbox/apra_liquidity_model/v1",
+    "digest": "sha256:e791ad553e242218df7a19d95068e8c3216c1c5dbc7956bdb1956aa686ab75e4"
+  },
+  "exact_snapshots": [
+    {
+      "metadata_location": "file:///Users/jim/src/apps/odd_world_model/examples/apra_liquidity_model/sandbox/20260712T142827Z_0.0.0-development.f94aa30.dirty.cc665fcae1.TS/physical/runtime/warehouse/wm/semantic_publications/metadata/00001-7c02e006-5d1b-4579-8dc7-c7ef96f81c7b.metadata.json",
+      "payload_digest": "sha256:d08c5aedb965f30683ebe39da6bfa834582a4f6889f11466a696a0ac69c3d598",
+      "record_count": 2,
+      "schema_fingerprint": "sha256:4a7c65c5d35bd4bbe35532f8fccf51246ea08078aac7b35f9b06b1115066b834",
+      "snapshot_id": "1101020722820305058",
+      "table_identifier": "wm.semantic_publications"
+    }
+  ],
+  "result": {
+    "interaction_goal": "inspect the apra_liquidity_model world-model instance built by 0.0.0-development.f94aa30.dirty.cc665fcae1",
+    "root_refs": [
+      {
+        "ref": "semantic-cut://odd_world_model/sandbox/apra_liquidity_model/v1",
+        "digest": "sha256:766db9924d5d473ebe9e943fc088314fe2a1a888dd222811ef9be28d0f8fc667",
+        "version": "v1"
+      }
+    ],
+    "traversed_semantic_cut_refs": [
+      {
+        "ref": "semantic-cut://odd_world_model/sandbox/apra_liquidity_model/v1",
+        "digest": "sha256:766db9924d5d473ebe9e943fc088314fe2a1a888dd222811ef9be28d0f8fc667",
+        "version": "v1"
+      }
+    ],
+    "traversed_semantic_link_refs": [],
+    "semantic_cut_count": 1,
+    "semantic_link_count": 0,
+    "included_ref_count": 1,
+    "omitted_ref_count": 0,
+    "fidelity": "lossy_projection",
+    "declared_losses": [
+      "official APRA HTML and PDF sources are inventoried while this deterministic adapter consumes only the bounded retained claims and requirement snapshot"
+    ]
+  },
+  "projected_at": "2026-07-12T14:28:27.645Z",
+  "query_digest": "sha256:daebfb32785040d722a0607bcb2b3c0fdaa86349b924d49ec9ad1496710887a3"
+}

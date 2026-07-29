@@ -13,5 +13,5 @@
     "skipLibCheck": true,
     "types": ["node"]
   },
-  "include": ["code/src/**/*.ts", "test_env/tests/**/*.ts"]
+  "include": ["code/src/**/*.ts", "sandbox/**/*.ts", "test_env/tests/**/*.ts"]
 }

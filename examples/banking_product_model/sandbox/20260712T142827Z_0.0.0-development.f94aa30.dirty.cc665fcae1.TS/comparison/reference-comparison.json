@@ -1,0 +1,28 @@
+{
+  "schema_kind": "odd_world_model.reference_comparison",
+  "schema_version": "v1",
+  "current_instance_ref": "wm-instance://odd_world_model/banking_product_model/20260712T142827Z_0.0.0-development.f94aa30.dirty.cc665fcae1.TS",
+  "retained_references": [
+    {
+      "cut": "20260419T000000Z_v1",
+      "classification": "historical_python_reference",
+      "exact_product_binding_available": false,
+      "object_count": 5
+    },
+    {
+      "cut": "20260515T000000Z_v1.TS",
+      "classification": "historical_typescript_filesystem_projection",
+      "exact_product_binding_available": false,
+      "object_count": 5
+    }
+  ],
+  "current_candidate_markov_object_count": 5,
+  "source_equivalence_status": "not_provable_from_historical_manifests",
+  "comparison_basis": "current exact source inventory plus historical output readback",
+  "declared_deltas": [
+    "current cut binds an exact installed development product and dependency digests",
+    "current runtime events are preserved from ABG rather than minted by the sandbox orchestrator",
+    "current Markov objects remain candidate-class with inconclusive treatment verification",
+    "historical object counts are descriptive and do not establish semantic equivalence"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema_kind": "odd_world_model.sandbox_verification",
+  "schema_version": "v1",
+  "instance_ref": "wm-instance://odd_world_model/apra_liquidity_model/20260712T142827Z_0.0.0-development.f94aa30.dirty.cc665fcae1.TS",
+  "status": "reference_instance_built_with_declared_gaps",
+  "checks": [
+    {
+      "check": "installed_subprocess_boundary",
+      "evidence_state": "observed",
+      "evidence_ref": "deployment://odd_world_model/0.0.0-development.f94aa30.dirty.cc665fcae1/53270bf8bc9e02b2"
+    },
+    {
+      "check": "exact_source_inventory",
+      "evidence_state": "observed",
+      "evidence_ref": "source-inventory://odd_world_model/apra_liquidity_model/v1"
+    },
+    {
+      "check": "abg_runtime_events_present",
+      "evidence_state": "observed",
+      "evidence_count": 708
+    },
+    {
+      "check": "admission_witnesses_present",
+      "evidence_state": "observed",
+      "evidence_count": 8
+    },
+    {
+      "check": "physical_snapshot_reproduced",
+      "evidence_state": "observed",
+      "evidence_ref": "attestation:write://odd_world_model/sandbox/apra_liquidity_model/v1"
+    },
+    {
+      "check": "candidate_markov_status_preserved",
+      "evidence_state": "observed",
+      "evidence_count": 1
+    }
+  ],
+  "release_authority": "not_claimed",
+  "native_carrier_closure": "not_claimed",
+  "gaps": [
+    {
+      "gap_type": "native_graph_payload_execution_not_realized",
+      "message": "the installed rc.3 GraphFunctions carry exact refs but the sandbox reference kernel executes the WM semantic transforms",
+      "retryable": false,
+      "evidence_refs": [
+        "deployment://odd_world_model/0.0.0-development.f94aa30.dirty.cc665fcae1/53270bf8bc9e02b2"
+      ]
+    },
+    {
+      "gap_type": "calibrated_fp_authorship_not_proven",
+      "message": "candidate semantics are supplied by the retained example descriptor rather than authored by a production F_P model",
+      "retryable": false,
+      "evidence_refs": [
+        "source-inventory://odd_world_model/apra_liquidity_model/v1"
+      ]
+    },
+    {
+      "gap_type": "semantic_state_projection_not_replay_native",
+      "message": "accepted and published WM states are local projections over replay-derived witnesses in the rc.3 reference bridge",
+      "retryable": false,
+      "evidence_refs": [
+        "admission-witness://odd_world_model/sandbox/apra_liquidity_model-proposal-v1",
+        "admission-witness://odd_world_model/sandbox/apra_liquidity_model-acceptance-v1",
+        "admission-witness://odd_world_model/sandbox/apra_liquidity_model-physical-v1",
+        "admission-witness://odd_world_model/sandbox/apra_liquidity_model-publication-v1",
+        "admission-witness://odd_world_model/sandbox/apra_liquidity_model-mesh-v1",
+        "admission-witness://odd_world_model/sandbox/apra_liquidity_model-context-v1",
+        "admission-witness://odd_world_model/sandbox/apra_liquidity_model-interpretation-v1",
+        "admission-witness://odd_world_model/sandbox/apra_liquidity_model-query-v1"
+      ]
+    }
+  ],
+  "result_digest": "sha256:4fa9c9e2b364924978c5f0846fc703907c9151551c9768843ddce42dd4770d73"
+}

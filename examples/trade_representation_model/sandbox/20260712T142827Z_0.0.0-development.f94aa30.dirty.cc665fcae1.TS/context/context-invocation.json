@@ -1,0 +1,39 @@
+{
+  "schema_kind": "odd_world_model.context_invocation_record",
+  "schema_version": "v1",
+  "invocation_ref": "context-invocation://odd_world_model/sandbox/trade_representation_model/v1",
+  "context_basis": {
+    "ref": "context-basis://odd_world_model/sandbox/trade_representation_model/v1",
+    "digest": "sha256:ed0315766ca0a9a540121cbd18e8464b4c952561eef59a7bc6c3e1ed0a24be23"
+  },
+  "context_projection": {
+    "ref": "context-projection://odd_world_model/sandbox/trade_representation_model/v1",
+    "digest": "sha256:aa735eba2a4fbfdb9d3941ed945bb3487fe6361158aaf7cee5043afad96d692e"
+  },
+  "model_identity": "model-capability://odd_world_model/reference-sandbox-interpreter/v1",
+  "model_role": "F_P",
+  "invoked_at": "2026-07-12T14:28:27.645Z",
+  "completed_at": "2026-07-12T14:28:27.645Z",
+  "output_digest": "sha256:ab6a0b76e4e0165d028d6c27aaf409d1f257136b061b81e164565d2bcb138a4e",
+  "output_proposal_ref": "proposal://odd_world_model/sandbox/trade_representation_model/interpretation/v1",
+  "abg_event_refs": [
+    "runtime-event:2026-07-12T14:28:29.549Z:617:4b37a32e-8dd9-437b-857e-aa16a03a0ed2",
+    "runtime-event:2026-07-12T14:28:29.549Z:618:7b4c2fa0-5930-466b-a29d-f3bc0bdbc30e",
+    "runtime-event:2026-07-12T14:28:29.551Z:634:6bdb69c5-b018-4cc2-a0dd-0c26cab42264",
+    "runtime-event:2026-07-12T14:28:29.551Z:637:67f7922e-0656-4a84-88b3-a22e92a6381d",
+    "runtime-event:2026-07-12T14:28:29.551Z:640:439b5456-61fe-4ec5-8776-c5fabda83a01",
+    "runtime-event:2026-07-12T14:28:29.556Z:670:87098c09-5bcf-4308-ae2c-297753226c93",
+    "runtime-event:2026-07-12T14:28:29.557Z:671:5365d0b6-950c-47b6-b03b-554ad7c889ea"
+  ],
+  "admission": {
+    "ref": "admission-witness://odd_world_model/sandbox/trade_representation_model-interpretation-v1",
+    "digest": "sha256:7f28e6f7e25776b343492469aafb5c3882f751b8b57292467cf280ed81200996"
+  },
+  "freshness_catalog": {
+    "ref": "context-dependency-catalog://odd_world_model/sandbox/trade_representation_model/v1",
+    "digest": "sha256:f08206c95763f0f28418c97a127ba5c96318d231cb158c8b20a357f92d2f6eeb"
+  },
+  "admission_status": "admitted",
+  "freshness_status": "fresh",
+  "invocation_digest": "sha256:bdced067a9aa72cd38453872260400fcc2fc0974cc52741965a482465d00b7fe"
+}

@@ -1,0 +1,69 @@
+{
+  "schema_kind": "odd_world_model.accepted_semantic_cut",
+  "schema_version": "v1",
+  "semantic_cut_ref": "semantic-cut://odd_world_model/sandbox/trade_representation_model/v1",
+  "cut_role": "domain_artifact",
+  "cut_version": "v1",
+  "epistemic_status": "candidate",
+  "proposal": {
+    "ref": "semantic-proposal://odd_world_model/sandbox/trade_representation_model/v1",
+    "digest": "sha256:f54c80509e33c44c21a2bf35cb6dc6c567e1b8d8a6d2f5c50b33569529e91d46"
+  },
+  "source_observation": {
+    "ref": "source-observation://odd_world_model/sandbox/trade_representation_model/v1",
+    "digest": "sha256:2cb7316fd3a6582d746e6cb5899d69d8543ef3e17b981a04f3b7520e2d63230f"
+  },
+  "deterministic_check": {
+    "ref": "deterministic-check://odd_world_model/sandbox/trade_representation_model/v1",
+    "digest": "sha256:e0809c3844c2d4b3bb50dcc4c9ce57fa61a396d8aff85678bf04e78b3f945d51"
+  },
+  "proposal_admission": {
+    "ref": "admission-witness://odd_world_model/sandbox/trade_representation_model-proposal-v1",
+    "digest": "sha256:8473efe06123efa0bd1a6fc64cc87776a6b1cbbee6452533a23c86b18db96685"
+  },
+  "acceptance_decision": {
+    "ref": "wm-acceptance://odd_world_model/sandbox/trade_representation_model/v1",
+    "digest": "sha256:6ff311f6a94e00ac7caa4eeaea0f8e62e8fe34f94513f4de0e41d420df9f02e5"
+  },
+  "acceptance_admission": {
+    "ref": "admission-witness://odd_world_model/sandbox/trade_representation_model-acceptance-v1",
+    "digest": "sha256:ed858a14b6ebfb4a64b588a9c3eda2f7c76d9578a792ae7e3fbd4ab6b261a4bd"
+  },
+  "semantic_payload_digest": "sha256:84503976af60a9efda7d52e98b36e77ae54bfcf32d396be8b0786f827fe06104",
+  "governing_refs": [
+    "specification/PRODUCT.md",
+    "specification/requirements/40-domain-build-verification.md",
+    "build_tenants/common/design/adrs/ADR-WM-006-versioned-installed-product-example-sandboxes.md"
+  ],
+  "source_refs": [
+    "source-corpus://odd_world_model/trade_representation_model/v1"
+  ],
+  "authority_refs": [
+    "authority://odd_world_model/trade-representation-example/v1"
+  ],
+  "dependency_identities": [
+    "@abiogenesis/typescript-tenant@4.6.0-rc.3#sha256:9cffb372c0dfc00983a5d0e882efbc3d0c3ac937a56f313000f35a4473358113",
+    "@odd-glc/route-one-typescript@0.1.0#sha256:7e548f92ecd6b4442f9c9f1feb46dd2edd7e9610a7dae8706482fc65d80fa578",
+    "fast-xml-parser@5.10.0#digest-not-published",
+    "fast-xml-validator@1.2.0#digest-not-published",
+    "json-canonicalize@2.0.0#digest-not-published",
+    "odd-world-model-storage@0.1.0#sha256:8a0b494395099062a87094f02beec86f911d95725b9283105fe2729e56a5fa41",
+    "duckdb@1.4.5#digest-not-published",
+    "pyiceberg@0.11.1#digest-not-published",
+    "rfc8785@0.1.4#digest-not-published"
+  ],
+  "temporal_coordinates": {
+    "observed_at": "2026-07-12T14:28:27.645Z",
+    "accepted_at": "2026-07-12T14:28:27.645Z"
+  },
+  "fidelity": "lossy_projection",
+  "losses": [
+    "authority notes are inventoried but not semantically interpreted by the deterministic example adapter"
+  ],
+  "exclusions": [
+    "source-evidence://trade_representation_model/authority-notes"
+  ],
+  "gaps": [],
+  "accepted_at": "2026-07-12T14:28:27.645Z",
+  "accepted_cut_digest": "sha256:57a94e2cbaf57214aca30fd6184f8c7217b8b879ca6914d4f30c6a46ed48cc6c"
+}

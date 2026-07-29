@@ -1,0 +1,87 @@
+[
+  {
+    "schema_kind": "odd_world_model.candidate_markov_object_cut",
+    "schema_version": "v1",
+    "object_ref": "markov-object://odd_world_model/trade_source_model/1234/v1",
+    "object_identity": "1234",
+    "identity_direction": {
+      "source_state_refs": [
+        "source-state://trade_source_model/1234/observed"
+      ],
+      "target_state_refs": [
+        "world-object://trade_source_model/1234/candidate"
+      ],
+      "projection_ref": "projection://odd_world_model/trade_source_model/fpml_trade/v1"
+    },
+    "projection_support_refs": [
+      "source-field://trade_source_model/1234/agreement",
+      "source-field://trade_source_model/1234/fpml_version",
+      "source-field://trade_source_model/1234/parties",
+      "source-field://trade_source_model/1234/party_refs",
+      "source-field://trade_source_model/1234/product",
+      "source-field://trade_source_model/1234/source_standard",
+      "source-field://trade_source_model/1234/source_view",
+      "source-field://trade_source_model/1234/trade_date",
+      "source-field://trade_source_model/1234/trade_id",
+      "source-field://trade_source_model/1234/trade_identifiers",
+      "source-field://trade_source_model/1234/trade_xml_id"
+    ],
+    "distributed_ledger_evidence_refs": [
+      "ledger-entry:source-field://trade_source_model/1234/agreement",
+      "ledger-entry:source-field://trade_source_model/1234/fpml_version",
+      "ledger-entry:source-field://trade_source_model/1234/parties",
+      "ledger-entry:source-field://trade_source_model/1234/party_refs",
+      "ledger-entry:source-field://trade_source_model/1234/product",
+      "ledger-entry:source-field://trade_source_model/1234/source_standard",
+      "ledger-entry:source-field://trade_source_model/1234/source_view",
+      "ledger-entry:source-field://trade_source_model/1234/trade_date",
+      "ledger-entry:source-field://trade_source_model/1234/trade_id",
+      "ledger-entry:source-field://trade_source_model/1234/trade_identifiers",
+      "ledger-entry:source-field://trade_source_model/1234/trade_xml_id"
+    ],
+    "candidate_basis": {
+      "ref": "candidate-basis://odd_world_model/trade_source_model/1234/v1",
+      "digest": "sha256:dae5a0e13421890c8c52fc3b8f40b81e3d8e98983e3546d0be3dbb71d418f78d"
+    },
+    "null_peer_basis": {
+      "ref": "null-peer-basis://odd_world_model/trade_source_model/1234/v1",
+      "digest": "sha256:7fdc36085ebe5ddd9368ef10b794d3b1700474b937efce816422cc899a2319ae"
+    },
+    "held_out_treatment_verification": {
+      "treatment_ref": "treatment://odd_world_model/trade_source_model/fpml_trade/v1",
+      "corpus_ref": "source-inventory://odd_world_model/trade_source_model/v1",
+      "result": "inconclusive",
+      "evidence_refs": [
+        "source-corpus://odd_world_model/trade_source_model/v1",
+        "1234"
+      ]
+    },
+    "boundary": {
+      "included_refs": [
+        "source-field://trade_source_model/1234/agreement",
+        "source-field://trade_source_model/1234/fpml_version",
+        "source-field://trade_source_model/1234/parties",
+        "source-field://trade_source_model/1234/party_refs",
+        "source-field://trade_source_model/1234/product",
+        "source-field://trade_source_model/1234/source_standard",
+        "source-field://trade_source_model/1234/source_view",
+        "source-field://trade_source_model/1234/trade_date",
+        "source-field://trade_source_model/1234/trade_id",
+        "source-field://trade_source_model/1234/trade_identifiers",
+        "source-field://trade_source_model/1234/trade_xml_id"
+      ],
+      "excluded_refs": [
+        "source-evidence://trade_source_model/uninterpreted-documentation"
+      ],
+      "rationale": "the retained trade_source_model descriptor selects the explicit fpml_trade fields and declares unprocessed source evidence as loss"
+    },
+    "publication_classification": "candidate",
+    "source_observation": {
+      "ref": "source-observation://odd_world_model/sandbox/trade_source_model/v1",
+      "digest": "sha256:9beb02f0eb66137b7cb55b8b0c46c316e62027fd1bb55c771c23e78493fb4234"
+    },
+    "authority_ref": "authority://fpml/official-example-corpus",
+    "created_at": "2026-07-12T14:28:27.645Z",
+    "cut_digest": "sha256:d713ffb212d54efe04adaf08a20926f4b209a65b1caf608ad8f45a27913612de"
+  }
+]

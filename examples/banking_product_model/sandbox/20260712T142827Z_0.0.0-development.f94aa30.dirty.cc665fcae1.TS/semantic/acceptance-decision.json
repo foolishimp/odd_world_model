@@ -1,0 +1,23 @@
+{
+  "schema_kind": "odd_world_model.wm_acceptance_decision",
+  "schema_version": "v1",
+  "decision_ref": "wm-acceptance://odd_world_model/sandbox/banking_product_model/v1",
+  "proposal": {
+    "ref": "semantic-proposal://odd_world_model/sandbox/banking_product_model/v1",
+    "digest": "sha256:4bcaf0f2920c76c5e0491e2b594bc8ead399b2cba405a39c8875a34659f2ee32"
+  },
+  "deterministic_check": {
+    "ref": "deterministic-check://odd_world_model/sandbox/banking_product_model/v1",
+    "digest": "sha256:a16106357ae4543b0209325c6653caea9a61916f6b7cd26c3bbe2b7afa1aaac2"
+  },
+  "proposal_admission": {
+    "ref": "admission-witness://odd_world_model/sandbox/banking_product_model-proposal-v1",
+    "digest": "sha256:71c09f140f9b0317428e61ef17e97d0a8d02787272c3695c5ca3ee8ec4c3154c"
+  },
+  "authority_ref": "authority://odd_world_model/banking-product-example/v1",
+  "disposition": "accepted",
+  "rationale": "the retained example descriptor, exact source inventory, candidate status, and deterministic payload contract passed",
+  "gaps": [],
+  "decided_at": "2026-07-12T14:28:27.645Z",
+  "decision_digest": "sha256:87cafcf349aa7b42e2cc5d3c354e93536b586a6034c2dd4d2d846a2c769b1d76"
+}

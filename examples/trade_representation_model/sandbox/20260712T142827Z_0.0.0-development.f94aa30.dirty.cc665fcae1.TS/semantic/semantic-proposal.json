@@ -1,0 +1,138 @@
+{
+  "schema_kind": "odd_world_model.semantic_proposal",
+  "schema_version": "v1",
+  "proposal_ref": "semantic-proposal://odd_world_model/sandbox/trade_representation_model/v1",
+  "source_observation": {
+    "ref": "source-observation://odd_world_model/sandbox/trade_representation_model/v1",
+    "digest": "sha256:2cb7316fd3a6582d746e6cb5899d69d8543ef3e17b981a04f3b7520e2d63230f"
+  },
+  "proposed_by": "fixture-capability://odd_world_model/trade_representation_model/retained-example-descriptor/v1",
+  "payload_schema_ref": "sandbox-contract://odd_world_model/trade_representation_model/semantic-payload/v1",
+  "payload": {
+    "schema_kind": "odd_world_model.example_semantic_payload",
+    "schema_version": "v1",
+    "example_name": "trade_representation_model",
+    "source_inventory": {
+      "ref": "source-inventory://odd_world_model/trade_representation_model/v1",
+      "digest": "sha256:8f06596edb4d1fc71c6f1f828be1ae97147ba27a1775cdfc850d5ae1aba7f99e"
+    },
+    "domain_payload": {
+      "schema_kind": "odd_world_model.example_domain_payload",
+      "schema_version": "v1",
+      "example_name": "trade_representation_model",
+      "domain_input": {
+        "source_id": "sandbox.trade_representation",
+        "published_by": "team.sandbox.trade",
+        "bounded_context": "sandbox.trade_representation.capture",
+        "summary": "Sandbox trade representation input for the first odd_world_model MVP lane.",
+        "trade": {
+          "trade_id": "trade_sandbox_001",
+          "product_name": "Brent commodity swap",
+          "commodity_family": "energy",
+          "commodity_name": "Brent crude",
+          "counterparty_id": "counterparty_sandbox_001",
+          "agreement_id": "agreement_sandbox_001",
+          "lifecycle_state": "booked"
+        },
+        "evidence_refs": [
+          "input://examples/trade_representation_model/sources/data/domain_input.json",
+          "input://examples/trade_representation_model/sources/data/schema_snapshot.json",
+          "input://examples/trade_representation_model/sources/uri_ledger/source_authority.md",
+          "input://examples/trade_representation_model/sources/uri_ledger/source_notes.md"
+        ]
+      },
+      "schema_snapshot": {
+        "schema_name": "trade_capture_schema",
+        "fields": [
+          "trade_id",
+          "product_name",
+          "commodity_family",
+          "commodity_name",
+          "counterparty_id",
+          "agreement_id",
+          "booking_timestamp",
+          "lifecycle_state"
+        ]
+      }
+    },
+    "candidate_markov_objects": [
+      {
+        "schema_kind": "odd_world_model.candidate_markov_object_cut",
+        "schema_version": "v1",
+        "object_ref": "markov-object://odd_world_model/trade_representation_model/trade_sandbox_001/v1",
+        "object_identity": "trade_sandbox_001",
+        "identity_direction": {
+          "source_state_refs": [
+            "source-state://trade_representation_model/trade_sandbox_001/observed"
+          ],
+          "target_state_refs": [
+            "world-object://trade_representation_model/trade_sandbox_001/candidate"
+          ],
+          "projection_ref": "projection://odd_world_model/trade_representation_model/trade_representation/v1"
+        },
+        "projection_support_refs": [
+          "source-field://trade_representation_model/trade_sandbox_001/agreement_id",
+          "source-field://trade_representation_model/trade_sandbox_001/commodity_family",
+          "source-field://trade_representation_model/trade_sandbox_001/commodity_name",
+          "source-field://trade_representation_model/trade_sandbox_001/counterparty_id",
+          "source-field://trade_representation_model/trade_sandbox_001/lifecycle_state",
+          "source-field://trade_representation_model/trade_sandbox_001/product_name",
+          "source-field://trade_representation_model/trade_sandbox_001/trade_id"
+        ],
+        "distributed_ledger_evidence_refs": [
+          "ledger-entry:source-field://trade_representation_model/trade_sandbox_001/agreement_id",
+          "ledger-entry:source-field://trade_representation_model/trade_sandbox_001/commodity_family",
+          "ledger-entry:source-field://trade_representation_model/trade_sandbox_001/commodity_name",
+          "ledger-entry:source-field://trade_representation_model/trade_sandbox_001/counterparty_id",
+          "ledger-entry:source-field://trade_representation_model/trade_sandbox_001/lifecycle_state",
+          "ledger-entry:source-field://trade_representation_model/trade_sandbox_001/product_name",
+          "ledger-entry:source-field://trade_representation_model/trade_sandbox_001/trade_id"
+        ],
+        "candidate_basis": {
+          "ref": "candidate-basis://odd_world_model/trade_representation_model/trade_sandbox_001/v1",
+          "digest": "sha256:96c484c65f07493ce3cf68def8a0373d284be91d74205e219b2f1f275c4dfce3"
+        },
+        "null_peer_basis": {
+          "ref": "null-peer-basis://odd_world_model/trade_representation_model/trade_sandbox_001/v1",
+          "digest": "sha256:9d583f5be6b62eab6df5c85d700ef00f7ae98db5da9ecf4581c0cdd7cc005be3"
+        },
+        "held_out_treatment_verification": {
+          "treatment_ref": "treatment://odd_world_model/trade_representation_model/trade_representation/v1",
+          "corpus_ref": "source-inventory://odd_world_model/trade_representation_model/v1",
+          "result": "inconclusive",
+          "evidence_refs": [
+            "source-corpus://odd_world_model/trade_representation_model/v1",
+            "trade_sandbox_001"
+          ]
+        },
+        "boundary": {
+          "included_refs": [
+            "source-field://trade_representation_model/trade_sandbox_001/agreement_id",
+            "source-field://trade_representation_model/trade_sandbox_001/commodity_family",
+            "source-field://trade_representation_model/trade_sandbox_001/commodity_name",
+            "source-field://trade_representation_model/trade_sandbox_001/counterparty_id",
+            "source-field://trade_representation_model/trade_sandbox_001/lifecycle_state",
+            "source-field://trade_representation_model/trade_sandbox_001/product_name",
+            "source-field://trade_representation_model/trade_sandbox_001/trade_id"
+          ],
+          "excluded_refs": [
+            "source-evidence://trade_representation_model/authority-notes"
+          ],
+          "rationale": "the retained trade_representation_model descriptor selects the explicit trade_representation fields and declares unprocessed source evidence as loss"
+        },
+        "publication_classification": "candidate",
+        "source_observation": {
+          "ref": "source-observation://odd_world_model/sandbox/trade_representation_model/v1",
+          "digest": "sha256:2cb7316fd3a6582d746e6cb5899d69d8543ef3e17b981a04f3b7520e2d63230f"
+        },
+        "authority_ref": "authority://odd_world_model/trade-representation-example/v1",
+        "created_at": "2026-07-12T14:28:27.645Z",
+        "cut_digest": "sha256:e05889d7efc4dd31900d4ed0a141fcdb3a9a598f1abc064411e8eb48311556b4"
+      }
+    ]
+  },
+  "epistemic_status": "candidate",
+  "created_at": "2026-07-12T14:28:27.645Z",
+  "payload_digest": "sha256:84503976af60a9efda7d52e98b36e77ae54bfcf32d396be8b0786f827fe06104",
+  "proposal_digest": "sha256:f54c80509e33c44c21a2bf35cb6dc6c567e1b8d8a6d2f5c50b33569529e91d46"
+}

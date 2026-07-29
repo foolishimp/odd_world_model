@@ -1,0 +1,33 @@
+{
+  "schema_kind": "odd_world_model.source_inventory",
+  "schema_version": "v1",
+  "inventory_ref": "source-inventory://odd_world_model/trade_representation_model/v1",
+  "example_name": "trade_representation_model",
+  "entries": [
+    {
+      "relative_path": "data/domain_input.json",
+      "media_type": "application/json",
+      "byte_length": 908,
+      "sha256": "sha256:bfdfef1695f27a6fd5f0cdc963c95f220ed53ffa5c491433603ad1b64a27eb99"
+    },
+    {
+      "relative_path": "data/schema_snapshot.json",
+      "media_type": "application/json",
+      "byte_length": 235,
+      "sha256": "sha256:d893a12c706bb0dd3a6ebd01aa04aba88825d842b1ec5cf754fa45b5c8ebd7b3"
+    },
+    {
+      "relative_path": "uri_ledger/source_authority.md",
+      "media_type": "text/markdown",
+      "byte_length": 1736,
+      "sha256": "sha256:077c21546c6d0701871afe048c9b6de2daa8aad44aa108f1dd8f5f453a4de25c"
+    },
+    {
+      "relative_path": "uri_ledger/source_notes.md",
+      "media_type": "text/markdown",
+      "byte_length": 619,
+      "sha256": "sha256:adb7c1a4298963232d988520fa00237143f4fd675d2879c42ee0d5e169f4dc69"
+    }
+  ],
+  "inventory_digest": "sha256:8f06596edb4d1fc71c6f1f828be1ae97147ba27a1775cdfc850d5ae1aba7f99e"
+}

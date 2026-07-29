@@ -1,0 +1,20 @@
+{
+  "schema_kind": "odd_world_model.source_observation",
+  "schema_version": "v1",
+  "observation_ref": "source-observation://odd_world_model/sandbox/trade_representation_model/v1",
+  "source": {
+    "ref": "source-corpus://odd_world_model/trade_representation_model/v1",
+    "digest": "sha256:8f06596edb4d1fc71c6f1f828be1ae97147ba27a1775cdfc850d5ae1aba7f99e",
+    "version": "v1"
+  },
+  "source_kind": "json_domain_seed",
+  "authority_ref": "authority://odd_world_model/trade-representation-example/v1",
+  "evidence_refs": [
+    "source-file://trade_representation_model/data/domain_input.json#sha256:bfdfef1695f27a6fd5f0cdc963c95f220ed53ffa5c491433603ad1b64a27eb99",
+    "source-file://trade_representation_model/data/schema_snapshot.json#sha256:d893a12c706bb0dd3a6ebd01aa04aba88825d842b1ec5cf754fa45b5c8ebd7b3",
+    "source-file://trade_representation_model/uri_ledger/source_authority.md#sha256:077c21546c6d0701871afe048c9b6de2daa8aad44aa108f1dd8f5f453a4de25c",
+    "source-file://trade_representation_model/uri_ledger/source_notes.md#sha256:adb7c1a4298963232d988520fa00237143f4fd675d2879c42ee0d5e169f4dc69"
+  ],
+  "observed_at": "2026-07-12T14:28:27.645Z",
+  "observation_digest": "sha256:2cb7316fd3a6582d746e6cb5899d69d8543ef3e17b981a04f3b7520e2d63230f"
+}

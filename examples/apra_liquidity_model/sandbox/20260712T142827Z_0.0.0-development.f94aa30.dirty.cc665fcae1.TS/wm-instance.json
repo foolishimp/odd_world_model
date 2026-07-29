@@ -1,0 +1,63 @@
+{
+  "schema_kind": "odd_world_model.instance_cut",
+  "schema_version": "v1",
+  "instance_ref": "wm-instance://odd_world_model/apra_liquidity_model/20260712T142827Z_0.0.0-development.f94aa30.dirty.cc665fcae1.TS",
+  "example_name": "apra_liquidity_model",
+  "interaction_goal": "build and inspect apra_liquidity_model with exact odd_world_model deployment 0.0.0-development.f94aa30.dirty.cc665fcae1",
+  "product_binding": {
+    "ref": "deployment://odd_world_model/0.0.0-development.f94aa30.dirty.cc665fcae1/53270bf8bc9e02b2",
+    "digest": "sha256:fc35bc1672e0ccc02e8dabd2bab7c92adaa2cdf5978b4546758b4041e0fa9d46",
+    "product_version": "0.0.0-development.f94aa30.dirty.cc665fcae1",
+    "deployment_class": "development_cut"
+  },
+  "source_inventory": {
+    "ref": "source-inventory://odd_world_model/apra_liquidity_model/v1",
+    "digest": "sha256:49d400eee2db46df6cdeff41f465e2487b8a1a4817b58ba128f7c40525bf83c1"
+  },
+  "artifact_manifest": {
+    "path": "proof/artifact-manifest.json",
+    "digest": "sha256:14a6c3ba997cb313eb1b58048c6c61c707703ff6a37bf601e35877841f8991a0"
+  },
+  "execution_mode": "installed_rc3_reference_kernel",
+  "artifact_index": {
+    "source_observation": {
+      "path": "semantic/source-observation.json",
+      "semantic_digest": "sha256:b6f5a1be830322ed63b0c928c4929b9ad0ebf8d87c8d6c127356f9fe5918b38e"
+    },
+    "candidate_markov_objects": {
+      "path": "semantic/candidate-markov-objects.json",
+      "semantic_digest": "sha256:a1cae8267d69e16ef93bf881e4e16880394b11c6686a39cb6bd676456d3ff04b"
+    },
+    "published_semantic_cut": {
+      "path": "semantic/published-semantic-cut.json",
+      "semantic_digest": "sha256:fb623543d14a58ce7af18dc5de11272554b8fda88c8d603c1e028d8fcf5b30f0"
+    },
+    "bounded_mesh_cut": {
+      "path": "mesh/bounded-mesh-cut.json",
+      "semantic_digest": "sha256:22ecb4406b0d9b132c1f28e882fc97a1655a7748e6ffd7b7f68c421bf72b8d6c"
+    },
+    "context_basis": {
+      "path": "context/context-basis.json",
+      "semantic_digest": "sha256:4c75a4e083a26d7e8d0e788d12926076ad1beb7ec97b7e083cdf3a18cae37e08"
+    },
+    "context_projection": {
+      "path": "context/context-projection.json",
+      "semantic_digest": "sha256:0293d0d3857f0c4f09f16f668ce8ea537ad266473d7683f7b1f71c126d8285ff"
+    },
+    "world_model_query": {
+      "path": "query/world-model-query.json",
+      "semantic_digest": "sha256:481169641e07db7029c3c9c6230668c7e1416888fcee0cb354543580da76b520"
+    },
+    "runtime_events": {
+      "path": "evidence/runtime-events.jsonl.gz",
+      "semantic_digest": "sha256:0172f391953076a6d114d5c3f337346469dfeb081119dabb8e5ee630a6dba70a"
+    }
+  },
+  "gap_types": [
+    "native_graph_payload_execution_not_realized",
+    "calibrated_fp_authorship_not_proven",
+    "semantic_state_projection_not_replay_native"
+  ],
+  "created_at": "2026-07-12T14:28:27.645Z",
+  "instance_digest": "sha256:42e2f2df8614ac6650b4791db47569783b24f45f07e3c5de7ccae5c7ec82b1e7"
+}

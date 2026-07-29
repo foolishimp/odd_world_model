@@ -1,0 +1,17 @@
+{
+  "observation_status": "reproduced",
+  "observed_at": "2026-07-12T14:28:29.432Z",
+  "observer_identity": "odd-world-model-storage/0.1.0:pyiceberg+duckdb",
+  "schema_kind": "odd_world_model.physical_effect_observation",
+  "schema_version": "v1",
+  "snapshot_observations": [
+    {
+      "message": "PyIceberg and DuckDB reproduced the exact snapshot (duckdb=1.4.5, iceberg_extension=2f229463)",
+      "snapshot_id": "7124086183510039804",
+      "status": "reproduced",
+      "table_identifier": "wm.semantic_publications"
+    }
+  ],
+  "subject_attestation_digest": "sha256:c393a1018359e0b65432d80c56c25f51a1130cfd7811e035a9854d0bfe734bba",
+  "subject_attestation_id": "attestation:write://odd_world_model/sandbox/trade_representation_model/v1"
+}

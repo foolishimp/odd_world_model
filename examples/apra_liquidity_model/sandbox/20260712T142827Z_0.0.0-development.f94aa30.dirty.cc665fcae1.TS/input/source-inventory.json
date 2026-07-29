@@ -1,0 +1,69 @@
+{
+  "schema_kind": "odd_world_model.source_inventory",
+  "schema_version": "v1",
+  "inventory_ref": "source-inventory://odd_world_model/apra_liquidity_model/v1",
+  "example_name": "apra_liquidity_model",
+  "entries": [
+    {
+      "relative_path": "data/authority/apra_liquidity_faq.html",
+      "media_type": "text/html",
+      "byte_length": 127274,
+      "sha256": "sha256:6fac30f6fa0759dc034e6945f4eeb757405cf69fed35d7ecdcf222fdc31228c0"
+    },
+    {
+      "relative_path": "data/authority/apra_liquidity_landing_page.html",
+      "media_type": "text/html",
+      "byte_length": 97672,
+      "sha256": "sha256:8a86590e8875f3b73f0ada79ab4b8548003e23f913108354ef3cd106b641bc15"
+    },
+    {
+      "relative_path": "data/authority/aps_210_liquidity_2025.html",
+      "media_type": "text/html",
+      "byte_length": 73711,
+      "sha256": "sha256:384ae122214556977402aad8fe5714203b2b7b1d2321e3ab2e46f84cc69751de"
+    },
+    {
+      "relative_path": "data/authority/ars_210_0_liquidity_2023.html",
+      "media_type": "text/html",
+      "byte_length": 3179398,
+      "sha256": "sha256:e7e1b60b1f7f417dac38fc6209914953059b0a9799fdaf35debf1a022223f245"
+    },
+    {
+      "relative_path": "data/authority_claims.json",
+      "media_type": "application/json",
+      "byte_length": 3633,
+      "sha256": "sha256:a64f924fa2529a103f0c94222c63cc08f0cff0aa015381ce2b854a5028804094"
+    },
+    {
+      "relative_path": "data/domain_input.json",
+      "media_type": "application/json",
+      "byte_length": 1465,
+      "sha256": "sha256:3f077fd045da38d57b9b5d41ea509f1584319b8e34980d9e82cc8d8125274bc8"
+    },
+    {
+      "relative_path": "data/requirements_snapshot.json",
+      "media_type": "application/json",
+      "byte_length": 441,
+      "sha256": "sha256:750e8673dad4de260944eb10c085cb5010970b8d478f0122c55d44021ab210d6"
+    },
+    {
+      "relative_path": "pdfs/apg_210_liquidity_2025.pdf",
+      "media_type": "application/pdf",
+      "byte_length": 462689,
+      "sha256": "sha256:ac9b334e1853cc66d8f6a3e8785ef1d66260c06a21deefaba7432f61899272d3"
+    },
+    {
+      "relative_path": "uri_ledger/source_authority.md",
+      "media_type": "text/markdown",
+      "byte_length": 3422,
+      "sha256": "sha256:7a14577e72c438c12b51f5d99d2ea2d247bacd0503346f17c3201c3c34179d8c"
+    },
+    {
+      "relative_path": "uri_ledger/source_notes.md",
+      "media_type": "text/markdown",
+      "byte_length": 822,
+      "sha256": "sha256:6c75a67dcbb091f46cfa65ef4df909075e2fa62514f38eff069822944cc0e409"
+    }
+  ],
+  "inventory_digest": "sha256:49d400eee2db46df6cdeff41f465e2487b8a1a4817b58ba128f7c40525bf83c1"
+}
